@@ -552,7 +552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a908e83b1e7ce9e428caae2838615cc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Topic: /image
+  Topic: camera/compressed
   ImageCamera: {fileID: 553620304}
   FrameId: Camera
   resolutionWidth: 640
