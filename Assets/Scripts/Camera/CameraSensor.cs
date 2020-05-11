@@ -15,8 +15,6 @@ namespace RosSharp.RosBridgeClient
         private Texture2D texture2D;
         private Rect rect;
 
-        public Noise noise;
-
         protected override void Start()
         {
             base.Start();
@@ -49,7 +47,6 @@ namespace RosSharp.RosBridgeClient
         {
             message.header.Update();
             texture2D.ReadPixels(rect, 0, 0);
-            noise.ApplyNoise(ref texture2D);
             message.data = texture2D.EncodeToJPG(qualityLevel);
             Publish(message);
         }
