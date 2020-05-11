@@ -875,4 +875,4 @@ MonoBehaviour:
   SecondsTimeout: 10
   Serializer: 0
   protocol: 0
-  RosBridgeServerUrl: ws://192.168.2.103:9090
+  RosBridgeServerUrl: ws://localhost:9090
