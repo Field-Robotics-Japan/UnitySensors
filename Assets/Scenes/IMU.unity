@@ -235,8 +235,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.984, y: 1.048, z: 0}
   m_LocalScale: {x: 2, y: 0.1, z: 0.3}
-  m_Children:
-  - {fileID: 1746736169}
+  m_Children: []
   m_Father: {fileID: 1717008349}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -733,9 +732,9 @@ GameObject:
   - component: {fileID: 1746736167}
   - component: {fileID: 1746736170}
   - component: {fileID: 1746736166}
-  - component: {fileID: 1746736171}
   - component: {fileID: 1746736173}
   - component: {fileID: 1746736172}
+  - component: {fileID: 1746736171}
   m_Layer: 0
   m_Name: IMU
   m_TagString: Untagged
@@ -810,12 +809,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746736165}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.40299997, y: 1.3199997, z: 0}
-  m_LocalScale: {x: 0.125, y: 0.79999995, z: 0.83333325}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.79, y: 1.18, z: -9.6846975e-11}
+  m_LocalScale: {x: 0.25, y: 0.08, z: 0.24999999}
   m_Children: []
-  m_Father: {fileID: 882909304}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1746736170
 Rigidbody:
@@ -860,7 +859,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Topic: /imu
-  PublishedTransform: {fileID: 1746736169}
   FrameId: Unity
 --- !u!114 &1746736173
 MonoBehaviour:
@@ -877,4 +875,4 @@ MonoBehaviour:
   SecondsTimeout: 10
   Serializer: 0
   protocol: 0
-  RosBridgeServerUrl: ws://localhost:9090
+  RosBridgeServerUrl: ws://192.168.2.103:9090
