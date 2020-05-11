@@ -558,9 +558,6 @@ MonoBehaviour:
   resolutionWidth: 640
   resolutionHeight: 480
   qualityLevel: 67
-  EnableFisheye: 0
-  Setting:
-    p: 0
 --- !u!114 &553620306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,7 +573,7 @@ MonoBehaviour:
   SecondsTimeout: 10
   Serializer: 0
   protocol: 0
-  RosBridgeServerUrl: ws://192.168.2.103:9090
+  RosBridgeServerUrl: ws://localhost:9090
 --- !u!1 &636982582
 GameObject:
   m_ObjectHideFlags: 0
