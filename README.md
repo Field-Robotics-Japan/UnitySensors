@@ -2,11 +2,12 @@
 <!-- [![unit04_test](.image/unit04_test.gif)](https://www.youtube.com/watch?v=C1V_L85p0-I)   -->
 Robot sensor packages available on Unity.
 You can communicate sensor info via ROS using ROS#.  
+
 The following sensors are added.
 
 - Velodyne Pack (VLP16)
-- IMU
 - RGB Camera
+- IMU
 
 There are several Prefab and Scene files available for testing each sensor.
 Check here for more information.
