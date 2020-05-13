@@ -10,7 +10,7 @@ The following sensors are added.
 - IMU
 
 There are several Prefab and Scene files available for testing each sensor.
-Check here for more information.
+Check [here](https://github.com/Field-Robotics-Japan/sensors_unity/tree/develop/Assets/Scenes) for more information.
 
 # How to use (ROS)
 ## 1. Launch ROS packages
