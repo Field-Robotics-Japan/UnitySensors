@@ -1,13 +1,23 @@
-﻿using System;
+﻿using System.IO;
 using UnityEngine;
+using SensorNoise;
 
 namespace RosSharp.RosBridgeClient
 {
     public class ImuSensor : UnityPublisher<MessageTypes.Sensor.Imu>
     {
+        public bool EnableNoise;
+        public NoiseSetteing Setting = new NoiseSetteing();
+
+        [System.Serializable]
+        public class NoiseSetteing
+        {
+            public double Sigma = 0.1;
+        }
+
+        public string FrameId = "imu";
         private Transform trans;
         private Rigidbody rb;
-        public string FrameId = "Unity";
         private MessageTypes.Sensor.Imu message;
         private float deltaTime;
 
@@ -42,6 +52,15 @@ namespace RosSharp.RosBridgeClient
             message.orientation = GetGeometryQuaternion(transform);
             message.angular_velocity = GetAngularVelocity(rigidbody);
             message.linear_acceleration = GetLinearAcceleration(transform, rigidbody);
+
+            if (EnableNoise)
+            {
+                var noise = new BoxMullerNoise();
+                message.angular_velocity.x = noise.next(message.angular_velocity.x, Setting.Sigma);
+                message.angular_velocity.y = noise.next(message.angular_velocity.y, Setting.Sigma);
+                message.angular_velocity.z = noise.next(message.angular_velocity.z, Setting.Sigma);
+            }
+
             Publish(message);
         }
 
