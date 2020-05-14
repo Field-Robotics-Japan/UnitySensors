@@ -16,7 +16,7 @@ namespace SensorNoise
             random = new Random(seed);
         }
 
-        public double next(double mu = 0.0, double sigma = 1.0, bool getCos = true)
+        public double apply(double mu = 0.0, double sigma = 1.0, bool getCos = true)
         {
             if (getCos)
             {
@@ -38,7 +38,7 @@ namespace SensorNoise
             }
         }
 
-        public double[] nextPair(double mu = 0.0, double sigma = 1.0)
+        public double[] applyPair(double mu = 0.0, double sigma = 1.0)
         {
             double[] normrand = new double[2];
             double rand = 0.0;
