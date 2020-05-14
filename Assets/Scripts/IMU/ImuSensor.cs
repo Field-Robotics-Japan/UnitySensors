@@ -7,12 +7,19 @@ namespace RosSharp.RosBridgeClient
     public class ImuSensor : UnityPublisher<MessageTypes.Sensor.Imu>
     {
         public bool EnableNoise;
+        public bool EnableBoxMullerNoise;
+        public bool EnableBiasNoise;
         public NoiseSetteing Setting = new NoiseSetteing();
 
         [System.Serializable]
         public class NoiseSetteing
         {
-            public double Sigma = 0.1;
+            public Vector4 QuatSigma;
+            public Vector4 QuatBias;
+            public Vector3 AngVelSigma;
+            public Vector3 AngVelBias;
+            public Vector3 LinAccSigma;
+            public Vector3 LinAccBias;
         }
 
         public string FrameId = "imu";
@@ -55,17 +62,8 @@ namespace RosSharp.RosBridgeClient
 
             if (EnableNoise)
             {
-                var noise = new BoxMullerNoise();
-                message.orientation.x = noise.next(message.orientation.x, Setting.Sigma);
-                message.orientation.y = noise.next(message.orientation.y, Setting.Sigma);
-                message.orientation.z = noise.next(message.orientation.z, Setting.Sigma);
-                message.orientation.w = noise.next(message.orientation.w, Setting.Sigma);
-                message.angular_velocity.x = noise.next(message.angular_velocity.x, Setting.Sigma);
-                message.angular_velocity.y = noise.next(message.angular_velocity.y, Setting.Sigma);
-                message.angular_velocity.z = noise.next(message.angular_velocity.z, Setting.Sigma);
-                message.linear_acceleration.x = noise.next(message.linear_acceleration.x, Setting.Sigma);
-                message.linear_acceleration.y = noise.next(message.linear_acceleration.y, Setting.Sigma);
-                message.linear_acceleration.z = noise.next(message.linear_acceleration.z, Setting.Sigma);
+                if (EnableBoxMullerNoise) applyBoxMuller(ref message);
+                if (EnableBiasNoise) applyBias(ref message);
             }
 
             Publish(message);
@@ -104,6 +102,37 @@ namespace RosSharp.RosBridgeClient
             result.y = acceleration.Unity2Ros().y;
             result.z = acceleration.Unity2Ros().z;
             return result;
+        }
+
+        private void applyBoxMuller(ref MessageTypes.Sensor.Imu msg )
+        {
+            var BoxMullerNoise = new BoxMullerNoise();
+            msg.orientation.x = BoxMullerNoise.apply(msg.orientation.x, Setting.QuatSigma[0]);
+            msg.orientation.y = BoxMullerNoise.apply(msg.orientation.y, Setting.QuatSigma[1]);
+            msg.orientation.z = BoxMullerNoise.apply(msg.orientation.z, Setting.QuatSigma[2]);
+            msg.orientation.w = BoxMullerNoise.apply(msg.orientation.w, Setting.QuatSigma[3]);
+            msg.angular_velocity.x = BoxMullerNoise.apply(msg.angular_velocity.x, Setting.AngVelSigma[0]);
+            msg.angular_velocity.y = BoxMullerNoise.apply(msg.angular_velocity.y, Setting.AngVelSigma[1]);
+            msg.angular_velocity.z = BoxMullerNoise.apply(msg.angular_velocity.z, Setting.AngVelSigma[2]);
+            msg.linear_acceleration.x = BoxMullerNoise.apply(msg.linear_acceleration.x, Setting.LinAccSigma[0]);
+            msg.linear_acceleration.y = BoxMullerNoise.apply(msg.linear_acceleration.y, Setting.LinAccSigma[1]);
+            msg.linear_acceleration.z = BoxMullerNoise.apply(msg.linear_acceleration.z, Setting.LinAccSigma[2]);
+        }
+
+        private void applyBias(ref MessageTypes.Sensor.Imu msg )
+        {
+            var BiasNoise = new BiasNoise();
+            msg.orientation.x = BiasNoise.apply( msg.orientation.x, Setting.QuatBias[0] );
+            msg.orientation.y = BiasNoise.apply( msg.orientation.y, Setting.QuatBias[1] );
+            msg.orientation.z = BiasNoise.apply( msg.orientation.z, Setting.QuatBias[2] );
+            msg.orientation.w = BiasNoise.apply( msg.orientation.w, Setting.QuatBias[3] );
+            msg.angular_velocity.x = BiasNoise.apply( msg.angular_velocity.x, Setting.AngVelBias[0] );
+            msg.angular_velocity.y = BiasNoise.apply( msg.angular_velocity.y, Setting.AngVelBias[1] );
+            msg.angular_velocity.z = BiasNoise.apply( msg.angular_velocity.z, Setting.AngVelBias[2] );
+            msg.linear_acceleration.x = BiasNoise.apply( msg.linear_acceleration.x, Setting.LinAccBias[0] );
+            msg.linear_acceleration.y = BiasNoise.apply( msg.linear_acceleration.y, Setting.LinAccBias[1] );
+            msg.linear_acceleration.z = BiasNoise.apply( msg.linear_acceleration.z, Setting.LinAccBias[2] );
+
         }
     }
 }
