@@ -20,7 +20,7 @@ public class ImuSensorEditor : Editor
         if (_target.EnableNoise)
         {
             EditorGUILayout.LabelField("Setting BoxMullerNoise");
-            _target.Setting.Sigma = EditorGUILayout.DoubleField("標準偏差Σ", _target.Setting.Sigma);
+            _target.Setting.Sigma = EditorGUILayout.DoubleField("Sigma", _target.Setting.Sigma);
         }
     }
 }
