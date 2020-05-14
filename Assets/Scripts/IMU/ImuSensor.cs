@@ -56,9 +56,16 @@ namespace RosSharp.RosBridgeClient
             if (EnableNoise)
             {
                 var noise = new BoxMullerNoise();
+                message.orientation.x = noise.next(message.orientation.x, Setting.Sigma);
+                message.orientation.y = noise.next(message.orientation.y, Setting.Sigma);
+                message.orientation.z = noise.next(message.orientation.z, Setting.Sigma);
+                message.orientation.w = noise.next(message.orientation.w, Setting.Sigma);
                 message.angular_velocity.x = noise.next(message.angular_velocity.x, Setting.Sigma);
                 message.angular_velocity.y = noise.next(message.angular_velocity.y, Setting.Sigma);
                 message.angular_velocity.z = noise.next(message.angular_velocity.z, Setting.Sigma);
+                message.linear_acceleration.x = noise.next(message.linear_acceleration.x, Setting.Sigma);
+                message.linear_acceleration.y = noise.next(message.linear_acceleration.y, Setting.Sigma);
+                message.linear_acceleration.z = noise.next(message.linear_acceleration.z, Setting.Sigma);
             }
 
             Publish(message);
