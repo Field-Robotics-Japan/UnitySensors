@@ -25,7 +25,7 @@ jobs:
       fail-fast: false
       matrix:
         projectPath:
-          - sensors_unity
+          - ./
         unityVersion:
           - 2019.3.10f1
         testMode:
