@@ -1,4 +1,8 @@
 # sensor_unity
+
+![Acquire activation file](https://github.com/Field-Robotics-Japan/sensors_unity/workflows/Acquire%20activation%20file/badge.svg)
+![CI](https://github.com/Field-Robotics-Japan/sensors_unity/workflows/CI/badge.svg?branch=dev%2Fapply_GithubActions)
+
 [![unit04_test](https://github.com/Field-Robotics-Japan/unit04_unity/blob/master/.image/unit04_test.gif)](https://www.youtube.com/watch?v=C1V_L85p0-I)  
 Robot sensor packages available on Unity.
 You can communicate sensor info via ROS using ROS#.  
