@@ -27,7 +27,7 @@ jobs:
         projectPath:
           - ./
         unityVersion:
-          - 2019.2.11f1
+          - 2019.3.10f1
         testMode:
           - all
 #           - playmode
