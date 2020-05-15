@@ -66,6 +66,8 @@ namespace RosSharp.RosBridgeClient
                 if (EnableBiasNoise) applyBias(ref message);
             }
 
+            Debug.Log(message.angular_velocity.z);
+
             Publish(message);
         }
 

@@ -834,5 +834,20 @@ PrefabInstance:
       propertyPath: EnableNoise
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7367901733237620766, guid: e9a4c88a81229c7f39c3b861e9b9e59b,
+        type: 3}
+      propertyPath: EnableBoxMullerNoise
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367901733237620766, guid: e9a4c88a81229c7f39c3b861e9b9e59b,
+        type: 3}
+      propertyPath: Setting.AngVelSigma.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7367901733237620766, guid: e9a4c88a81229c7f39c3b861e9b9e59b,
+        type: 3}
+      propertyPath: Setting.AngVelSigma.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9a4c88a81229c7f39c3b861e9b9e59b, type: 3}

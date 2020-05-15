@@ -14,6 +14,8 @@ public class ImuSensorEditor : Editor
     // inspectorのGUI設定
     public override void OnInspectorGUI()
     {
+        EditorGUI.BeginChangeCheck();
+        
         _target.Topic = EditorGUILayout.TextField("Topic", _target.Topic);
         _target.FrameId = EditorGUILayout.TextField("FrameId", _target.FrameId);
         _target.EnableNoise = EditorGUILayout.ToggleLeft("EnableNoise", _target.EnableNoise);
@@ -34,6 +36,12 @@ public class ImuSensorEditor : Editor
                 _target.Setting.AngVelBias = EditorGUILayout.Vector3Field("AngularVelocity", _target.Setting.AngVelBias);
                 _target.Setting.LinAccBias = EditorGUILayout.Vector3Field("LinearAcceleration", _target.Setting.LinAccBias);
             }
+        }
+
+        // GUIの更新があったら実行
+        if (EditorGUI.EndChangeCheck())
+        {
+            EditorUtility.SetDirty(_target);
         }
     }
 }
