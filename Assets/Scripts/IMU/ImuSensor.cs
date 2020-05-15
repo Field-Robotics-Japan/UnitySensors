@@ -61,12 +61,10 @@ namespace RosSharp.RosBridgeClient
             message.linear_acceleration = GetLinearAcceleration(transform, rigidbody);
 
             if (EnableNoise)
-            {
+            {   // apply Noise
                 if (EnableBoxMullerNoise) applyBoxMuller(ref message);
                 if (EnableBiasNoise) applyBias(ref message);
             }
-
-            Debug.Log(message.angular_velocity.z);
 
             Publish(message);
         }
