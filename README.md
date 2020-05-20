@@ -1,5 +1,9 @@
 # sensor_unity
-<!-- [![unit04_test](.image/unit04_test.gif)](https://www.youtube.com/watch?v=C1V_L85p0-I)   -->
+
+[![Acquire activation file](https://github.com/Field-Robotics-Japan/sensors_unity/workflows/Acquire%20activation%20file/badge.svg)](https://github.com/Field-Robotics-Japan/sensors_unity/actions?query=workflow%3A%22Acquire+activation+file%22)
+[![CI](https://github.com/Field-Robotics-Japan/sensors_unity/workflows/CI/badge.svg)](https://github.com/Field-Robotics-Japan/sensors_unity/actions?query=workflow%3ACI)
+
+[![unit04_test](https://github.com/Field-Robotics-Japan/unit04_unity/blob/master/.image/unit04_test.gif)](https://www.youtube.com/watch?v=C1V_L85p0-I)  
 Robot sensor packages available on Unity.
 You can communicate sensor info via ROS using ROS#.  
 
@@ -10,7 +14,7 @@ The following sensors are added.
 - IMU
 
 There are several Prefab and Scene files available for testing each sensor.
-Check here for more information.
+Check [here](https://github.com/Field-Robotics-Japan/sensors_unity/tree/develop/Assets/Scenes) for more information.
 
 # How to use (ROS)
 ## 1. Launch ROS packages
