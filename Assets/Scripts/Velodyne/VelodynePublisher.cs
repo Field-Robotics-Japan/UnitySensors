@@ -13,7 +13,6 @@ namespace RosSharp.RosBridgeClient
         private List<MessageTypes.Velodyne.VelodynePacket> packets;
         private int[] laserIdxs1 = { 0,8 ,1,9, 2,10, 3,11, 4,12, 5,13, 6,14,  7, 15};
         private float elapsedTime = 0.0f;
-        private const float processInterval = 0.001f;
         public int numDataBlocks = 12;
         public static DateTime UNIX_EPOCH = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
         public float rate = 10.0f;
@@ -157,7 +156,7 @@ namespace RosSharp.RosBridgeClient
             {
                 if (lidar.IsInitialized())
                 {
-                    if (Time.time > elapsedTime - processInterval)
+                    if (Time.time >= elapsedTime)
                     {
                         elapsedTime = Time.time + 1.0f / rate;
                         lidar.Scan();
