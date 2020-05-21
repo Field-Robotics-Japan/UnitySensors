@@ -16,6 +16,7 @@ public class Lidar : MonoBehaviour {
     [HideInInspector]
     public float[] distances;
     public float[] azimuts;
+    private bool isInitialized = false;
 
 
     // Use this for initialization
@@ -24,10 +25,11 @@ public class Lidar : MonoBehaviour {
         azimuts = new float[numberOfIncrements];
         vertIncrement = (float)(maxAngle - minAngle) / (float)(numberOfLayers - 1);
         azimutIncrAngle = (float)(360.0f / numberOfIncrements);
+        isInitialized = true;
     }
 
 // Update is called once per frame
-void FixedUpdate () {
+    public void Scan () {
         Vector3 fwd = new Vector3(0, 0, 1);
         Vector3 dir;
         RaycastHit hit;
@@ -58,5 +60,9 @@ void FixedUpdate () {
             }
         }
 
+    }
+
+    public bool IsInitialized () {
+        return isInitialized;
     }
 }
