@@ -164,7 +164,7 @@ namespace RosSharp.RosBridgeClient
                         PublishVelodyneData();
                     }
                 }
-                yield return new WaitForSeconds(processInterval);
+                yield return null;
             }
         }
     }
