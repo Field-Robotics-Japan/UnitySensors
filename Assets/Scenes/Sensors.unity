@@ -314,7 +314,32 @@ PrefabInstance:
     - target: {fileID: 2348453325183345179, guid: d6ec601ec6cdfc03b9a08fc86740f18c,
         type: 3}
       propertyPath: numberOfIncrements
-      value: 3600
+      value: 1800
+      objectReference: {fileID: 0}
+    - target: {fileID: 2348453325183345179, guid: d6ec601ec6cdfc03b9a08fc86740f18c,
+        type: 3}
+      propertyPath: pointColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2348453325183345179, guid: d6ec601ec6cdfc03b9a08fc86740f18c,
+        type: 3}
+      propertyPath: pointColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2348453325183345179, guid: d6ec601ec6cdfc03b9a08fc86740f18c,
+        type: 3}
+      propertyPath: pointColor.b
+      value: 0.18825626
+      objectReference: {fileID: 0}
+    - target: {fileID: 2348453325183345179, guid: d6ec601ec6cdfc03b9a08fc86740f18c,
+        type: 3}
+      propertyPath: pointColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2348453325183345179, guid: d6ec601ec6cdfc03b9a08fc86740f18c,
+        type: 3}
+      propertyPath: pointSize
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 6528621286637279778, guid: d6ec601ec6cdfc03b9a08fc86740f18c,
         type: 3}
