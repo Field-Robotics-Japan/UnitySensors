@@ -13,11 +13,11 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-45519
+34831
 Successfully changed project path to: /home/ryodo/workspace/Unity/UnitySensorsROSAssets
 /home/ryodo/workspace/Unity/UnitySensorsROSAssets
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 34.42 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 40.37 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.14f1 (d0d1bb862f9d)
 [Subsystems] Discovering subsystems at path /home/ryodo/Unity/Hub/Editor/2020.3.14f1/Editor/Data/Resources/UnitySubsystems
@@ -33,56 +33,56 @@ int_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program
 L_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map_array GL_ARB_texture_filter_anisotropic GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewpor
 t_array GL_ATI_blend_equation_separate GL_ATI_texture_float GL_EXT_EGL_image_storage GL_EXT_EGL_sync GL_EXT_abgr GL_EXT_blend_equation_separate GL_EXT_demote_to_helper_invocation GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_pixel_buffer_object GL_EXT_polygon_offset_clamp GL_EXT_provoking_vertex GL_EXT_semaphore GL_EXT_semaphore_fd GL_EXT_shader_framebuffer_fetch GL_EXT_shader_framebuffer_fetch_non_coherent GL_EXT_shader_integer_mix GL_EXT_shader_samples_identical GL_EXT_texture_array GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_filter_anisotropic GL_EXT_texture_integer GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_snorm GL_EXT_texture_swizzle GL_EXT_ti
 mer_query GL_EXT_transform_feedback GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_IBM_multimode_draw_arrays GL_INTEL_blackhole_render GL_INTEL_conservative_rasterization GL_INTEL_performance_query GL_INTEL_shader_atomic_float_minmax GL_INTEL_shader_integer_functions2 GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent GL_KHR_context_flush_control GL_KHR_debug GL_KHR_no_error GL_KHR_parallel_shader_compile GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_KHR_texture_compression_astc_ldr GL_KHR_texture_compression_astc_sliced_3d GL_MESA_framebuffer_flip_y GL_MESA_pack_invert GL_MESA_shader_integer_functions GL_MESA_texture_signed_rgba GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_copy_image GL_NV_depth_clamp GL_NV_fragment_shader_interlock GL_NV_packed_depth_stencil GL_NV_texture_barrier GL_OES_EGL_image GL_S3_s3tc
-OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle 197353648
+OPENGL LOG: Creating OpenGL 4.6 graphics device ; Context level  <OpenGL 4.5> ; Context handle -271911408
 Initialize mono
 Mono path[0] = '/home/ryodo/Unity/Hub/Editor/2020.3.14f1/Editor/Data/Managed'
 Mono path[1] = '/home/ryodo/Unity/Hub/Editor/2020.3.14f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/home/ryodo/Unity/Hub/Editor/2020.3.14f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56295
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56193
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /home/ryodo/Unity/Hub/Editor/2020.3.14f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: /home/ryodo/Unity/Hub/Editor/2020.3.14f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.002855 seconds.
+Registered in 0.002895 seconds.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 47.13 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 74.33 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.485 seconds
+- Completed reload, in  2.182 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1485ms)
+	ReloadAssembly (2183ms)
 		BeginReloadAssembly (32ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (555ms)
-			LoadAssemblies (33ms)
+		EndReloadAssembly (890ms)
+			LoadAssemblies (31ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (209ms)
+			SetupTypeCache (300ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (47ms)
-			SetupLoadedEditorAssemblies (228ms)
+			RebuildScriptCaches (107ms)
+			SetupLoadedEditorAssemblies (366ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (47ms)
-				BeforeProcessingInitializeOnLoad (7ms)
-				ProcessInitializeOnLoadAttributes (126ms)
-				ProcessInitializeOnLoadMethodAttributes (39ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (74ms)
+				BeforeProcessingInitializeOnLoad (11ms)
+				ProcessInitializeOnLoadAttributes (185ms)
+				ProcessInitializeOnLoadMethodAttributes (83ms)
 				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (0ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003044 seconds.
+Registered in 0.007582 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 74.07 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 57.51 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 More than one message was registered as "rosgraph_msgs/Clock" "Default"
 UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
@@ -98,45 +98,45 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes () (at /hom
 (Filename: Library/PackageCache/com.unity.robotics.ros-tcp-connector@7f055108f4/Runtime/MessageGeneration/MessageRegistry.cs Line: 28)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  2.698 seconds
+- Completed reload, in  2.689 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2699ms)
-		BeginReloadAssembly (276ms)
+	ReloadAssembly (2690ms)
+		BeginReloadAssembly (344ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
+			DisableScriptedObjects (11ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (44ms)
-		EndReloadAssembly (2286ms)
-			LoadAssemblies (219ms)
+			CreateAndSetChildDomain (51ms)
+		EndReloadAssembly (2196ms)
+			LoadAssemblies (170ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (730ms)
+			SetupTypeCache (577ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (102ms)
-			SetupLoadedEditorAssemblies (960ms)
+			RebuildScriptCaches (91ms)
+			SetupLoadedEditorAssemblies (1145ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
+				InitializePlatformSupportModulesInManaged (9ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (74ms)
-				BeforeProcessingInitializeOnLoad (109ms)
-				ProcessInitializeOnLoadAttributes (714ms)
-				ProcessInitializeOnLoadMethodAttributes (42ms)
-				AfterProcessingInitializeOnLoad (8ms)
-				EditorAssembliesLoaded (0ms)
+				RefreshPlugins (58ms)
+				BeforeProcessingInitializeOnLoad (97ms)
+				ProcessInitializeOnLoadAttributes (907ms)
+				ProcessInitializeOnLoadMethodAttributes (60ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
+			AwakeInstancesAfterBackupRestoration (20ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
-Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.83 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1883 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 79.4 MB.
 System memory in use after: 79.4 MB.
 
 Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2316.
-Total: 5.619977 ms (FindLiveObjects: 0.318549 ms CreateObjectMapping: 0.152626 ms MarkObjects: 4.813826 ms  DeleteObjects: 0.332600 ms)
+Total: 8.600330 ms (FindLiveObjects: 0.446839 ms CreateObjectMapping: 0.242952 ms MarkObjects: 7.504501 ms  DeleteObjects: 0.403482 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -149,158 +149,25 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/UnitySensorsROSAssets/Resources/Hokuyo/aaa.prefab
-  artifactKey: Guid(9c617fb1c0661c449ac62c251741dfe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnitySensorsROSAssets/Resources/Hokuyo/aaa.prefab using Guid(9c617fb1c0661c449ac62c251741dfe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b9767a0c6c97048177b52be09974f6d') in 0.159114 seconds 
-  Import took 0.165966 seconds .
+  path: Assets/UnitySensorsROSAssets/RawData/RGBCamera/logitech-c910.fbx
+  artifactKey: Guid(13786b1b2aaec4c2eabf77965ec0b4e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnitySensorsROSAssets/RawData/RGBCamera/logitech-c910.fbx using Guid(13786b1b2aaec4c2eabf77965ec0b4e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd53af6632c3d63e71fcb72da9044b00') in 0.319871 seconds 
+  Import took 0.328089 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.010862 seconds.
-  path: Assets/UnitySensorsROSAssets/Resources/Hokuyo/aaa.prefab
-  artifactKey: Guid(9c617fb1c0661c449ac62c251741dfe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnitySensorsROSAssets/Resources/Hokuyo/aaa.prefab using Guid(9c617fb1c0661c449ac62c251741dfe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b9767a0c6c97048177b52be09974f6d') in 0.013609 seconds 
-  Import took 0.022326 seconds .
+  Time since last request: 232.846661 seconds.
+  path: Assets/UnitySensorsROSAssets/Resources/ROSClock/ROSClock.prefab
+  artifactKey: Guid(7a5388d59725a499f8140eda39b5e799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnitySensorsROSAssets/Resources/ROSClock/ROSClock.prefab using Guid(7a5388d59725a499f8140eda39b5e799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1d918bfc8f784cedbf6d9d5a92bd4c5') in 0.005726 seconds 
+  Import took 0.010432 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.755038 seconds.
-  path: Assets/UnitySensorsROSAssets/Resources/Hokuyo/ust_30lx.fbx
-  artifactKey: Guid(1373fdea0a99786dc837a5cfb2da0047) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnitySensorsROSAssets/Resources/Hokuyo/ust_30lx.fbx using Guid(1373fdea0a99786dc837a5cfb2da0047) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd49a1b7b5f8544ec657146aafd8cbaa1') in 0.124868 seconds 
-  Import took 0.128899 seconds .
+  Time since last request: 0.003229 seconds.
+  path: Assets/UnitySensorsROSAssets/Resources/ROSClock/ROSClock.prefab
+  artifactKey: Guid(7a5388d59725a499f8140eda39b5e799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UnitySensorsROSAssets/Resources/ROSClock/ROSClock.prefab using Guid(7a5388d59725a499f8140eda39b5e799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1d918bfc8f784cedbf6d9d5a92bd4c5') in 0.004116 seconds 
+  Import took 0.008419 seconds .
 
-========================================================================
-Received Import Request.
-  Time since last request: 46.832187 seconds.
-  path: Assets/UnitySensorsROSAssets/RawData/Velodyne/puck.fbx
-  artifactKey: Guid(7083e14fd9d4fe124995a89ef0853497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnitySensorsROSAssets/RawData/Velodyne/puck.fbx using Guid(7083e14fd9d4fe124995a89ef0853497) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '453b3f1da56b4e3bee915769c19f77e9') in 0.038514 seconds 
-  Import took 0.042165 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.736533 seconds.
-  path: Assets/UnitySensorsROSAssets/RawData/Hokuyo/ust_30lx.fbx
-  artifactKey: Guid(c75feb773b973d81fac1799050bf0eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnitySensorsROSAssets/RawData/Hokuyo/ust_30lx.fbx using Guid(c75feb773b973d81fac1799050bf0eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63c1b14d7270fa9f07452bb8fd3c3b20') in 0.065163 seconds 
-  Import took 0.071338 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001879 seconds.
-  path: Assets/UnitySensorsROSAssets/RawData/Hokuyo/ust_30lx.fbx
-  artifactKey: Guid(c75feb773b973d81fac1799050bf0eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnitySensorsROSAssets/RawData/Hokuyo/ust_30lx.fbx using Guid(c75feb773b973d81fac1799050bf0eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63c1b14d7270fa9f07452bb8fd3c3b20') in 0.053938 seconds 
-  Import took 0.069547 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 116.229607 seconds.
-  path: Assets/UnitySensorsROSAssets/RawData/Hokuyo/ust_30lx.fbx
-  artifactKey: Guid(c75feb773b973d81fac1799050bf0eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnitySensorsROSAssets/RawData/Hokuyo/ust_30lx.fbx using Guid(c75feb773b973d81fac1799050bf0eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f13a12fb7567ec9983e7ff79bc5ff5f8') in 0.063949 seconds 
-  Import took 0.070942 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005450 seconds.
-  path: Assets/UnitySensorsROSAssets/RawData/Hokuyo/ust_30lx.fbx
-  artifactKey: Guid(c75feb773b973d81fac1799050bf0eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnitySensorsROSAssets/RawData/Hokuyo/ust_30lx.fbx using Guid(c75feb773b973d81fac1799050bf0eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f13a12fb7567ec9983e7ff79bc5ff5f8') in 0.050594 seconds 
-  Import took 0.056791 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 138.457232 seconds.
-  path: Assets/UnitySensorsROSAssets/RawData/Hokuyo/ust_30lx.fbx
-  artifactKey: Guid(c75feb773b973d81fac1799050bf0eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnitySensorsROSAssets/RawData/Hokuyo/ust_30lx.fbx using Guid(c75feb773b973d81fac1799050bf0eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58667b89e02b690e0ccbf2dbd8662d68') in 0.073110 seconds 
-  Import took 0.083889 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 206.057733 seconds.
-  path: Assets/UnitySensorsROSAssets/Resources/Hokuyo/UST-30LX.prefab
-  artifactKey: Guid(4b45773bf370816bda449c53d74fe86a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnitySensorsROSAssets/Resources/Hokuyo/UST-30LX.prefab using Guid(4b45773bf370816bda449c53d74fe86a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e9131b43b7bee6b594a0c9e6d3f7c7c') in 0.028389 seconds 
-  Import took 0.032232 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 340.107442 seconds.
-  path: Assets/UnitySensorsROSAssets/Resources/Hokuyo/UST-30LX.prefab
-  artifactKey: Guid(4b45773bf370816bda449c53d74fe86a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UnitySensorsROSAssets/Resources/Hokuyo/UST-30LX.prefab using Guid(4b45773bf370816bda449c53d74fe86a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca155dbd448c873257d8d28fcc75d51d') in 0.022559 seconds 
-  Import took 0.027208 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006801 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-More than one message was registered as "rosgraph_msgs/Clock" "Default"
-UnityEngine.StackTraceUtility:ExtractStackTrace () (at /home/bokken/buildslave/unity/build/Runtime/Export/Scripting/StackTrace.cs:37)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-Unity.Robotics.ROSTCPConnector.MessageGeneration.MessageRegistry:Register<RosMessageTypes.Rosgraph.ClockMsg> (string,System.Func`2<Unity.Robotics.ROSTCPConnector.MessageGeneration.MessageDeserializer, RosMessageTypes.Rosgraph.ClockMsg>,Unity.Robotics.ROSTCPConnector.MessageGeneration.MessageSubtopic) (at Library/PackageCache/com.unity.robotics.ros-tcp-connector@7f055108f4/Runtime/MessageGeneration/MessageRegistry.cs:28)
-RosMessageTypes.Rosgraph.ClockMsg:Register () (at Assets/UnitySensorsROS/Scripts/Runtime/Messages/Rosgraph/msg/ClockMsg.cs:57)
-System.Reflection.MonoMethod:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes () (at /home/bokken/buildslave/unity/build/Editor/Mono/EditorAssemblies.cs:154)
-
-(Filename: Library/PackageCache/com.unity.robotics.ros-tcp-connector@7f055108f4/Runtime/MessageGeneration/MessageRegistry.cs Line: 28)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  2.909 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2909ms)
-		BeginReloadAssembly (280ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (11ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (123ms)
-		EndReloadAssembly (2441ms)
-			LoadAssemblies (191ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (818ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (133ms)
-			SetupLoadedEditorAssemblies (989ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (11ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (161ms)
-				ProcessInitializeOnLoadAttributes (763ms)
-				ProcessInitializeOnLoadMethodAttributes (43ms)
-				AfterProcessingInitializeOnLoad (9ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (13ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.67 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1878 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 81.1 MB.
-System memory in use after: 81.2 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2363.
-Total: 4.910646 ms (FindLiveObjects: 0.353117 ms CreateObjectMapping: 0.186990 ms MarkObjects: 4.278380 ms  DeleteObjects: 0.090492 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
