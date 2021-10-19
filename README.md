@@ -1,27 +1,28 @@
-# sensor_unity
+# UnitySensorsROSAssets
 
-[![Acquire activation file](https://github.com/Field-Robotics-Japan/sensors_unity/workflows/Acquire%20activation%20file/badge.svg)](https://github.com/Field-Robotics-Japan/sensors_unity/actions?query=workflow%3A%22Acquire+activation+file%22)
-[![CI](https://github.com/Field-Robotics-Japan/sensors_unity/workflows/CI/badge.svg)](https://github.com/Field-Robotics-Japan/sensors_unity/actions?query=workflow%3ACI)
+[![Acquire activation file](https://github.com/Field-Robotics-Japan/UnitySensorsROSAssets/workflows/Acquire%20activation%20file/badge.svg)](https://github.com/Field-Robotics-Japan/UnitySensorsROSAssets/actions?query=workflow%3A%22Acquire+activation+file%22)
+[![CI](https://github.com/Field-Robotics-Japan/UnitySensorsROSAssets/workflows/CI/badge.svg)](https://github.com/Field-Robotics-Japan/UnitySensorsROSAssets/actions?query=workflow%3ACI)
 
-[![unit04_test](https://github.com/Field-Robotics-Japan/unit04_unity/blob/master/.image/unit04_test.gif)](https://www.youtube.com/watch?v=C1V_L85p0-I)  
+![unity_sensors_ros_assets](.imae/unity_sensors_ros_assets.gif)
 Robot sensor packages available on Unity.
-You can communicate sensor info via ROS using ROS#.  
+You can communicate sensor info via ROS and ROS2 using ROSTCPConnector and ROSTCPEndpoint.  
 
 The following sensors are added.
 
-- Velodyne Pack (VLP16)
-- RGB Camera
+- 3D LiDAR (Velodyne VLP-16)
+- 2D LiDAR (Hokuyo UST-30LX)
+- RGB Camera (Logitech C910)
 - IMU
 
 There are several Prefab and Scene files available for testing each sensor.
-Check [here](https://github.com/Field-Robotics-Japan/sensors_unity/tree/develop/Assets/Scenes) for more information.
+Check [this directory](https://github.com/Field-Robotics-Japan/sensors_unity/tree/develop/Assets/Scenes).
 
 # How to use (ROS)
 ## 1. Launch ROS packages
-### 1-1 rosbridge
-Launch the `rosbridge` with following command.
+### 1-1 ros_tcp_endpoint
+Launch the `ros_tcp_endpoint` with following command.
 ```bash
-$ roslaunch rosbridge_server rosbridge_websocket.launch address:=localhost
+roslaunch ros_tcp_endpoint endpoint.launch 
 ```
 
 ### 1-2 Sensors
@@ -33,7 +34,7 @@ Please create launch file by copy and paste following script.
   <arg name="calibration" default="$(find velodyne_pointcloud)/params/VLP16db.yaml" />
   <arg name="manager" default="velodyne_pointcloud" />
   <arg name="max_range" default="100.0" />
-  <arg name="min_range" default="0.9" />
+  <arg name="min_range" default="0.1" />
 
   <node pkg="velodyne_pointcloud" type="cloud_node" name="$(arg manager)">
     <param name="model" value="VLP16"/>
@@ -80,7 +81,7 @@ It can be used in the same way as a normal IMU sensor.
 You can try all the sensors in the "`Sensors`" scene file.
 
 # LICENSE
-Copyright [2020] Ryodo Tanaka groadpg@gmail.com
+Copyright [2020-2021] Ryodo Tanaka groadpg@gmail.com
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
@@ -89,4 +90,4 @@ http://www.apache.org/licenses/LICENSE-2.0
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
 ## Dependencies
-- [RosSharp](https://github.com/siemens/ros-sharp) (Apache2.0 License)
+- [RosTCPConnector](https://github.com/Unity-Technologies/ROS-TCP-Connector) (Appache 2.0 LICENSE)
