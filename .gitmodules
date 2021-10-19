@@ -1,0 +1,6 @@
+[submodule "Assets/UnitySensorsROS"]
+	path = Assets/UnitySensorsROS
+	url = git@github.com:Field-Robotics-Japan/UnitySensorsROS.git
+[submodule "Assets/UnitySensors"]
+	path = Assets/UnitySensors
+	url = git@github.com:Field-Robotics-Japan/UnitySensors.git
