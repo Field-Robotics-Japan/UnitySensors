@@ -28,7 +28,10 @@ roslaunch ros_tcp_endpoint endpoint.launch
 ### 1-2 Sensors
 #### 1-2-1 velodyne_pointcloud
 Launch the `velodyne_pointcloud` package with following launch file.  
-Please create launch file by copy and paste following script.
+Please create launch file by copy and paste following script.  
+**The version of `velodyne_pointcloud` package should be later than 1.6.0.**  
+If you fail to lanch following launch file, please download velodyne package directoly into your workspace, build it, and launch them again.  
+https://github.com/ros-drivers/velodyne
 ```xml
 <launch>
   <arg name="calibration" default="$(find velodyne_pointcloud)/params/VLP16db.yaml" />
@@ -36,7 +39,7 @@ Please create launch file by copy and paste following script.
   <arg name="max_range" default="100.0" />
   <arg name="min_range" default="0.1" />
 
-  <node pkg="velodyne_pointcloud" type="cloud_node" name="$(arg manager)">
+  <node pkg="velodyne_pointcloud" type="transform_node" name="$(arg manager)">
     <param name="model" value="VLP16"/>
     <param name="calibration" value="$(arg calibration)"/>
     <param name="max_range" value="$(arg max_range)"/>
