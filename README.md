@@ -77,7 +77,7 @@ If you want to check the images in Rviz, you don't need to use the above launch 
 It can be used in the same way as a normal IMU sensor.
 
 ## 2. Clone and run on Unity
-1. Just to clone this repo with `git clone` command.
+1. Just to clone this repo with `git clone --recursive https://github.com/Field-Robotics-Japan/UnitySensorsROSAssets.git` command.
 1. Then, open the project file with UnityHub.
 1. Finally, run the scene file for the sensor you want to test.
 
