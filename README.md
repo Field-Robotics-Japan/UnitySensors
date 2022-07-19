@@ -38,12 +38,14 @@ https://github.com/ros-drivers/velodyne
   <arg name="manager" default="velodyne_pointcloud" />
   <arg name="max_range" default="100.0" />
   <arg name="min_range" default="0.1" />
+  <arg name="frame_id" default="velodyne" />
 
   <node pkg="velodyne_pointcloud" type="transform_node" name="$(arg manager)">
     <param name="model" value="VLP16"/>
     <param name="calibration" value="$(arg calibration)"/>
     <param name="max_range" value="$(arg max_range)"/>
     <param name="min_range" value="$(arg min_range)"/>
+    <param name="frame_id" value="$(arg frame_id)"/>
     <!-- <param name="view_direction" value="0"/> -->
     <!-- <param name="view_width" value="360"/> -->
   </node>
