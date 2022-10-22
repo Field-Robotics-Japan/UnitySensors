@@ -16,7 +16,47 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 557aba88001ff65f5bd763098c04b874
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 0ab228516eb63f9428739154e0f7bd67
+    m_Address: Assets/UnitySensors/RawData/CSV/Livox/avia.csv
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9a2a0beb1d0334a4d97eea91212c26cc
+    m_Address: Assets/UnitySensors/RawData/CSV/Livox/avia_24000.csv
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2c44e703b2735ba4f9c004dff17bf832
+    m_Address: horizon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 36c2cfa0ff7c3f8459a6fb674533da17
+    m_Address: horizon_24000
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: efc6d072c533cd64ba3e298156bca648
+    m_Address: mid40
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f162ea5dc1b3e3f4381131b091a91e90
+    m_Address: mid40_24000
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bdc06d7e28746a241930be13e10a1298
+    m_Address: mid70
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d7951d6fecc3ff14aad7c16bf3f11122
+    m_Address: mid70_10000
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: acb74fde3af62e64d91c52c11c500553
+    m_Address: tele
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0b0ee4651e6d088459d609620e918876
+    m_Address: tele_24000
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: a8b41513afff104b987e38b80773665d, type: 2}
   m_SchemaSet:
