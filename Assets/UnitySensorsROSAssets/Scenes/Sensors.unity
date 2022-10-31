@@ -1756,6 +1756,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Livox Mid70
       objectReference: {fileID: 0}
+    - target: {fileID: 4581981656350524615, guid: 46d8efdce160e84109f206113bddd4f6,
+        type: 3}
+      propertyPath: _frameId
+      value: mid70
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581981656350524615, guid: 46d8efdce160e84109f206113bddd4f6,
+        type: 3}
+      propertyPath: _topicName
+      value: mid70/points
+      objectReference: {fileID: 0}
     - target: {fileID: 4581981656350524634, guid: 46d8efdce160e84109f206113bddd4f6,
         type: 3}
       propertyPath: m_RootOrder
@@ -1764,7 +1774,7 @@ PrefabInstance:
     - target: {fileID: 4581981656350524634, guid: 46d8efdce160e84109f206113bddd4f6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.909
+      value: -1.9601
       objectReference: {fileID: 0}
     - target: {fileID: 4581981656350524634, guid: 46d8efdce160e84109f206113bddd4f6,
         type: 3}
@@ -1779,7 +1789,7 @@ PrefabInstance:
     - target: {fileID: 4581981656350524634, guid: 46d8efdce160e84109f206113bddd4f6,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4581981656350524634, guid: 46d8efdce160e84109f206113bddd4f6,
         type: 3}
@@ -1789,7 +1799,7 @@ PrefabInstance:
     - target: {fileID: 4581981656350524634, guid: 46d8efdce160e84109f206113bddd4f6,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4581981656350524634, guid: 46d8efdce160e84109f206113bddd4f6,
         type: 3}
@@ -1804,7 +1814,7 @@ PrefabInstance:
     - target: {fileID: 4581981656350524634, guid: 46d8efdce160e84109f206113bddd4f6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4581981656350524634, guid: 46d8efdce160e84109f206113bddd4f6,
         type: 3}
