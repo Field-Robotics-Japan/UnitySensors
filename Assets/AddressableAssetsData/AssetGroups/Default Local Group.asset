@@ -29,12 +29,32 @@ MonoBehaviour:
     m_Address: horizon
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 36c2cfa0ff7c3f8459a6fb674533da17
+    m_Address: horizon_24000
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: efc6d072c533cd64ba3e298156bca648
     m_Address: mid40
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: f162ea5dc1b3e3f4381131b091a91e90
+    m_Address: mid40_24000
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bdc06d7e28746a241930be13e10a1298
+    m_Address: mid70
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d7951d6fecc3ff14aad7c16bf3f11122
+    m_Address: mid70_10000
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: acb74fde3af62e64d91c52c11c500553
     m_Address: tele
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0b0ee4651e6d088459d609620e918876
+    m_Address: tele_24000
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0
