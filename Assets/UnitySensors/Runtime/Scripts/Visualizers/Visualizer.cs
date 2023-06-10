@@ -5,9 +5,15 @@ using UnityEngine;
 using UnitySensors;
 
 namespace UnitySensors.Visualization
-{
+{ 
+    /// <summary>
+    /// T( : Sensor)が取得したデータをGizmosで可視化する
+    /// </summary>   
     public class Visualizer<T> : MonoBehaviour where T : Sensor
     {
+        /// <summary>
+        /// 球の可視化設定
+        /// </summary>   
         [System.Serializable]
         protected class SphereSetting
         {
@@ -15,6 +21,9 @@ namespace UnitySensors.Visualization
             public float radius = 0.5f;
         }
 
+        /// <summary>
+        /// 線の可視化設定
+        /// </summary>   
         [System.Serializable]
         protected class LineSetting
         {
@@ -23,11 +32,14 @@ namespace UnitySensors.Visualization
             public float lineLengthFactor = 1.0f;
         }
 
+        /// <summary>
+        /// 可視化モード設定
+        /// </summary>   
         protected enum VisualizeMode
         {
-            NONE,
-            SELECTED,
-            ALWAYS
+            NONE,       // 表示なし
+            SELECTED,   // オブジェクトが選択された時のみ表示
+            ALWAYS      // 常時表示
         }
 
         [SerializeField]
@@ -57,6 +69,9 @@ namespace UnitySensors.Visualization
             Visualize();
         }
 
+        /// <summary>
+        /// 可視化関数の仮想関数
+        /// </summary>   
         protected virtual void Visualize()
         {
         }
