@@ -36,7 +36,7 @@ namespace UnitySensors.Visualization
             if (!_scanPattern) return;
             if (!_scanPattern.loaded) return;
 
-            if (!_transform) _transform = _target.transform;
+            if (!_transform) _transform = transform;
 
             int counter_old = (_counter==0 ? _scanPattern.size - 1 : _counter - 1);
             for(int i = 0; i < _drawNumPerVisualize; i++)
