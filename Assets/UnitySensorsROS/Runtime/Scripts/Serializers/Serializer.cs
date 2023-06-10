@@ -7,6 +7,7 @@ using RosMessageTypes.Std;
 
 namespace UnitySensors.ROS
 {
+    [System.Serializable]
     public class Serializer
     {
         protected class AutoHeader

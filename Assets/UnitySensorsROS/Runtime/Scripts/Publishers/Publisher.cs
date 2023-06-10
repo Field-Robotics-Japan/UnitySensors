@@ -7,13 +7,14 @@ using UnitySensors;
 
 namespace UnitySensors.ROS
 {
-    public class Publisher<T> : MonoBehaviour where T : Sensor
+    public class Publisher<T, TT> : MonoBehaviour where T : Sensor where TT : Serializer, new()
     {
         [SerializeField]
         private float _frequency = 10.0f;
 
         protected ROSConnection _ros;
         protected T _sensor;
+        protected TT _serializer;
 
         protected float _time_now = 0.0f;
         private float _time_old = 0.0f;
@@ -24,6 +25,7 @@ namespace UnitySensors.ROS
         {
             _ros = ROSConnection.GetOrCreateInstance();
             _sensor = GetComponent<T>();
+            _serializer = new TT();
         }
 
         protected virtual void Start()
