@@ -1,0 +1,16 @@
+{
+    "name": "com.frj.unity-sensors",
+    "version": "0.1.1",
+    "displayName": "UnitySensors",
+    "description": "",
+    "unity": "2021.3",
+    "dependencies": {
+    },
+    "keywords": [
+        "unitysensors",
+        "robot",
+        "robotics",
+        "sensor",
+        "simulation"
+    ]
+}
