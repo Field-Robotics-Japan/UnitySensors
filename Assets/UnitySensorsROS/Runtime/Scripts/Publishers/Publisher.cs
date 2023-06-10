@@ -7,6 +7,9 @@ using UnitySensors;
 
 namespace UnitySensors.ROS
 {
+    /// <summary>
+    /// T( : Sensor)が取得したデータをTT( : Serializer)でシリアライズし、ROSトピックとしてPubする
+    /// </summary>
     public class Publisher<T, TT> : MonoBehaviour where T : Sensor where TT : Serializer, new()
     {
         [SerializeField]
@@ -36,6 +39,9 @@ namespace UnitySensors.ROS
             Init();
         }
 
+        /// <summary>
+        /// 初期化の仮想関数
+        /// </summary>
         protected virtual void Init()
         {
 
@@ -51,6 +57,9 @@ namespace UnitySensors.ROS
             }
         }
 
+        /// <summary>
+        /// ROSトピック送信の仮想関数
+        /// </summary>
         protected virtual void Publish(float time)
         {
 
