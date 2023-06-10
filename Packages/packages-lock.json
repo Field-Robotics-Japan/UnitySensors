@@ -69,7 +69,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "7f055108f43ab11ff297175a52af5d30fbac9d57"
+      "hash": "c27f00c6cf750d2d0564349b3039d19aa3925e7c"
     },
     "com.unity.services.core": {
       "version": "1.6.0",
