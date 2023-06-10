@@ -3,15 +3,18 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-#if UNITY_EDITOR
-[CustomPropertyDrawer(typeof(ReadOnlyAttribute))]
-public class ReadOnlyDrawer : PropertyDrawer
+namespace UnitySensors
 {
-    public override void OnGUI(Rect _position, SerializedProperty _property, GUIContent _label)
+#if UNITY_EDITOR
+    [CustomPropertyDrawer(typeof(ReadOnlyAttribute))]
+    public class ReadOnlyDrawer : PropertyDrawer
     {
-        EditorGUI.BeginDisabledGroup(true);
-        EditorGUI.PropertyField(_position, _property, _label);
-        EditorGUI.EndDisabledGroup();
+        public override void OnGUI(Rect _position, SerializedProperty _property, GUIContent _label)
+        {
+            EditorGUI.BeginDisabledGroup(true);
+            EditorGUI.PropertyField(_position, _property, _label);
+            EditorGUI.EndDisabledGroup();
+        }
     }
-}
 #endif
+}

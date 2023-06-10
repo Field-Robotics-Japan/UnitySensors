@@ -1,5 +1,8 @@
 using UnityEngine;
 
-public class ReadOnlyAttribute : PropertyAttribute
+namespace UnitySensors
 {
+    public class ReadOnlyAttribute : PropertyAttribute
+    {
+    }
 }
