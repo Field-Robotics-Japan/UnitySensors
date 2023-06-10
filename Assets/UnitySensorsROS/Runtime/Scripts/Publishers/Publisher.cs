@@ -17,6 +17,7 @@ namespace UnitySensors.ROS
 
         protected ROSConnection _ros;
         protected T _sensor;
+        [SerializeField]
         protected TT _serializer;
 
         protected float _time_now = 0.0f;
