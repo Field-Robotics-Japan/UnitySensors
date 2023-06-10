@@ -11,6 +11,7 @@ namespace UnitySensors.ROS
     [System.Serializable]
     public class IMUSerializer : Serializer
     {
+        [SerializeField]
         private ImuMsg _msg;
 
         private AutoHeader _header;
