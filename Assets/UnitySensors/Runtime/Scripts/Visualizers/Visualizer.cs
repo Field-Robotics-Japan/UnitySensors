@@ -70,7 +70,7 @@ namespace UnitySensors.Visualization
         }
 
         /// <summary>
-        /// ‰Â‹‰»ŠÖ”‚Ì‰¼‘zŠÖ”
+        /// ‰Â‹‰»‚Ì‰¼‘zŠÖ”
         /// </summary>   
         protected virtual void Visualize()
         {
