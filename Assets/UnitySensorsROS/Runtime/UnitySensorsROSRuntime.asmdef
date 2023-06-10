@@ -1,7 +1,10 @@
 {
     "name": "UnitySensorsROSRuntime",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:625bfc588fb96c74696858f2c467e978",
+        "GUID:e9a473e6ad03eae4a89800bf81bd1594"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
