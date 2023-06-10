@@ -14,7 +14,7 @@ namespace UnitySensors
             base.Start();
             _format = base._scriptableObject as NMEAFormat;
             if (_format) _format.Init();
-            else Debug.LogError("Type of GNSSFormat does not match.");
+            else Debug.LogError("Type of NMEAFormat does not match.");
         }
 
         public override void Update()
