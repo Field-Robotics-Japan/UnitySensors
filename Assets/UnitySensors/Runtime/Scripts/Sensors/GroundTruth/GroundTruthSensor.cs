@@ -12,6 +12,9 @@ namespace UnitySensors
         private Quaternion _rotation;
 
         private Transform _transform;
+
+        public Vector3 position { get => _position; }
+        public Quaternion rotation { get => _rotation; }
         protected override void Init()
         {
             _transform = transform;
