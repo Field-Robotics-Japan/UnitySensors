@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7875522723969563284
+--- !u!1 &6955153883381555123
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7875522723969563272}
-  - component: {fileID: 7875522723969563287}
-  - component: {fileID: 7875522723969563286}
-  - component: {fileID: 7875522723969563285}
+  - component: {fileID: 6955153883381555127}
+  - component: {fileID: 6955153883381555126}
+  - component: {fileID: 6955153883381555121}
+  - component: {fileID: 6955153883381555120}
   m_Layer: 0
-  m_Name: DepthCamera
+  m_Name: RGBCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7875522723969563272
+--- !u!4 &6955153883381555127
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7875522723969563284}
+  m_GameObject: {fileID: 6955153883381555123}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34,13 +34,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &7875522723969563287
+--- !u!20 &6955153883381555126
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7875522723969563284}
+  m_GameObject: {fileID: 6955153883381555123}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -77,41 +77,33 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &7875522723969563286
+--- !u!114 &6955153883381555121
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7875522723969563284}
+  m_GameObject: {fileID: 6955153883381555123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf70f25101c5d9f40a32e2e35f74d1e9, type: 3}
+  m_Script: {fileID: 11500000, guid: 1478023f72437a1488d09d4c2a1759c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 10
-  _mode: 2
   _resolution: {x: 640, y: 480}
-  _fov: 30
-  _minRange: 0.05
-  _maxRange: 30
   _quality: 100
---- !u!114 &7875522723969563285
+--- !u!114 &6955153883381555120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7875522723969563284}
+  m_GameObject: {fileID: 6955153883381555123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6323bc0aca7cccc48a027c576b1fdf07, type: 3}
+  m_Script: {fileID: 11500000, guid: f44df42047d0e73448f85d7c30b3d684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _visualizeMode: 2
+  _visualizeMode: 1
   _defaultColor: {r: 1, g: 1, b: 1, a: 1}
-  _output: {fileID: 0}
-  _point:
-    color: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
-    radius: 0.025
-  _maxPointNum: 1000
+  _image: {fileID: 0}
