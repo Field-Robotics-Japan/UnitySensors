@@ -10,10 +10,10 @@ namespace UnitySensors.ROS
     public class LivoxPublisher : Publisher<LivoxSensor, Serializer>
     {
         [SerializeField]
-        private string _topicName;
+        private string _topicName = "/livox/lidar";
 
         [SerializeField]
-        private string _frameId;
+        private string _frameId = "livox_frame";
 
         private PointCloud2Serializer _serializer_pc;
         private bool _init = false;
@@ -22,6 +22,8 @@ namespace UnitySensors.ROS
         {
             if (!_sensor.initialized) return;
             _ros.RegisterPublisher<PointCloud2Msg>(_topicName);
+
+            _serializer_pc = new PointCloud2Serializer();
             _serializer_pc.Init(_frameId, ref _sensor.points, _sensor.pointNum);
             _init = true;
         }
@@ -37,8 +39,9 @@ namespace UnitySensors.ROS
                 if (_sensor.initialized) Init();
                 return;
             }
+            _sensor.CompleteJob();
             _serializer_pc.Serialize(time);
-            _ros.Publish(_topicName, _serializer_pc.msg);
+            //_ros.Publish(_topicName, _serializer_pc.msg);
         }
     }
 }

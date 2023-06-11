@@ -64,13 +64,13 @@ namespace UnitySensors.ROS
 
         public PointCloud2Msg Serialize(float time)
         {
+            _handle = _job.Schedule(_pointNum, 1);
+            JobHandle.ScheduleBatchedJobs();
             _handle.Complete();
+
             _header.Serialize(time);
             _msg.data = _data.ToArray();
             _msg.header = _header.header;
-
-            _handle = _job.Schedule(_pointNum, 1);
-            JobHandle.ScheduleBatchedJobs();
 
             return _msg;
         }
