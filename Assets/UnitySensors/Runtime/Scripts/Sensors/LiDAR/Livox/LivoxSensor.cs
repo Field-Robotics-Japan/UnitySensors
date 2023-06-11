@@ -43,7 +43,7 @@ namespace UnitySensors
 
         public uint pointNum { get=>(uint)(_scanPattern.size / _scanSeparation);}
 
-    protected override void Init()
+        protected override void Init()
         {
             CreateSensor();
             SetupCamera();
