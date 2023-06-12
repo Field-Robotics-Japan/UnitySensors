@@ -24,7 +24,7 @@ namespace UnitySensors.ROS
             _ros.RegisterPublisher<PointCloud2Msg>(_topicName);
 
             _serializer_pc = new PointCloud2Serializer();
-            _serializer_pc.Init(_frameId, ref _sensor.points, _sensor.pointNum);
+            _serializer_pc.Init(_frameId, ref _sensor.points, _sensor.pointsNum);
             _init = true;
         }
         private void OnApplicationQuit()

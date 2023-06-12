@@ -42,7 +42,7 @@ namespace UnitySensors
         private NativeArray<int> _pixelIndices;
 
         private int _pointsNum;
-        public uint pointNum { get=>(uint)(_pointsNum);}
+        public uint pointsNum { get=>(uint)(_pointsNum);}
 
         protected override void Init()
         {
