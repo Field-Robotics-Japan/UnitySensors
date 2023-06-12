@@ -89,11 +89,12 @@ namespace UnitySensors
         }
         private void SetupIndicesAndDirections()
         {
-            _directions = new NativeArray<Vector3>(_pointsNum, Allocator.Persistent);
-            _pixelIndices = new NativeArray<int>(_pointsNum, Allocator.Persistent);
+            int scanPattern_size = _scanPattern.size;
+            _directions = new NativeArray<Vector3>(scanPattern_size, Allocator.Persistent);
+            _pixelIndices = new NativeArray<int>(scanPattern_size, Allocator.Persistent);
 
             float radius = _textureSize.y * 0.5f / Mathf.Tan(_cam.fieldOfView * 0.5f * Mathf.Deg2Rad);
-            for (int i = 0; i < _pointsNum; i++)
+            for (int i = 0; i < scanPattern_size; i++)
             {
                 _directions[i] = _scanPattern.scans[i];
 
