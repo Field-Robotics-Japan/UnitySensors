@@ -41,10 +41,12 @@ namespace UnitySensors
         private NativeArray<Vector3> _directions;
         private NativeArray<int> _pixelIndices;
 
-        public uint pointNum { get=>(uint)(_scanPattern.size / _scanSeparation);}
+        private int _pointsNum;
+        public uint pointNum { get=>(uint)(_pointsNum);}
 
         protected override void Init()
         {
+            _pointsNum = _scanPattern.size / _scanSeparation;
             CreateSensor();
             SetupCamera();
             SetupIndicesAndDirections();
@@ -87,13 +89,11 @@ namespace UnitySensors
         }
         private void SetupIndicesAndDirections()
         {
-            int pointsNum = _scanPattern.size;
-
-            _directions = new NativeArray<Vector3>(pointsNum, Allocator.Persistent);
-            _pixelIndices = new NativeArray<int>(pointsNum, Allocator.Persistent);
+            _directions = new NativeArray<Vector3>(_pointsNum, Allocator.Persistent);
+            _pixelIndices = new NativeArray<int>(_pointsNum, Allocator.Persistent);
 
             float radius = _textureSize.y * 0.5f / Mathf.Tan(_cam.fieldOfView * 0.5f * Mathf.Deg2Rad);
-            for (int i = 0; i < pointsNum; i++)
+            for (int i = 0; i < _pointsNum; i++)
             {
                 _directions[i] = _scanPattern.scans[i];
 
@@ -107,7 +107,7 @@ namespace UnitySensors
 
         private void SetupJob()
         {
-            points = new NativeArray<Vector3>(_scanPattern.size / _scanSeparation, Allocator.Persistent);
+            points = new NativeArray<Vector3>(_pointsNum, Allocator.Persistent);
             _job = new TextureToPointsJob()
             {
                 far = _maxRange,
@@ -139,7 +139,7 @@ namespace UnitySensors
                 }
             });
 
-            _handle = _job.Schedule(_scanPattern.size / _scanSeparation, 1);
+            _handle = _job.Schedule(_pointsNum, 1);
 
             JobHandle.ScheduleBatchedJobs();
         }
@@ -150,11 +150,6 @@ namespace UnitySensors
         }
 
         private void OnDestroy()
-        {
-            _rt.Release();
-        }
-
-        private void OnApplicationQuit()
         {
             _handle.Complete();
             _pixelIndices.Dispose();
