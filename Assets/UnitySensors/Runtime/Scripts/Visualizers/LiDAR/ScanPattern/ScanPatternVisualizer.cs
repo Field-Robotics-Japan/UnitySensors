@@ -14,7 +14,7 @@ namespace UnitySensors.Visualization
         }
 
         [SerializeField]
-        private ScanPattern _scanPattern;
+        private LiDARScanPattern _scanPattern;
 
         [SerializeField]
         private Mode _mode;

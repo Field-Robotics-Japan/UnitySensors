@@ -6,7 +6,7 @@ using UnityEditor;
 namespace UnitySensors
 {
     [CreateAssetMenu]
-    public class ScanPattern : ScriptableObject
+    public class LiDARScanPattern : ScriptableObject
     {
         [SerializeField]
         private TextAsset _file;

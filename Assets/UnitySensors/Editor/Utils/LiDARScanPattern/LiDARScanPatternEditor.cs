@@ -5,13 +5,13 @@ using UnityEditor;
 
 namespace UnitySensors
 {
-    [CustomEditor(typeof(ScanPattern))]
-    public class ScanPatternEditor : Editor
+    [CustomEditor(typeof(LiDARScanPattern))]
+    public class LiDARScanPatternEditor : Editor
     {
-        private ScanPattern _target;
+        private LiDARScanPattern _target;
         private void OnEnable()
         {
-            _target = target as ScanPattern;
+            _target = target as LiDARScanPattern;
         }
         public override void OnInspectorGUI()
         {
