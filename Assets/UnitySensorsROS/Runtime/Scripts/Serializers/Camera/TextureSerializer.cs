@@ -7,7 +7,7 @@ using RosMessageTypes.Sensor;
 
 namespace UnitySensors.ROS
 {
-    public class RGBCameraSerializer : Serializer
+    public class TextureSerializer : Serializer
     {
         private CompressedImageMsg _msg;
 

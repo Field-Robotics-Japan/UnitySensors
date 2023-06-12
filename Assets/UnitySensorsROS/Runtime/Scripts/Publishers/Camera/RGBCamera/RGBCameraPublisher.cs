@@ -7,7 +7,7 @@ using RosMessageTypes.Sensor;
 namespace UnitySensors.ROS
 {
     [RequireComponent(typeof(RGBCameraSensor))]
-    public class RGBCameraPublisher : Publisher<RGBCameraSensor, RGBCameraSerializer>
+    public class RGBCameraPublisher : Publisher<RGBCameraSensor, TextureSerializer>
     {
         [SerializeField]
         private string _topicName = "image";

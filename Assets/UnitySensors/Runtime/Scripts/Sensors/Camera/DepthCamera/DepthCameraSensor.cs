@@ -54,7 +54,7 @@ namespace UnitySensors
         public DepthCamerMode mode { get => _mode; }
         public int quality { get => _quality; }
         public Texture2D texture { get => _texture; }
-        public int pointsNum { get => _pointsNum; }
+        public uint pointsNum { get => (uint)_pointsNum; }
 
         protected override void Init()
         {
