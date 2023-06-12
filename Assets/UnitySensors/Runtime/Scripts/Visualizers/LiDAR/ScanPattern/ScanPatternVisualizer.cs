@@ -14,7 +14,7 @@ namespace UnitySensors.Visualization
         }
 
         [SerializeField]
-        private LiDARScanPattern _scanPattern;
+        private ScanPattern _scanPattern;
 
         [SerializeField]
         private Mode _mode;
@@ -34,7 +34,7 @@ namespace UnitySensors.Visualization
         protected override void Visualize()
         {
             if (!_scanPattern) return;
-            if (!_scanPattern.loaded) return;
+            if (!_scanPattern.generated) return;
 
             if (!_transform) _transform = transform;
 

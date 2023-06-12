@@ -13,7 +13,7 @@ namespace UnitySensors
     public class LivoxSensor : Sensor
     {
         [SerializeField]
-        private LiDARScanPattern _scanPattern;
+        private CSVLiDARScanPattern _scanPattern;
 
         [SerializeField]
         private int _scanSeparation = 40;
