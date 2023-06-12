@@ -96,7 +96,7 @@ MonoBehaviour:
   _visualizeMode: 2
   _defaultColor: {r: 1, g: 1, b: 1, a: 1}
   _point:
-    color: {r: 1, g: 1, b: 1, a: 1}
+    color: {r: 0, g: 0, b: 0, a: 1}
     radius: 0.02
   _maxPointNum: 1000
 --- !u!1 &4240999480699132564
