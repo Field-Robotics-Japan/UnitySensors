@@ -41,7 +41,7 @@ namespace UnitySensors.ROS
             }
             _sensor.CompleteJob();
             _serializer_pc.Serialize(time);
-            //_ros.Publish(_topicName, _serializer_pc.msg);
+            _ros.Publish(_topicName, _serializer_pc.msg);
         }
     }
 }
