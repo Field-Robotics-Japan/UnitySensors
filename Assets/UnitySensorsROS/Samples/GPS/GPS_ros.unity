@@ -123,23 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &44854352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a43f2130f8dec04da1eb2fbd26724c9, type: 3}
-  m_Name: GPGGA(Clone)
-  m_EditorClassIdentifier: 
-  _timeMode: 0
-  _quality: 0
-  _satelliteNum: 8
-  _HDOP: 0
-  _geoidHeight: 36.7071
 --- !u!1 &557147204
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +217,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &873899251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a43f2130f8dec04da1eb2fbd26724c9, type: 3}
+  m_Name: GPGGA(Clone)
+  m_EditorClassIdentifier: 
+  _timeMode: 0
+  _quality: 0
+  _satelliteNum: 8
+  _HDOP: 0
+  _geoidHeight: 36.7071
 --- !u!1 &1080544182
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,14 +319,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 10
-  _serializer:
+  _topicName: gnss/raw_data
+  _frame_id: gnss_link
+  _serializer_gps:
     _format:
       scriptableObject: {fileID: 11400000, guid: 397f872695a0b93498193d95c6ff737c,
         type: 2}
       _parametersCache: '{"_timeMode":0,"_quality":0,"_satelliteNum":8,"_HDOP":0.0,"_geoidHeight":36.70709991455078}'
-      _scriptableObject: {fileID: 44854352}
-  _topicName: gnss/raw_data
-  _frame_id: gnss_link
+      _scriptableObject: {fileID: 873899251}
 --- !u!114 &1243027674
 MonoBehaviour:
   m_ObjectHideFlags: 0
