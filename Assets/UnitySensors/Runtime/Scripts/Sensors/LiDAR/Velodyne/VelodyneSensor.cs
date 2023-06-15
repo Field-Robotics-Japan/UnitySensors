@@ -18,15 +18,12 @@ namespace UnitySensors
         private RotatingLiDARScanPattern _scanPattern;
         [SerializeField]
         private float _gaussianNoiseSigma = 0.0f;
-        [SerializeField]
-        private bool _safeDisposal = false;
 
+        private Transform _transform;
         private JobHandle _handle;
         private UpdateRaycastCommandsJob _updateRaycastCommandsJob;
         private UpdateGaussianNoisesJob _updateGaussianNoisesJob;
         private RaycastHitsToPointsJob _raycastHitsToPointsJob;
-
-        private TransformAccessArray _transformAccessArray;
 
         private NativeArray<Vector3> _directions;
         private NativeArray<RaycastCommand> _raycastCommands;
@@ -41,22 +38,11 @@ namespace UnitySensors
 
         protected override void Init()
         {
+            _transform = this.transform;
             _pointsNum = _scanPattern.size;
-            SetupTransformAccessArray();
             SetupDirections();
             SetupJobs();
             base.Init();
-        }
-
-        private void SetupTransformAccessArray()
-        {
-            Transform _transform = transform;
-            Transform[] transformArray = new Transform[_pointsNum];
-            for(int i = 0; i < _pointsNum; i++)
-            {
-                transformArray[i] = _transform;
-            }
-            _transformAccessArray = new TransformAccessArray(transformArray, 1);
         }
 
         private void SetupDirections()
@@ -81,6 +67,8 @@ namespace UnitySensors
 
             _updateRaycastCommandsJob = new UpdateRaycastCommandsJob()
             {
+                origin = _transform.position,
+                localToWorldMatrix = _transform.localToWorldMatrix,
                 directions = _directions,
                 raycastCommands = _raycastCommands
             };
@@ -108,7 +96,10 @@ namespace UnitySensors
             if(_randomSeed++ == 0) _randomSeed = 1;
             _updateGaussianNoisesJob.random.InitState(_randomSeed);
 
-            JobHandle updateRaycastCommandsJobHandle = _updateRaycastCommandsJob.Schedule(_transformAccessArray);
+            _updateRaycastCommandsJob.origin = _transform.position;
+            _updateRaycastCommandsJob.localToWorldMatrix = _transform.localToWorldMatrix;
+
+            JobHandle updateRaycastCommandsJobHandle = _updateRaycastCommandsJob.Schedule(_pointsNum, 1);
             JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(_pointsNum, 1, updateRaycastCommandsJobHandle);
             JobHandle raycastJobHandle = RaycastCommand.ScheduleBatch(_raycastCommands, _raycastHits, _pointsNum, updateGaussianNoisesJobHandle);
             _handle = _raycastHitsToPointsJob.Schedule(_pointsNum, 1, raycastJobHandle);
@@ -124,8 +115,6 @@ namespace UnitySensors
         private void OnDestroy()
         {
             _handle.Complete();
-            if(_safeDisposal)
-                _transformAccessArray.Dispose();
             _noises.Dispose();
             _directions.Dispose();
             _raycastCommands.Dispose();
@@ -134,16 +123,20 @@ namespace UnitySensors
         }
 
         [BurstCompile]
-        private struct UpdateRaycastCommandsJob : IJobParallelForTransform
+        private struct UpdateRaycastCommandsJob : IJobParallelFor
         {
+            [ReadOnly]
+            public Vector3 origin;
+            [ReadOnly]
+            public Matrix4x4 localToWorldMatrix;
             [ReadOnly]
             public NativeArray<Vector3> directions;
             public NativeArray<RaycastCommand> raycastCommands;
 
-            public void Execute(int index, TransformAccess transform)
+            public void Execute(int index)
             {
-                Vector3 direction = transform.localToWorldMatrix * directions[index];
-                raycastCommands[index] = new RaycastCommand(transform.position, direction);
+                Vector3 direction = localToWorldMatrix * directions[index];
+                raycastCommands[index] = new RaycastCommand(origin, direction);
             }
         }
 
