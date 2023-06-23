@@ -23,6 +23,8 @@ namespace UnitySensors
         [SerializeField]
         private int _azimuthResolution = 360;
 
+        public int numOfLayer { get => _zenithAngles.Length; }
+
         public override void GenerateScanPattern()
         {
             _generated = false;
