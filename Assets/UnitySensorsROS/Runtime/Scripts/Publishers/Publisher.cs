@@ -55,6 +55,7 @@ namespace UnitySensors.ROS
             if (_time_now - _time_old > _frequency_inv)
             {
                 Publish(_time_now);
+                _time_old = _time_now;
             }
         }
 
