@@ -1,22 +1,23 @@
+
 name: Acquire activation file
-on: 
-  pull_request:
-    branches:
-    - master
+on:
+  workflow_dispatch: {}
 jobs:
   activation:
     name: Request manual activation file 🔑
     runs-on: ubuntu-latest
     steps:
-    # Request manual activation file
-    - name: Request manual activation file
-      id: getManualLicenseFile
-      uses: webbertakken/unity-request-manual-activation-file@v1.1
-      with:
-        unityVersion: 2019.3.12f1
-    # Upload artifact (Unity_v20XX.X.XXXX.alf)
-    - name: Expose as artifact
-      uses: actions/upload-artifact@v1
-      with:
-        name: ${{ steps.getManualLicenseFile.outputs.filePath }}
-        path: ${{ steps.getManualLicenseFile.outputs.filePath }}
+      # GameCI の Activation を利用して alf ファイルを発行する
+      - name: Request manual activation file
+        id: getManualLicenseFile
+        uses: game-ci/unity-request-activation-file@v2
+        with:
+          unityVersion:
+            - 2020.3.48f1
+            - 2021.3.28f1
+            - 2022.3.4f1
+      - name: Expose as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ steps.getManualLicenseFile.outputs.filePath }}
+          path: ${{ steps.getManualLicenseFile.outputs.filePath }}
