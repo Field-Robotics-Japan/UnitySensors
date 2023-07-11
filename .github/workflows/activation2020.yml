@@ -1,4 +1,4 @@
-name: Acquire activation file
+name: Acquire activation file for 2020
 
 on:
   workflow_dispatch: {}
