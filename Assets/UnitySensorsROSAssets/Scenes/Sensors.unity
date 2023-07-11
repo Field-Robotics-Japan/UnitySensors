@@ -320,6 +320,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2348453325183345179, guid: d6ec601ec6cdfc03b9a08fc86740f18c,
         type: 3}
+      propertyPath: _rotateDir
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2348453325183345179, guid: d6ec601ec6cdfc03b9a08fc86740f18c,
+        type: 3}
       propertyPath: pointColor.a
       value: 1
       objectReference: {fileID: 0}
