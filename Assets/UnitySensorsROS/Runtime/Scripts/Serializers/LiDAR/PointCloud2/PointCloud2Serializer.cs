@@ -38,7 +38,7 @@ namespace UnitySensors.ROS
             _msg.height = 1;
             _msg.width = pointsNum;
             _msg.fields = new PointFieldMsg[3];
-            for(int i = 0; i < 3; i++)
+            for (int i = 0; i < 3; i++)
             {
                 _msg.fields[i] = new PointFieldMsg();
                 _msg.fields[i].name = ((char)('x' + i)).ToString();
@@ -94,8 +94,8 @@ namespace UnitySensors.ROS
             public void Execute(int index)
             {
                 NativeArray<float> tmp = new NativeArray<float>(3, Allocator.Temp);
-                tmp[0] = points[index].x;
-                tmp[1] = points[index].z;
+                tmp[0] = points[index].z;
+                tmp[1] = -points[index].x;
                 tmp[2] = points[index].y;
                 var slice = new NativeSlice<float>(tmp).SliceConvert<byte>();
                 slice.CopyTo(data.GetSubArray(index * 12, 12));
