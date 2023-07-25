@@ -94,8 +94,8 @@ namespace UnitySensors.ROS
             public void Execute(int index)
             {
                 NativeArray<float> tmp = new NativeArray<float>(3, Allocator.Temp);
-                tmp[0] = points[index].z;
-                tmp[1] = -points[index].x;
+                tmp[0] = -points[index].z;
+                tmp[1] = points[index].x;
                 tmp[2] = points[index].y;
                 var slice = new NativeSlice<float>(tmp).SliceConvert<byte>();
                 slice.CopyTo(data.GetSubArray(index * 12, 12));
