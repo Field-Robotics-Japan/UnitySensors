@@ -36,7 +36,11 @@ namespace UnitySensors.ROS
             /// </summary>
             public void Serialize(float time)
             {
+#if ROS2
+                int sec = (int)Math.Truncate(time);
+#else
                 uint sec = (uint)Math.Truncate(time);
+# endif
                 _header.stamp.sec = sec;
                 _header.stamp.nanosec = (uint)((time - sec) * 1e+9);
                 _header.seq++;
