@@ -22,23 +22,23 @@ namespace UnitySensors.ROS
         private JobHandle _handle;
         private PointsToPointCloud2MsgJob _job;
 
-        private int _pointNum;
+        private int _pointsNum;
         private NativeArray<byte> _data;
 
         public PointCloud2Msg msg { get => _msg; }
 
-        public void Init(string frame_id, ref NativeArray<Vector3> points, uint pointNum)
+        public void Init(string frame_id, ref NativeArray<Vector3> points, uint pointsNum)
         {
-            _pointNum = (int)pointNum;
+            _pointsNum = (int)pointsNum;
 
             _header = new AutoHeader();
             _header.Init(frame_id);
 
             _msg = new PointCloud2Msg();
             _msg.height = 1;
-            _msg.width = pointNum;
+            _msg.width = pointsNum;
             _msg.fields = new PointFieldMsg[3];
-            for(int i = 0; i < 3; i++)
+            for (int i = 0; i < 3; i++)
             {
                 _msg.fields[i] = new PointFieldMsg();
                 _msg.fields[i].name = ((char)('x' + i)).ToString();
@@ -48,15 +48,15 @@ namespace UnitySensors.ROS
             }
             _msg.is_bigendian = false;
             _msg.point_step = 12;
-            _msg.row_step = pointNum * 12;
-            _msg.data = new byte[_pointNum * 12];
+            _msg.row_step = pointsNum * 12;
+            _msg.data = new byte[_pointsNum * 12];
             _msg.is_dense = true;
 
-            _data = new NativeArray<byte>(_pointNum * 12, Allocator.Persistent);
+            _data = new NativeArray<byte>(_pointsNum * 12, Allocator.Persistent);
 
             _job = new PointsToPointCloud2MsgJob
             {
-                pointNum = _pointNum,
+                pointNum = _pointsNum,
                 points = points,
                 data = _data
             };
@@ -64,7 +64,7 @@ namespace UnitySensors.ROS
 
         public PointCloud2Msg Serialize(float time)
         {
-            _handle = _job.Schedule(_pointNum, 1);
+            _handle = _job.Schedule(_pointsNum, 1);
             JobHandle.ScheduleBatchedJobs();
             _handle.Complete();
 
@@ -94,8 +94,8 @@ namespace UnitySensors.ROS
             public void Execute(int index)
             {
                 NativeArray<float> tmp = new NativeArray<float>(3, Allocator.Temp);
-                tmp[0] = points[index].x;
-                tmp[1] = points[index].z;
+                tmp[0] = -points[index].z;
+                tmp[1] = points[index].x;
                 tmp[2] = points[index].y;
                 var slice = new NativeSlice<float>(tmp).SliceConvert<byte>();
                 slice.CopyTo(data.GetSubArray(index * 12, 12));

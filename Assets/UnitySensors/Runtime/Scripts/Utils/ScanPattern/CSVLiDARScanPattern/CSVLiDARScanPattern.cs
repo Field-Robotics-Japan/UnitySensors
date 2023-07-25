@@ -19,7 +19,7 @@ namespace UnitySensors
             _loadedFile = "";
             _maxAzimuth = _maxZenith = 0;
 
-            if(_file == null)
+            if (_file == null)
             {
                 Debug.LogWarning(this.name + ": CSV file is not set.");
                 return;
@@ -70,8 +70,10 @@ namespace UnitySensors
             _size = lines.Length - 2;
 
             _generated = true;
+#if UNITY_EDITOR
             EditorUtility.SetDirty(this);
             AssetDatabase.SaveAssets();
+#endif
         }
     }
 }

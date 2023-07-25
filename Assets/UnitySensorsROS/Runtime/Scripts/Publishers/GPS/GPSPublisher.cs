@@ -36,10 +36,12 @@ namespace UnitySensors.ROS
         {
             base.Update();
             _serializer_gps.Update();
+#if UNITY_EDITOR
             if (!Application.isPlaying && (_serializer_gps.format.updated))
             {
                 EditorUtility.SetDirty(this);
             }
+#endif
         }
 
         protected override void Publish(float time)
