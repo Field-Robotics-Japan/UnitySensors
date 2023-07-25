@@ -17,6 +17,12 @@ namespace UnitySensors
         [SerializeField]
         private RotatingLiDARScanPattern _scanPattern;
         [SerializeField]
+        private float _minDistance = 0.0f;
+        [SerializeField]
+        private float _maxDistance = 100.0f;
+        [SerializeField]
+        private float _maxIntensity = 255.0f;
+        [SerializeField]
         private float _gaussianNoiseSigma = 0.0f;
 
         private Transform _transform;
@@ -30,11 +36,15 @@ namespace UnitySensors
         private NativeArray<RaycastHit> _raycastHits;
         private Random _random;
         private NativeArray<float> _noises;
+        public NativeArray<float> distances;
         public NativeArray<Vector3> points;
+        public NativeArray<float> intensities;
 
         private uint _randomSeed;
         private int _pointsNum;
         public uint pointsNum { get => (uint)_pointsNum; }
+        public int layersNum { get => _scanPattern.numOfLayer; }
+        public int azimuthResolution { get => _scanPattern.azimuthResolution; }
 
         protected override void Init()
         {
@@ -56,7 +66,9 @@ namespace UnitySensors
 
         private void SetupJobs()
         {
+            distances = new NativeArray<float>(_pointsNum, Allocator.Persistent);
             points = new NativeArray<Vector3>(_pointsNum, Allocator.Persistent);
+            intensities = new NativeArray<float>(_pointsNum, Allocator.Persistent);
             _raycastCommands = new NativeArray<RaycastCommand>(_pointsNum, Allocator.Persistent);
             _raycastHits = new NativeArray<RaycastHit>(_pointsNum, Allocator.Persistent);
 
@@ -82,10 +94,16 @@ namespace UnitySensors
 
             _raycastHitsToPointsJob = new RaycastHitsToPointsJob()
             {
+                minDistance = _minDistance,
+                minDistance_sqr = _minDistance * _minDistance,
+                maxDistance = _maxDistance,
+                maxIntensity = _maxIntensity,
                 directions = _directions,
                 raycastHits = _raycastHits,
                 noises = _noises,
-                points = points
+                distances = distances,
+                points = points,
+                intensities = intensities
             };
         }
 
@@ -119,7 +137,9 @@ namespace UnitySensors
             _directions.Dispose();
             _raycastCommands.Dispose();
             _raycastHits.Dispose();
+            distances.Dispose();
             points.Dispose();
+            intensities.Dispose();
         }
 
         [BurstCompile]
@@ -162,17 +182,33 @@ namespace UnitySensors
         private struct RaycastHitsToPointsJob : IJobParallelFor
         {
             [ReadOnly]
+            public float minDistance;
+            [ReadOnly]
+            public float minDistance_sqr;
+            [ReadOnly]
+            public float maxDistance;
+            [ReadOnly]
+            public float maxIntensity;
+            [ReadOnly]
             public NativeArray<Vector3> directions;
             [ReadOnly]
             public NativeArray<RaycastHit> raycastHits;
             [ReadOnly]
             public NativeArray<float> noises;
 
+            public NativeArray<float> distances;
             public NativeArray<Vector3> points;
+            public NativeArray<float> intensities;
 
             public void Execute(int index)
             {
-                points[index] = directions[index] * (raycastHits[index].distance + noises[index]);
+                float distance = raycastHits[index].distance + noises[index];
+                bool isValid = (minDistance <= distance && distance <= maxDistance);
+                if (!isValid) distance = 0;
+                distances[index] = distance;
+                points[index] = directions[index] * distance;
+                float distance_sqr = distance * distance;
+                intensities[index] = isValid ? maxIntensity * minDistance_sqr / distance_sqr : 0;
             }
         }
     }

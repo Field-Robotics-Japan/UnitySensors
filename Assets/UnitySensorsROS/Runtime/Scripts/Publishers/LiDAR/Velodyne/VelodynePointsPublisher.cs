@@ -7,7 +7,7 @@ using RosMessageTypes.Sensor;
 namespace UnitySensors.ROS
 {
     [RequireComponent(typeof(VelodyneSensor))]
-    public class VelodynePublisher : Publisher<VelodyneSensor, Serializer>
+    public class VelodynePointsPublisher : Publisher<VelodyneSensor, Serializer>
     {
         [SerializeField]
         private string _topicName = "velodyne_points";

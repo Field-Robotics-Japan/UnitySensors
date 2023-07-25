@@ -24,6 +24,7 @@ namespace UnitySensors
         private int _azimuthResolution = 360;
 
         public int numOfLayer { get => _zenithAngles.Length; }
+        public int azimuthResolution { get => _azimuthResolution; }
 
         public override void GenerateScanPattern()
         {
