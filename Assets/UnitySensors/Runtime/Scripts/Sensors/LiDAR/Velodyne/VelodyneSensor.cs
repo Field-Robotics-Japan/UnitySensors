@@ -36,6 +36,7 @@ namespace UnitySensors
         private NativeArray<RaycastHit> _raycastHits;
         private Random _random;
         private NativeArray<float> _noises;
+        
         public NativeArray<float> distances;
         public NativeArray<Vector3> points;
         public NativeArray<float> intensities;

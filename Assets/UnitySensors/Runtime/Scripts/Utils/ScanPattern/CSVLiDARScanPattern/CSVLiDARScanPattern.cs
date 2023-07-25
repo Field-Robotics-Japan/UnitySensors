@@ -24,7 +24,7 @@ namespace UnitySensors
                 Debug.LogWarning(this.name + ": CSV file is not set.");
                 return;
             }
-
+            
             string fileText = _file.text;
             string[] lines = fileText.Split('\n');
 
