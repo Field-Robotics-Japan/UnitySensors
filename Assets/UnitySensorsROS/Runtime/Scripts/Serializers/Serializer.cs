@@ -28,7 +28,10 @@ namespace UnitySensors.ROS
             {
                 _header = new HeaderMsg();
                 _header.frame_id = frame_id;
+#if ROS2
+#else
                 _header.seq = 0;
+#endif
             }
 
             /// <summary>
@@ -43,7 +46,10 @@ namespace UnitySensors.ROS
 # endif
                 _header.stamp.sec = sec;
                 _header.stamp.nanosec = (uint)((time - sec) * 1e+9);
+#if ROS2
+#else
                 _header.seq++;
+#endif
             }
         }
     }
