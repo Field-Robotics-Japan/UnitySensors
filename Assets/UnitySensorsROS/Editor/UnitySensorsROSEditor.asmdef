@@ -1,0 +1,17 @@
+{
+    "name": "UnitySensorsROSEditor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e9a473e6ad03eae4a89800bf81bd1594",
+        "GUID:fa38f881a10f6314fa784b8975c16eff"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
