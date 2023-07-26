@@ -22,9 +22,11 @@ namespace UnitySensors
         private int _scanSeparation = 40;
 
         [SerializeField]
-        private float _minRange = 0.1f;
+        private float _minDistance = 0.1f;
         [SerializeField]
-        private float _maxRange = 100.0f;
+        private float _maxDistance = 100.0f;
+        [SerializeField]
+        private float _maxIntensity = 255.0f;
         [SerializeField]
         private float _gaussianNoiseSigma = 0.0f;
 
@@ -45,6 +47,7 @@ namespace UnitySensors
         private UpdateGaussianNoisesJob _updateGaussianNoisesJob;
         private Random _random;
         public NativeArray<Vector3> points;
+        public NativeArray<float> intensities;
         private NativeArray<Vector3> _directions;
         private NativeArray<int> _pixelIndices;
         private NativeArray<float> _noises;
@@ -89,8 +92,8 @@ namespace UnitySensors
 
             _cam.targetTexture = _rt;
             _cam.fieldOfView = fov;
-            _cam.nearClipPlane = _minRange;
-            _cam.farClipPlane = _maxRange;
+            _cam.nearClipPlane = _minDistance;
+            _cam.farClipPlane = _maxDistance;
             _cam.gameObject.AddComponent<DepthCamera>();
             _cam.clearFlags = CameraClearFlags.SolidColor;
 
@@ -118,6 +121,7 @@ namespace UnitySensors
         private void SetupJob()
         {
             points = new NativeArray<Vector3>(_pointsNum, Allocator.Persistent);
+            intensities = new NativeArray<float>(_pointsNum, Allocator.Persistent);
             _randomSeed = (uint)Environment.TickCount;
             _random = new Random(_randomSeed);
 
@@ -132,14 +136,18 @@ namespace UnitySensors
 
             _textureToPointsJob = new TextureToPointsJob()
             {
-                far = _maxRange,
                 scanSeparation = _scanSeparation,
                 separationCounter = 0,
+                minDistance = _minDistance,
+                minDistance_sqr = _minDistance * _minDistance,
+                maxDistance = _maxDistance,
+                maxIntensity = _maxIntensity,
                 pixelIndices = _pixelIndices,
                 directions = _directions,
                 pixels = _texture.GetPixelData<Color>(0),
                 noises = _noises,
-                points = points
+                points = points,
+                intensities = intensities
             };
         }
 
@@ -183,6 +191,7 @@ namespace UnitySensors
             _pixelIndices.Dispose();
             _directions.Dispose();
             points.Dispose();
+            intensities.Dispose();
 
             _rt.Release();
         }
@@ -208,9 +217,17 @@ namespace UnitySensors
         [BurstCompile]
         private struct TextureToPointsJob : IJobParallelFor
         {
-            public float far;
             public int scanSeparation;
             public int separationCounter;
+
+            [ReadOnly]
+            public float minDistance;
+            [ReadOnly]
+            public float minDistance_sqr;
+            [ReadOnly]
+            public float maxDistance;
+            [ReadOnly]
+            public float maxIntensity;
 
             [ReadOnly]
             public NativeArray<int> pixelIndices;
@@ -223,13 +240,18 @@ namespace UnitySensors
             public NativeArray<float> noises;
 
             public NativeArray<Vector3> points;
+            public NativeArray<float> intensities;
 
             public void Execute(int index)
             {
                 int offset = points.Length * separationCounter / scanSeparation;
                 int pixelIndex = pixelIndices.AsReadOnly()[index + offset];
-                float distance = pixels.AsReadOnly()[pixelIndex].r;
-                points[index] = directions.AsReadOnly()[index + offset] * (far * Mathf.Clamp01(1.0f - distance) + noises[index]);
+                float distance = maxDistance * Mathf.Clamp01(1.0f - pixels.AsReadOnly()[pixelIndex].r) + noises[index];
+                bool isValid = (minDistance <= distance && distance <= maxDistance);
+                if (!isValid) distance = 0;
+                points[index] = directions.AsReadOnly()[index + offset] * distance;
+                float distance_sqr = distance * distance;
+                intensities[index] = isValid ? maxIntensity * minDistance_sqr / distance_sqr : 0;
             }
         }
     }
