@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -387,10 +387,6 @@ MonoBehaviour:
     _msg:
       transforms: []
   _topicName: /tf
-  thisFrameID: base_link
-  rootTF: 1
-  parentSensor: {fileID: 0}
-  parentFrameID: ground_truth
 --- !u!114 &304106768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,6 +400,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 10
+  _frame_id: base_link
+  _children:
+  - {fileID: 1983887115}
+  - {fileID: 1891329943}
 --- !u!114 &304106769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -635,27 +635,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 10
---- !u!114 &1891329944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1891329939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cde12085c739d548a159c84b40bbd2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _frequency: 10
-  _serializer:
-    _msg:
-      transforms: []
-  _topicName: /tf
-  thisFrameID: velodyne_link
-  rootTF: 0
-  parentSensor: {fileID: 304106762}
-  parentFrameID: base_link
+  _frame_id: velodyne_link
+  _children: []
 --- !u!1001 &1983887109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -731,27 +712,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1983887109}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1983887114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822541744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cde12085c739d548a159c84b40bbd2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _frequency: 10
-  _serializer:
-    _msg:
-      transforms: []
-  _topicName: /tf
-  thisFrameID: camera
-  rootTF: 0
-  parentSensor: {fileID: 304106762}
-  parentFrameID: base_link
 --- !u!114 &1983887115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -765,3 +725,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 10
+  _frame_id: camera
+  _children: []
