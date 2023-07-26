@@ -28,7 +28,11 @@ public class ROSClock : MonoBehaviour
     void Update()
     {
         float time = Time.time;
+#if ROS2
+        int sec = (int)Math.Truncate(time);
+#else
         uint sec = (uint)Math.Truncate(time);
+# endif
         uint nanosec = (uint)((time - sec) * 1e+9);
         _message.clock.sec = sec;
         _message.clock.nanosec = nanosec;
