@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 10
-  _frame_id: base_link
+  frame_id: 
   _children:
   - {fileID: 1983887115}
   - {fileID: 1891329943}
@@ -635,7 +635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 10
-  _frame_id: velodyne_link
+  frame_id: velodyne_link
   _children: []
 --- !u!1001 &1983887109
 PrefabInstance:
@@ -725,5 +725,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 10
-  _frame_id: camera
+  frame_id: camera
   _children: []
