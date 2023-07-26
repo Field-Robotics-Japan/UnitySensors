@@ -14,9 +14,9 @@ public class TFSensor : Sensor
     };
 
     [SerializeField]
-    private string _frame_id;
+    public string frame_id;
     [SerializeField]
-    private TFSensor[] _children;
+    public TFSensor[] _children;
 
     private Transform _transform;
 
@@ -41,7 +41,7 @@ public class TFSensor : Sensor
         Quaternion worldToLocalQuaternion = Quaternion.Inverse(_transform.rotation);
         foreach (TFSensor child in _children)
         {
-            tf.AddRange(child.GetTFData(_frame_id, worldToLocalMatrix, worldToLocalQuaternion));
+            tf.AddRange(child.GetTFData(frame_id, worldToLocalMatrix, worldToLocalQuaternion));
         }
         return tf.ToArray();
     }
@@ -52,7 +52,7 @@ public class TFSensor : Sensor
 
         TFData tfData;
         tfData.frame_id_parent = frame_id_parent;
-        tfData.frame_id_child = _frame_id;
+        tfData.frame_id_child = frame_id;
         tfData.position = worldToLocalMatrix * _transform.position;
         tfData.rotation = worldToLocalQuaternion * _transform.rotation;
         tf.Add(tfData);
@@ -61,8 +61,15 @@ public class TFSensor : Sensor
         worldToLocalQuaternion = Quaternion.Inverse(_transform.rotation);
         foreach (TFSensor child in _children)
         {
-            tf.AddRange(child.GetTFData(_frame_id, worldToLocalMatrix, worldToLocalQuaternion));
+            tf.AddRange(child.GetTFData(frame_id, worldToLocalMatrix, worldToLocalQuaternion));
         }
         return tf.ToArray();
+    }
+
+    public void AddChild(TFSensor child)
+    {
+        List<TFSensor> children = _children!=null ? new List<TFSensor>(_children) : new List<TFSensor>();
+        children.Add(child);
+        _children = children.ToArray();
     }
 }
