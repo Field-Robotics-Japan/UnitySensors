@@ -4,6 +4,8 @@
 [![CI](https://github.com/Field-Robotics-Japan/UnitySensorsROSAssets/workflows/CI/badge.svg)](https://github.com/Field-Robotics-Japan/UnitySensorsROSAssets/actions?query=workflow%3ACI)
 
 ![unity_sensors_ros_assets](.image/unity_sensors_ros_assets.gif)
+
+## Overview
 Robot sensor packages available on Unity.
 You can communicate sensor info via ROS and ROS2 using ROSTCPConnector and ROSTCPEndpoint.  
 
@@ -19,12 +21,20 @@ The following sensors are added.
 - (TF)
 
 There are several Prefab and Scene files available for testing each sensor.
-Check [this directory](https://github.com/Field-Robotics-Japan/sensors_unity/tree/develop/Assets/Scenes).
 
 ## Dependencies
 - [RosTCPConnector](https://github.com/Unity-Technologies/ROS-TCP-Connector) (Appache 2.0 LICENSE)
 
-## Tutorial
+## Package Installation (For using UnitySensors in your project)
+1. Using Unity 2021.3 or later, open the Package Manager from `Window` -> `Package Manager`.
+2. In the Package Manager window, find and click the + button in the upper lefthand corner of the window. Select `Add package from git URL....`
+
+3. Enter the git URL for the desired package. 
+    1. For the UnitySensors, enter `https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensors#v1.0b`.
+    2. For the UnitySensorsROS, enter `https://github.com/Field-Robotics-Japan/UnitySensorsROS.git?path=/Assets/UnitySensorsROS#v1.0b`.
+    __Note: UnitySensorsROS does not contain UnitySensors.__
+4. Click `Add`.
+
 ## Documentation
 
 ## LICENSE
