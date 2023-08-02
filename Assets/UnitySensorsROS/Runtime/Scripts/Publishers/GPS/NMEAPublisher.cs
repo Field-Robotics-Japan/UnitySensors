@@ -9,7 +9,7 @@ namespace UnitySensors.ROS
 {
     [RequireComponent(typeof(GPSSensor))]
     [ExecuteAlways]
-    public class GPSPublisher : Publisher<GPSSensor, Serializer>
+    public class NMEAPublisher : Publisher<GPSSensor, Serializer>
     {
         [SerializeField]
         private string _topicName = "gnss/raw_data";
@@ -17,7 +17,7 @@ namespace UnitySensors.ROS
         private string _frame_id = "gnss_link";
 
         [SerializeField]
-        private GPSSerializer _serializer_gps;
+        private NMEASerializer _serializer_gps;
 
         protected override void Start()
         {

@@ -10,7 +10,7 @@ using RosMessageTypes.Nmea;
 namespace UnitySensors.ROS
 {
     [System.Serializable]
-    public class GPSSerializer : Serializer
+    public class NMEASerializer : Serializer
     {
         [SerializeField]
         private NMEAFormatManager _format;
