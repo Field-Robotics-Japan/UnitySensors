@@ -58,8 +58,6 @@ namespace UnitySensors.ROS
             _msg.longitude = coordinate.longitude;
             _msg.altitude = coordinate.altitude;
             _msg.position_covariance_type = 0;
-
-            Debug.Log(_msg.status.service);
         }
     }
 }
