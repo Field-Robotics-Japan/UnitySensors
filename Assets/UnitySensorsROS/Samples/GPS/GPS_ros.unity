@@ -217,23 +217,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!114 &873899251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a43f2130f8dec04da1eb2fbd26724c9, type: 3}
-  m_Name: GPGGA(Clone)
-  m_EditorClassIdentifier: 
-  _timeMode: 0
-  _quality: 0
-  _satelliteNum: 8
-  _HDOP: 0
-  _geoidHeight: 36.7071
 --- !u!1 &1080544182
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,6 +282,7 @@ GameObject:
   - component: {fileID: 1243027675}
   - component: {fileID: 1243027674}
   - component: {fileID: 1243027673}
+  - component: {fileID: 1243027676}
   m_Layer: 0
   m_Name: GPS
   m_TagString: Untagged
@@ -313,7 +297,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243027672}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd1737f876f48b4989fb62329fbe050, type: 3}
   m_Name: 
@@ -323,10 +307,9 @@ MonoBehaviour:
   _frame_id: gnss_link
   _serializer_gps:
     _format:
-      scriptableObject: {fileID: 11400000, guid: 397f872695a0b93498193d95c6ff737c,
-        type: 2}
-      _parametersCache: '{"_timeMode":0,"_quality":0,"_satelliteNum":8,"_HDOP":0.0,"_geoidHeight":36.70709991455078}'
-      _scriptableObject: {fileID: 873899251}
+      scriptableObject: {fileID: 0}
+      _parametersCache: 
+      _scriptableObject: {fileID: 0}
 --- !u!114 &1243027674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,6 +348,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1243027676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243027672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 397c445553a6f3a40ac4d6892894ff7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _frequency: 10
+  _topicName: gnss/raw_data
+  _frame_id: gnss_link
+  _serializer_navsat:
+    _status: 0
+    _service: 3
 --- !u!1 &1274738610
 GameObject:
   m_ObjectHideFlags: 0
