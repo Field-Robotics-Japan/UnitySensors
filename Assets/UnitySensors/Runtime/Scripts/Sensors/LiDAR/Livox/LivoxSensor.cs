@@ -55,6 +55,9 @@ namespace UnitySensors
         private uint _randomSeed;
         private int _pointsNum;
         public uint pointsNum { get=>(uint)(_pointsNum);}
+        public float minDistance { get => _minDistance; }
+        public float maxDistance { get => _maxDistance; }
+        public float maxIntensity { get => _maxIntensity; }
 
         protected override void Init()
         {
