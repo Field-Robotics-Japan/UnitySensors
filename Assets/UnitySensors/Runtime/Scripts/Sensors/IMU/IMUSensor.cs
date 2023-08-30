@@ -52,7 +52,7 @@ namespace UnitySensors
 
             _velocity = (_position - _position_last) / _dt;
             _acceleration = (_velocity - _velocity_last) / _dt;
-            _acceleration += _transform.InverseTransformVector(_gravity).normalized * _gravityMagnitude;
+            _acceleration += _transform.InverseTransformDirection(_gravity).normalized * _gravityMagnitude;
 
             Quaternion rotation_delta = Quaternion.Inverse(_rotation_last) * _rotation;
             rotation_delta.ToAngleAxis(out float angle, out Vector3 axis);
