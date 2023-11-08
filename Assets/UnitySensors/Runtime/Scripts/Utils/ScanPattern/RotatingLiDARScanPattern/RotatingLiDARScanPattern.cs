@@ -24,6 +24,7 @@ namespace UnitySensors
         private int _azimuthResolution = 360;
 
         public int numOfLayer { get => _zenithAngles.Length; }
+        public int azimuthResolution { get => _azimuthResolution; }
 
         public override void GenerateScanPattern()
         {
@@ -35,11 +36,11 @@ namespace UnitySensors
             _scans = new Vector3[_size];
 
             int index = 0;
-            for(int azimuth = 0; azimuth < _azimuthResolution; azimuth++)
+            for (int azimuth = 0; azimuth < _azimuthResolution; azimuth++)
             {
                 float azimuthAngle = 360.0f / _azimuthResolution * azimuth;
                 if (_rotationDirection == RotationDirection.CCW) azimuthAngle *= -1;
-                foreach(float zenithAngle in _zenithAngles)
+                foreach (float zenithAngle in _zenithAngles)
                 {
                     _scans[index] = Quaternion.Euler(-zenithAngle, azimuthAngle, 0) * Vector3.forward;
                     index++;
@@ -54,8 +55,10 @@ namespace UnitySensors
 
             _generated = true;
 
+#if UNITY_EDITOR
             EditorUtility.SetDirty(this);
             AssetDatabase.SaveAssets();
+#endif
         }
     }
 }

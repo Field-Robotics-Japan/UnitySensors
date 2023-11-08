@@ -8,7 +8,7 @@ using UnitySensors;
 namespace UnitySensors.ROS
 {
     /// <summary>
-    /// T( : Sensor)‚ªŽæ“¾‚µ‚½ƒf[ƒ^‚ðTT( : Serializer)‚ÅƒVƒŠƒAƒ‰ƒCƒY‚µAROSƒgƒsƒbƒN‚Æ‚µ‚ÄPub‚·‚é
+    /// T( : Sensor)ãŒå–å¾—ã—ãŸãƒ‡ãƒ¼ã‚¿ã‚’TT( : Serializer)ã§ã‚·ãƒªã‚¢ãƒ©ã‚¤ã‚ºã—ã€ROSãƒˆãƒ”ãƒƒã‚¯ã¨ã—ã¦Pubã™ã‚‹
     /// </summary>
     public class Publisher<T, TT> : MonoBehaviour where T : Sensor where TT : Serializer, new()
     {
@@ -41,7 +41,7 @@ namespace UnitySensors.ROS
         }
 
         /// <summary>
-        /// ‰Šú‰»‚Ì‰¼‘zŠÖ”
+        /// åˆæœŸåŒ–ã®ä»®æƒ³é–¢æ•°
         /// </summary>
         protected virtual void Init()
         {
@@ -55,11 +55,12 @@ namespace UnitySensors.ROS
             if (_time_now - _time_old > _frequency_inv)
             {
                 Publish(_time_now);
+                _time_old = _time_now;
             }
         }
 
         /// <summary>
-        /// ROSƒgƒsƒbƒN‘—M‚Ì‰¼‘zŠÖ”
+        /// ROSãƒˆãƒ”ãƒƒã‚¯é€ä¿¡ã®ä»®æƒ³é–¢æ•°
         /// </summary>
         protected virtual void Publish(float time)
         {
