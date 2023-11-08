@@ -36,6 +36,18 @@ There are several Prefab and Scene files available for testing each sensor.
 4. Click `Add`.
 
 ## Documentation
+Not yet...  
+Any PR for documentation is VERY WELCOME !!!
+
+## Trouble Shooting
+### Depth camera values are wrong after build.
+#### Reason
+The one of possible reason is, wrong on graphics settings.
+#### Solution
+the go to Edit -> Project Settings -> Graphics and include this shader to the always included shaders.
+#### Reference
+https://github.com/Field-Robotics-Japan/UnitySensors/issues/64#issuecomment-1783409312  
+Thanks to [@panagelak](https://github.com/panagelak) and [@Autumn60](https://github.com/Autumn60) .  
 
 ## LICENSE
 Copyright [2020-2021] Ryodo Tanaka groadpg@gmail.com
