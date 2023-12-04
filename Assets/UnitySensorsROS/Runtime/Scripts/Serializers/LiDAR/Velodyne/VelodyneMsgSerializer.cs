@@ -64,7 +64,11 @@ namespace UnitySensors.ROS
             
             _msg.header = _header.header;
 
-            uint sec = _header.header.stamp.sec;
+#if ROS2
+            int sec = (int)_header.header.stamp.sec;
+#else
+            uint sec = (uint)_header.header.stamp.sec;
+# endif
             uint nanosec = _header.header.stamp.nanosec;
 
             for (int i = 0; i < _msg.packets.Length; i++)

@@ -1,7 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
 using RosMessageTypes.Geometry;
 using RosMessageTypes.Tf2;
 using Unity.Robotics.ROSTCPConnector.ROSGeometry;
 using UnityEngine;
+
+using TFData = TFSensor.TFData;
 
 namespace UnitySensors.ROS
 {
@@ -17,24 +21,29 @@ namespace UnitySensors.ROS
 
         public TFMessageMsg msg { get => _msg; }
 
-        public void Init(string parent_frame_id)
+        public void Init()
         {
             _msg = new TFMessageMsg();
-            _msg.transforms = new TransformStampedMsg[1];
             _header = new AutoHeader();
 
-            _header.Init(parent_frame_id);
+            _header.Init("");
         }
 
-        public TFMessageMsg Serialize(float time, string thisFrameID, Vector3 position, Quaternion rotation)
+        public TFMessageMsg Serialize(float time, TFData[] tf)
         {
             _header.Serialize(time);
-            TransformStampedMsg tfStamped = new TransformStampedMsg();
-            tfStamped.header = _header.header;
-            tfStamped.child_frame_id = thisFrameID;
-            tfStamped.transform.translation = position.To<FLU>();
-            tfStamped.transform.rotation = rotation.To<FLU>();
-            _msg.transforms[0] = tfStamped;
+            List<TransformStampedMsg> transforms = new List<TransformStampedMsg>();
+            foreach(TFData tfData in tf)
+            {
+                TransformStampedMsg transform = new TransformStampedMsg();
+                transform.header = _header.header;
+                transform.header.frame_id = tfData.frame_id_parent;
+                transform.child_frame_id = tfData.frame_id_child;
+                transform.transform.translation = tfData.position.To<FLU>();
+                transform.transform.rotation = tfData.rotation.To<FLU>();
+                transforms.Add(transform);
+            }
+            _msg.transforms = transforms.ToArray();
             return _msg;
         }
     }
