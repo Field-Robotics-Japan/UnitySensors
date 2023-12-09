@@ -6,6 +6,7 @@ using RosMessageTypes.Sensor;
 
 namespace UnitySensors.ROS
 {
+    /*
     [RequireComponent(typeof(LivoxSensor))]
     public class LivoxPublisher : Publisher<LivoxSensor, Serializer>
     {
@@ -44,4 +45,5 @@ namespace UnitySensors.ROS
             _ros.Publish(_topicName, _serializer_pc.msg);
         }
     }
+    */
 }
