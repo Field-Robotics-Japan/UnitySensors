@@ -11,6 +11,7 @@ using Unity.Jobs;
 
 namespace UnitySensors
 {
+    /*
     public class VelodyneSensorDepthBuffer : Sensor
     {
         [SerializeField]
@@ -243,4 +244,5 @@ namespace UnitySensors
             }
         }
     }
+    */
 }

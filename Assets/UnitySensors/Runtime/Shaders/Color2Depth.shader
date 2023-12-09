@@ -1,4 +1,4 @@
-Shader "Color2Depth"
+Shader "UnitySensors/Color2Depth"
 {
     Properties
     {

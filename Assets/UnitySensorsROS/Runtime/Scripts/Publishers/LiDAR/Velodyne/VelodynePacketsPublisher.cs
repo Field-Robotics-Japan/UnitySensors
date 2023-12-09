@@ -6,6 +6,7 @@ using RosMessageTypes.Velodyne;
 
 namespace UnitySensors.ROS
 {
+    /*
     [RequireComponent(typeof(VelodyneSensor))]
     public class VelodynePacketsPublisher : Publisher<VelodyneSensor, Serializer>
     {
@@ -44,4 +45,5 @@ namespace UnitySensors.ROS
             _ros.Publish(_topicName, _serializer_vmsg.msg);
         }
     }
+    */
 }

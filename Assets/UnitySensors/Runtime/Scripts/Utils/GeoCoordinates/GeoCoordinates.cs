@@ -1,4 +1,4 @@
-namespace UnitySensors
+namespace UnitySensors.Utils.GeoCoordinate
 {
     [System.Serializable]
     public class GeoCoordinate

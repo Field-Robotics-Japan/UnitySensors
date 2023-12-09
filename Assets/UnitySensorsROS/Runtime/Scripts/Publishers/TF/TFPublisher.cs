@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace UnitySensors.ROS
 {
+    /*
     [RequireComponent(typeof(TFSensor))]
     public class TFPublisher : Publisher<TFSensor, TFSerializer>
     {
@@ -20,4 +21,5 @@ namespace UnitySensors.ROS
             _ros.Publish(_topicName, _serializer.msg);
         }
     }
+    */
 }

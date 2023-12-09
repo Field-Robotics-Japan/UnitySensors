@@ -1,29 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnitySensors.Data.Pose;
 
-namespace UnitySensors
+namespace UnitySensors.Sensor.GroundTruth
 {
-    public class GroundTruthSensor : Sensor
+    public class GroundTruthSensor : UnitySensor, IPoseInterface
     {
-        [ReadOnly]
-        private Vector3 _position;
-        [ReadOnly]
-        private Quaternion _rotation;
-
         private Transform _transform;
 
-        public Vector3 position { get => _position; }
-        public Quaternion rotation { get => _rotation; }
+        public Vector3 position { get => _transform.position; }
+        public Quaternion rotation { get => _transform.rotation; }
+
         protected override void Init()
         {
-            _transform = transform;
+            _transform = this.transform;
         }
 
         protected override void UpdateSensor()
         {
-            _position = _transform.position;
-            _rotation = _transform.rotation;
+        }
+
+        protected override void OnSensorDestroy()
+        {
         }
     }
 }

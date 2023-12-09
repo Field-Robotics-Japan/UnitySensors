@@ -8,6 +8,7 @@ using UnitySensors;
 using UnitySensors.ROS;
 
 #if UNITY_EDITOR
+/*
 class URDF2TFConverter : EditorWindow
 {
     private enum Mode
@@ -132,5 +133,5 @@ class URDF2TFConverter : EditorWindow
         }
     }
 }
-
+*/
 #endif

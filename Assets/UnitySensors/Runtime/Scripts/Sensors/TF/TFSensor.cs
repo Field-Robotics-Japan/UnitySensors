@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnitySensors;
 
+/*
 public class TFSensor : Sensor
 {
     public struct TFData
@@ -73,3 +74,4 @@ public class TFSensor : Sensor
         _children = children.ToArray();
     }
 }
+*/
