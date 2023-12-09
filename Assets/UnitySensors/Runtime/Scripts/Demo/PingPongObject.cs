@@ -12,8 +12,8 @@ namespace UnitySensors.Demo
         [SerializeField]
         private Vector3 _end;
 
-        [SerializeField]
         private float _speed_coef;
+
         private Transform _transform;
 
         private void Start()
