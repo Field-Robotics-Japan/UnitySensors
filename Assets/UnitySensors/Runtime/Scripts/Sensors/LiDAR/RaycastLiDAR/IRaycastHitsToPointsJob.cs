@@ -33,11 +33,12 @@ namespace UnitySensors.Sensor.LiDAR
 
         public void Execute(int index)
         {
-            float distance = raycastHits[index].distance + noises[index];
+            float distance = raycastHits[index].distance;
+            distance = (minRange < distance && distance < maxRange) ? distance + noises[index] : 0;
             Point point = new Point()
             {
                 position = directions[index + indexOffset] * distance,
-                intensity = (minRange < distance && distance < maxRange) ? maxIntensity * minRange_sqr / (distance * distance) : 0
+                intensity = (distance != 0) ? maxIntensity * minRange_sqr / (distance * distance) : 0
             };
             points[index] = point;
         }
