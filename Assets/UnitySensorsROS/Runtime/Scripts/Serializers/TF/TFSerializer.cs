@@ -5,11 +5,11 @@ using RosMessageTypes.Tf2;
 using Unity.Robotics.ROSTCPConnector.ROSGeometry;
 using UnityEngine;
 
-using TFData = TFSensor.TFData;
+//using TFData = TFSensor.TFData;
 
 namespace UnitySensors.ROS
 {
-
+    /*
     [System.Serializable]
     public class TFSerializer : Serializer
     {
@@ -47,4 +47,5 @@ namespace UnitySensors.ROS
             return _msg;
         }
     }
+    */
 }
