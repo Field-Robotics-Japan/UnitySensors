@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnitySensors.Attribute;
 using UnitySensors.Utils.GeoCoordinate;
 
 namespace UnitySensors.Sensor.GNSS
@@ -14,6 +15,7 @@ namespace UnitySensors.Sensor.GNSS
         private Transform _transform;
         private GeoCoordinateConverter _gcc;
 
+        [SerializeField]
         private GeoCoordinate _coordinate;
         public GeoCoordinate coordinate { get => _coordinate; }
 
