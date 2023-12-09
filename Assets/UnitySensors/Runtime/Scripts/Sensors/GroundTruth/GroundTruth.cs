@@ -3,7 +3,7 @@ using UnitySensors.Data.Pose;
 
 namespace UnitySensors.Sensor.GroundTruth
 {
-    public class GroundTruthSensor : UnitySensor, IPoseInterface
+    public class GroundTruth : UnitySensor, IPoseInterface
     {
         private Transform _transform;
 

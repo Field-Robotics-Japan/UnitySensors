@@ -6,8 +6,8 @@ using UnitySensors.ROS.Serializer.PoseStamped;
 
 namespace UnitySensors.ROS.Publisher
 {
-    [RequireComponent(typeof(GroundTruthSensor))]
-    public class GroundTruthPublisher : RosMsgPublisher<GroundTruthSensor, PoseStampedMsgSerializer<GroundTruthSensor>, PoseStampedMsg>
+    [RequireComponent(typeof(GroundTruth))]
+    public class GroundTruthPublisher : RosMsgPublisher<GroundTruth, PoseStampedMsgSerializer<GroundTruth>, PoseStampedMsg>
     {
     }
 }
