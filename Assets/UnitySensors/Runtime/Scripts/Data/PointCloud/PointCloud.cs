@@ -1,10 +1,16 @@
+using System;
+using Unity.Collections;
 using Unity.Mathematics;
 
 namespace UnitySensors.Data.PointCloud
 {
-    public struct Point
+    public struct PointCloud<T> : IDisposable where T : struct, IPointInterface
     {
-        public float3 position;
-        public float intensity;
+        public NativeArray<T> points;
+
+        public void Dispose()
+        {
+            points.Dispose();
+        }
     }
 }

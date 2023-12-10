@@ -2,9 +2,9 @@ using Unity.Collections;
 
 namespace UnitySensors.Data.PointCloud
 {
-    public interface IPointCloudInterface
+    public interface IPointCloudInterface<T> where T : struct, IPointInterface
     {
-        public NativeArray<Point> points { get; }
+        public PointCloud<T> pointCloud { get; }
         public int pointsNum { get; }
     }
 }

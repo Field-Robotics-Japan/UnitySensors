@@ -1,13 +1,13 @@
 using UnityEngine;
+using Unity.Mathematics;
+
+using UnitySensors.Data.PointCloud;
 using UnitySensors.Sensor.LiDAR;
 using UnitySensors.Visualization.PointCloud;
 
-using Unity.Mathematics;
-
 namespace UnitySensors.Visualization.LiDAR
 {
-    [RequireComponent(typeof(LiDARSensor))]
-    public class LiDARVisualizer : PointCloudVisualizer<LiDARSensor>
+    public class LiDARVisualizer : PointCloudVisualizer<LiDARSensor<PointXYZI>, PointXYZI>
     {
 
     }

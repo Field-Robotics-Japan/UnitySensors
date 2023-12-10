@@ -8,7 +8,7 @@ using UnitySensors.Data.PointCloud;
 
 namespace UnitySensors.Sensor.Camera
 {
-    public class DepthCameraSensor : CameraSensor, IPointCloudInterface
+    public class DepthCameraSensor : CameraSensor, IPointCloudInterface<PointXYZ>
     {
         private Material _mat;
 
@@ -17,9 +17,9 @@ namespace UnitySensors.Sensor.Camera
         private ITextureToPointsJob _textureToPointsJob;
         private NativeArray<float3> _directions;
 
-        private NativeArray<Point> _points;
+        private PointCloud<PointXYZ> _pointCloud;
         private int _pointsNum;
-        public NativeArray<Point> points { get => _points; }
+        public PointCloud<PointXYZ> pointCloud { get => _pointCloud; }
         public int pointsNum { get => _pointsNum; }
 
         protected override void Init()
@@ -53,14 +53,17 @@ namespace UnitySensors.Sensor.Camera
 
         private void SetupJob()
         {
-            _points = new NativeArray<Point>(_pointsNum, Allocator.Persistent);
+            _pointCloud = new PointCloud<PointXYZ>()
+            {
+                points = new NativeArray<PointXYZ>(_pointsNum, Allocator.Persistent)
+            };
 
             _textureToPointsJob = new ITextureToPointsJob()
             {
                 far = m_camera.farClipPlane,
                 directions = _directions,
                 pixels = texture.GetPixelData<Color>(0),
-                points = points
+                points = _pointCloud.points
             };
         }
 
@@ -79,7 +82,7 @@ namespace UnitySensors.Sensor.Camera
         protected override void OnSensorDestroy()
         {
             _jobHandle.Complete();
-            _points.Dispose();
+            _pointCloud.Dispose();
             _directions.Dispose();
             base.OnSensorDestroy();
         }

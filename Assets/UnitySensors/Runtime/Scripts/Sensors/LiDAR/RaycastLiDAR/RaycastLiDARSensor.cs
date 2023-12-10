@@ -6,12 +6,13 @@ using Unity.Jobs;
 using Unity.Mathematics;
 
 using UnitySensors.Utils.Noise;
+using UnitySensors.Data.PointCloud;
 
 using Random = Unity.Mathematics.Random;
 
 namespace UnitySensors.Sensor.LiDAR
 {
-    public class RaycastLiDARSensor : LiDARSensor
+    public class RaycastLiDARSensor : LiDARSensor<PointXYZI>
     {
         private Transform _transform;
 
@@ -79,7 +80,7 @@ namespace UnitySensors.Sensor.LiDAR
                 indexOffset = 0,
                 raycastHits = _raycastHits,
                 noises = _noises,
-                points = points,
+                points = pointCloud.points,
             };
         }
 
