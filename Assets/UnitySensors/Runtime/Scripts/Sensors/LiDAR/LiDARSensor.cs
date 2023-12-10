@@ -9,7 +9,8 @@ using UnitySensors.Data.PointCloud;
 
 namespace UnitySensors.Sensor.LiDAR
 {
-    public abstract class LiDARSensor : UnitySensor, IPointCloudInterface
+    public abstract class LiDARSensor<T> : UnitySensor, IPointCloudInterface<T>
+        where T : struct, IPointXYZInterface
     {
         [SerializeField]
         private ScanPattern _scanPattern;
@@ -24,25 +25,28 @@ namespace UnitySensors.Sensor.LiDAR
         [SerializeField]
         private float _maxIntensity = 255.0f;
 
-        private NativeArray<Point> _points;
+        private PointCloud<T> _pointCloud;
 
         protected ScanPattern scanPattern { get => _scanPattern; }
         protected float minRange { get => _minRange; }
         protected float maxRange { get => _maxRange; }
         protected float gaussianNoiseSigma { get => _gaussianNoiseSigma; }
         protected float maxIntensity { get => _maxIntensity; }
-        public NativeArray<Point> points { get => _points; }
+        public PointCloud<T> pointCloud { get => _pointCloud; }
         public int pointsNum { get => _pointsNumPerScan; }
 
         protected override void Init()
         {
             _pointsNumPerScan = Mathf.Clamp(_pointsNumPerScan, 1, scanPattern.size);
-            _points = new NativeArray<Point>(_pointsNumPerScan, Allocator.Persistent);
+            _pointCloud = new PointCloud<T>()
+            {
+                points = new NativeArray<T>(_pointsNumPerScan, Allocator.Persistent)
+            };
         }
 
         protected override void OnSensorDestroy()
         {
-            _points.Dispose();
+            _pointCloud.Dispose();
         }
     }
 }

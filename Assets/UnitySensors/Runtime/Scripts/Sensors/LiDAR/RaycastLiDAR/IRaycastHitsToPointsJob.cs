@@ -29,13 +29,13 @@ namespace UnitySensors.Sensor.LiDAR
         [ReadOnly]
         public NativeArray<float> noises;
 
-        public NativeArray<Point> points;
+        public NativeArray<PointXYZI> points;
 
         public void Execute(int index)
         {
             float distance = raycastHits[index].distance;
             distance = (minRange < distance && distance < maxRange) ? distance + noises[index] : 0;
-            Point point = new Point()
+            PointXYZI point = new PointXYZI()
             {
                 position = directions[index + indexOffset] * distance,
                 intensity = (distance != 0) ? maxIntensity * minRange_sqr / (distance * distance) : 0

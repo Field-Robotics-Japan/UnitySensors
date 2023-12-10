@@ -1,4 +1,4 @@
-Shader "UnitySensors/PointCloud"
+Shader "UnitySensors/PointCloudXYZ"
 {
 	Properties{
 		_MainTex("Albedo (RGB)", 2D) = "white" {}
@@ -26,7 +26,6 @@ float2 uv_MainTex;
 	struct Point
 	{
 		float3 position;
-		float intensity;
 	};
 	StructuredBuffer<Point> PointsBuffer;
 	float4x4 LocalToWorldMatrix;
@@ -54,8 +53,7 @@ float2 uv_MainTex;
 		float4 col = 1.0f;
 
 #ifdef UNITY_PROCEDURAL_INSTANCING_ENABLED
-		// col = pointsBuffer[unity_InstanceID].intensity;
-		col = float4(1, 1, 1, (PointsBuffer[unity_InstanceID].intensity < 1) ? 0 : 1);
+		col = float4(1, 1, 1, 1);
 #else
 		col = float4(1, 1, 1, 1);
 #endif

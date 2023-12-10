@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Unity.Collections;
 using Unity.Jobs;
@@ -9,13 +11,15 @@ using UnitySensors.Sensor;
 namespace UnitySensors.ROS.Serializer.PointCloud
 {
     [System.Serializable]
-    public class PointCloud2MsgSerializer<T> : RosMsgSerializer<T, PointCloud2Msg> where T : UnitySensor, IPointCloudInterface
+    public class PointCloud2MsgSerializer<T, TT> : RosMsgSerializer<T, PointCloud2Msg>
+        where T : UnitySensor, IPointCloudInterface<TT>
+        where TT : struct, IPointXYZInterface
     {
         [SerializeField]
         private HeaderSerializer _header;
 
         private JobHandle _jobHandle;
-        private IPointsToPointCloud2MsgJob _pointsToPointCloud2MsgJob;
+        private IPointsToPointCloud2MsgJob<TT> _pointsToPointCloud2MsgJob;
         private NativeArray<byte> _data;
 
         public override void Init(T sensor)
@@ -24,7 +28,7 @@ namespace UnitySensors.ROS.Serializer.PointCloud
             _header.Init(sensor);
 
             _msg.height = 1;
-            _msg.width = (uint)sensor.points.Length;
+            _msg.width = (uint)sensor.pointsNum;
             _msg.fields = new PointFieldMsg[3];
             for (int i = 0; i < 3; i++)
             {
@@ -36,15 +40,15 @@ namespace UnitySensors.ROS.Serializer.PointCloud
             }
             _msg.is_bigendian = false;
             _msg.point_step = 12;
-            _msg.row_step = (uint)sensor.points.Length * 12;
+            _msg.row_step = (uint)sensor.pointsNum * 12;
             _msg.data = new byte[(uint)sensor.pointsNum * 12];
             _msg.is_dense = true;
 
             _data = new NativeArray<byte>(sensor.pointsNum * 12, Allocator.Persistent);
 
-            _pointsToPointCloud2MsgJob = new IPointsToPointCloud2MsgJob()
+            _pointsToPointCloud2MsgJob = new IPointsToPointCloud2MsgJob<TT>()
             {
-                points = sensor.points,
+                points = sensor.pointCloud.points,
                 data = _data
             };
         }

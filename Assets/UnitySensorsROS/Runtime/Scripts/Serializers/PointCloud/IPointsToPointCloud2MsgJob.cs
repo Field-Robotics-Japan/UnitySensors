@@ -1,19 +1,17 @@
-using UnityEngine;
-
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Jobs;
 
 using UnitySensors.Data.PointCloud;
-using UnitySensors.Sensor.LiDAR;
 
 namespace UnitySensors.ROS.Serializer.PointCloud
 {
     [BurstCompile]
-    public struct IPointsToPointCloud2MsgJob : IJobParallelFor
+    public struct IPointsToPointCloud2MsgJob<T> : IJobParallelFor
+        where T : struct, IPointXYZInterface
     {
         [ReadOnly]
-        public NativeArray<Point> points;
+        public NativeArray<T> points;
 
         public NativeArray<byte> data;
 
