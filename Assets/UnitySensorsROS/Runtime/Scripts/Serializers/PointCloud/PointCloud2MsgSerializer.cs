@@ -13,7 +13,7 @@ namespace UnitySensors.ROS.Serializer.PointCloud
     [System.Serializable]
     public class PointCloud2MsgSerializer<T, TT> : RosMsgSerializer<T, PointCloud2Msg>
         where T : UnitySensor, IPointCloudInterface<TT>
-        where TT : struct, IPointInterface
+        where TT : struct, IPointXYZInterface
     {
         [SerializeField]
         private HeaderSerializer _header;

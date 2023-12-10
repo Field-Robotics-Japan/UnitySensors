@@ -6,6 +6,7 @@ using UnitySensors.Sensor;
 
 namespace UnitySensors.ROS.Serializer.Image
 {
+    [System.Serializable]
     public class ImageMsgSerializer<T> : RosMsgSerializer<T, CompressedImageMsg> where T : UnitySensor, ITextureInterface
     {
         [SerializeField]

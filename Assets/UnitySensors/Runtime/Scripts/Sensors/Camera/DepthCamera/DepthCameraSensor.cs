@@ -60,6 +60,7 @@ namespace UnitySensors.Sensor.Camera
 
             _textureToPointsJob = new ITextureToPointsJob()
             {
+                near= m_camera.nearClipPlane,
                 far = m_camera.farClipPlane,
                 directions = _directions,
                 pixels = texture.GetPixelData<Color>(0),
