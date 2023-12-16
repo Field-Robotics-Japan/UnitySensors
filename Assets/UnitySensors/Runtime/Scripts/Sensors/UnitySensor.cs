@@ -16,8 +16,8 @@ namespace UnitySensors.Sensor
 
         private float _frequency_inv;
 
+        public float dt { get => _frequency_inv; }
         public float time { get => _time; }
-        public float dt { get => _dt; }
 
         private void Awake()
         {
@@ -27,7 +27,7 @@ namespace UnitySensors.Sensor
             Init();
         }
 
-        private void Update()
+        protected virtual void Update()
         {
             _dt += Time.deltaTime;
             if (_dt < _frequency_inv) return;
