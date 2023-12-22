@@ -17,6 +17,8 @@ namespace UnitySensors.Sensor.LiDAR
         [SerializeField, ReadOnly]
         public float maxZenithAngle;
         [SerializeField, ReadOnly]
+        public float minAzimuthAngle;
+        [SerializeField, ReadOnly]
         public float maxAzimuthAngle;
     }
 }
