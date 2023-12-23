@@ -41,9 +41,9 @@ namespace UnitySensors.Sensor.LiDAR
         private void LoadScanData()
         {
             _directions = new NativeArray<float3>(scanPattern.size * 2, Allocator.Persistent);
-            for(int i = 0; i < scanPattern.scans.Length; i++)
+            for(int i = 0; i < scanPattern.size; i++)
             {
-                _directions[i] = _directions[i + scanPattern.scans.Length] = scanPattern.scans[i];
+                _directions[i] = _directions[i + scanPattern.size] = scanPattern.scans[i];
             }
         }
 
