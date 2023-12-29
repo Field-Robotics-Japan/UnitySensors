@@ -5,6 +5,7 @@ Shader "UnitySensors/Color2Depth"
         _F("_F", float) = 0.0
         _Y_MIN("_Y_MIN", float) = 0.0
         _Y_MAX("_Y_MAX", float) = 1.0
+        _Y_COEF("_Y_COEF", float) = 1.0
     }
     SubShader
     {
@@ -23,6 +24,7 @@ Shader "UnitySensors/Color2Depth"
             float _F;
             float _Y_MIN;
             float _Y_MAX;
+            float _Y_COEF;
 
             struct appdata
             {
@@ -50,6 +52,8 @@ Shader "UnitySensors/Color2Depth"
             {
                 clip(i.uv.y - _Y_MIN);
                 clip(_Y_MAX - i.uv.y);
+                i.uv.y -= _Y_MIN;
+                i.uv.y *= _Y_COEF;
                 float depth01 = Linear01Depth(tex2D(_CameraDepthTexture, i.uv).r);
                 float3 viewPos = (i.viewDir.xyz / i.viewDir.w) * depth01;
                 float distance = 1.0f - length(viewPos) / _F;
