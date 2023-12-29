@@ -30,6 +30,10 @@ namespace UnitySensors.Sensor.LiDAR
         [SerializeField]
         private float[] _zenithAngles;
         [SerializeField]
+        private float _minAzimuthAngle;
+        [SerializeField]
+        private float _maxAzimuthAngle;
+        [SerializeField]
         private int _azimuthAngleResolution = 360;
 
         private Vector2 _scrollPosition = Vector2.zero;
@@ -70,6 +74,8 @@ namespace UnitySensors.Sensor.LiDAR
                     _so.ApplyModifiedProperties();
                     EditorGUILayout.EndScrollView();
 
+                    _minAzimuthAngle = EditorGUILayout.FloatField("Min Azimuth Angle", _minAzimuthAngle);
+                    _maxAzimuthAngle = EditorGUILayout.FloatField("Max Azimuth Angle", _maxAzimuthAngle);
                     _azimuthAngleResolution = EditorGUILayout.IntField("Azimuth Angle Resolution", _azimuthAngleResolution);
 
                     break;
@@ -164,8 +170,8 @@ namespace UnitySensors.Sensor.LiDAR
             int index = 0;
             for (int azimuth = 0; azimuth < _azimuthAngleResolution; azimuth++)
             {
-                float azimuthAngle = 360.0f / _azimuthAngleResolution * azimuth;
-                if (_direction == Direction.CCW) azimuthAngle *= -1;
+                if (_direction == Direction.CCW) azimuth = _azimuthAngleResolution - 1 - azimuth;
+                float azimuthAngle = Mathf.Lerp(_minAzimuthAngle, _maxAzimuthAngle, (float)azimuth / _azimuthAngleResolution);
                 foreach (float zenithAngle in _zenithAngles)
                 {
                     scan.scans[index] = Quaternion.Euler(-zenithAngle, azimuthAngle, 0) * Vector3.forward;
@@ -173,8 +179,8 @@ namespace UnitySensors.Sensor.LiDAR
                 }
             }
 
-            scan.minAzimuthAngle = -180.0f;
-            scan.maxAzimuthAngle = 180.0f;
+            scan.minAzimuthAngle = _minAzimuthAngle;
+            scan.maxAzimuthAngle = _maxAzimuthAngle;
 
             scan.minZenithAngle = float.MaxValue;
             scan.maxZenithAngle = float.MinValue;
