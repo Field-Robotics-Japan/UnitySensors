@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Rendering;
 using Unity.Collections;
@@ -5,16 +6,25 @@ using Unity.Jobs;
 using Unity.Mathematics;
 
 using UnitySensors.Data.PointCloud;
+using UnitySensors.Utils.Noise;
+
+using Random = Unity.Mathematics.Random;
 
 namespace UnitySensors.Sensor.Camera
 {
     public class DepthCameraSensor : CameraSensor, IPointCloudInterface<PointXYZ>
     {
+        [SerializeField]
+        private float _gaussianNoiseSigma = 0.0f;
+
         private Material _mat;
 
         private JobHandle _jobHandle;
 
+        private IUpdateGaussianNoisesJob _updateGaussianNoisesJob;
         private ITextureToPointsJob _textureToPointsJob;
+
+        private NativeArray<float> _noises;
         private NativeArray<float3> _directions;
 
         private PointCloud<PointXYZ> _pointCloud;
@@ -58,12 +68,22 @@ namespace UnitySensors.Sensor.Camera
                 points = new NativeArray<PointXYZ>(_pointsNum, Allocator.Persistent)
             };
 
+            _noises = new NativeArray<float>(pointsNum, Allocator.Persistent);
+
+            _updateGaussianNoisesJob = new IUpdateGaussianNoisesJob()
+            {
+                sigma = _gaussianNoiseSigma,
+                random = new Random((uint)Environment.TickCount),
+                noises = _noises
+            };
+
             _textureToPointsJob = new ITextureToPointsJob()
             {
                 near= m_camera.nearClipPlane,
                 far = m_camera.farClipPlane,
                 directions = _directions,
                 pixels = texture.GetPixelData<Color>(0),
+                noises = _noises,
                 points = _pointCloud.points
             };
         }
@@ -72,7 +92,8 @@ namespace UnitySensors.Sensor.Camera
         {
             if (!LoadTexture()) return;
 
-            _jobHandle = _textureToPointsJob.Schedule(_pointsNum, 1);
+            JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(_pointsNum, 1);
+            _jobHandle = _textureToPointsJob.Schedule(_pointsNum, 1, updateGaussianNoisesJobHandle);
             JobHandle.ScheduleBatchedJobs();
             _jobHandle.Complete();
 
@@ -84,6 +105,7 @@ namespace UnitySensors.Sensor.Camera
         {
             _jobHandle.Complete();
             _pointCloud.Dispose();
+            _noises.Dispose();
             _directions.Dispose();
             base.OnSensorDestroy();
         }
