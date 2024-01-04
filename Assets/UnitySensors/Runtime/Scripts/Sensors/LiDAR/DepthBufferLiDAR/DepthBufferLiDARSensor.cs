@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Rendering;
 using Unity.Collections;
@@ -6,32 +7,32 @@ using Unity.Mathematics;
 
 using UnitySensors.Attribute;
 using UnitySensors.Data.PointCloud;
+using UnitySensors.Utils.Noise;
 using UnitySensors.Utils.Camera;
+
+using Random = Unity.Mathematics.Random;
 
 namespace UnitySensors.Sensor.LiDAR
 {
     public class DepthBufferLiDARSensor : LiDARSensor<PointXYZI>
     {
         [SerializeField, Min(1)]
-        private int _texturePixelsNum;
+        private int _texturePixelsNum = 1;
         [SerializeField, Attribute.ReadOnly]
         private Vector2Int _textureSizePerCamera;
-
-        [SerializeField]
-        private Shader _shader;
-        [SerializeField]
-        private MeshRenderer _renderer;
 
         private Transform _transform;
 
         private JobHandle _jobHandle;
         private ITextureToPointsJob _textureToPointsJob;
+        private IUpdateGaussianNoisesJob _updateGaussianNoisesJob;
 
         private RenderTexture _rt;
         private Texture2D _texture;
         private NativeArray<Color> _pixels;
         private NativeArray<float3> _directions;
         private NativeArray<int> _pixelIndices;
+        private NativeArray<float> _noises;
 
         private int _camerasNum = 0;
         private float _horizontalFOV;
@@ -55,7 +56,7 @@ namespace UnitySensors.Sensor.LiDAR
 
             float aspectRatio = Mathf.Tan(0.5f * _horizontalFOV * Mathf.Deg2Rad) / Mathf.Tan(0.5f * verticalFOV * Mathf.Deg2Rad);
             _textureSizePerCamera.y = Mathf.RoundToInt(Mathf.Sqrt((_texturePixelsNum / _camerasNum) / aspectRatio));
-            _textureSizePerCamera.x = Mathf.CeilToInt(_textureSizePerCamera.y * aspectRatio);
+            _textureSizePerCamera.x = Mathf.RoundToInt(_textureSizePerCamera.y * aspectRatio);
 
             _rt = new RenderTexture(_textureSizePerCamera.x, _textureSizePerCamera.y * _camerasNum, 32, RenderTextureFormat.ARGBFloat);
             _texture = new Texture2D(_textureSizePerCamera.x, _textureSizePerCamera.y * _camerasNum, TextureFormat.RGBAFloat, false);
@@ -87,10 +88,6 @@ namespace UnitySensors.Sensor.LiDAR
                 converter.y_max = (float)(i + 1.0f) / _camerasNum;
                 converter.y_coef = _camerasNum;
             }
-
-            Material mat = new Material(_shader);
-            mat.mainTexture = _rt;
-            _renderer.material = mat;
         }
 
         private void LoadScanData()
@@ -107,9 +104,9 @@ namespace UnitySensors.Sensor.LiDAR
                 float3 scan = scanPattern.scans[i];
 
                 _directions[i] = _directions[i + scanPattern.size] = scan;
+
                 float azimuthAngle = Mathf.Atan2(scan.x, scan.z) * Mathf.Rad2Deg;
                 int cameraIndex = Mathf.FloorToInt(_camerasNum * Mathf.InverseLerp(scanPattern.minAzimuthAngle, scanPattern.maxAzimuthAngle, azimuthAngle));
-
                 Vector3 dir = scan;
                 dir = Quaternion.Euler(0, -(cameraIndex - camerasNum_2) * _horizontalFOV, 0) * dir;
                 dir *= (radius / dir.z);
@@ -117,23 +114,13 @@ namespace UnitySensors.Sensor.LiDAR
                 int index_x = (int)Mathf.Clamp(_textureSizePerCamera.x * 0.5f + dir.x, 0, _textureSizePerCamera.x - 1);
                 int index_y = (int)Mathf.Clamp(_textureSizePerCamera.y * 0.5f + dir.y, 0, _textureSizePerCamera.y - 1);
                 _pixelIndices[i] = _pixelIndices[i + scanPattern.size] = cameraIndex * textureSizePerCamera + index_y * _textureSizePerCamera.x + index_x;
-
-                /*
-                float azimuthAngle = Mathf.Atan2(scan.x, scan.z) * Mathf.Rad2Deg;
-                int cameraIndex = Mathf.FloorToInt(_camerasNum * Mathf.InverseLerp(scanPattern.minAzimuthAngle, scanPattern.maxAzimuthAngle, azimuthAngle));
-
-                Vector3 dir = scan;
-                dir = Quaternion.Euler(0, -((cameraIndex - camerasNum_2 + 0.5f) * _horizontalFOV), 0) * dir;
-                dir *= (radius / dir.z);
-                int index_x = (int)Mathf.Clamp(_textureSizePerCamera.x * 0.5f + dir.x, 0, _textureSizePerCamera.x - 1);
-                int index_y = (int)Mathf.Clamp(_textureSizePerCamera.y * 0.5f + dir.y, 0, _textureSizePerCamera.y - 1);
-                _pixelIndices[i] = _pixelIndices[i + scanPattern.size] = cameraIndex * textureSizePerCamera + index_y * _textureSizePerCamera.x + index_x;
-                */
             }
         }
 
         private void SetupJobs()
         {
+            _noises = new NativeArray<float>(pointsNum, Allocator.Persistent);
+
             _textureToPointsJob = new ITextureToPointsJob()
             {
                 near = minRange,
@@ -141,8 +128,16 @@ namespace UnitySensors.Sensor.LiDAR
                 indexOffset = 0,
                 directions = _directions,
                 pixelIndices = _pixelIndices,
+                noises =_noises,
                 pixels = _pixels,
                 points = pointCloud.points
+            };
+
+            _updateGaussianNoisesJob = new IUpdateGaussianNoisesJob()
+            {
+                sigma = gaussianNoiseSigma,
+                random = new Random((uint)Environment.TickCount),
+                noises = _noises
             };
         }
 
@@ -150,7 +145,8 @@ namespace UnitySensors.Sensor.LiDAR
         {
             if (!LoadTexture()) return;
 
-            _jobHandle = _textureToPointsJob.Schedule(pointsNum, 1);
+            JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(pointsNum, 1);
+            _jobHandle = _textureToPointsJob.Schedule(pointsNum, 1, updateGaussianNoisesJobHandle);
 
             JobHandle.ScheduleBatchedJobs();
             _jobHandle.Complete();
@@ -187,6 +183,7 @@ namespace UnitySensors.Sensor.LiDAR
             _rt.Release();
             _directions.Dispose();
             _pixelIndices.Dispose();
+            _noises.Dispose();
             base.OnSensorDestroy();
         }
     }

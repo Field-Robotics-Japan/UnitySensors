@@ -20,6 +20,8 @@ namespace UnitySensors.Sensor.LiDAR
         public NativeArray<float3> directions;
         [ReadOnly]
         public NativeArray<int> pixelIndices;
+        [ReadOnly]
+        public NativeArray<float> noises;
 
         [ReadOnly, NativeDisableParallelForRestriction]
         public NativeArray<Color> pixels;
@@ -31,7 +33,7 @@ namespace UnitySensors.Sensor.LiDAR
         {
             int pixelIndex = pixelIndices[index + indexOffset];
             float distance = Mathf.Clamp01(1.0f - pixels.AsReadOnly()[pixelIndex].r) * far;
-            distance = (near < distance && distance < far) ? distance/* + noises[index]*/ : 0;
+            distance = (near < distance && distance < far) ? distance + noises[index] : 0;
             PointXYZI point = new PointXYZI()
             {
                 position = directions[index + indexOffset] * distance
