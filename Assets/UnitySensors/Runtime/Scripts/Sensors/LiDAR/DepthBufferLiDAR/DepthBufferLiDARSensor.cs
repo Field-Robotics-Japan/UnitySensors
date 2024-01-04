@@ -24,15 +24,15 @@ namespace UnitySensors.Sensor.LiDAR
         private Transform _transform;
 
         private JobHandle _jobHandle;
-        private ITextureToPointsJob _textureToPointsJob;
         private IUpdateGaussianNoisesJob _updateGaussianNoisesJob;
+        private ITextureToPointsJob _textureToPointsJob;
 
         private RenderTexture _rt;
         private Texture2D _texture;
+        private NativeArray<float> _noises;
         private NativeArray<Color> _pixels;
         private NativeArray<float3> _directions;
         private NativeArray<int> _pixelIndices;
-        private NativeArray<float> _noises;
 
         private int _camerasNum = 0;
         private float _horizontalFOV;
@@ -121,6 +121,13 @@ namespace UnitySensors.Sensor.LiDAR
         {
             _noises = new NativeArray<float>(pointsNum, Allocator.Persistent);
 
+            _updateGaussianNoisesJob = new IUpdateGaussianNoisesJob()
+            {
+                sigma = gaussianNoiseSigma,
+                random = new Random((uint)Environment.TickCount),
+                noises = _noises
+            };
+
             _textureToPointsJob = new ITextureToPointsJob()
             {
                 near = minRange,
@@ -131,13 +138,6 @@ namespace UnitySensors.Sensor.LiDAR
                 noises =_noises,
                 pixels = _pixels,
                 points = pointCloud.points
-            };
-
-            _updateGaussianNoisesJob = new IUpdateGaussianNoisesJob()
-            {
-                sigma = gaussianNoiseSigma,
-                random = new Random((uint)Environment.TickCount),
-                noises = _noises
             };
         }
 

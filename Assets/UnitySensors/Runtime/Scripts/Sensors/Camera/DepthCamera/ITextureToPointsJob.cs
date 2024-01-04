@@ -20,13 +20,15 @@ namespace UnitySensors.Sensor.Camera
 
         [ReadOnly]
         public NativeArray<Color> pixels;
+        [ReadOnly]
+        public NativeArray<float> noises;
 
         public NativeArray<PointXYZ> points;
 
         public void Execute(int index)
         {
             float distance = Mathf.Clamp01(1.0f - pixels.AsReadOnly()[index].r) * far;
-            distance = (near < distance && distance < far) ? distance/* + noises[index]*/ : 0;
+            distance = (near < distance && distance < far) ? distance + noises[index] : 0;
             PointXYZ point = new PointXYZ()
             {
                 position = directions[index] * distance
