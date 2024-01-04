@@ -172816,4 +172816,5 @@ MonoBehaviour:
   size: 57600
   minZenithAngle: -15
   maxZenithAngle: 15
+  minAzimuthAngle: -180
   maxAzimuthAngle: 180

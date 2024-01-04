@@ -30,7 +30,13 @@ namespace UnitySensors.Sensor.LiDAR
         [SerializeField]
         private float[] _zenithAngles;
         [SerializeField]
+        private float _minAzimuthAngle;
+        [SerializeField]
+        private float _maxAzimuthAngle;
+        [SerializeField]
         private int _azimuthAngleResolution = 360;
+        [SerializeField]
+        private float _zenithAngleOffset = 0;
 
         private Vector2 _scrollPosition = Vector2.zero;
         private SerializedObject _so;
@@ -59,7 +65,8 @@ namespace UnitySensors.Sensor.LiDAR
                 case Mode.FromCSV:
 
                     _csvFile = EditorGUILayout.ObjectField("CSV File", _csvFile, typeof(TextAsset), true) as TextAsset;
-                    
+                    _zenithAngleOffset = EditorGUILayout.FloatField("Zenith Angle Offset", _zenithAngleOffset);
+
                     break;
 
                 case Mode.FromSpecification:
@@ -70,6 +77,8 @@ namespace UnitySensors.Sensor.LiDAR
                     _so.ApplyModifiedProperties();
                     EditorGUILayout.EndScrollView();
 
+                    _minAzimuthAngle = EditorGUILayout.FloatField("Min Azimuth Angle", _minAzimuthAngle);
+                    _maxAzimuthAngle = EditorGUILayout.FloatField("Max Azimuth Angle", _maxAzimuthAngle);
                     _azimuthAngleResolution = EditorGUILayout.IntField("Azimuth Angle Resolution", _azimuthAngleResolution);
 
                     break;
@@ -122,7 +131,8 @@ namespace UnitySensors.Sensor.LiDAR
             ScanPattern scan = ScriptableObject.CreateInstance<ScanPattern>();
             scan.size = lines.Length - 2;
             scan.scans = new float3[scan.size];
-            scan.maxAzimuthAngle = 0.0f;
+            scan.minAzimuthAngle = float.MaxValue;
+            scan.maxAzimuthAngle = float.MinValue;
             scan.minZenithAngle = float.MaxValue;
             scan.maxZenithAngle = float.MinValue;
 
@@ -137,9 +147,10 @@ namespace UnitySensors.Sensor.LiDAR
                 }
 
                 float azimuthAngle = float.Parse(line[azimuth_index]);
-                float zenithAngle = float.Parse(line[zenith_index]) - 90;
+                float zenithAngle = float.Parse(line[zenith_index]) - _zenithAngleOffset;
 
-                scan.maxAzimuthAngle = Mathf.Max(scan.maxAzimuthAngle, Mathf.Abs(azimuthAngle));
+                scan.minAzimuthAngle = Mathf.Min(scan.minAzimuthAngle, azimuthAngle);
+                scan.maxAzimuthAngle = Mathf.Max(scan.maxAzimuthAngle, azimuthAngle);
                 scan.minZenithAngle = Mathf.Min(scan.minZenithAngle, zenithAngle);
                 scan.maxZenithAngle = Mathf.Max(scan.maxZenithAngle, zenithAngle);
                 
@@ -162,8 +173,8 @@ namespace UnitySensors.Sensor.LiDAR
             int index = 0;
             for (int azimuth = 0; azimuth < _azimuthAngleResolution; azimuth++)
             {
-                float azimuthAngle = 360.0f / _azimuthAngleResolution * azimuth;
-                if (_direction == Direction.CCW) azimuthAngle *= -1;
+                if (_direction == Direction.CCW) azimuth = _azimuthAngleResolution - 1 - azimuth;
+                float azimuthAngle = Mathf.Lerp(_minAzimuthAngle, _maxAzimuthAngle, (float)azimuth / _azimuthAngleResolution);
                 foreach (float zenithAngle in _zenithAngles)
                 {
                     scan.scans[index] = Quaternion.Euler(-zenithAngle, azimuthAngle, 0) * Vector3.forward;
@@ -171,7 +182,8 @@ namespace UnitySensors.Sensor.LiDAR
                 }
             }
 
-            scan.maxAzimuthAngle = 180.0f;
+            scan.minAzimuthAngle = _minAzimuthAngle;
+            scan.maxAzimuthAngle = _maxAzimuthAngle;
 
             scan.minZenithAngle = float.MaxValue;
             scan.maxZenithAngle = float.MinValue;
