@@ -43,8 +43,8 @@ Shader "UnitySensors/Color2Depth"
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = TRANSFORM_TEX(v.uv, _CameraDepthTexture);
-                o.viewDir = mul(unity_CameraInvProjection, float4 (o.uv * 2.0 - 1.0, 1.0, 1.0));
+                o.uv = v.uv;
+                o.viewDir = mul(unity_CameraInvProjection, float4 (v.uv.x * 2.0 - 1.0, (v.uv.y - _Y_MIN) * _Y_COEF * 2.0 - 1.0, 1.0, 1.0));
                 return o;
             }
 
@@ -52,9 +52,7 @@ Shader "UnitySensors/Color2Depth"
             {
                 clip(i.uv.y - _Y_MIN);
                 clip(_Y_MAX - i.uv.y);
-                i.uv.y -= _Y_MIN;
-                i.uv.y *= _Y_COEF;
-                float depth01 = Linear01Depth(tex2D(_CameraDepthTexture, i.uv).r);
+                float depth01 = Linear01Depth(tex2D(_CameraDepthTexture, float2 (i.uv.x, (i.uv.y - _Y_MIN) * _Y_COEF)).r);
                 float3 viewPos = (i.viewDir.xyz / i.viewDir.w) * depth01;
                 float distance = 1.0f - length(viewPos) / _F;
                 return float4(distance, distance, distance, 1.0f);
