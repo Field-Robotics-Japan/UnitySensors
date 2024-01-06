@@ -34,7 +34,8 @@ namespace UnitySensors.Sensor.LiDAR
         public void Execute(int index)
         {
             float distance = raycastHits[index].distance;
-            distance = (minRange < distance && distance < maxRange) ? distance + noises[index] : 0;
+            float distance_noised = distance + noises[index];
+            distance = (minRange < distance && distance < maxRange && minRange < distance_noised && distance_noised < maxRange) ? distance_noised : 0;
             PointXYZI point = new PointXYZI()
             {
                 position = directions[index + indexOffset] * distance,
