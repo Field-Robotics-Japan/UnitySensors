@@ -1,4 +1,6 @@
 <map id="UnitySensors.Visualization.ScanPatternVisualizer" name="UnitySensors.Visualization.ScanPatternVisualizer">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,205,121"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1Visualization_1_1Visualizer.html" title=" " alt="" coords="25,5,185,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="45,171,245,212"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1Visualization_1_1Visualizer.html" title=" " alt="" coords="5,81,165,108"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1ScanPattern.html" title=" " alt="" coords="189,81,379,108"/>
+<area shape="rect" id="node4" title=" " alt="" coords="219,5,349,32"/>
 </map>

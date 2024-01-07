@@ -1,4 +1,8 @@
 <map id="UnitySensors.ROS.VelodynePointsPublisher.Publish" name="UnitySensors.ROS.VelodynePointsPublisher.Publish">
-<area shape="rect" id="node1" title="ROSトピック送信の仮想関数" alt="" coords="5,5,208,47"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1VelodynePointsPublisher.html#a2fa13b0b943c26e584566831ff4eac54" title="初期化の仮想関数" alt="" coords="256,5,459,47"/>
+<area shape="rect" id="node1" title="ROSトピック送信の仮想関数" alt="" coords="5,39,208,80"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1VelodynePointsPublisher.html#a2fa13b0b943c26e584566831ff4eac54" title="初期化の仮想関数" alt="" coords="265,5,468,47"/>
+<area shape="rect" id="node5" href="$classUnitySensors_1_1ROS_1_1PointCloud2Serializer.html#a01fbe4d4de0901b2deb93613e4fcfad7" title=" " alt="" coords="256,71,477,112"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1PointCloud2Serializer.html#a11ea80e1614cdcfae5edc7f88e3fa8e8" title=" " alt="" coords="525,5,747,47"/>
+<area shape="rect" id="node4" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html#a5a4664d356a25d74dad02a2d2f6d0956" title="���ú���֐�" alt="" coords="795,5,1001,47"/>
+<area shape="rect" id="node6" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html#ad1a8258c1a9bc4abce0c95ba73250e72" title="�V���A���C�Y�֐�" alt="" coords="533,71,739,112"/>
 </map>

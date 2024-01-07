@@ -1,0 +1,5 @@
+<map id="UnitySensors.ROS.VelodynePointsPublisher.Init" name="UnitySensors.ROS.VelodynePointsPublisher.Init">
+<area shape="rect" id="node1" title="åˆæœŸåŒ–ã®ä»®æƒ³é–¢æ•°" alt="" coords="5,5,208,47"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1PointCloud2Serializer.html#a11ea80e1614cdcfae5edc7f88e3fa8e8" title=" " alt="" coords="256,5,477,47"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html#a5a4664d356a25d74dad02a2d2f6d0956" title="‰ŠÃº‰»ŠÖ”" alt="" coords="525,5,732,47"/>
+</map>

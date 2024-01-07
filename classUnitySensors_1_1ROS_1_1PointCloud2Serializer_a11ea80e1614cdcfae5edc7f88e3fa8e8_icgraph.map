@@ -1,0 +1,11 @@
+<map id="UnitySensors.ROS.PointCloud2Serializer.Init" name="UnitySensors.ROS.PointCloud2Serializer.Init">
+<area shape="rect" id="node1" title=" " alt="" coords="605,105,827,147"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1DepthCameraPublisher.html#aefb4f7ad7b736ca2c6b15bfa5da7b375" title="初期化の仮想関数" alt="" coords="309,9,543,51"/>
+<area shape="rect" id="node4" href="$classUnitySensors_1_1ROS_1_1LivoxPublisher.html#a740c86d5b02ffbd25b17882037e50471" title="初期化の仮想関数" alt="" coords="295,81,557,107"/>
+<area shape="rect" id="node6" href="$classUnitySensors_1_1ROS_1_1VelodynePointsPublisher.html#a2fa13b0b943c26e584566831ff4eac54" title="初期化の仮想関数" alt="" coords="325,135,527,176"/>
+<area shape="rect" id="node8" href="$classUnitySensors_1_1ROS_1_1VelodynePublisher.html#a8bc9217902894da822d07d43a85ec2cd" title="初期化の仮想関数" alt="" coords="325,200,527,241"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1DepthCameraPublisher.html#ab6e2f2e532e39e9ebe52a22192197132" title="ROSトピック送信の仮想関数" alt="" coords="9,5,243,47"/>
+<area shape="rect" id="node5" href="$classUnitySensors_1_1ROS_1_1LivoxPublisher.html#aa7ee33ec81ab196c53c5f44a7a743ef3" title="ROSトピック送信の仮想関数" alt="" coords="5,71,247,112"/>
+<area shape="rect" id="node7" href="$classUnitySensors_1_1ROS_1_1VelodynePointsPublisher.html#acdfa5d1c2bf84fb18f317a397917cd3f" title="ROSトピック送信の仮想関数" alt="" coords="25,136,227,177"/>
+<area shape="rect" id="node9" href="$classUnitySensors_1_1ROS_1_1VelodynePublisher.html#ab0d9019f2e72ca6b323cb33b878f2af7" title="ROSトピック送信の仮想関数" alt="" coords="25,201,227,243"/>
+</map>

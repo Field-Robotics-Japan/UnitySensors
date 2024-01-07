@@ -1,0 +1,7 @@
+<map id="UnitySensors.ROS.PointCloud2Serializer.Dispose" name="UnitySensors.ROS.PointCloud2Serializer.Dispose">
+<area shape="rect" id="node1" title=" " alt="" coords="296,104,517,145"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1DepthCameraPublisher.html#a02c674836c24ee5273288b1cd74caf7d" title=" " alt="" coords="10,5,243,47"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1LivoxPublisher.html#a6d5313d53dd9a5ec6fe8d4c38362657e" title=" " alt="" coords="6,71,247,112"/>
+<area shape="rect" id="node4" href="$classUnitySensors_1_1ROS_1_1VelodynePointsPublisher.html#af0961956760aa84cb9c009d95c2d6aed" title=" " alt="" coords="5,136,248,177"/>
+<area shape="rect" id="node5" href="$classUnitySensors_1_1ROS_1_1VelodynePublisher.html#abb302a2cb2c1ea70f63b2e855a4e3e2c" title=" " alt="" coords="25,201,228,243"/>
+</map>

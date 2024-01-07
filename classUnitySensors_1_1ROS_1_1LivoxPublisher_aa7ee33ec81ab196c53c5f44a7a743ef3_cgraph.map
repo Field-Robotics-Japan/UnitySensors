@@ -1,4 +1,8 @@
 <map id="UnitySensors.ROS.LivoxPublisher.Publish" name="UnitySensors.ROS.LivoxPublisher.Publish">
-<area shape="rect" id="node1" title="ROSトピック送信の仮想関数" alt="" coords="5,5,247,47"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1LivoxPublisher.html#a740c86d5b02ffbd25b17882037e50471" title="初期化の仮想関数" alt="" coords="295,13,557,39"/>
+<area shape="rect" id="node1" title="ROSトピック送信の仮想関数" alt="" coords="5,39,247,80"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1LivoxPublisher.html#a740c86d5b02ffbd25b17882037e50471" title="初期化の仮想関数" alt="" coords="295,15,557,42"/>
+<area shape="rect" id="node5" href="$classUnitySensors_1_1ROS_1_1PointCloud2Serializer.html#a01fbe4d4de0901b2deb93613e4fcfad7" title=" " alt="" coords="315,68,537,109"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1PointCloud2Serializer.html#a11ea80e1614cdcfae5edc7f88e3fa8e8" title=" " alt="" coords="605,5,827,47"/>
+<area shape="rect" id="node4" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html#a5a4664d356a25d74dad02a2d2f6d0956" title="���ú���֐�" alt="" coords="875,5,1081,47"/>
+<area shape="rect" id="node6" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html#ad1a8258c1a9bc4abce0c95ba73250e72" title="�V���A���C�Y�֐�" alt="" coords="613,71,819,112"/>
 </map>

@@ -1,5 +1,13 @@
 <map id="UnitySensors.Visualization.LivoxPointsMeshGenerator" name="UnitySensors.Visualization.LivoxPointsMeshGenerator">
-<area shape="rect" id="node1" title=" " alt="" coords="5,155,205,196"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1Visualization_1_1PointsMeshGenerator.html" title=" " alt="" coords="24,80,187,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="43,5,167,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1088,46,1288,87"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1Visualization_1_1PointsMeshGenerator.html" title=" " alt="" coords="599,5,761,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="184,8,308,35"/>
+<area shape="rect" id="node5" href="$classUnitySensors_1_1Sensor.html" title=" " alt="" coords="428,41,495,68"/>
+<area shape="rect" id="node4" href="$classUnitySensors_1_1LivoxSensor.html" title=" " alt="" coords="795,100,985,127"/>
+<area shape="rect" id="node6" href="$classUnitySensors_1_1CSVLiDARScanPattern.html" title=" " alt="" coords="357,93,565,134"/>
+<area shape="rect" id="node7" href="$classUnitySensors_1_1ScanPattern.html" title=" " alt="" coords="197,100,295,127"/>
+<area shape="rect" id="node8" title=" " alt="" coords="5,100,135,127"/>
+<area shape="rect" id="node9" href="$structUnitySensors_1_1LivoxSensor_1_1UpdateGaussianNoisesJob.html" title=" " alt="" coords="364,158,559,199"/>
+<area shape="rect" id="node10" title=" " alt="" coords="189,201,303,228"/>
+<area shape="rect" id="node11" href="$structUnitySensors_1_1LivoxSensor_1_1TextureToPointsJob.html" title=" " alt="" coords="364,223,559,265"/>
 </map>

@@ -1,5 +1,12 @@
 <map id="UnitySensors.VelodyneSensor" name="UnitySensors.VelodyneSensor">
-<area shape="rect" id="node1" title=" " alt="" coords="5,155,221,181"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor.html" title=" " alt="" coords="80,80,147,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="51,5,175,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="845,129,1061,156"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor.html" title=" " alt="" coords="443,5,509,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="184,5,308,32"/>
+<area shape="rect" id="node4" href="$structUnitySensors_1_1VelodyneSensor_1_1UpdateGaussianNoisesJob.html" title=" " alt="" coords="367,57,585,98"/>
+<area shape="rect" id="node5" title=" " alt="" coords="189,129,303,156"/>
+<area shape="rect" id="node6" href="$structUnitySensors_1_1VelodyneSensor_1_1UpdateRaycastCommandsJob.html" title=" " alt="" coords="367,122,585,163"/>
+<area shape="rect" id="node10" href="$structUnitySensors_1_1VelodyneSensor_1_1RaycastHitsToPointsJob.html" title=" " alt="" coords="367,187,585,229"/>
+<area shape="rect" id="node7" href="$classUnitySensors_1_1RotatingLiDARScanPattern.html" title=" " alt="" coords="357,253,595,294"/>
+<area shape="rect" id="node8" href="$classUnitySensors_1_1ScanPattern.html" title=" " alt="" coords="197,260,295,287"/>
+<area shape="rect" id="node9" title=" " alt="" coords="5,260,135,287"/>
 </map>

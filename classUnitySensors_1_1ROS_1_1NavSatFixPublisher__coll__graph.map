@@ -1,4 +1,6 @@
 <map id="UnitySensors.ROS.NavSatFixPublisher" name="UnitySensors.ROS.NavSatFixPublisher">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,215,136"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Publisher.html" title=" " alt="" coords="25,5,195,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="7,185,217,227"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Publisher.html" title=" " alt="" coords="5,81,176,123"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html" title=" " alt="" coords="201,81,410,123"/>
+<area shape="rect" id="node4" href="$classUnitySensors_1_1ROS_1_1Serializer.html" title="センサが取得したデータづｰROSづ勲essage型にシリアライズすづｩ" alt="" coords="264,5,347,32"/>
 </map>

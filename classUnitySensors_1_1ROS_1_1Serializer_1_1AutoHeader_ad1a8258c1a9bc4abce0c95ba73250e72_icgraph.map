@@ -1,0 +1,18 @@
+<map id="UnitySensors.ROS.Serializer.AutoHeader.Serialize" name="UnitySensors.ROS.Serializer.AutoHeader.Serialize">
+<area shape="rect" id="node1" title="�V���A���C�Y�֐�" alt="" coords="593,431,800,472"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1PointCloud2Serializer.html#a01fbe4d4de0901b2deb93613e4fcfad7" title=" " alt="" coords="311,136,533,177"/>
+<area shape="rect" id="node7" href="$classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer.html#adedaced2851d960cc3224cf9a53456c1" title=" " alt="" coords="321,267,523,308"/>
+<area shape="rect" id="node9" href="$classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a682d5f6a6e5e4c6619ff4cb07d4c9209" title=" " alt="" coords="317,332,527,373"/>
+<area shape="rect" id="node11" href="$classUnitySensors_1_1ROS_1_1NMEASerializer.html#a96b8b7635842edc0af23cb3a9e954f38" title=" " alt="" coords="299,397,545,439"/>
+<area shape="rect" id="node13" href="$classUnitySensors_1_1ROS_1_1TextureSerializer.html#a74cc910b3dc3a408a8c5a6037401e63a" title=" " alt="" coords="327,463,517,504"/>
+<area shape="rect" id="node14" href="$classUnitySensors_1_1ROS_1_1TFSerializer.html#afed6c13bdaa684c89c4c36ec015de6e6" title=" " alt="" coords="311,528,533,569"/>
+<area shape="rect" id="node15" href="$classUnitySensors_1_1ROS_1_1IMUSerializer.html#a5d6681f4afc9e9a5c50d117d8f2af2d9" title=" " alt="" coords="305,593,539,635"/>
+<area shape="rect" id="node16" href="$classUnitySensors_1_1ROS_1_1GroundTruthSerializer.html#ae2e94b139c0af2589d718ea8b180fed3" title=" " alt="" coords="311,659,533,700"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1DepthCameraPublisher.html#ab6e2f2e532e39e9ebe52a22192197132" title="ROSトピック送信の仮想関数" alt="" coords="11,5,245,47"/>
+<area shape="rect" id="node4" href="$classUnitySensors_1_1ROS_1_1LivoxPublisher.html#aa7ee33ec81ab196c53c5f44a7a743ef3" title="ROSトピック送信の仮想関数" alt="" coords="7,71,249,112"/>
+<area shape="rect" id="node5" href="$classUnitySensors_1_1ROS_1_1VelodynePointsPublisher.html#acdfa5d1c2bf84fb18f317a397917cd3f" title="ROSトピック送信の仮想関数" alt="" coords="27,136,229,177"/>
+<area shape="rect" id="node6" href="$classUnitySensors_1_1ROS_1_1VelodynePublisher.html#ab0d9019f2e72ca6b323cb33b878f2af7" title="ROSトピック送信の仮想関数" alt="" coords="27,201,229,243"/>
+<area shape="rect" id="node8" href="$classUnitySensors_1_1ROS_1_1VelodynePacketsPublisher.html#a3ca6c5765feff40348d949bc9011155e" title="ROSトピック送信の仮想関数" alt="" coords="27,267,229,308"/>
+<area shape="rect" id="node10" href="$classUnitySensors_1_1ROS_1_1NavSatFixPublisher.html#a125d2aead1c46634fb9bec1f4f5e06d2" title="ROSトピック送信の仮想関数" alt="" coords="23,332,233,373"/>
+<area shape="rect" id="node12" href="$classUnitySensors_1_1ROS_1_1NMEAPublisher.html#a322e3585eb4d347168f909cec9cd944e" title="ROSトピック送信の仮想関数" alt="" coords="5,397,251,439"/>
+</map>

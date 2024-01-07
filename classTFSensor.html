@@ -67,6 +67,7 @@ $(function() {
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classTFSensor-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">TFSensor Class Reference</div>  </div>
@@ -100,59 +101,275 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad9e8df9c634c932433f4aa23b7698a15"><td class="memItemLeft" align="right" valign="top"><a id="ad9e8df9c634c932433f4aa23b7698a15"></a>
-<a class="el" href="structTFSensor_1_1TFData.html">TFData</a>[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetTFData</b> ()</td></tr>
+<tr class="memitem:ad9e8df9c634c932433f4aa23b7698a15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structTFSensor_1_1TFData.html">TFData</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTFSensor.html#ad9e8df9c634c932433f4aa23b7698a15">GetTFData</a> ()</td></tr>
 <tr class="separator:ad9e8df9c634c932433f4aa23b7698a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a143aa806fa6ac87ad5ad22e450bb9c6e"><td class="memItemLeft" align="right" valign="top"><a id="a143aa806fa6ac87ad5ad22e450bb9c6e"></a>
-<a class="el" href="structTFSensor_1_1TFData.html">TFData</a>[]&#160;</td><td class="memItemRight" valign="bottom"><b>GetTFData</b> (string frame_id_parent, Matrix4x4 worldToLocalMatrix, Quaternion worldToLocalQuaternion)</td></tr>
+<tr class="memitem:a143aa806fa6ac87ad5ad22e450bb9c6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structTFSensor_1_1TFData.html">TFData</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTFSensor.html#a143aa806fa6ac87ad5ad22e450bb9c6e">GetTFData</a> (string frame_id_parent, Matrix4x4 worldToLocalMatrix, Quaternion worldToLocalQuaternion)</td></tr>
 <tr class="separator:a143aa806fa6ac87ad5ad22e450bb9c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad69bb36980801e83a0d7817c3d8ef5b3"><td class="memItemLeft" align="right" valign="top"><a id="ad69bb36980801e83a0d7817c3d8ef5b3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddChild</b> (<a class="el" href="classTFSensor.html">TFSensor</a> child)</td></tr>
+<tr class="memitem:ad69bb36980801e83a0d7817c3d8ef5b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTFSensor.html#ad69bb36980801e83a0d7817c3d8ef5b3">AddChild</a> (<a class="el" href="classTFSensor.html">TFSensor</a> child)</td></tr>
 <tr class="separator:ad69bb36980801e83a0d7817c3d8ef5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a24cbf36b2854c8713f87d00c98da1739"><td class="memItemLeft" align="right" valign="top"><a id="a24cbf36b2854c8713f87d00c98da1739"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>frame_id</b></td></tr>
+<tr class="memitem:a24cbf36b2854c8713f87d00c98da1739"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTFSensor.html#a24cbf36b2854c8713f87d00c98da1739">frame_id</a></td></tr>
 <tr class="separator:a24cbf36b2854c8713f87d00c98da1739"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae181b039d7dedc621aa984bb6f3ac416"><td class="memItemLeft" align="right" valign="top"><a id="ae181b039d7dedc621aa984bb6f3ac416"></a>
-<a class="el" href="classTFSensor.html">TFSensor</a>[]&#160;</td><td class="memItemRight" valign="bottom"><b>_children</b></td></tr>
+<tr class="memitem:ae181b039d7dedc621aa984bb6f3ac416"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTFSensor.html">TFSensor</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTFSensor.html#ae181b039d7dedc621aa984bb6f3ac416">_children</a></td></tr>
 <tr class="separator:ae181b039d7dedc621aa984bb6f3ac416"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a661420dde6ece7ace3733a375a753b39"><td class="memItemLeft" align="right" valign="top"><a id="a661420dde6ece7ace3733a375a753b39"></a>
-override void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> ()</td></tr>
+<tr class="memitem:a661420dde6ece7ace3733a375a753b39"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTFSensor.html#a661420dde6ece7ace3733a375a753b39">Init</a> ()</td></tr>
 <tr class="separator:a661420dde6ece7ace3733a375a753b39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a719e2c4dc5841eb1eefb5b38e470f034"><td class="memItemLeft" align="right" valign="top"><a id="a719e2c4dc5841eb1eefb5b38e470f034"></a>
-override void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateSensor</b> ()</td></tr>
+<tr class="memitem:a719e2c4dc5841eb1eefb5b38e470f034"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTFSensor.html#a719e2c4dc5841eb1eefb5b38e470f034">UpdateSensor</a> ()</td></tr>
 <tr class="separator:a719e2c4dc5841eb1eefb5b38e470f034"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:ae31724a8125a5adf7342dcf81ec1988e"><td class="memItemLeft" align="right" valign="top"><a id="ae31724a8125a5adf7342dcf81ec1988e"></a>
-<a class="el" href="structTFSensor_1_1TFData.html">TFData</a>[]&#160;</td><td class="memItemRight" valign="bottom"><b>tf</b><code> [get]</code></td></tr>
+<tr class="memitem:ae31724a8125a5adf7342dcf81ec1988e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structTFSensor_1_1TFData.html">TFData</a>[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTFSensor.html#ae31724a8125a5adf7342dcf81ec1988e">tf</a><code> [get]</code></td></tr>
 <tr class="separator:ae31724a8125a5adf7342dcf81ec1988e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classUnitySensors_1_1Sensor"><td colspan="2" onclick="javascript:toggleInherit('properties_classUnitySensors_1_1Sensor')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classUnitySensors_1_1Sensor.html">UnitySensors.Sensor</a></td></tr>
-<tr class="memitem:ae70cd6b37903a7aaa68f24dc8214f102 inherit properties_classUnitySensors_1_1Sensor"><td class="memItemLeft" align="right" valign="top"><a id="ae70cd6b37903a7aaa68f24dc8214f102"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>initialized</b><code> [get]</code></td></tr>
+<tr class="memitem:ae70cd6b37903a7aaa68f24dc8214f102 inherit properties_classUnitySensors_1_1Sensor"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor.html#ae70cd6b37903a7aaa68f24dc8214f102">initialized</a><code> [get]</code></td></tr>
 <tr class="separator:ae70cd6b37903a7aaa68f24dc8214f102 inherit properties_classUnitySensors_1_1Sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ae16ca1f7f3ec67fdfba72ccd50f190e1"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTFSensor.html#ae16ca1f7f3ec67fdfba72ccd50f190e1">_transform</a></td></tr>
+<tr class="separator:ae16ca1f7f3ec67fdfba72ccd50f190e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_classUnitySensors_1_1Sensor"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classUnitySensors_1_1Sensor')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classUnitySensors_1_1Sensor.html">UnitySensors.Sensor</a></td></tr>
-<tr class="memitem:a72bb5fb8a30e51fcf147a56c573eb9b4 inherit pro_attribs_classUnitySensors_1_1Sensor"><td class="memItemLeft" align="right" valign="top"><a id="a72bb5fb8a30e51fcf147a56c573eb9b4"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>_time_now</b> = 0.0f</td></tr>
+<tr class="memitem:a72bb5fb8a30e51fcf147a56c573eb9b4 inherit pro_attribs_classUnitySensors_1_1Sensor"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor.html#a72bb5fb8a30e51fcf147a56c573eb9b4">_time_now</a> = 0.0f</td></tr>
 <tr class="separator:a72bb5fb8a30e51fcf147a56c573eb9b4 inherit pro_attribs_classUnitySensors_1_1Sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ab4d1be3fa52eb0b65d977854c6f152 inherit pro_attribs_classUnitySensors_1_1Sensor"><td class="memItemLeft" align="right" valign="top"><a id="a9ab4d1be3fa52eb0b65d977854c6f152"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>_frequency_inv</b></td></tr>
+<tr class="memitem:a9ab4d1be3fa52eb0b65d977854c6f152 inherit pro_attribs_classUnitySensors_1_1Sensor"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor.html#a9ab4d1be3fa52eb0b65d977854c6f152">_frequency_inv</a></td></tr>
 <tr class="separator:a9ab4d1be3fa52eb0b65d977854c6f152 inherit pro_attribs_classUnitySensors_1_1Sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a871b2f9b884651b2317c3f7cac0accd2 inherit pro_attribs_classUnitySensors_1_1Sensor"><td class="memItemLeft" align="right" valign="top"><a id="a871b2f9b884651b2317c3f7cac0accd2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>_initialized</b> = false</td></tr>
+<tr class="memitem:a871b2f9b884651b2317c3f7cac0accd2 inherit pro_attribs_classUnitySensors_1_1Sensor"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor.html#a871b2f9b884651b2317c3f7cac0accd2">_initialized</a> = false</td></tr>
 <tr class="separator:a871b2f9b884651b2317c3f7cac0accd2 inherit pro_attribs_classUnitySensors_1_1Sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad69bb36980801e83a0d7817c3d8ef5b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad69bb36980801e83a0d7817c3d8ef5b3">&#9670;&nbsp;</a></span>AddChild()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TFSensor.AddChild </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTFSensor.html">TFSensor</a>&#160;</td>
+          <td class="paramname"><em>child</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad9e8df9c634c932433f4aa23b7698a15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9e8df9c634c932433f4aa23b7698a15">&#9670;&nbsp;</a></span>GetTFData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structTFSensor_1_1TFData.html">TFData</a> [] TFSensor.GetTFData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTFSensor_ad9e8df9c634c932433f4aa23b7698a15_cgraph.png" border="0" usemap="#aclassTFSensor_ad9e8df9c634c932433f4aa23b7698a15_cgraph" alt=""/></div>
+<map name="aclassTFSensor_ad9e8df9c634c932433f4aa23b7698a15_cgraph" id="aclassTFSensor_ad9e8df9c634c932433f4aa23b7698a15_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,160,56"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTFSensor_ad9e8df9c634c932433f4aa23b7698a15_icgraph.png" border="0" usemap="#aclassTFSensor_ad9e8df9c634c932433f4aa23b7698a15_icgraph" alt=""/></div>
+<map name="aclassTFSensor_ad9e8df9c634c932433f4aa23b7698a15_icgraph" id="aclassTFSensor_ad9e8df9c634c932433f4aa23b7698a15_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,160,56"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a143aa806fa6ac87ad5ad22e450bb9c6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a143aa806fa6ac87ad5ad22e450bb9c6e">&#9670;&nbsp;</a></span>GetTFData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structTFSensor_1_1TFData.html">TFData</a> [] TFSensor.GetTFData </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>frame_id_parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Matrix4x4&#160;</td>
+          <td class="paramname"><em>worldToLocalMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Quaternion&#160;</td>
+          <td class="paramname"><em>worldToLocalQuaternion</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTFSensor_a143aa806fa6ac87ad5ad22e450bb9c6e_cgraph.png" border="0" usemap="#aclassTFSensor_a143aa806fa6ac87ad5ad22e450bb9c6e_cgraph" alt=""/></div>
+<map name="aclassTFSensor_a143aa806fa6ac87ad5ad22e450bb9c6e_cgraph" id="aclassTFSensor_a143aa806fa6ac87ad5ad22e450bb9c6e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,160,56"/>
+<area shape="rect" href="classTFSensor.html#ad9e8df9c634c932433f4aa23b7698a15" title=" " alt="" coords="208,29,363,56"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a661420dde6ece7ace3733a375a753b39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a661420dde6ece7ace3733a375a753b39">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void TFSensor.Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classUnitySensors_1_1Sensor.html#ad1164845b43c3fa1e051f77b2c21bd78">UnitySensors.Sensor</a>.</p>
+
+</div>
+</div>
+<a id="a719e2c4dc5841eb1eefb5b38e470f034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a719e2c4dc5841eb1eefb5b38e470f034">&#9670;&nbsp;</a></span>UpdateSensor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void TFSensor.UpdateSensor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="classUnitySensors_1_1Sensor.html#af55fb20f2203dc8602abb70662e4bb82">UnitySensors.Sensor</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae181b039d7dedc621aa984bb6f3ac416"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae181b039d7dedc621aa984bb6f3ac416">&#9670;&nbsp;</a></span>_children</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTFSensor.html">TFSensor</a> [] TFSensor._children</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae16ca1f7f3ec67fdfba72ccd50f190e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae16ca1f7f3ec67fdfba72ccd50f190e1">&#9670;&nbsp;</a></span>_transform</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transform TFSensor._transform</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24cbf36b2854c8713f87d00c98da1739"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24cbf36b2854c8713f87d00c98da1739">&#9670;&nbsp;</a></span>frame_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string TFSensor.frame_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="ae31724a8125a5adf7342dcf81ec1988e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae31724a8125a5adf7342dcf81ec1988e">&#9670;&nbsp;</a></span>tf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structTFSensor_1_1TFData.html">TFData</a> [] TFSensor.tf</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/UnitySensors/Runtime/Scripts/Sensors/TF/TFSensor.cs</li>
+<li>Assets/UnitySensors/Runtime/Scripts/Sensors/TF/<a class="el" href="TFSensor_8cs.html">TFSensor.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

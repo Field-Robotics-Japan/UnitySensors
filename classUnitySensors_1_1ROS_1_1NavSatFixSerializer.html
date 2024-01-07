@@ -68,6 +68,8 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnitySensors.ROS.NavSatFixSerializer Class Reference</div>  </div>
@@ -94,21 +96,320 @@ Collaboration diagram for UnitySensors.ROS.NavSatFixSerializer:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7edf93e047a27a0514823b7e35ffeb5a"><td class="memItemLeft" align="right" valign="top"><a id="a7edf93e047a27a0514823b7e35ffeb5a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> (string frame_id)</td></tr>
+<tr class="memitem:a7edf93e047a27a0514823b7e35ffeb5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a7edf93e047a27a0514823b7e35ffeb5a">Init</a> (string frame_id)</td></tr>
 <tr class="separator:a7edf93e047a27a0514823b7e35ffeb5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a682d5f6a6e5e4c6619ff4cb07d4c9209"><td class="memItemLeft" align="right" valign="top"><a id="a682d5f6a6e5e4c6619ff4cb07d4c9209"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Serialize</b> (float time, <a class="el" href="classUnitySensors_1_1GeoCoordinate.html">GeoCoordinate</a> coordinate)</td></tr>
+<tr class="memitem:a682d5f6a6e5e4c6619ff4cb07d4c9209"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a682d5f6a6e5e4c6619ff4cb07d4c9209">Serialize</a> (float time, <a class="el" href="classUnitySensors_1_1GeoCoordinate.html">GeoCoordinate</a> coordinate)</td></tr>
 <tr class="separator:a682d5f6a6e5e4c6619ff4cb07d4c9209"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a01abcb7c3fcd57e62695c500b18cdb2d"><td class="memItemLeft" align="right" valign="top"><a id="a01abcb7c3fcd57e62695c500b18cdb2d"></a>
-NavSatFixMsg&#160;</td><td class="memItemRight" valign="bottom"><b>msg</b><code> [get]</code></td></tr>
+<tr class="memitem:a01abcb7c3fcd57e62695c500b18cdb2d"><td class="memItemLeft" align="right" valign="top">NavSatFixMsg&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a01abcb7c3fcd57e62695c500b18cdb2d">msg</a><code> [get]</code></td></tr>
 <tr class="separator:a01abcb7c3fcd57e62695c500b18cdb2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a5efd1b6a9ee7dcc8e1bdebc530fac676"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a5efd1b6a9ee7dcc8e1bdebc530fac676">Status</a> { <a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a5efd1b6a9ee7dcc8e1bdebc530fac676aa80630704b93114ed9e817a3f53f59c7">NO_FIX</a>
+, <a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a5efd1b6a9ee7dcc8e1bdebc530fac676a6aaac758332a8320840ac0e5f8fc28e2">FIX</a>
+, <a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a5efd1b6a9ee7dcc8e1bdebc530fac676a4e6c2686379f717bf114c84212039da7">SBAS_FIX</a>
+, <a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a5efd1b6a9ee7dcc8e1bdebc530fac676a32a4b873a10709f0c9d4c0f0e3922e24">GBAS_FIX</a>
+ }</td></tr>
+<tr class="separator:a5efd1b6a9ee7dcc8e1bdebc530fac676"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74ec43c0d2fad1cc438f1573984ffc87"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a74ec43c0d2fad1cc438f1573984ffc87">Service</a> { <a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a74ec43c0d2fad1cc438f1573984ffc87a8c578de37278ada488d763ea86c5cf20">GPS</a>
+, <a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a74ec43c0d2fad1cc438f1573984ffc87a48549df6f41418cb94b963fe84894cd6">GLONASS</a>
+, <a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a74ec43c0d2fad1cc438f1573984ffc87ab513c44a4d8c00922c7155d8a90dfde5">COMPASS</a>
+, <a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a74ec43c0d2fad1cc438f1573984ffc87a002aa3295f27b9c1aa3c602fd2a37c35">GALILEO</a>
+ }</td></tr>
+<tr class="separator:a74ec43c0d2fad1cc438f1573984ffc87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a9b34f7bc874094d6f1d3f26129cf5253"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a5efd1b6a9ee7dcc8e1bdebc530fac676">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a9b34f7bc874094d6f1d3f26129cf5253">_status</a></td></tr>
+<tr class="separator:a9b34f7bc874094d6f1d3f26129cf5253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca6f4424c37d14994b4689787e49e73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a74ec43c0d2fad1cc438f1573984ffc87">Service</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a2ca6f4424c37d14994b4689787e49e73">_service</a></td></tr>
+<tr class="separator:a2ca6f4424c37d14994b4689787e49e73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a362219a901c2884ec4435a4b6cbee2f0"><td class="memItemLeft" align="right" valign="top">NavSatFixMsg&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a362219a901c2884ec4435a4b6cbee2f0">_msg</a></td></tr>
+<tr class="separator:a362219a901c2884ec4435a4b6cbee2f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ad85a5b8c42164d5faa91dec67c83f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html">AutoHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a7ad85a5b8c42164d5faa91dec67c83f5">_header</a></td></tr>
+<tr class="separator:a7ad85a5b8c42164d5faa91dec67c83f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cb1857493dd761518e5f199e07631df"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a8cb1857493dd761518e5f199e07631df">_service_num</a></td></tr>
+<tr class="separator:a8cb1857493dd761518e5f199e07631df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a74ec43c0d2fad1cc438f1573984ffc87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74ec43c0d2fad1cc438f1573984ffc87">&#9670;&nbsp;</a></span>Service</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a74ec43c0d2fad1cc438f1573984ffc87">UnitySensors.ROS.NavSatFixSerializer.Service</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a74ec43c0d2fad1cc438f1573984ffc87a8c578de37278ada488d763ea86c5cf20"></a>GPS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a74ec43c0d2fad1cc438f1573984ffc87a48549df6f41418cb94b963fe84894cd6"></a>GLONASS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a74ec43c0d2fad1cc438f1573984ffc87ab513c44a4d8c00922c7155d8a90dfde5"></a>COMPASS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a74ec43c0d2fad1cc438f1573984ffc87a002aa3295f27b9c1aa3c602fd2a37c35"></a>GALILEO&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a5efd1b6a9ee7dcc8e1bdebc530fac676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5efd1b6a9ee7dcc8e1bdebc530fac676">&#9670;&nbsp;</a></span>Status</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a5efd1b6a9ee7dcc8e1bdebc530fac676">UnitySensors.ROS.NavSatFixSerializer.Status</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5efd1b6a9ee7dcc8e1bdebc530fac676aa80630704b93114ed9e817a3f53f59c7"></a>NO_FIX&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5efd1b6a9ee7dcc8e1bdebc530fac676a6aaac758332a8320840ac0e5f8fc28e2"></a>FIX&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5efd1b6a9ee7dcc8e1bdebc530fac676a4e6c2686379f717bf114c84212039da7"></a>SBAS_FIX&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5efd1b6a9ee7dcc8e1bdebc530fac676a32a4b873a10709f0c9d4c0f0e3922e24"></a>GBAS_FIX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7edf93e047a27a0514823b7e35ffeb5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7edf93e047a27a0514823b7e35ffeb5a">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnitySensors.ROS.NavSatFixSerializer.Init </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>frame_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUnitySensors_1_1ROS_1_1NavSatFixSerializer_a7edf93e047a27a0514823b7e35ffeb5a_cgraph.png" border="0" usemap="#aclassUnitySensors_1_1ROS_1_1NavSatFixSerializer_a7edf93e047a27a0514823b7e35ffeb5a_cgraph" alt=""/></div>
+<map name="aclassUnitySensors_1_1ROS_1_1NavSatFixSerializer_a7edf93e047a27a0514823b7e35ffeb5a_cgraph" id="aclassUnitySensors_1_1ROS_1_1NavSatFixSerializer_a7edf93e047a27a0514823b7e35ffeb5a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,215,47"/>
+<area shape="rect" href="classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html#a5a4664d356a25d74dad02a2d2f6d0956" title="初甘ｺ化関数" alt="" coords="263,5,469,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUnitySensors_1_1ROS_1_1NavSatFixSerializer_a7edf93e047a27a0514823b7e35ffeb5a_icgraph.png" border="0" usemap="#aclassUnitySensors_1_1ROS_1_1NavSatFixSerializer_a7edf93e047a27a0514823b7e35ffeb5a_icgraph" alt=""/></div>
+<map name="aclassUnitySensors_1_1ROS_1_1NavSatFixSerializer_a7edf93e047a27a0514823b7e35ffeb5a_icgraph" id="aclassUnitySensors_1_1ROS_1_1NavSatFixSerializer_a7edf93e047a27a0514823b7e35ffeb5a_icgraph">
+<area shape="rect" title=" " alt="" coords="263,5,472,47"/>
+<area shape="rect" href="classUnitySensors_1_1ROS_1_1NavSatFixPublisher.html#aa3e45f0979d8ba35020606fd14ace5d6" title="蛻晄悄蛹悶�ｮ莉ｮ諠ｳ髢｢謨ｰ" alt="" coords="5,5,215,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a682d5f6a6e5e4c6619ff4cb07d4c9209"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a682d5f6a6e5e4c6619ff4cb07d4c9209">&#9670;&nbsp;</a></span>Serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnitySensors.ROS.NavSatFixSerializer.Serialize </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classUnitySensors_1_1GeoCoordinate.html">GeoCoordinate</a>&#160;</td>
+          <td class="paramname"><em>coordinate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUnitySensors_1_1ROS_1_1NavSatFixSerializer_a682d5f6a6e5e4c6619ff4cb07d4c9209_cgraph.png" border="0" usemap="#aclassUnitySensors_1_1ROS_1_1NavSatFixSerializer_a682d5f6a6e5e4c6619ff4cb07d4c9209_cgraph" alt=""/></div>
+<map name="aclassUnitySensors_1_1ROS_1_1NavSatFixSerializer_a682d5f6a6e5e4c6619ff4cb07d4c9209_cgraph" id="aclassUnitySensors_1_1ROS_1_1NavSatFixSerializer_a682d5f6a6e5e4c6619ff4cb07d4c9209_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,215,47"/>
+<area shape="rect" href="classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html#ad1a8258c1a9bc4abce0c95ba73250e72" title="シリアライズ関数" alt="" coords="263,5,469,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUnitySensors_1_1ROS_1_1NavSatFixSerializer_a682d5f6a6e5e4c6619ff4cb07d4c9209_icgraph.png" border="0" usemap="#aclassUnitySensors_1_1ROS_1_1NavSatFixSerializer_a682d5f6a6e5e4c6619ff4cb07d4c9209_icgraph" alt=""/></div>
+<map name="aclassUnitySensors_1_1ROS_1_1NavSatFixSerializer_a682d5f6a6e5e4c6619ff4cb07d4c9209_icgraph" id="aclassUnitySensors_1_1ROS_1_1NavSatFixSerializer_a682d5f6a6e5e4c6619ff4cb07d4c9209_icgraph">
+<area shape="rect" title=" " alt="" coords="263,5,472,47"/>
+<area shape="rect" href="classUnitySensors_1_1ROS_1_1NavSatFixPublisher.html#a125d2aead1c46634fb9bec1f4f5e06d2" title="ROS繝医ヴ繝�繧ｯ騾∽ｿ｡縺ｮ莉ｮ諠ｳ髢｢謨ｰ" alt="" coords="5,5,215,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a7ad85a5b8c42164d5faa91dec67c83f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ad85a5b8c42164d5faa91dec67c83f5">&#9670;&nbsp;</a></span>_header</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html">AutoHeader</a> UnitySensors.ROS.NavSatFixSerializer._header</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a362219a901c2884ec4435a4b6cbee2f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a362219a901c2884ec4435a4b6cbee2f0">&#9670;&nbsp;</a></span>_msg</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">NavSatFixMsg UnitySensors.ROS.NavSatFixSerializer._msg</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ca6f4424c37d14994b4689787e49e73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ca6f4424c37d14994b4689787e49e73">&#9670;&nbsp;</a></span>_service</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a74ec43c0d2fad1cc438f1573984ffc87">Service</a> UnitySensors.ROS.NavSatFixSerializer._service</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8cb1857493dd761518e5f199e07631df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cb1857493dd761518e5f199e07631df">&#9670;&nbsp;</a></span>_service_num</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint UnitySensors.ROS.NavSatFixSerializer._service_num</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b34f7bc874094d6f1d3f26129cf5253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b34f7bc874094d6f1d3f26129cf5253">&#9670;&nbsp;</a></span>_status</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a5efd1b6a9ee7dcc8e1bdebc530fac676">Status</a> UnitySensors.ROS.NavSatFixSerializer._status</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a01abcb7c3fcd57e62695c500b18cdb2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01abcb7c3fcd57e62695c500b18cdb2d">&#9670;&nbsp;</a></span>msg</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">NavSatFixMsg UnitySensors.ROS.NavSatFixSerializer.msg</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/UnitySensorsROS/Runtime/Scripts/Serializers/GPS/NavSatFixSerializer.cs</li>
+<li>Assets/UnitySensorsROS/Runtime/Scripts/Serializers/GPS/<a class="el" href="NavSatFixSerializer_8cs.html">NavSatFixSerializer.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

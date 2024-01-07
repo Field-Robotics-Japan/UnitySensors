@@ -1,0 +1,5 @@
+<map id="UnitySensors.ROS.VelodyneMsgSerializer.Init" name="UnitySensors.ROS.VelodyneMsgSerializer.Init">
+<area shape="rect" id="node1" title=" " alt="" coords="507,5,709,47"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1VelodynePacketsPublisher.html#ad9d873fb295faba0e1c4e438d9f65ade" title="初期化の仮想関数" alt="" coords="256,5,459,47"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1VelodynePacketsPublisher.html#a3ca6c5765feff40348d949bc9011155e" title="ROSトピック送信の仮想関数" alt="" coords="5,5,208,47"/>
+</map>

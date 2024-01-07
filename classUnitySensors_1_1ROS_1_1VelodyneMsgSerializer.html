@@ -69,6 +69,7 @@ $(function() {
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UnitySensors.ROS.VelodyneMsgSerializer Class Reference</div>  </div>
@@ -88,8 +89,13 @@ Collaboration diagram for UnitySensors.ROS.VelodyneMsgSerializer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer__coll__graph.png" border="0" usemap="#aUnitySensors_8ROS_8VelodyneMsgSerializer_coll__map" alt="Collaboration graph"/></div>
 <map name="aUnitySensors_8ROS_8VelodyneMsgSerializer_coll__map" id="aUnitySensors_8ROS_8VelodyneMsgSerializer_coll__map">
-<area shape="rect" title=" " alt="" coords="5,80,208,121"/>
-<area shape="rect" href="classUnitySensors_1_1ROS_1_1Serializer.html" title="センサが取得したデータづｰROSづ勲essage型にシリアライズすづｩ" alt="" coords="65,5,148,32"/>
+<area shape="rect" title=" " alt="" coords="785,57,988,98"/>
+<area shape="rect" href="classUnitySensors_1_1ROS_1_1Serializer.html" title="センサが取得したデータづｰROSづ勲essage型にシリアライズすづｩ" alt="" coords="531,5,613,32"/>
+<area shape="rect" href="classRosMessageTypes_1_1Velodyne_1_1VelodyneScanMsg.html" title=" " alt="" coords="467,57,677,98"/>
+<area shape="rect" title=" " alt="" coords="5,43,85,69"/>
+<area shape="rect" href="classRosMessageTypes_1_1Velodyne_1_1VelodynePacketMsg.html" title=" " alt="" coords="135,65,344,106"/>
+<area shape="rect" href="structUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_1_1DistancesToVelodyneScanMsgJob.html" title=" " alt="" coords="447,123,697,179"/>
+<area shape="rect" title=" " alt="" coords="182,137,297,164"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -100,24 +106,319 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae42fa7fa474927a3e9e5efd8da041eab"><td class="memItemLeft" align="right" valign="top"><a id="ae42fa7fa474927a3e9e5efd8da041eab"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> (string frame_id, ref NativeArray&lt; float &gt; distances, ref NativeArray&lt; float &gt; intensities, int pointsNum, int azimuthResolution)</td></tr>
+<tr class="memitem:ae42fa7fa474927a3e9e5efd8da041eab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer.html#ae42fa7fa474927a3e9e5efd8da041eab">Init</a> (string frame_id, ref NativeArray&lt; float &gt; distances, ref NativeArray&lt; float &gt; intensities, int pointsNum, int azimuthResolution)</td></tr>
 <tr class="separator:ae42fa7fa474927a3e9e5efd8da041eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adedaced2851d960cc3224cf9a53456c1"><td class="memItemLeft" align="right" valign="top"><a id="adedaced2851d960cc3224cf9a53456c1"></a>
-<a class="el" href="classRosMessageTypes_1_1Velodyne_1_1VelodyneScanMsg.html">VelodyneScanMsg</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Serialize</b> (float time)</td></tr>
+<tr class="memitem:adedaced2851d960cc3224cf9a53456c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRosMessageTypes_1_1Velodyne_1_1VelodyneScanMsg.html">VelodyneScanMsg</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer.html#adedaced2851d960cc3224cf9a53456c1">Serialize</a> (float time)</td></tr>
 <tr class="separator:adedaced2851d960cc3224cf9a53456c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab03168b4154c38510c1877033fa2f435"><td class="memItemLeft" align="right" valign="top"><a id="ab03168b4154c38510c1877033fa2f435"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Dispose</b> ()</td></tr>
+<tr class="memitem:ab03168b4154c38510c1877033fa2f435"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer.html#ab03168b4154c38510c1877033fa2f435">Dispose</a> ()</td></tr>
 <tr class="separator:ab03168b4154c38510c1877033fa2f435"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:aad9a48d6802bfdef86b1b51dd0278298"><td class="memItemLeft" align="right" valign="top"><a id="aad9a48d6802bfdef86b1b51dd0278298"></a>
-<a class="el" href="classRosMessageTypes_1_1Velodyne_1_1VelodyneScanMsg.html">VelodyneScanMsg</a>&#160;</td><td class="memItemRight" valign="bottom"><b>msg</b><code> [get]</code></td></tr>
+<tr class="memitem:aad9a48d6802bfdef86b1b51dd0278298"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRosMessageTypes_1_1Velodyne_1_1VelodyneScanMsg.html">VelodyneScanMsg</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer.html#aad9a48d6802bfdef86b1b51dd0278298">msg</a><code> [get]</code></td></tr>
 <tr class="separator:aad9a48d6802bfdef86b1b51dd0278298"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a74c384ca5280f79219530ed0f19e848f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRosMessageTypes_1_1Velodyne_1_1VelodyneScanMsg.html">VelodyneScanMsg</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer.html#a74c384ca5280f79219530ed0f19e848f">_msg</a></td></tr>
+<tr class="separator:a74c384ca5280f79219530ed0f19e848f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a520d9b4fab138f64961b2d8ca037d0fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html">AutoHeader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer.html#a520d9b4fab138f64961b2d8ca037d0fb">_header</a></td></tr>
+<tr class="separator:a520d9b4fab138f64961b2d8ca037d0fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00d734f93646632f88974a99c1d4defc"><td class="memItemLeft" align="right" valign="top">JobHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer.html#a00d734f93646632f88974a99c1d4defc">_handle</a></td></tr>
+<tr class="separator:a00d734f93646632f88974a99c1d4defc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bfea670c0af47afd10fc3ba6a43dc09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_1_1DistancesToVelodyneScanMsgJob.html">DistancesToVelodyneScanMsgJob</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer.html#a7bfea670c0af47afd10fc3ba6a43dc09">_job</a></td></tr>
+<tr class="separator:a7bfea670c0af47afd10fc3ba6a43dc09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f9842112b95f9faead95717bd71b932"><td class="memItemLeft" align="right" valign="top">NativeArray&lt; byte &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer.html#a6f9842112b95f9faead95717bd71b932">_packets</a></td></tr>
+<tr class="separator:a6f9842112b95f9faead95717bd71b932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f42a30e3c215d2e3b846024a830d3a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer.html#a8f42a30e3c215d2e3b846024a830d3a0">_jobSize</a></td></tr>
+<tr class="separator:a8f42a30e3c215d2e3b846024a830d3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab03168b4154c38510c1877033fa2f435"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab03168b4154c38510c1877033fa2f435">&#9670;&nbsp;</a></span>Dispose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnitySensors.ROS.VelodyneMsgSerializer.Dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_ab03168b4154c38510c1877033fa2f435_icgraph.png" border="0" usemap="#aclassUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_ab03168b4154c38510c1877033fa2f435_icgraph" alt=""/></div>
+<map name="aclassUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_ab03168b4154c38510c1877033fa2f435_icgraph" id="aclassUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_ab03168b4154c38510c1877033fa2f435_icgraph">
+<area shape="rect" title=" " alt="" coords="305,5,508,47"/>
+<area shape="rect" href="classUnitySensors_1_1ROS_1_1VelodynePacketsPublisher.html#a749376597807dfc10f5a1ee2ceee5e83" title=" " alt="" coords="5,5,257,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae42fa7fa474927a3e9e5efd8da041eab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae42fa7fa474927a3e9e5efd8da041eab">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnitySensors.ROS.VelodyneMsgSerializer.Init </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>frame_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref NativeArray&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>distances</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref NativeArray&lt; float &gt;&#160;</td>
+          <td class="paramname"><em>intensities</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pointsNum</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>azimuthResolution</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_ae42fa7fa474927a3e9e5efd8da041eab_cgraph.png" border="0" usemap="#aclassUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_ae42fa7fa474927a3e9e5efd8da041eab_cgraph" alt=""/></div>
+<map name="aclassUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_ae42fa7fa474927a3e9e5efd8da041eab_cgraph" id="aclassUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_ae42fa7fa474927a3e9e5efd8da041eab_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,208,47"/>
+<area shape="rect" href="classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html#a5a4664d356a25d74dad02a2d2f6d0956" title="初甘ｺ化関数" alt="" coords="256,5,463,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_ae42fa7fa474927a3e9e5efd8da041eab_icgraph.png" border="0" usemap="#aclassUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_ae42fa7fa474927a3e9e5efd8da041eab_icgraph" alt=""/></div>
+<map name="aclassUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_ae42fa7fa474927a3e9e5efd8da041eab_icgraph" id="aclassUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_ae42fa7fa474927a3e9e5efd8da041eab_icgraph">
+<area shape="rect" title=" " alt="" coords="507,5,709,47"/>
+<area shape="rect" href="classUnitySensors_1_1ROS_1_1VelodynePacketsPublisher.html#ad9d873fb295faba0e1c4e438d9f65ade" title="蛻晄悄蛹悶�ｮ莉ｮ諠ｳ髢｢謨ｰ" alt="" coords="256,5,459,47"/>
+<area shape="rect" href="classUnitySensors_1_1ROS_1_1VelodynePacketsPublisher.html#a3ca6c5765feff40348d949bc9011155e" title="ROS繝医ヴ繝�繧ｯ騾∽ｿ｡縺ｮ莉ｮ諠ｳ髢｢謨ｰ" alt="" coords="5,5,208,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adedaced2851d960cc3224cf9a53456c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adedaced2851d960cc3224cf9a53456c1">&#9670;&nbsp;</a></span>Serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRosMessageTypes_1_1Velodyne_1_1VelodyneScanMsg.html">VelodyneScanMsg</a> UnitySensors.ROS.VelodyneMsgSerializer.Serialize </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_adedaced2851d960cc3224cf9a53456c1_cgraph.png" border="0" usemap="#aclassUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_adedaced2851d960cc3224cf9a53456c1_cgraph" alt=""/></div>
+<map name="aclassUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_adedaced2851d960cc3224cf9a53456c1_cgraph" id="aclassUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_adedaced2851d960cc3224cf9a53456c1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,208,47"/>
+<area shape="rect" href="classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html#ad1a8258c1a9bc4abce0c95ba73250e72" title="シリアライズ関数" alt="" coords="256,5,463,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_adedaced2851d960cc3224cf9a53456c1_icgraph.png" border="0" usemap="#aclassUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_adedaced2851d960cc3224cf9a53456c1_icgraph" alt=""/></div>
+<map name="aclassUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_adedaced2851d960cc3224cf9a53456c1_icgraph" id="aclassUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_adedaced2851d960cc3224cf9a53456c1_icgraph">
+<area shape="rect" title=" " alt="" coords="256,5,459,47"/>
+<area shape="rect" href="classUnitySensors_1_1ROS_1_1VelodynePacketsPublisher.html#a3ca6c5765feff40348d949bc9011155e" title="ROS繝医ヴ繝�繧ｯ騾∽ｿ｡縺ｮ莉ｮ諠ｳ髢｢謨ｰ" alt="" coords="5,5,208,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a00d734f93646632f88974a99c1d4defc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00d734f93646632f88974a99c1d4defc">&#9670;&nbsp;</a></span>_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">JobHandle UnitySensors.ROS.VelodyneMsgSerializer._handle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a520d9b4fab138f64961b2d8ca037d0fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a520d9b4fab138f64961b2d8ca037d0fb">&#9670;&nbsp;</a></span>_header</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html">AutoHeader</a> UnitySensors.ROS.VelodyneMsgSerializer._header</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7bfea670c0af47afd10fc3ba6a43dc09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bfea670c0af47afd10fc3ba6a43dc09">&#9670;&nbsp;</a></span>_job</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_1_1DistancesToVelodyneScanMsgJob.html">DistancesToVelodyneScanMsgJob</a> UnitySensors.ROS.VelodyneMsgSerializer._job</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f42a30e3c215d2e3b846024a830d3a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f42a30e3c215d2e3b846024a830d3a0">&#9670;&nbsp;</a></span>_jobSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnitySensors.ROS.VelodyneMsgSerializer._jobSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74c384ca5280f79219530ed0f19e848f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74c384ca5280f79219530ed0f19e848f">&#9670;&nbsp;</a></span>_msg</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRosMessageTypes_1_1Velodyne_1_1VelodyneScanMsg.html">VelodyneScanMsg</a> UnitySensors.ROS.VelodyneMsgSerializer._msg</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f9842112b95f9faead95717bd71b932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f9842112b95f9faead95717bd71b932">&#9670;&nbsp;</a></span>_packets</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">NativeArray&lt;byte&gt; UnitySensors.ROS.VelodyneMsgSerializer._packets</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="aad9a48d6802bfdef86b1b51dd0278298"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad9a48d6802bfdef86b1b51dd0278298">&#9670;&nbsp;</a></span>msg</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRosMessageTypes_1_1Velodyne_1_1VelodyneScanMsg.html">VelodyneScanMsg</a> UnitySensors.ROS.VelodyneMsgSerializer.msg</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/UnitySensorsROS/Runtime/Scripts/Serializers/LiDAR/Velodyne/VelodyneMsgSerializer.cs</li>
+<li>Assets/UnitySensorsROS/Runtime/Scripts/Serializers/LiDAR/Velodyne/<a class="el" href="VelodyneMsgSerializer_8cs.html">VelodyneMsgSerializer.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

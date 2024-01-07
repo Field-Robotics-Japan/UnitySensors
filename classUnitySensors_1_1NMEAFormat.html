@@ -101,50 +101,333 @@ Collaboration diagram for UnitySensors.NMEAFormat:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2c32fa086fdfeef258798d4b21f6607e"><td class="memItemLeft" align="right" valign="top"><a id="a2c32fa086fdfeef258798d4b21f6607e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> ()</td></tr>
+<tr class="memitem:a2c32fa086fdfeef258798d4b21f6607e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1NMEAFormat.html#a2c32fa086fdfeef258798d4b21f6607e">Init</a> ()</td></tr>
 <tr class="separator:a2c32fa086fdfeef258798d4b21f6607e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5933d3ea3e1686f4179f76d030e437b2"><td class="memItemLeft" align="right" valign="top"><a id="a5933d3ea3e1686f4179f76d030e437b2"></a>
-virtual string&#160;</td><td class="memItemRight" valign="bottom"><b>Serialize</b> (<a class="el" href="classUnitySensors_1_1GeoCoordinate.html">GeoCoordinate</a> coordinate, Vector3 velocity)</td></tr>
+<tr class="memitem:a5933d3ea3e1686f4179f76d030e437b2"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1NMEAFormat.html#a5933d3ea3e1686f4179f76d030e437b2">Serialize</a> (<a class="el" href="classUnitySensors_1_1GeoCoordinate.html">GeoCoordinate</a> coordinate, Vector3 velocity)</td></tr>
 <tr class="separator:a5933d3ea3e1686f4179f76d030e437b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classUnitySensors_1_1AttachableScriptableObject"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classUnitySensors_1_1AttachableScriptableObject')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classUnitySensors_1_1AttachableScriptableObject.html">UnitySensors.AttachableScriptableObject</a></td></tr>
-<tr class="memitem:a218bed93a801b2e7bfe0c399f5d904d4 inherit pub_methods_classUnitySensors_1_1AttachableScriptableObject"><td class="memItemLeft" align="right" valign="top"><a id="a218bed93a801b2e7bfe0c399f5d904d4"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
+<tr class="memitem:a218bed93a801b2e7bfe0c399f5d904d4 inherit pub_methods_classUnitySensors_1_1AttachableScriptableObject"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1AttachableScriptableObject.html#a218bed93a801b2e7bfe0c399f5d904d4">Update</a> ()</td></tr>
 <tr class="separator:a218bed93a801b2e7bfe0c399f5d904d4 inherit pub_methods_classUnitySensors_1_1AttachableScriptableObject"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
 Protected Types</h2></td></tr>
-<tr class="memitem:ab27d535000f7bfbb07e314e9fd9256e0"><td class="memItemLeft" align="right" valign="top"><a id="ab27d535000f7bfbb07e314e9fd9256e0"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>TimeMode</b> { <b>SIM</b> = 0
-, <b>UTC</b> = 1
+<tr class="memitem:ab27d535000f7bfbb07e314e9fd9256e0"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1NMEAFormat.html#ab27d535000f7bfbb07e314e9fd9256e0">TimeMode</a> { <a class="el" href="classUnitySensors_1_1NMEAFormat.html#ab27d535000f7bfbb07e314e9fd9256e0a26296209d6c79aa8c645bc2b21be4df3">SIM</a> = 0
+, <a class="el" href="classUnitySensors_1_1NMEAFormat.html#ab27d535000f7bfbb07e314e9fd9256e0a9234324ddf6b4176b57d803a925b7961">UTC</a> = 1
  }</td></tr>
 <tr class="separator:ab27d535000f7bfbb07e314e9fd9256e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f804761d7dbadb8c236276f3d7ec86a"><td class="memItemLeft" align="right" valign="top"><a id="a3f804761d7dbadb8c236276f3d7ec86a"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>NMEAMode</b> { <b>NONE</b>
-, <b>AUTONOMOUS</b>
-, <b>DIFFERENTIAL</b>
-, <b>ESTIMATED</b>
+<tr class="memitem:a3f804761d7dbadb8c236276f3d7ec86a"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1NMEAFormat.html#a3f804761d7dbadb8c236276f3d7ec86a">NMEAMode</a> { <a class="el" href="classUnitySensors_1_1NMEAFormat.html#a3f804761d7dbadb8c236276f3d7ec86aab50339a10e1de285ac99d4c3990b8693">NONE</a>
+, <a class="el" href="classUnitySensors_1_1NMEAFormat.html#a3f804761d7dbadb8c236276f3d7ec86aade7d660fc991e08c2d3526fec8a46c4a">AUTONOMOUS</a>
+, <a class="el" href="classUnitySensors_1_1NMEAFormat.html#a3f804761d7dbadb8c236276f3d7ec86aa2e25c43ec468dd0de23ab38bbbf1e7f0">DIFFERENTIAL</a>
+, <a class="el" href="classUnitySensors_1_1NMEAFormat.html#a3f804761d7dbadb8c236276f3d7ec86aafc9812c3304b9bb404f050c41654732e">ESTIMATED</a>
  }</td></tr>
 <tr class="separator:a3f804761d7dbadb8c236276f3d7ec86a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a838e951e1f0db24b5ca753a7d87e9678"><td class="memItemLeft" align="right" valign="top"><a id="a838e951e1f0db24b5ca753a7d87e9678"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddUTCTime</b> (ref string sentence)</td></tr>
+<tr class="memitem:a838e951e1f0db24b5ca753a7d87e9678"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1NMEAFormat.html#a838e951e1f0db24b5ca753a7d87e9678">AddUTCTime</a> (ref string sentence)</td></tr>
 <tr class="separator:a838e951e1f0db24b5ca753a7d87e9678"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91f657a95d5ced868d84d4b03e33119a"><td class="memItemLeft" align="right" valign="top"><a id="a91f657a95d5ced868d84d4b03e33119a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddSimTime</b> (ref string sentence)</td></tr>
+<tr class="memitem:a91f657a95d5ced868d84d4b03e33119a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1NMEAFormat.html#a91f657a95d5ced868d84d4b03e33119a">AddSimTime</a> (ref string sentence)</td></tr>
 <tr class="separator:a91f657a95d5ced868d84d4b03e33119a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e308401153c9f822c236ca7ecb4f13b"><td class="memItemLeft" align="right" valign="top"><a id="a3e308401153c9f822c236ca7ecb4f13b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddLatitude</b> (ref string sentence, float latitude)</td></tr>
+<tr class="memitem:a3e308401153c9f822c236ca7ecb4f13b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1NMEAFormat.html#a3e308401153c9f822c236ca7ecb4f13b">AddLatitude</a> (ref string sentence, float latitude)</td></tr>
 <tr class="separator:a3e308401153c9f822c236ca7ecb4f13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6baf0375b6ffb85f03c2277c8b279883"><td class="memItemLeft" align="right" valign="top"><a id="a6baf0375b6ffb85f03c2277c8b279883"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddLongitude</b> (ref string sentence, float longitude)</td></tr>
+<tr class="memitem:a6baf0375b6ffb85f03c2277c8b279883"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1NMEAFormat.html#a6baf0375b6ffb85f03c2277c8b279883">AddLongitude</a> (ref string sentence, float longitude)</td></tr>
 <tr class="separator:a6baf0375b6ffb85f03c2277c8b279883"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1332b7afd2edb45587e7e776646421ad"><td class="memItemLeft" align="right" valign="top"><a id="a1332b7afd2edb45587e7e776646421ad"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddChecksum</b> (ref string sentence)</td></tr>
+<tr class="memitem:a1332b7afd2edb45587e7e776646421ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1NMEAFormat.html#a1332b7afd2edb45587e7e776646421ad">AddChecksum</a> (ref string sentence)</td></tr>
 <tr class="separator:a1332b7afd2edb45587e7e776646421ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a3f804761d7dbadb8c236276f3d7ec86a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f804761d7dbadb8c236276f3d7ec86a">&#9670;&nbsp;</a></span>NMEAMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classUnitySensors_1_1NMEAFormat.html#a3f804761d7dbadb8c236276f3d7ec86a">UnitySensors.NMEAFormat.NMEAMode</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3f804761d7dbadb8c236276f3d7ec86aab50339a10e1de285ac99d4c3990b8693"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3f804761d7dbadb8c236276f3d7ec86aade7d660fc991e08c2d3526fec8a46c4a"></a>AUTONOMOUS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3f804761d7dbadb8c236276f3d7ec86aa2e25c43ec468dd0de23ab38bbbf1e7f0"></a>DIFFERENTIAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a3f804761d7dbadb8c236276f3d7ec86aafc9812c3304b9bb404f050c41654732e"></a>ESTIMATED&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ab27d535000f7bfbb07e314e9fd9256e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab27d535000f7bfbb07e314e9fd9256e0">&#9670;&nbsp;</a></span>TimeMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classUnitySensors_1_1NMEAFormat.html#ab27d535000f7bfbb07e314e9fd9256e0">UnitySensors.NMEAFormat.TimeMode</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab27d535000f7bfbb07e314e9fd9256e0a26296209d6c79aa8c645bc2b21be4df3"></a>SIM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab27d535000f7bfbb07e314e9fd9256e0a9234324ddf6b4176b57d803a925b7961"></a>UTC&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1332b7afd2edb45587e7e776646421ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1332b7afd2edb45587e7e776646421ad">&#9670;&nbsp;</a></span>AddChecksum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnitySensors.NMEAFormat.AddChecksum </td>
+          <td>(</td>
+          <td class="paramtype">ref string&#160;</td>
+          <td class="paramname"><em>sentence</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e308401153c9f822c236ca7ecb4f13b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e308401153c9f822c236ca7ecb4f13b">&#9670;&nbsp;</a></span>AddLatitude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnitySensors.NMEAFormat.AddLatitude </td>
+          <td>(</td>
+          <td class="paramtype">ref string&#160;</td>
+          <td class="paramname"><em>sentence</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>latitude</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6baf0375b6ffb85f03c2277c8b279883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6baf0375b6ffb85f03c2277c8b279883">&#9670;&nbsp;</a></span>AddLongitude()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnitySensors.NMEAFormat.AddLongitude </td>
+          <td>(</td>
+          <td class="paramtype">ref string&#160;</td>
+          <td class="paramname"><em>sentence</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>longitude</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91f657a95d5ced868d84d4b03e33119a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91f657a95d5ced868d84d4b03e33119a">&#9670;&nbsp;</a></span>AddSimTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnitySensors.NMEAFormat.AddSimTime </td>
+          <td>(</td>
+          <td class="paramtype">ref string&#160;</td>
+          <td class="paramname"><em>sentence</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a838e951e1f0db24b5ca753a7d87e9678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a838e951e1f0db24b5ca753a7d87e9678">&#9670;&nbsp;</a></span>AddUTCTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnitySensors.NMEAFormat.AddUTCTime </td>
+          <td>(</td>
+          <td class="paramtype">ref string&#160;</td>
+          <td class="paramname"><em>sentence</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c32fa086fdfeef258798d4b21f6607e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c32fa086fdfeef258798d4b21f6607e">&#9670;&nbsp;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UnitySensors.NMEAFormat.Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUnitySensors_1_1NMEAFormat_a2c32fa086fdfeef258798d4b21f6607e_icgraph.png" border="0" usemap="#aclassUnitySensors_1_1NMEAFormat_a2c32fa086fdfeef258798d4b21f6607e_icgraph" alt=""/></div>
+<map name="aclassUnitySensors_1_1NMEAFormat_a2c32fa086fdfeef258798d4b21f6607e_icgraph" id="aclassUnitySensors_1_1NMEAFormat_a2c32fa086fdfeef258798d4b21f6607e_icgraph">
+<area shape="rect" title=" " alt="" coords="899,13,1121,39"/>
+<area shape="rect" href="classUnitySensors_1_1NMEAFormatManager.html#a6f02fbbd2e41373c53550c601b14f44a" title=" " alt="" coords="593,5,851,47"/>
+<area shape="rect" href="classUnitySensors_1_1ROS_1_1NMEASerializer.html#ab43cdb94b27cf1e2277ee46548ba61da" title=" " alt="" coords="299,5,545,47"/>
+<area shape="rect" href="classUnitySensors_1_1ROS_1_1NMEAPublisher.html#ab3a3cb4c905b69be330e0d4a00cd78be" title=" " alt="" coords="5,5,251,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5933d3ea3e1686f4179f76d030e437b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5933d3ea3e1686f4179f76d030e437b2">&#9670;&nbsp;</a></span>Serialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual string UnitySensors.NMEAFormat.Serialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classUnitySensors_1_1GeoCoordinate.html">GeoCoordinate</a>&#160;</td>
+          <td class="paramname"><em>coordinate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>velocity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="classUnitySensors_1_1GPVTG.html#a9604f038bd793d152c8f6fc7e6e906a7">UnitySensors.GPVTG</a>, <a class="el" href="classUnitySensors_1_1GPRMC.html#a6856cdfa5318fce8cd3da9b6985df3ab">UnitySensors.GPRMC</a>, <a class="el" href="classUnitySensors_1_1GPGSA.html#af4cf8a79ae362c58b3a30ef9fb0c2162">UnitySensors.GPGSA</a>, and <a class="el" href="classUnitySensors_1_1GPGGA.html#a4b41691a81d5ea7abe14b32f88a36b22">UnitySensors.GPGGA</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUnitySensors_1_1NMEAFormat_a5933d3ea3e1686f4179f76d030e437b2_icgraph.png" border="0" usemap="#aclassUnitySensors_1_1NMEAFormat_a5933d3ea3e1686f4179f76d030e437b2_icgraph" alt=""/></div>
+<map name="aclassUnitySensors_1_1NMEAFormat_a5933d3ea3e1686f4179f76d030e437b2_icgraph" id="aclassUnitySensors_1_1NMEAFormat_a5933d3ea3e1686f4179f76d030e437b2_icgraph">
+<area shape="rect" title=" " alt="" coords="899,5,1100,47"/>
+<area shape="rect" href="classUnitySensors_1_1NMEAFormatManager.html#a12066b3223659f10e24be88e06e33cfd" title=" " alt="" coords="593,5,851,47"/>
+<area shape="rect" href="classUnitySensors_1_1ROS_1_1NMEASerializer.html#a96b8b7635842edc0af23cb3a9e954f38" title=" " alt="" coords="299,5,545,47"/>
+<area shape="rect" href="classUnitySensors_1_1ROS_1_1NMEAPublisher.html#a322e3585eb4d347168f909cec9cd944e" title="ROSトピック送信の仮想関数" alt="" coords="5,5,251,47"/>
+</map>
+</div>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/UnitySensorsROS/Runtime/Scripts/Serializers/GPS/NMEA/NMEAFormat.cs</li>
+<li>Assets/UnitySensorsROS/Runtime/Scripts/Serializers/GPS/NMEA/<a class="el" href="NMEAFormat_8cs.html">NMEAFormat.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

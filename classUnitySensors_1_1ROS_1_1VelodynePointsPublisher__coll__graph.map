@@ -1,4 +1,8 @@
 <map id="UnitySensors.ROS.VelodynePointsPublisher" name="UnitySensors.ROS.VelodynePointsPublisher">
-<area shape="rect" id="node1" title=" " alt="" coords="7,95,209,136"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Publisher.html" title=" " alt="" coords="5,5,211,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="28,289,231,331"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Publisher.html" title=" " alt="" coords="5,185,211,227"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1PointCloud2Serializer.html" title=" " alt="" coords="235,185,456,227"/>
+<area shape="rect" id="node4" href="$classUnitySensors_1_1ROS_1_1Serializer.html" title="センサが取得したデータづｰROSづ勲essage型にシリアライズすづｩ" alt="" coords="244,89,327,115"/>
+<area shape="rect" id="node5" href="$structUnitySensors_1_1ROS_1_1PointCloud2Serializer_1_1PointsToPointCloud2MsgJob.html" title=" " alt="" coords="351,81,617,123"/>
+<area shape="rect" id="node6" title=" " alt="" coords="427,5,541,32"/>
 </map>

@@ -1,14 +1,4 @@
 var searchData=
 [
-  ['nmea_51',['Nmea',['../namespaceRosMessageTypes_1_1Nmea.html',1,'RosMessageTypes']]],
-  ['readablescriptableobjectattribute_52',['ReadableScriptableObjectAttribute',['../classUnitySensors_1_1ReadableScriptableObjectAttribute.html',1,'UnitySensors']]],
-  ['readme_53',['README',['../md_Assets_UnitySensors_README.html',1,'(Global Namespace)'],['../md_Assets_UnitySensorsROS_README.html',1,'(Global Namespace)']]],
-  ['readonlyattribute_54',['ReadOnlyAttribute',['../classUnitySensors_1_1ReadOnlyAttribute.html',1,'UnitySensors']]],
-  ['rgbcamerapublisher_55',['RGBCameraPublisher',['../classUnitySensors_1_1ROS_1_1RGBCameraPublisher.html',1,'UnitySensors::ROS']]],
-  ['rgbcamerasensor_56',['RGBCameraSensor',['../classUnitySensors_1_1RGBCameraSensor.html',1,'UnitySensors']]],
-  ['rgbcameravisualizer_57',['RGBCameraVisualizer',['../classUnitySensors_1_1Visualization_1_1RGBCameraVisualizer.html',1,'UnitySensors::Visualization']]],
-  ['rosclock_58',['ROSClock',['../classROSClock.html',1,'']]],
-  ['rosmessagetypes_59',['RosMessageTypes',['../namespaceRosMessageTypes.html',1,'']]],
-  ['rotatinglidarscanpattern_60',['RotatingLiDARScanPattern',['../classUnitySensors_1_1RotatingLiDARScanPattern.html',1,'UnitySensors']]],
-  ['velodyne_61',['Velodyne',['../namespaceRosMessageTypes_1_1Velodyne.html',1,'RosMessageTypes']]]
+  ['header_222',['header',['../classRosMessageTypes_1_1Nmea_1_1SentenceMsg.html#aaae222b734f033133d444ba4c9c4ce9b',1,'RosMessageTypes.Nmea.SentenceMsg.header()'],['../classRosMessageTypes_1_1Velodyne_1_1VelodyneScanMsg.html#adce42b91036e938c0b11053b63a19cf5',1,'RosMessageTypes.Velodyne.VelodyneScanMsg.header()'],['../classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html#a7175ccacb8a63e8f51c5a6e957402c55',1,'UnitySensors.ROS.Serializer.AutoHeader.header()']]]
 ];
