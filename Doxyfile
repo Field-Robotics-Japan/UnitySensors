@@ -1,6 +1,6 @@
 DOXYFILE_ENCODING   = UTF-8
-PROJECT_NAME        = UnitySensors
-OUTPUT_DIRECTORY    = docs
+
+PROJECT_NAME        = "UnitySensors"
 
 PROJECT_NUMBER         =
 
@@ -8,7 +8,7 @@ PROJECT_BRIEF          =
 
 PROJECT_LOGO           =
 
-OUTPUT_DIRECTORY       =
+OUTPUT_DIRECTORY       = docs
 
 CREATE_SUBDIRS         = NO
 
