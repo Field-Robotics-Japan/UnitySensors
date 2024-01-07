@@ -1,0 +1,37 @@
+var classUnitySensors_1_1DepthCameraSensor =
+[
+    [ "TextureToPointsJob", "structUnitySensors_1_1DepthCameraSensor_1_1TextureToPointsJob.html", "structUnitySensors_1_1DepthCameraSensor_1_1TextureToPointsJob" ],
+    [ "DepthCamerMode", "classUnitySensors_1_1DepthCameraSensor.html#a6cd9b75f622f9d3813f8fd927725244b", [
+      [ "TEXTURE_ONLY", "classUnitySensors_1_1DepthCameraSensor.html#a6cd9b75f622f9d3813f8fd927725244ba0bbc8e8692204b158d8f3b482e29d3dc", null ],
+      [ "POINTCLOUD_ONLY", "classUnitySensors_1_1DepthCameraSensor.html#a6cd9b75f622f9d3813f8fd927725244bac62de8e2dbf70bde4bb8e4c7864f16c5", null ],
+      [ "BOTH", "classUnitySensors_1_1DepthCameraSensor.html#a6cd9b75f622f9d3813f8fd927725244ba6328e5e3186c227a021ef2ff77e40197", null ]
+    ] ],
+    [ "CompleteJob", "classUnitySensors_1_1DepthCameraSensor.html#acc87e55720b29d11f6db638a6ca7d00e", null ],
+    [ "Init", "classUnitySensors_1_1DepthCameraSensor.html#aae6a6ea507ce920ea278a5f8b71edd65", null ],
+    [ "OnApplicationQuit", "classUnitySensors_1_1DepthCameraSensor.html#a0afe56ab0512e465100c68321946055b", null ],
+    [ "OnDestroy", "classUnitySensors_1_1DepthCameraSensor.html#ace6be2b99a5c2645672ad653c669db3e", null ],
+    [ "SetupDirections", "classUnitySensors_1_1DepthCameraSensor.html#a78de107ffdb49c81f2c986101420c42b", null ],
+    [ "SetupJob", "classUnitySensors_1_1DepthCameraSensor.html#a68fa409fed9d787c8b4f9f6da795d0ba", null ],
+    [ "UpdateSensor", "classUnitySensors_1_1DepthCameraSensor.html#aad304e50e555cfd1db5149a71bd8a008", null ],
+    [ "UpdateTexture", "classUnitySensors_1_1DepthCameraSensor.html#a102070403b8c4105eb2d70bfa7fa89c7", null ],
+    [ "_cam", "classUnitySensors_1_1DepthCameraSensor.html#abe12c8c42e81bec1cb9ba0f014942ad9", null ],
+    [ "_directions", "classUnitySensors_1_1DepthCameraSensor.html#a655ff98972633a2e1f6800840d83951a", null ],
+    [ "_fov", "classUnitySensors_1_1DepthCameraSensor.html#a6fabd82657c4765de488f81e860635d1", null ],
+    [ "_handle", "classUnitySensors_1_1DepthCameraSensor.html#a95a77d9c77100dd4ea8c872770cda4c8", null ],
+    [ "_job", "classUnitySensors_1_1DepthCameraSensor.html#a42709d7556c9c46c9ae4f3de245696d8", null ],
+    [ "_maxRange", "classUnitySensors_1_1DepthCameraSensor.html#a8eaa325bfba9c89e3b8b2f3d03ff3026", null ],
+    [ "_minRange", "classUnitySensors_1_1DepthCameraSensor.html#a37cf32267906a31b888e400c024b2356", null ],
+    [ "_mode", "classUnitySensors_1_1DepthCameraSensor.html#aee48710d7e58376b4ddf6dd0bb6b08d6", null ],
+    [ "_pointsNum", "classUnitySensors_1_1DepthCameraSensor.html#ae1acf70a23a93354fc85240771e77355", null ],
+    [ "_quality", "classUnitySensors_1_1DepthCameraSensor.html#a5ab56b18370463b7bdfdb70590c6dd7b", null ],
+    [ "_resolution", "classUnitySensors_1_1DepthCameraSensor.html#ab9226589ed28862804ad836bbc0f767f", null ],
+    [ "_rt", "classUnitySensors_1_1DepthCameraSensor.html#a4668fe816b3f9c1188b379ec904b304f", null ],
+    [ "_texture", "classUnitySensors_1_1DepthCameraSensor.html#a9bfadb539492ccfebd9e32804268913d", null ],
+    [ "_texture_depth", "classUnitySensors_1_1DepthCameraSensor.html#a5ef904c3f5b3a61180cbcdbea3af628b", null ],
+    [ "_textureInit", "classUnitySensors_1_1DepthCameraSensor.html#aeac3a1cdbf375158fbd8a585980457f4", null ],
+    [ "points", "classUnitySensors_1_1DepthCameraSensor.html#a2ce387fa2c169d52142d6ea82cd76d20", null ],
+    [ "mode", "classUnitySensors_1_1DepthCameraSensor.html#a8a3e683359c88f9e42db829d20bc9108", null ],
+    [ "pointsNum", "classUnitySensors_1_1DepthCameraSensor.html#a03aab4e79b414d4d560f28d4451b77ff", null ],
+    [ "quality", "classUnitySensors_1_1DepthCameraSensor.html#a4c38ce39b98b4b00dd1714e1fbf1b2ae", null ],
+    [ "texture", "classUnitySensors_1_1DepthCameraSensor.html#ae5b72594fc61d5aeecb0d2029f4a273f", null ]
+];
