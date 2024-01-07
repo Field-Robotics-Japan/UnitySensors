@@ -1,0 +1,13 @@
+<map id="UnitySensors.Sensor" name="UnitySensors.Sensor">
+<area shape="rect" id="node1" title=" " alt="" coords="177,240,333,267"/>
+<area shape="rect" id="node3" href="$classTFSensor.html" title=" " alt="" coords="458,5,539,32"/>
+<area shape="rect" id="node4" href="$classUnitySensors_1_1DepthCameraSensor.html" title=" " alt="" coords="397,57,600,98"/>
+<area shape="rect" id="node5" href="$classUnitySensors_1_1GPSSensor.html" title=" " alt="" coords="407,123,590,149"/>
+<area shape="rect" id="node6" href="$classUnitySensors_1_1GroundTruthSensor.html" title=" " alt="" coords="403,174,594,215"/>
+<area shape="rect" id="node7" href="$classUnitySensors_1_1IMUSensor.html" title=" " alt="" coords="407,240,590,267"/>
+<area shape="rect" id="node8" href="$classUnitySensors_1_1LivoxSensor.html" title=" " alt="" coords="403,291,594,317"/>
+<area shape="rect" id="node9" href="$classUnitySensors_1_1RGBCameraSensor.html" title=" " alt="" coords="381,341,616,368"/>
+<area shape="rect" id="node10" href="$classUnitySensors_1_1VelodyneSensor.html" title=" " alt="" coords="391,392,607,419"/>
+<area shape="rect" id="node11" href="$classUnitySensors_1_1VelodyneSensorDepthBuffer.html" title=" " alt="" coords="391,443,607,485"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,240,129,267"/>
+</map>
