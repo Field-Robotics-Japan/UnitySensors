@@ -34,9 +34,6 @@ namespace UnitySensors.Sensor.IMU
         private Vector3 _gravity;
         private float _gravityMagnitude;
 
-        private Vector3 _gravity;
-        private float _gravityMagnitude;
-
         protected override void Init()
         {
             _transform = this.transform;
