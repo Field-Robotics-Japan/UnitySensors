@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace UnitySensors
+namespace UnitySensors.Utils.GeoCoordinate
 {
     /// <summary>
     /// 平面直角座標系と緯度経度の相互変換

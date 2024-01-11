@@ -1,56 +1,25 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+using Unity.Robotics.ROSTCPConnector.MessageGeneration;
 using RosMessageTypes.Std;
 
-namespace UnitySensors.ROS
+
+using UnitySensors.Sensor;
+
+namespace UnitySensors.ROS.Serializer
 {
-    /// <summary>
-    /// センサが取得したデータをROSのMessage型にシリアライズする
-    /// </summary>
     [System.Serializable]
-    public class Serializer
+    public abstract class RosMsgSerializer<T, TT> where T : UnitySensor where TT : Message, new()
     {
-        /// <summary>
-        /// std_msgs/Headerの生成を行う
-        /// </summary>
-        protected class AutoHeader
+        private T _sensor;
+        protected T sensor { get => _sensor; }
+
+        protected TT _msg;
+
+        public virtual void Init(T sensor)
         {
-            private HeaderMsg _header;
-            public HeaderMsg header { get => _header; }
-
-            /// <summary>
-            /// 初期化関数
-            /// </summary>
-            public void Init(string frame_id)
-            {
-                _header = new HeaderMsg();
-                _header.frame_id = frame_id;
-#if ROS2
-#else
-                _header.seq = 0;
-#endif
-            }
-
-            /// <summary>
-            /// シリアライズ関数
-            /// </summary>
-            public void Serialize(float time)
-            {
-#if ROS2
-                int sec = (int)Math.Truncate(time);
-#else
-                uint sec = (uint)Math.Truncate(time);
-# endif
-                _header.stamp.sec = sec;
-                _header.stamp.nanosec = (uint)((time - sec) * 1e+9);
-#if ROS2
-#else
-                _header.seq++;
-#endif
-            }
+            _sensor = sensor;
+            _msg = new TT();
         }
+
+        public abstract TT Serialize();
     }
 }

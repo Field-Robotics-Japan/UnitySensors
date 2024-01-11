@@ -13,6 +13,7 @@ using Random = Unity.Mathematics.Random;
 
 namespace UnitySensors
 {
+    /*
     public class LivoxSensor : Sensor
     {
         [SerializeField]
@@ -258,4 +259,5 @@ namespace UnitySensors
             }
         }
     }
+    */
 }

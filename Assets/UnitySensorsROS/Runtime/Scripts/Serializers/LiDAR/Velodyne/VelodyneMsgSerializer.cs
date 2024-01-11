@@ -12,6 +12,7 @@ using RosMessageTypes.Velodyne;
 
 namespace UnitySensors.ROS
 {
+    /*
     [System.Serializable]
     public class VelodyneMsgSerializer : Serializer
     {
@@ -148,4 +149,5 @@ namespace UnitySensors.ROS
             }
         }
     }
+    */
 }
