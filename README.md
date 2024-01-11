@@ -11,8 +11,8 @@ You can communicate sensor info via ROS and ROS2 using ROSTCPConnector and ROSTC
 
 The following sensors are added.
 
-- Velodyne 3D LiDAR (Velodyne VLP-16, VLP-16-HiRes, VLP-32)
-- Livox 3D LiDAR(Avia, Horizon, Mid40, Mid70, Tele)
+- Velodyne 3D LiDAR (Velodyne VLP-16, VLP-16-HiRes, VLP-32, VLS-128)
+- Livox 3D LiDAR(Avia, Horizon, Mid40, Mid70, Tele, HAP, Mid360)
 - RGB Camera
 - RGBD Camera
 - IMU
