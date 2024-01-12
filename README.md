@@ -11,8 +11,8 @@ You can communicate sensor info via ROS and ROS2 using ROSTCPConnector and ROSTC
 
 The following sensors are added.
 
-- Velodyne 3D LiDAR (Velodyne VLP-16, VLP-16-HiRes, VLP-32)
-- Livox 3D LiDAR(Avia, Horizon, Mid40, Mid70, Tele)
+- Velodyne 3D LiDAR (Velodyne VLP-16, VLP-16-HiRes, VLP-32, VLS-128)
+- Livox 3D LiDAR(Avia, Horizon, Mid40, Mid70, Tele, HAP, Mid360)
 - RGB Camera
 - RGBD Camera
 - IMU
@@ -31,23 +31,11 @@ There are several Prefab and Scene files available for testing each sensor.
 
 3. Enter the git URL for the desired package. 
     1. For the UnitySensors, enter `https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensors#v1.0b`.
-    2. For the UnitySensorsROS, enter `https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensorsROS#v1.0b`.
+    2. For the UnitySensorsROS, enter `https://github.com/Field-Robotics-Japan/UnitySensorsROS.git?path=/Assets/UnitySensorsROS#v1.0b`.
     __Note: UnitySensorsROS does not contain UnitySensors.__
 4. Click `Add`.
 
 ## Documentation
-Not yet...  
-Any PR for documentation is VERY WELCOME !!!
-
-## Trouble Shooting
-### Depth camera values are wrong after build.
-#### Reason
-The one of possible reason is, wrong on graphics settings.
-#### Solution
-the go to Edit -> Project Settings -> Graphics and include this shader to the always included shaders.
-#### Reference
-https://github.com/Field-Robotics-Japan/UnitySensors/issues/64#issuecomment-1783409312  
-Thanks to [@panagelak](https://github.com/panagelak) and [@Autumn60](https://github.com/Autumn60) .  
 
 ## LICENSE
 Copyright [2020-2021] Ryodo Tanaka groadpg@gmail.com

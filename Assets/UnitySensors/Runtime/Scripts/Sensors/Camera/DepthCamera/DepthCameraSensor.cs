@@ -1,207 +1,118 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.Rendering;
-
-using Unity.Burst;
 using Unity.Collections;
-using UnityEngine.Jobs;
 using Unity.Jobs;
+using Unity.Mathematics;
 
-namespace UnitySensors
+using UnitySensors.Data.PointCloud;
+using UnitySensors.Utils.Noise;
+
+using Random = Unity.Mathematics.Random;
+
+namespace UnitySensors.Sensor.Camera
 {
-    [RequireComponent(typeof(Camera))]
-    public class DepthCameraSensor : Sensor
+    public class DepthCameraSensor : CameraSensor, IPointCloudInterface<PointXYZ>
     {
-        public enum DepthCamerMode
-        {
-            TEXTURE_ONLY,
-            POINTCLOUD_ONLY,
-            BOTH
-        }
-
         [SerializeField]
-        private DepthCamerMode _mode;
+        private float _gaussianNoiseSigma = 0.0f;
 
-        [SerializeField]
-        private Vector2Int _resolution = new Vector2Int(640, 480);
+        private Material _mat;
 
-        [SerializeField]
-        private float _fov = 30.0f;
-        [SerializeField]
-        private float _minRange = 0.05f;
-        [SerializeField]
-        private float _maxRange = 10.0f;
+        private JobHandle _jobHandle;
 
-        [SerializeField, Range(0, 100)]
-        private int _quality = 100;
+        private IUpdateGaussianNoisesJob _updateGaussianNoisesJob;
+        private ITextureToPointsJob _textureToPointsJob;
 
-        private Camera _cam;
+        private NativeArray<float> _noises;
+        private NativeArray<float3> _directions;
 
-        private RenderTexture _rt = null;
-        private Texture2D _texture;
-        private Texture2D _texture_depth;
-
-        private JobHandle _handle;
-        private TextureToPointsJob _job;
-        private NativeArray<Vector3> _directions;
-        public NativeArray<Vector3> points;
-
+        private PointCloud<PointXYZ> _pointCloud;
         private int _pointsNum;
-
-        private bool _textureInit;
-
-        public DepthCamerMode mode { get => _mode; }
-        public int quality { get => _quality; }
-        public Texture2D texture { get => _texture; }
-        public uint pointsNum { get => (uint)_pointsNum; }
+        public PointCloud<PointXYZ> pointCloud { get => _pointCloud; }
+        public int pointsNum { get => _pointsNum; }
 
         protected override void Init()
         {
-            _textureInit = false;
-
-            _cam = GetComponent<Camera>();
-            _rt = new RenderTexture(_resolution.x, _resolution.y, 32, RenderTextureFormat.ARGBFloat);
-
-            _cam.clearFlags = CameraClearFlags.SolidColor;
-            _cam.fieldOfView = _fov;
-            _cam.targetTexture = _rt;
-            _cam.nearClipPlane = _minRange;
-            _cam.farClipPlane = _maxRange;
-
-            if (!GetComponent<DepthCamera>())
-            {
-                gameObject.AddComponent<DepthCamera>();
-            }
-
-            if (_mode != DepthCamerMode.POINTCLOUD_ONLY)
-            {
-                _texture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBAFloat, false);
-            }
-
-            if (_mode != DepthCamerMode.TEXTURE_ONLY)
-            {
-                _texture_depth = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBAFloat, false);
-                SetupDirections();
-                SetupJob();
-            }
-
-            UpdateTexture();
             base.Init();
+
+            _mat = new Material(Shader.Find("UnitySensors/Color2Depth"));
+            float f = m_camera.farClipPlane;
+            _mat.SetFloat("_F", f);
+
+            SetupDirections();
+            SetupJob();
         }
 
         private void SetupDirections()
         {
-            _pointsNum = _resolution.x * _resolution.y;
+            _pointsNum = resolution.x * resolution.y;
 
-            _directions = new NativeArray<Vector3>(_pointsNum, Allocator.Persistent);
+            _directions = new NativeArray<float3>(_pointsNum, Allocator.Persistent);
 
-            float z = _resolution.y * 0.5f / Mathf.Tan(_cam.fieldOfView * 0.5f * Mathf.Deg2Rad);
-            for (int y = 0; y < _resolution.y; y++)
+            float z = resolution.y * 0.5f / Mathf.Tan(m_camera.fieldOfView * 0.5f * Mathf.Deg2Rad);
+            for (int y = 0; y < resolution.y; y++)
             {
-                for (int x = 0; x < _resolution.x; x++)
+                for (int x = 0; x < resolution.x; x++)
                 {
-                    Vector3 vec = new Vector3(-_resolution.x / 2 + x, -_resolution.y / 2 + y, z);
-                    _directions[y * _resolution.x + x] = vec.normalized;
+                    Vector3 vec = new Vector3(-resolution.x / 2 + x, -resolution.y / 2 + y, z);
+                    _directions[y * resolution.x + x] = vec.normalized;
                 }
             }
         }
 
         private void SetupJob()
         {
-            points = new NativeArray<Vector3>(_pointsNum, Allocator.Persistent);
-
-            _job = new TextureToPointsJob()
+            _pointCloud = new PointCloud<PointXYZ>()
             {
-                far = _maxRange,
+                points = new NativeArray<PointXYZ>(_pointsNum, Allocator.Persistent)
+            };
+
+            _noises = new NativeArray<float>(pointsNum, Allocator.Persistent);
+
+            _updateGaussianNoisesJob = new IUpdateGaussianNoisesJob()
+            {
+                sigma = _gaussianNoiseSigma,
+                random = new Random((uint)Environment.TickCount),
+                noises = _noises
+            };
+
+            _textureToPointsJob = new ITextureToPointsJob()
+            {
+                near= m_camera.nearClipPlane,
+                far = m_camera.farClipPlane,
                 directions = _directions,
-                pixels = _texture_depth.GetPixelData<Color>(0),
-                points = points
+                pixels = texture.GetPixelData<Color>(0),
+                noises = _noises,
+                points = _pointCloud.points
             };
         }
 
         protected override void UpdateSensor()
         {
-            if (!_textureInit) return;
-            if (_mode != DepthCamerMode.TEXTURE_ONLY)
-            {
-                _handle.Complete();
-            }
+            if (!LoadTexture()) return;
 
-            UpdateTexture();
+            JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(_pointsNum, 1);
+            _jobHandle = _textureToPointsJob.Schedule(_pointsNum, 1, updateGaussianNoisesJobHandle);
+            JobHandle.ScheduleBatchedJobs();
+            _jobHandle.Complete();
 
-            if (_mode != DepthCamerMode.TEXTURE_ONLY)
-            {
-                _handle = _job.Schedule(_pointsNum, 1);
-                JobHandle.ScheduleBatchedJobs();
-            }
+            if (onSensorUpdated != null)
+                onSensorUpdated.Invoke();
         }
 
-        private void UpdateTexture()
+        protected override void OnSensorDestroy()
         {
-            AsyncGPUReadback.Request(_rt, 0, request => {
-                if (request.hasError)
-                {
-                }
-                else
-                {
-                    if (!Application.isPlaying) return;
-                    var data = request.GetData<Color>();
-                    if (_mode != DepthCamerMode.POINTCLOUD_ONLY)
-                    {
-                        _texture.LoadRawTextureData(data);
-                        _texture.Apply();
-                    }
-                    if (_mode != DepthCamerMode.TEXTURE_ONLY)
-                    {
-                        _texture_depth.LoadRawTextureData(data);
-                        _texture_depth.Apply();
-                    }
-                    _textureInit = true;
-                }
-            });
+            _jobHandle.Complete();
+            _pointCloud.Dispose();
+            _noises.Dispose();
+            _directions.Dispose();
+            base.OnSensorDestroy();
         }
 
-        public void CompleteJob()
+        private void OnRenderImage(RenderTexture source, RenderTexture dest)
         {
-            if (_mode == DepthCamerMode.TEXTURE_ONLY) return;
-            _handle.Complete();
-        }
-
-        private void OnDestroy()
-        {
-            _rt.Release();
-        }
-
-        private void OnApplicationQuit()
-        {
-            if (_mode != DepthCamerMode.TEXTURE_ONLY)
-            {
-                _handle.Complete();
-                _directions.Dispose();
-                points.Dispose();
-            }
-            _rt.Release();
-        }
-
-        [BurstCompile]
-        private struct TextureToPointsJob : IJobParallelFor
-        {
-            public float far;
-
-            [ReadOnly]
-            public NativeArray<Vector3> directions;
-
-            [ReadOnly]
-            public NativeArray<Color> pixels;
-
-            public NativeArray<Vector3> points;
-
-            public void Execute(int index)
-            {
-                float distance = pixels.AsReadOnly()[index].r;
-                points[index] = directions.AsReadOnly()[index] * far * Mathf.Clamp01(1.0f - distance);
-            }
+            Graphics.Blit(source, dest, _mat);
         }
     }
 }

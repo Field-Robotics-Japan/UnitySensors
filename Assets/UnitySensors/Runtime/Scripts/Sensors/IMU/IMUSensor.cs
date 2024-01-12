@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnitySensors.Attribute;
 
-namespace UnitySensors
+namespace UnitySensors.Sensor.IMU
 {
-    public class IMUSensor : Sensor
+    public class IMUSensor : UnitySensor
     {
         private Transform _transform;
 
@@ -32,15 +31,12 @@ namespace UnitySensors
         public Vector3 localVelocity { get => _transform.InverseTransformDirection(_velocity); }
         public Vector3 localAcceleration { get => _transform.InverseTransformDirection(_acceleration.normalized) * _acceleration.magnitude; }
 
-        private float _dt { get => base._frequency_inv; }
-
         private Vector3 _gravity;
         private float _gravityMagnitude;
 
         protected override void Init()
         {
             _transform = this.transform;
-
             _gravity = Physics.gravity;
             _gravityMagnitude = _gravity.magnitude;
         }
@@ -50,18 +46,25 @@ namespace UnitySensors
             _position = _transform.position;
             _rotation = _transform.rotation;
 
-            _velocity = (_position - _position_last) / _dt;
-            _acceleration = (_velocity - _velocity_last) / _dt;
+            _velocity = (_position - _position_last) / dt;
+            _acceleration = (_velocity - _velocity_last) / dt;
             _acceleration += _transform.InverseTransformDirection(_gravity).normalized * _gravityMagnitude;
 
             Quaternion rotation_delta = Quaternion.Inverse(_rotation_last) * _rotation;
             rotation_delta.ToAngleAxis(out float angle, out Vector3 axis);
-            float angularSpeed = (angle * Mathf.Deg2Rad) / _dt;
+            float angularSpeed = (angle * Mathf.Deg2Rad) / dt;
             _angularVelocity = axis * angularSpeed;
 
             _position_last = _position;
             _velocity_last = _velocity;
             _rotation_last = _rotation;
+
+            if (onSensorUpdated != null)
+                onSensorUpdated.Invoke();
+        }
+
+        protected override void OnSensorDestroy()
+        {
         }
     }
 }
