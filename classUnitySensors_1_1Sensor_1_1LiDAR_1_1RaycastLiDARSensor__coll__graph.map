@@ -1,0 +1,9 @@
+<map id="UnitySensors.Sensor.LiDAR.RaycastLiDARSensor" name="UnitySensors.Sensor.LiDAR.RaycastLiDARSensor">
+<area shape="rect" id="node1" title=" " alt="" coords="692,85,895,126"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor.html" title=" " alt="" coords="233,5,431,32"/>
+<area shape="rect" id="node3" href="$structUnitySensors_1_1Sensor_1_1LiDAR_1_1IRaycastHitsToPointsJob.html" title=" " alt="" coords="231,57,433,98"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,128,120,155"/>
+<area shape="rect" id="node5" href="$structUnitySensors_1_1Sensor_1_1LiDAR_1_1IUpdateRaycastCommandsJob.html" title=" " alt="" coords="223,122,441,163"/>
+<area shape="rect" id="node6" href="$structUnitySensors_1_1Utils_1_1Noise_1_1IUpdateGaussianNoisesJob.html" title=" " alt="" coords="233,187,431,229"/>
+<area shape="rect" id="node7" title=" " alt="" coords="9,196,116,223"/>
+</map>

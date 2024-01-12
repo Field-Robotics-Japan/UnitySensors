@@ -1,6 +1,0 @@
-<map id="UnitySensors.ROS.NMEASerializer.Serialize" name="UnitySensors.ROS.NMEASerializer.Serialize">
-<area shape="rect" id="node1" title=" " alt="" coords="5,39,252,80"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html#ad1a8258c1a9bc4abce0c95ba73250e72" title="シリアライズ関数" alt="" coords="325,5,532,47"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1NMEAFormatManager.html#a12066b3223659f10e24be88e06e33cfd" title=" " alt="" coords="300,71,557,112"/>
-<area shape="rect" id="node4" href="$classUnitySensors_1_1NMEAFormat.html#a5933d3ea3e1686f4179f76d030e437b2" title=" " alt="" coords="605,71,807,112"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="UnitySensors.NMEAFormat.Init" name="UnitySensors.NMEAFormat.Init">
-<area shape="rect" id="node1" title=" " alt="" coords="899,13,1121,39"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1NMEAFormatManager.html#a6f02fbbd2e41373c53550c601b14f44a" title=" " alt="" coords="593,5,851,47"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1NMEASerializer.html#ab43cdb94b27cf1e2277ee46548ba61da" title=" " alt="" coords="299,5,545,47"/>
-<area shape="rect" id="node4" href="$classUnitySensors_1_1ROS_1_1NMEAPublisher.html#ab3a3cb4c905b69be330e0d4a00cd78be" title=" " alt="" coords="5,5,251,47"/>
-</map>

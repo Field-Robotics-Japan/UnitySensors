@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['both_148',['BOTH',['../classUnitySensors_1_1DepthCameraSensor.html#a6cd9b75f622f9d3813f8fd927725244ba6328e5e3186c227a021ef2ff77e40197',1,'UnitySensors::DepthCameraSensor']]]
+  ['buffer_5fsize_5fdictionary_79',['BUFFER_SIZE_DICTIONARY',['../classUnitySensors_1_1Visualization_1_1PointCloud_1_1PointCloudVisualizer.html#ae64889380e015491eb6cbeb778fb34ca',1,'UnitySensors::Visualization::PointCloud::PointCloudVisualizer']]]
 ];

@@ -1,0 +1,14 @@
+<map id="UnitySensors.Sensor.Camera.DepthCameraSensor" name="UnitySensors.Sensor.Camera.DepthCameraSensor">
+<area shape="rect" id="node1" title=" " alt="" coords="891,173,1105,214"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1CameraSensor.html" title=" " alt="" coords="492,56,609,83"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="194,5,295,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node5" href="$interfaceUnitySensors_1_1Data_1_1Texture_1_1ITextureInterface.html" title=" " alt="" coords="179,56,311,83"/>
+<area shape="rect" id="node6" title=" " alt="" coords="194,107,295,133"/>
+<area shape="rect" id="node7" href="$interfaceUnitySensors_1_1Data_1_1PointCloud_1_1IPointCloudInterface.html" title=" " alt="" coords="473,107,628,149"/>
+<area shape="rect" id="node8" href="$structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToPointsJob.html" title=" " alt="" coords="443,173,658,214"/>
+<area shape="rect" id="node9" title=" " alt="" coords="187,188,302,215"/>
+<area shape="rect" id="node11" href="$structUnitySensors_1_1Utils_1_1Noise_1_1IUpdateGaussianNoisesJob.html" title=" " alt="" coords="452,238,649,279"/>
+<area shape="rect" id="node10" href="$structUnitySensors_1_1Data_1_1PointCloud_1_1PointCloud.html" title=" " alt="" coords="440,303,661,345"/>
+<area shape="rect" id="node12" title=" " alt="" coords="191,248,298,275"/>
+</map>

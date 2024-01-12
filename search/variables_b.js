@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['offset_828',['offset',['../structUnitySensors_1_1VelodyneSensorDepthBuffer_1_1TextureToPointsJob.html#a0d70f5cce95a144b7aa81a4d5f416eeb',1,'UnitySensors::VelodyneSensorDepthBuffer::TextureToPointsJob']]],
-  ['origin_829',['origin',['../structUnitySensors_1_1VelodyneSensor_1_1UpdateRaycastCommandsJob.html#a6f9440625ce89983d548748ea8fe851b',1,'UnitySensors::VelodyneSensor::UpdateRaycastCommandsJob']]]
+  ['onsensorupdated_723',['onSensorUpdated',['../classUnitySensors_1_1Sensor_1_1UnitySensor.html#a90abe1d9c46c143bcc3364f3747ff841',1,'UnitySensors::Sensor::UnitySensor']]],
+  ['origin_724',['origin',['../structUnitySensors_1_1Sensor_1_1LiDAR_1_1IUpdateRaycastCommandsJob.html#ad9ab356cd090986ae904e6b5dfe27d6d',1,'UnitySensors::Sensor::LiDAR::IUpdateRaycastCommandsJob']]]
 ];

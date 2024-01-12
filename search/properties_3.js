@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['format_893',['format',['../classUnitySensors_1_1ROS_1_1NMEASerializer.html#a79dc522c8552802ebb7116bdd7cc9a07',1,'UnitySensors::ROS::NMEASerializer']]]
+  ['gaussiannoisesigma_761',['gaussianNoiseSigma',['../classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor.html#a292e4df4544e5ca55f00b79d36f87a34',1,'UnitySensors::Sensor::LiDAR::LiDARSensor']]]
 ];

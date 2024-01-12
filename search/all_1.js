@@ -1,24 +1,8 @@
 var searchData=
 [
-  ['acceleration_127',['acceleration',['../classUnitySensors_1_1IMUSensor.html#ab8c99f2deb313e63d4d6ad001ed4f58a',1,'UnitySensors::IMUSensor']]],
-  ['addchecksum_128',['AddChecksum',['../classUnitySensors_1_1NMEAFormat.html#a1332b7afd2edb45587e7e776646421ad',1,'UnitySensors::NMEAFormat']]],
-  ['addchild_129',['AddChild',['../classTFSensor.html#ad69bb36980801e83a0d7817c3d8ef5b3',1,'TFSensor']]],
-  ['addlatitude_130',['AddLatitude',['../classUnitySensors_1_1NMEAFormat.html#a3e308401153c9f822c236ca7ecb4f13b',1,'UnitySensors::NMEAFormat']]],
-  ['addlongitude_131',['AddLongitude',['../classUnitySensors_1_1NMEAFormat.html#a6baf0375b6ffb85f03c2277c8b279883',1,'UnitySensors::NMEAFormat']]],
-  ['addsimtime_132',['AddSimTime',['../classUnitySensors_1_1NMEAFormat.html#a91f657a95d5ced868d84d4b03e33119a',1,'UnitySensors::NMEAFormat']]],
-  ['addutcdate_133',['AddUTCDate',['../classUnitySensors_1_1GPRMC.html#a3b91963aa4fded726e848aee5536a78e',1,'UnitySensors::GPRMC']]],
-  ['addutctime_134',['AddUTCTime',['../classUnitySensors_1_1NMEAFormat.html#a838e951e1f0db24b5ca753a7d87e9678',1,'UnitySensors::NMEAFormat']]],
-  ['altitude_135',['altitude',['../classUnitySensors_1_1GeoCoordinate.html#a6899ab79e07a5892ffbe69b7ac59076b',1,'UnitySensors::GeoCoordinate']]],
-  ['angularvelocity_136',['angularVelocity',['../classUnitySensors_1_1IMUSensor.html#ad2c77fd3a4f8381c6ee6ad268f47f82e',1,'UnitySensors::IMUSensor']]],
-  ['atanh_137',['Atanh',['../classUnitySensors_1_1GeoCoordinateConverter.html#a63bd1903cbffd90919673df9837a7a7d',1,'UnitySensors::GeoCoordinateConverter']]],
-  ['attachablescriptableobject_138',['AttachableScriptableObject',['../classUnitySensors_1_1AttachableScriptableObject.html',1,'UnitySensors']]],
-  ['attachablescriptableobject_2ecs_139',['AttachableScriptableObject.cs',['../AttachableScriptableObject_8cs.html',1,'']]],
-  ['attachablescriptableobjectmanager_140',['AttachableScriptableObjectManager',['../classUnitySensors_1_1AttachableScriptableObjectManager.html',1,'UnitySensors']]],
-  ['attachablescriptableobjectmanager_2ecs_141',['AttachableScriptableObjectManager.cs',['../AttachableScriptableObjectManager_8cs.html',1,'']]],
-  ['auto_142',['AUTO',['../classUnitySensors_1_1GPGSA.html#a9aadc4bea6a9fc87daae926788d47608ae1f2d5134ed2543d38a0de9751cf75d9',1,'UnitySensors::GPGSA']]],
-  ['autoheader_143',['AutoHeader',['../classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html',1,'UnitySensors::ROS::Serializer']]],
-  ['autonomous_144',['AUTONOMOUS',['../classUnitySensors_1_1NMEAFormat.html#a3f804761d7dbadb8c236276f3d7ec86aade7d660fc991e08c2d3526fec8a46c4a',1,'UnitySensors::NMEAFormat']]],
-  ['awake_145',['Awake',['../classUnitySensors_1_1DepthCamera.html#a9fc7bd895b57faeecda292d679aa4dbb',1,'UnitySensors.DepthCamera.Awake()'],['../classUnitySensors_1_1Visualization_1_1PointsMeshGenerator.html#a34bd6e35b47d8024d6006150fa3841d1',1,'UnitySensors.Visualization.PointsMeshGenerator.Awake()'],['../classUnitySensors_1_1ROS_1_1Publisher.html#a006761f3fada0387ca17479fbba7c8c9',1,'UnitySensors.ROS.Publisher.Awake()']]],
-  ['azimuth_5fcoef_146',['azimuth_coef',['../structUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_1_1DistancesToVelodyneScanMsgJob.html#a6ff3284113eb80eef26a816aec4d47de',1,'UnitySensors::ROS::VelodyneMsgSerializer::DistancesToVelodyneScanMsgJob']]],
-  ['azimuthresolution_147',['azimuthResolution',['../classUnitySensors_1_1VelodyneSensor.html#ab4fa622b77af335c2e4e97dc9c16b23a',1,'UnitySensors.VelodyneSensor.azimuthResolution()'],['../classUnitySensors_1_1RotatingLiDARScanPattern.html#ac67856b00f29db5bf234b21145e81771',1,'UnitySensors.RotatingLiDARScanPattern.azimuthResolution()']]]
+  ['acceleration_74',['acceleration',['../classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a7e8dd33a0c66f4042c5068eb10641e93',1,'UnitySensors::Sensor::IMU::IMUSensor']]],
+  ['altitude_75',['altitude',['../classUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinate.html#ad6c016aa64ecc88008460c78f7e10ffe',1,'UnitySensors::Utils::GeoCoordinate::GeoCoordinate']]],
+  ['angularvelocity_76',['angularVelocity',['../classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a7d80f038b4ff10e861b370f86cb2d06f',1,'UnitySensors::Sensor::IMU::IMUSensor']]],
+  ['atanh_77',['Atanh',['../classUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinateConverter.html#ac5d29e27a5779028d560a06d558aa25f',1,'UnitySensors::Utils::GeoCoordinate::GeoCoordinateConverter']]],
+  ['awake_78',['Awake',['../classUnitySensors_1_1Sensor_1_1UnitySensor.html#aca1a1e3fa481727b31a9d818f83c585e',1,'UnitySensors::Sensor::UnitySensor']]]
 ];

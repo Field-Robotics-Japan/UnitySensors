@@ -1,0 +1,7 @@
+<map id="UnitySensors.Sensor.GNSS.GNSSSensor" name="UnitySensors.Sensor.GNSS.GNSSSensor">
+<area shape="rect" id="node1" title=" " alt="" coords="587,57,785,98"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="251,5,353,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node4" href="$classUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinateConverter.html" title="平面直角座標系と緯度経度の相互変換 参照：国土地理院の「測量計算サイト」 http://vldb.gsi.go.jp/sokuchi/surveycal..." alt="" coords="179,57,425,98"/>
+<area shape="rect" id="node5" href="$classUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinate.html" title=" " alt="" coords="179,122,425,163"/>
+</map>

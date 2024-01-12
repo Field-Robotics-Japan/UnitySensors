@@ -1,0 +1,8 @@
+<map id="UnitySensors.Sensor.Camera.CameraSensor" name="UnitySensors.Sensor.Camera.CameraSensor">
+<area shape="rect" id="node1" title=" " alt="" coords="357,39,572,80"/>
+<area shape="rect" id="node5" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html" title=" " alt="" coords="620,5,835,47"/>
+<area shape="rect" id="node6" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor.html" title=" " alt="" coords="620,71,835,112"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="193,21,294,47"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,21,129,47"/>
+<area shape="rect" id="node4" href="$interfaceUnitySensors_1_1Data_1_1Texture_1_1ITextureInterface.html" title=" " alt="" coords="177,71,309,98"/>
+</map>

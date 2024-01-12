@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classUnitySensors_1_1ROS_1_1Publisher.html" title=" " alt="" coords="5,5,223,47"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1IMUPublisher.html" title=" " alt="" coords="271,13,500,39"/>
+<area shape="rect" id="node1" href="$classUnitySensors_1_1ROS_1_1Publisher_1_1RosMsgPublisher.html" title=" " alt="" coords="5,5,264,76"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Publisher_1_1GroundTruthPublisher.html" title=" " alt="" coords="312,20,519,61"/>
 </map>

@@ -1,6 +1,0 @@
-<map id="UnitySensors.ROS.PointCloud2Serializer" name="UnitySensors.ROS.PointCloud2Serializer">
-<area shape="rect" id="node1" title=" " alt="" coords="5,185,227,227"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Serializer.html" title="センサが取得したデータづｰROSづ勲essage型にシリアライズすづｩ" alt="" coords="53,89,136,115"/>
-<area shape="rect" id="node3" href="$structUnitySensors_1_1ROS_1_1PointCloud2Serializer_1_1PointsToPointCloud2MsgJob.html" title=" " alt="" coords="161,81,426,123"/>
-<area shape="rect" id="node4" title=" " alt="" coords="236,5,351,32"/>
-</map>

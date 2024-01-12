@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['depthcamera_458',['DepthCamera',['../classUnitySensors_1_1DepthCamera.html',1,'UnitySensors']]],
-  ['depthcamerapublisher_459',['DepthCameraPublisher',['../classUnitySensors_1_1ROS_1_1DepthCameraPublisher.html',1,'UnitySensors::ROS']]],
-  ['depthcamerasensor_460',['DepthCameraSensor',['../classUnitySensors_1_1DepthCameraSensor.html',1,'UnitySensors']]],
-  ['depthcameravisualizer_461',['DepthCameraVisualizer',['../classUnitySensors_1_1Visualization_1_1DepthCameraVisualizer.html',1,'UnitySensors::Visualization']]],
-  ['distancestovelodynescanmsgjob_462',['DistancesToVelodyneScanMsgJob',['../structUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_1_1DistancesToVelodyneScanMsgJob.html',1,'UnitySensors::ROS::VelodyneMsgSerializer']]]
+  ['gaussiannoise_396',['GaussianNoise',['../classUnitySensors_1_1Utils_1_1Noise_1_1GaussianNoise.html',1,'UnitySensors::Utils::Noise']]],
+  ['geocoordinate_397',['GeoCoordinate',['../classUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinate.html',1,'UnitySensors::Utils::GeoCoordinate']]],
+  ['geocoordinateconverter_398',['GeoCoordinateConverter',['../classUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinateConverter.html',1,'UnitySensors::Utils::GeoCoordinate']]],
+  ['gnsssensor_399',['GNSSSensor',['../classUnitySensors_1_1Sensor_1_1GNSS_1_1GNSSSensor.html',1,'UnitySensors::Sensor::GNSS']]],
+  ['groundtruth_400',['GroundTruth',['../classUnitySensors_1_1Sensor_1_1GroundTruth_1_1GroundTruth.html',1,'UnitySensors::Sensor::GroundTruth']]],
+  ['groundtrutheditor_401',['GroundTruthEditor',['../classUnitySensors_1_1Editor_1_1GroundTruthEditor.html',1,'UnitySensors::Editor']]],
+  ['groundtruthpublisher_402',['GroundTruthPublisher',['../classUnitySensors_1_1ROS_1_1Publisher_1_1GroundTruthPublisher.html',1,'UnitySensors::ROS::Publisher']]]
 ];

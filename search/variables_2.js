@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['color_803',['color',['../classUnitySensors_1_1Visualization_1_1Visualizer_1_1SphereSetting.html#ad9a899599c4049501a6011071c9738eb',1,'UnitySensors.Visualization.Visualizer.SphereSetting.color()'],['../classUnitySensors_1_1Visualization_1_1Visualizer_1_1LineSetting.html#a756f631335cc7523aef2e0556d0fdfdc',1,'UnitySensors.Visualization.Visualizer.LineSetting.color()']]]
+  ['buffer_5fsize_5fdictionary_696',['BUFFER_SIZE_DICTIONARY',['../classUnitySensors_1_1Visualization_1_1PointCloud_1_1PointCloudVisualizer.html#ae64889380e015491eb6cbeb778fb34ca',1,'UnitySensors::Visualization::PointCloud::PointCloudVisualizer']]]
 ];

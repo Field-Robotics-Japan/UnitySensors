@@ -1,12 +1,18 @@
 var searchData=
 [
-  ['ccw_149',['CCW',['../classUnitySensors_1_1RotatingLiDARScanPattern.html#a5fa64290bc7f4d49e5a3e9ca7813dcdba59ec5d573abd014f3ae2c26ca962e8cf',1,'UnitySensors::RotatingLiDARScanPattern']]],
-  ['color_150',['color',['../classUnitySensors_1_1Visualization_1_1Visualizer_1_1SphereSetting.html#ad9a899599c4049501a6011071c9738eb',1,'UnitySensors.Visualization.Visualizer.SphereSetting.color()'],['../classUnitySensors_1_1Visualization_1_1Visualizer_1_1LineSetting.html#a756f631335cc7523aef2e0556d0fdfdc',1,'UnitySensors.Visualization.Visualizer.LineSetting.color()']]],
-  ['compass_151',['COMPASS',['../classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a74ec43c0d2fad1cc438f1573984ffc87ab513c44a4d8c00922c7155d8a90dfde5',1,'UnitySensors::ROS::NavSatFixSerializer']]],
-  ['completejob_152',['CompleteJob',['../classUnitySensors_1_1DepthCameraSensor.html#acc87e55720b29d11f6db638a6ca7d00e',1,'UnitySensors.DepthCameraSensor.CompleteJob()'],['../classUnitySensors_1_1LivoxSensor.html#ae4726f9c4ccff07682608556a10945b8',1,'UnitySensors.LivoxSensor.CompleteJob()'],['../classUnitySensors_1_1VelodyneSensor.html#a2322fd4ac1a1ca8012ce9afc9c4ac42d',1,'UnitySensors.VelodyneSensor.CompleteJob()'],['../classUnitySensors_1_1VelodyneSensorDepthBuffer.html#ac488f4dcccf0c575f1b15b4cb8b85983',1,'UnitySensors.VelodyneSensorDepthBuffer.CompleteJob()']]],
-  ['coordinate_153',['coordinate',['../classUnitySensors_1_1GPSSensor.html#a4272a2ee4432e7eb4b1b65ead7857769',1,'UnitySensors::GPSSensor']]],
-  ['createsensor_154',['CreateSensor',['../classUnitySensors_1_1LivoxSensor.html#a0165dd10b19185fdc6af4331067985aa',1,'UnitySensors.LivoxSensor.CreateSensor()'],['../classUnitySensors_1_1VelodyneSensorDepthBuffer.html#ab90197e484bd23daf85e31ac9070d297',1,'UnitySensors.VelodyneSensorDepthBuffer.CreateSensor()']]],
-  ['csvlidarscanpattern_155',['CSVLiDARScanPattern',['../classUnitySensors_1_1CSVLiDARScanPattern.html',1,'UnitySensors']]],
-  ['csvlidarscanpattern_2ecs_156',['CSVLiDARScanPattern.cs',['../CSVLiDARScanPattern_8cs.html',1,'']]],
-  ['cw_157',['CW',['../classUnitySensors_1_1RotatingLiDARScanPattern.html#a5fa64290bc7f4d49e5a3e9ca7813dcdba9af3107a066f6b0defb1cafc0499f6ed',1,'UnitySensors::RotatingLiDARScanPattern']]]
+  ['cameraimagemsgpublisher_80',['CameraImageMsgPublisher',['../classUnitySensors_1_1ROS_1_1Publisher_1_1LiDAR_1_1CameraImageMsgPublisher.html',1,'UnitySensors::ROS::Publisher::LiDAR']]],
+  ['cameraimagemsgpublisher_2ecs_81',['CameraImageMsgPublisher.cs',['../CameraImageMsgPublisher_8cs.html',1,'']]],
+  ['camerainfomsgpublisher_82',['CameraInfoMsgPublisher',['../classUnitySensors_1_1ROS_1_1Publisher_1_1Camera_1_1CameraInfoMsgPublisher.html',1,'UnitySensors::ROS::Publisher::Camera']]],
+  ['camerainfomsgpublisher_2ecs_83',['CameraInfoMsgPublisher.cs',['../CameraInfoMsgPublisher_8cs.html',1,'']]],
+  ['camerainfomsgserializer_84',['CameraInfoMsgSerializer',['../classUnitySensors_1_1ROS_1_1Serializer_1_1Camera_1_1CameraInfoMsgSerializer.html',1,'UnitySensors::ROS::Serializer::Camera']]],
+  ['camerainfomsgserializer_2ecs_85',['CameraInfoMsgSerializer.cs',['../CameraInfoMsgSerializer_8cs.html',1,'']]],
+  ['camerasensor_86',['CameraSensor',['../classUnitySensors_1_1Sensor_1_1Camera_1_1CameraSensor.html',1,'UnitySensors::Sensor::Camera']]],
+  ['camerasensor_2ecs_87',['CameraSensor.cs',['../CameraSensor_8cs.html',1,'']]],
+  ['cameratexturevisualizer_88',['CameraTextureVisualizer',['../classUnitySensors_1_1Visualization_1_1Camera_1_1CameraTextureVisualizer.html',1,'UnitySensors::Visualization::Camera']]],
+  ['cameratexturevisualizer_2ecs_89',['CameraTextureVisualizer.cs',['../CameraTextureVisualizer_8cs.html',1,'']]],
+  ['color2depth_90',['Color2Depth',['../classUnitySensors_1_1Utils_1_1Camera_1_1Color2Depth.html',1,'UnitySensors::Utils::Camera']]],
+  ['color2depth_2ecs_91',['Color2Depth.cs',['../Color2Depth_8cs.html',1,'']]],
+  ['compass_92',['COMPASS',['../classUnitySensors_1_1ROS_1_1Serializer_1_1GNSS_1_1NavSatFixMsgSerializer.html#acd05bc3ec7d2e590df56c7f54048b94fab513c44a4d8c00922c7155d8a90dfde5',1,'UnitySensors::ROS::Serializer::GNSS::NavSatFixMsgSerializer']]],
+  ['coordinate_93',['coordinate',['../classUnitySensors_1_1Sensor_1_1GNSS_1_1GNSSSensor.html#a9e6aeef1ef0fe82c54a2a2648872abb3',1,'UnitySensors::Sensor::GNSS::GNSSSensor']]],
+  ['copyto_94',['CopyTo',['../interfaceUnitySensors_1_1Data_1_1PointCloud_1_1IPointInterface.html#a216969f3087290ba323154eda97d5662',1,'UnitySensors.Data.PointCloud.IPointInterface.CopyTo()'],['../structUnitySensors_1_1Data_1_1PointCloud_1_1PointXYZ.html#a8a46095299ae3d62589c69fc1e61fec6',1,'UnitySensors.Data.PointCloud.PointXYZ.CopyTo()'],['../structUnitySensors_1_1Data_1_1PointCloud_1_1PointXYZI.html#a07cc7ef895f7299708a2fe89e9bc1d06',1,'UnitySensors.Data.PointCloud.PointXYZI.CopyTo()']]]
 ];

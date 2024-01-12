@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['generated_894',['generated',['../classUnitySensors_1_1ScanPattern.html#a63e297fa087edb1386e13bb7f5f82ab8',1,'UnitySensors::ScanPattern']]]
+  ['localacceleration_762',['localAcceleration',['../classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#aba65e5099e8671b6e344a1d3fc09eb18',1,'UnitySensors::Sensor::IMU::IMUSensor']]],
+  ['localvelocity_763',['localVelocity',['../classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a2cef9cf81d26c528a66665ad45c16dc3',1,'UnitySensors::Sensor::IMU::IMUSensor']]]
 ];

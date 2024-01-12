@@ -34,17 +34,14 @@ var NAVTREE =
       [ "Dependencies", "md_README.html#autotoc_md2", null ],
       [ "Package Installation (For using UnitySensors in your project)", "md_README.html#autotoc_md3", null ],
       [ "Documentation", "md_README.html#autotoc_md4", null ],
-      [ "Trouble Shooting", "md_README.html#autotoc_md5", [
-        [ "Depth camera values are wrong after build.", "md_README.html#autotoc_md6", [
-          [ "Reason", "md_README.html#autotoc_md7", null ],
-          [ "Solution", "md_README.html#autotoc_md8", null ],
-          [ "Reference", "md_README.html#autotoc_md9", null ]
-        ] ]
-      ] ],
-      [ "LICENSE", "md_README.html#autotoc_md10", null ]
+      [ "LICENSE", "md_README.html#autotoc_md5", null ]
     ] ],
     [ "Packages", "namespaces.html", [
-      [ "Packages", "namespaces.html", "namespaces_dup" ]
+      [ "Packages", "namespaces.html", "namespaces_dup" ],
+      [ "Package Functions", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Typedefs", "namespacemembers_type.html", null ]
+      ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -53,7 +50,7 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", "functions_vars" ],
+        [ "Variables", "functions_vars.html", null ],
         [ "Enumerations", "functions_enum.html", null ],
         [ "Properties", "functions_prop.html", null ]
       ] ]
@@ -62,8 +59,7 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Typedefs", "globals_type.html", null ],
-        [ "Enumerations", "globals_enum.html", null ]
+        [ "Typedefs", "globals_type.html", null ]
       ] ]
     ] ]
   ] ]
@@ -71,10 +67,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"AttachableScriptableObjectManager_8cs.html",
-"classUnitySensors_1_1GeoCoordinateConverter.html#ade65d043e6fceaa43b3617e650fa3332",
-"classUnitySensors_1_1ROS_1_1VelodynePacketsPublisher.html#a6ff5d86e754638588b21536af2b411ac",
-"dir_b5b038cccaa6a513186b93f96b5d627f.html"
+"CameraImageMsgPublisher_8cs.html",
+"classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#afb1b85d3051b8b77ff862f07d2c49a5c",
+"dir_e707e3c34a73d93a8400ad2337c33388.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

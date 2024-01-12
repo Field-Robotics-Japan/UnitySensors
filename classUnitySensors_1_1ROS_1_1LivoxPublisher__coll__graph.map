@@ -1,8 +1,0 @@
-<map id="UnitySensors.ROS.LivoxPublisher" name="UnitySensors.ROS.LivoxPublisher">
-<area shape="rect" id="node1" title=" " alt="" coords="5,289,244,316"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Publisher.html" title=" " alt="" coords="13,185,193,227"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1PointCloud2Serializer.html" title=" " alt="" coords="218,185,439,227"/>
-<area shape="rect" id="node4" href="$classUnitySensors_1_1ROS_1_1Serializer.html" title="センサが取得したデータづｰROSづ勲essage型にシリアライズすづｩ" alt="" coords="227,89,310,115"/>
-<area shape="rect" id="node5" href="$structUnitySensors_1_1ROS_1_1PointCloud2Serializer_1_1PointsToPointCloud2MsgJob.html" title=" " alt="" coords="335,81,600,123"/>
-<area shape="rect" id="node6" title=" " alt="" coords="410,5,525,32"/>
-</map>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['quality_318',['quality',['../classUnitySensors_1_1DepthCameraSensor.html#a4c38ce39b98b4b00dd1714e1fbf1b2ae',1,'UnitySensors.DepthCameraSensor.quality()'],['../classUnitySensors_1_1RGBCameraSensor.html#aa5c60eb34806077d590c82ae8bf2ac41',1,'UnitySensors.RGBCameraSensor.quality()']]],
-  ['quality_319',['Quality',['../classUnitySensors_1_1GPGGA.html#acd5bad782fa11ca502e2fddd8f5b2854',1,'UnitySensors::GPGGA']]]
+  ['quality_258',['quality',['../classUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ImageMsgSerializer.html#a31428af8a9c4e56c8308ceb107c6c597',1,'UnitySensors::ROS::Serializer::Image::ImageMsgSerializer']]]
 ];

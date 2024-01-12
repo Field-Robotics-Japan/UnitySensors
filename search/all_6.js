@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['far_181',['far',['../structUnitySensors_1_1DepthCameraSensor_1_1TextureToPointsJob.html#a4322f01f7c3532950e0248d308e92141',1,'UnitySensors.DepthCameraSensor.TextureToPointsJob.far()'],['../structUnitySensors_1_1VelodyneSensorDepthBuffer_1_1TextureToPointsJob.html#af08d887d99fd20ae5c0951d21c55cfda',1,'UnitySensors.VelodyneSensorDepthBuffer.TextureToPointsJob.far()']]],
-  ['fix_182',['FIX',['../classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a5efd1b6a9ee7dcc8e1bdebc530fac676a6aaac758332a8320840ac0e5f8fc28e2',1,'UnitySensors::ROS::NavSatFixSerializer']]],
-  ['fixlinelength_183',['fixLineLength',['../classUnitySensors_1_1Visualization_1_1Visualizer_1_1LineSetting.html#ad1335dfc11f829a01089fc558eeca9cf',1,'UnitySensors::Visualization::Visualizer::LineSetting']]],
-  ['format_184',['format',['../classUnitySensors_1_1ROS_1_1NMEASerializer.html#a79dc522c8552802ebb7116bdd7cc9a07',1,'UnitySensors::ROS::NMEASerializer']]],
-  ['frame_5fid_185',['frame_id',['../classTFSensor.html#a24cbf36b2854c8713f87d00c98da1739',1,'TFSensor']]],
-  ['frame_5fid_5fchild_186',['frame_id_child',['../structTFSensor_1_1TFData.html#a091cc5544436515dfdb131d8fa63f5ee',1,'TFSensor::TFData']]],
-  ['frame_5fid_5fparent_187',['frame_id_parent',['../structTFSensor_1_1TFData.html#ac6b6ccfb072ba94f0757237b2d7a28bc',1,'TFSensor::TFData']]]
+  ['far_115',['far',['../structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToPointsJob.html#a02ef2d0181a9a272f21069a539de70db',1,'UnitySensors.Sensor.Camera.ITextureToPointsJob.far()'],['../structUnitySensors_1_1Sensor_1_1LiDAR_1_1ITextureToPointsJob.html#a51a105e5e9ef501beb71b82eda388587',1,'UnitySensors.Sensor.LiDAR.ITextureToPointsJob.far()']]],
+  ['fix_116',['FIX',['../classUnitySensors_1_1ROS_1_1Serializer_1_1GNSS_1_1NavSatFixMsgSerializer.html#a90931f9939caae2993b1de11335ffe37a6aaac758332a8320840ac0e5f8fc28e2',1,'UnitySensors::ROS::Serializer::GNSS::NavSatFixMsgSerializer']]],
+  ['frame_5fid_5fchild_117',['frame_id_child',['../structUnitySensors_1_1Sensor_1_1TF_1_1TFData.html#a28708bdeafcf999ac5f276c7695caff7',1,'UnitySensors::Sensor::TF::TFData']]],
+  ['frame_5fid_5fparent_118',['frame_id_parent',['../structUnitySensors_1_1Sensor_1_1TF_1_1TFData.html#a590a285009e2fe20e2ab51ab0a8fb195',1,'UnitySensors::Sensor::TF::TFData']]]
 ];

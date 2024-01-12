@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['ccw_864',['CCW',['../classUnitySensors_1_1RotatingLiDARScanPattern.html#a5fa64290bc7f4d49e5a3e9ca7813dcdba59ec5d573abd014f3ae2c26ca962e8cf',1,'UnitySensors::RotatingLiDARScanPattern']]],
-  ['compass_865',['COMPASS',['../classUnitySensors_1_1ROS_1_1NavSatFixSerializer.html#a74ec43c0d2fad1cc438f1573984ffc87ab513c44a4d8c00922c7155d8a90dfde5',1,'UnitySensors::ROS::NavSatFixSerializer']]],
-  ['cw_866',['CW',['../classUnitySensors_1_1RotatingLiDARScanPattern.html#a5fa64290bc7f4d49e5a3e9ca7813dcdba9af3107a066f6b0defb1cafc0499f6ed',1,'UnitySensors::RotatingLiDARScanPattern']]]
+  ['galileo_751',['GALILEO',['../classUnitySensors_1_1ROS_1_1Serializer_1_1GNSS_1_1NavSatFixMsgSerializer.html#acd05bc3ec7d2e590df56c7f54048b94fa002aa3295f27b9c1aa3c602fd2a37c35',1,'UnitySensors::ROS::Serializer::GNSS::NavSatFixMsgSerializer']]],
+  ['gbas_5ffix_752',['GBAS_FIX',['../classUnitySensors_1_1ROS_1_1Serializer_1_1GNSS_1_1NavSatFixMsgSerializer.html#a90931f9939caae2993b1de11335ffe37a32a4b873a10709f0c9d4c0f0e3922e24',1,'UnitySensors::ROS::Serializer::GNSS::NavSatFixMsgSerializer']]],
+  ['glonass_753',['GLONASS',['../classUnitySensors_1_1ROS_1_1Serializer_1_1GNSS_1_1NavSatFixMsgSerializer.html#acd05bc3ec7d2e590df56c7f54048b94fa48549df6f41418cb94b963fe84894cd6',1,'UnitySensors::ROS::Serializer::GNSS::NavSatFixMsgSerializer']]],
+  ['gps_754',['GPS',['../classUnitySensors_1_1ROS_1_1Serializer_1_1GNSS_1_1NavSatFixMsgSerializer.html#acd05bc3ec7d2e590df56c7f54048b94fa8c578de37278ada488d763ea86c5cf20',1,'UnitySensors::ROS::Serializer::GNSS::NavSatFixMsgSerializer']]]
 ];

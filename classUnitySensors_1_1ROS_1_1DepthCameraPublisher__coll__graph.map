@@ -1,8 +1,0 @@
-<map id="UnitySensors.ROS.DepthCameraPublisher" name="UnitySensors.ROS.DepthCameraPublisher">
-<area shape="rect" id="node1" title=" " alt="" coords="891,37,1124,79"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Publisher.html" title=" " alt="" coords="515,5,749,47"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1PointCloud2Serializer.html" title=" " alt="" coords="521,71,743,112"/>
-<area shape="rect" id="node4" href="$classUnitySensors_1_1ROS_1_1Serializer.html" title="センサが取得したデータづｰROSづ勲essage型にシリアライズすづｩ" alt="" coords="261,49,343,75"/>
-<area shape="rect" id="node5" href="$structUnitySensors_1_1ROS_1_1PointCloud2Serializer_1_1PointsToPointCloud2MsgJob.html" title=" " alt="" coords="169,100,435,141"/>
-<area shape="rect" id="node6" title=" " alt="" coords="5,107,120,134"/>
-</map>

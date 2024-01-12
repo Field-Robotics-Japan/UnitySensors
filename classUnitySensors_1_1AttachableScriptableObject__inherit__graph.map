@@ -1,9 +1,0 @@
-<map id="UnitySensors.AttachableScriptableObject" name="UnitySensors.AttachableScriptableObject">
-<area shape="rect" id="node1" title=" " alt="" coords="236,80,483,121"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1NMEAFormat.html" title=" " alt="" coords="261,169,458,196"/>
-<area shape="rect" id="node2" title=" " alt="" coords="295,5,424,32"/>
-<area shape="rect" id="node4" href="$classUnitySensors_1_1GPGGA.html" title=" " alt="" coords="5,244,164,271"/>
-<area shape="rect" id="node5" href="$classUnitySensors_1_1GPGSA.html" title=" " alt="" coords="188,244,347,271"/>
-<area shape="rect" id="node6" href="$classUnitySensors_1_1GPRMC.html" title=" " alt="" coords="371,244,531,271"/>
-<area shape="rect" id="node7" href="$classUnitySensors_1_1GPVTG.html" title=" " alt="" coords="555,244,713,271"/>
-</map>

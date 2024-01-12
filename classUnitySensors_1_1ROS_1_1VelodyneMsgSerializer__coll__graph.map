@@ -1,9 +1,0 @@
-<map id="UnitySensors.ROS.VelodyneMsgSerializer" name="UnitySensors.ROS.VelodyneMsgSerializer">
-<area shape="rect" id="node1" title=" " alt="" coords="785,57,988,98"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Serializer.html" title="センサが取得したデータづｰROSづ勲essage型にシリアライズすづｩ" alt="" coords="531,5,613,32"/>
-<area shape="rect" id="node3" href="$classRosMessageTypes_1_1Velodyne_1_1VelodyneScanMsg.html" title=" " alt="" coords="467,57,677,98"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,43,85,69"/>
-<area shape="rect" id="node5" href="$classRosMessageTypes_1_1Velodyne_1_1VelodynePacketMsg.html" title=" " alt="" coords="135,65,344,106"/>
-<area shape="rect" id="node6" href="$structUnitySensors_1_1ROS_1_1VelodyneMsgSerializer_1_1DistancesToVelodyneScanMsgJob.html" title=" " alt="" coords="447,123,697,179"/>
-<area shape="rect" id="node7" title=" " alt="" coords="182,137,297,164"/>
-</map>

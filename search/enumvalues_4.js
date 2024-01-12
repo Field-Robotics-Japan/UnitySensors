@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['estimated_869',['ESTIMATED',['../classUnitySensors_1_1NMEAFormat.html#a3f804761d7dbadb8c236276f3d7ec86aafc9812c3304b9bb404f050c41654732e',1,'UnitySensors::NMEAFormat']]]
+  ['sbas_5ffix_756',['SBAS_FIX',['../classUnitySensors_1_1ROS_1_1Serializer_1_1GNSS_1_1NavSatFixMsgSerializer.html#a90931f9939caae2993b1de11335ffe37a4e6c2686379f717bf114c84212039da7',1,'UnitySensors::ROS::Serializer::GNSS::NavSatFixMsgSerializer']]]
 ];

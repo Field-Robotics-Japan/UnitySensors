@@ -1,8 +1,0 @@
-<map id="UnitySensors.ROS.VelodynePacketsPublisher.Publish" name="UnitySensors.ROS.VelodynePacketsPublisher.Publish">
-<area shape="rect" id="node1" title="ROS繝医ヴ繝�繧ｯ騾∽ｿ｡縺ｮ莉ｮ諠ｳ髢｢謨ｰ" alt="" coords="5,39,208,80"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1VelodynePacketsPublisher.html#ad9d873fb295faba0e1c4e438d9f65ade" title="蛻晄悄蛹悶�ｮ莉ｮ諠ｳ髢｢謨ｰ" alt="" coords="256,5,459,47"/>
-<area shape="rect" id="node5" href="$classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer.html#adedaced2851d960cc3224cf9a53456c1" title=" " alt="" coords="256,71,459,112"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1VelodyneMsgSerializer.html#ae42fa7fa474927a3e9e5efd8da041eab" title=" " alt="" coords="509,5,711,47"/>
-<area shape="rect" id="node4" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html#a5a4664d356a25d74dad02a2d2f6d0956" title="初甘ｺ化関数" alt="" coords="761,5,968,47"/>
-<area shape="rect" id="node6" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html#ad1a8258c1a9bc4abce0c95ba73250e72" title="シリアライズ関数" alt="" coords="507,71,713,112"/>
-</map>

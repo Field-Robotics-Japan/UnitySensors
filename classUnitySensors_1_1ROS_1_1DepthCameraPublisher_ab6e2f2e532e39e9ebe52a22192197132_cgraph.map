@@ -1,8 +1,0 @@
-<map id="UnitySensors.ROS.DepthCameraPublisher.Publish" name="UnitySensors.ROS.DepthCameraPublisher.Publish">
-<area shape="rect" id="node1" title="ROS繝医ヴ繝�繧ｯ騾∽ｿ｡縺ｮ莉ｮ諠ｳ髢｢謨ｰ" alt="" coords="5,39,239,80"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1DepthCameraPublisher.html#aefb4f7ad7b736ca2c6b15bfa5da7b375" title="蛻晄悄蛹悶�ｮ莉ｮ諠ｳ髢｢謨ｰ" alt="" coords="287,5,520,47"/>
-<area shape="rect" id="node5" href="$classUnitySensors_1_1ROS_1_1PointCloud2Serializer.html#a01fbe4d4de0901b2deb93613e4fcfad7" title=" " alt="" coords="293,71,514,112"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1PointCloud2Serializer.html#a11ea80e1614cdcfae5edc7f88e3fa8e8" title=" " alt="" coords="568,5,789,47"/>
-<area shape="rect" id="node4" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html#a5a4664d356a25d74dad02a2d2f6d0956" title="初甘ｺ化関数" alt="" coords="837,5,1044,47"/>
-<area shape="rect" id="node6" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1AutoHeader.html#ad1a8258c1a9bc4abce0c95ba73250e72" title="シリアライズ関数" alt="" coords="575,71,782,112"/>
-</map>

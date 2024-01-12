@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['both_863',['BOTH',['../classUnitySensors_1_1DepthCameraSensor.html#a6cd9b75f622f9d3813f8fd927725244ba6328e5e3186c227a021ef2ff77e40197',1,'UnitySensors::DepthCameraSensor']]]
+  ['fix_750',['FIX',['../classUnitySensors_1_1ROS_1_1Serializer_1_1GNSS_1_1NavSatFixMsgSerializer.html#a90931f9939caae2993b1de11335ffe37a6aaac758332a8320840ac0e5f8fc28e2',1,'UnitySensors::ROS::Serializer::GNSS::NavSatFixMsgSerializer']]]
 ];

@@ -1,0 +1,8 @@
+<map id="UnitySensors.Sensor.LiDAR.DepthBufferLiDARSensor" name="UnitySensors.Sensor.LiDAR.DepthBufferLiDARSensor">
+<area shape="rect" id="node1" title=" " alt="" coords="655,57,857,98"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor.html" title=" " alt="" coords="225,5,423,32"/>
+<area shape="rect" id="node3" href="$structUnitySensors_1_1Sensor_1_1LiDAR_1_1ITextureToPointsJob.html" title=" " alt="" coords="223,57,425,98"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,73,120,100"/>
+<area shape="rect" id="node5" href="$structUnitySensors_1_1Utils_1_1Noise_1_1IUpdateGaussianNoisesJob.html" title=" " alt="" coords="225,122,423,163"/>
+<area shape="rect" id="node6" title=" " alt="" coords="9,132,116,159"/>
+</map>

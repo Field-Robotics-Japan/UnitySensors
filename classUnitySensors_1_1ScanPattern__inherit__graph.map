@@ -1,6 +1,0 @@
-<map id="UnitySensors.ScanPattern" name="UnitySensors.ScanPattern">
-<area shape="rect" id="node1" title=" " alt="" coords="137,80,327,107"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1CSVLiDARScanPattern.html" title=" " alt="" coords="5,155,213,196"/>
-<area shape="rect" id="node4" href="$classUnitySensors_1_1RotatingLiDARScanPattern.html" title=" " alt="" coords="237,155,475,196"/>
-<area shape="rect" id="node2" title=" " alt="" coords="167,5,297,32"/>
-</map>

@@ -1,12 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,111,135,137"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1AttachableScriptableObject.html" title=" " alt="" coords="183,74,429,115"/>
-<area shape="rect" id="node8" href="$classUnitySensors_1_1ScanPattern.html" title=" " alt="" coords="211,140,401,167"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1NMEAFormat.html" title=" " alt="" coords="497,81,695,108"/>
-<area shape="rect" id="node4" href="$classUnitySensors_1_1GPGGA.html" title=" " alt="" coords="763,5,922,32"/>
-<area shape="rect" id="node5" href="$classUnitySensors_1_1GPGSA.html" title=" " alt="" coords="763,56,922,83"/>
-<area shape="rect" id="node6" href="$classUnitySensors_1_1GPRMC.html" title=" " alt="" coords="763,107,923,133"/>
-<area shape="rect" id="node7" href="$classUnitySensors_1_1GPVTG.html" title=" " alt="" coords="764,157,921,184"/>
-<area shape="rect" id="node9" href="$classUnitySensors_1_1CSVLiDARScanPattern.html" title=" " alt="" coords="492,133,700,174"/>
-<area shape="rect" id="node10" href="$classUnitySensors_1_1RotatingLiDARScanPattern.html" title=" " alt="" coords="477,198,715,239"/>
+<area shape="rect" id="node1" href="$interfaceUnitySensors_1_1Data_1_1PointCloud_1_1IPointInterface.html" title=" " alt="" coords="5,39,227,80"/>
+<area shape="rect" id="node2" href="$interfaceUnitySensors_1_1Data_1_1PointCloud_1_1IPointXYZInterface.html" title=" " alt="" coords="275,39,496,80"/>
+<area shape="rect" id="node3" href="$structUnitySensors_1_1Data_1_1PointCloud_1_1PointXYZ.html" title=" " alt="" coords="544,5,765,47"/>
+<area shape="rect" id="node4" href="$structUnitySensors_1_1Data_1_1PointCloud_1_1PointXYZI.html" title=" " alt="" coords="544,71,765,112"/>
 </map>

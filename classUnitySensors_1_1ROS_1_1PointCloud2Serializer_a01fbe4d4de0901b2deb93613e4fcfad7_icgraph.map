@@ -1,7 +1,0 @@
-<map id="UnitySensors.ROS.PointCloud2Serializer.Serialize" name="UnitySensors.ROS.PointCloud2Serializer.Serialize">
-<area shape="rect" id="node1" title=" " alt="" coords="295,104,516,145"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1DepthCameraPublisher.html#ab6e2f2e532e39e9ebe52a22192197132" title="ROSトピック送信の仮想関数" alt="" coords="9,5,243,47"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1LivoxPublisher.html#aa7ee33ec81ab196c53c5f44a7a743ef3" title="ROSトピック送信の仮想関数" alt="" coords="5,71,247,112"/>
-<area shape="rect" id="node4" href="$classUnitySensors_1_1ROS_1_1VelodynePointsPublisher.html#acdfa5d1c2bf84fb18f317a397917cd3f" title="ROSトピック送信の仮想関数" alt="" coords="25,136,227,177"/>
-<area shape="rect" id="node5" href="$classUnitySensors_1_1ROS_1_1VelodynePublisher.html#ab0d9019f2e72ca6b323cb33b878f2af7" title="ROSトピック送信の仮想関数" alt="" coords="25,201,227,243"/>
-</map>
