@@ -38,7 +38,7 @@ There are several Prefab and Scene files available for testing each sensor.
 ## Documentation
 
 ## LICENSE
-Copyright [2020-2021] Ryodo Tanaka groadpg@gmail.com
+Copyright [2020-2024] Ryodo Tanaka (groadpg@gmail.com) and Akiro Harada
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
