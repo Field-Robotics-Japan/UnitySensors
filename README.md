@@ -31,7 +31,7 @@ There are several Prefab and Scene files available for testing each sensor.
 
 3. Enter the git URL for the desired package. 
     1. For the UnitySensors, enter `https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensors#v2.0.0b`.
-    2. For the UnitySensorsROS, enter `https://github.com/Field-Robotics-Japan/UnitySensorsROS.git?path=/Assets/UnitySensorsROS#v2.0.0b`.
+    2. For the UnitySensorsROS, enter `https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensorsROS#v2.0.0b`.
     __Note: UnitySensorsROS does not contain UnitySensors.__
 4. Click `Add`.
 
