@@ -173,8 +173,7 @@ namespace UnitySensors.Sensor.LiDAR
             int index = 0;
             for (int azimuth = 0; azimuth < _azimuthAngleResolution; azimuth++)
             {
-                if (_direction == Direction.CCW) azimuth = _azimuthAngleResolution - 1 - azimuth;
-                float azimuthAngle = Mathf.Lerp(_minAzimuthAngle, _maxAzimuthAngle, (float)azimuth / _azimuthAngleResolution);
+                float azimuthAngle = Mathf.Lerp(_minAzimuthAngle, _maxAzimuthAngle, (float)(_direction == Direction.CW ? azimuth : _azimuthAngleResolution - 1 - azimuth) / _azimuthAngleResolution);
                 foreach (float zenithAngle in _zenithAngles)
                 {
                     scan.scans[index] = Quaternion.Euler(-zenithAngle, azimuthAngle, 0) * Vector3.forward;
