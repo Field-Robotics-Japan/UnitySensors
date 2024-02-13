@@ -18,8 +18,8 @@ var hierarchy =
       [ "UnitySensors.Sensor.LiDAR.IUpdateRaycastCommandsJob", "structUnitySensors_1_1Sensor_1_1LiDAR_1_1IUpdateRaycastCommandsJob.html", null ],
       [ "UnitySensors.Utils.Noise.IUpdateGaussianNoisesJob", "structUnitySensors_1_1Utils_1_1Noise_1_1IUpdateGaussianNoisesJob.html", null ]
     ] ],
-    [ "UnitySensors.ROS.Publisher.PointCloud.ImageMsgPublisher< CameraSensor >", "classUnitySensors_1_1ROS_1_1Publisher_1_1PointCloud_1_1ImageMsgPublisher.html", [
-      [ "UnitySensors.ROS.Publisher.LiDAR.CameraImageMsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1LiDAR_1_1CameraImageMsgPublisher.html", null ]
+    [ "UnitySensors.ROS.Publisher.Image.ImageMsgPublisher< CameraSensor >", "classUnitySensors_1_1ROS_1_1Publisher_1_1Image_1_1ImageMsgPublisher.html", [
+      [ "UnitySensors.ROS.Publisher.Image.CameraImageMsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1Image_1_1CameraImageMsgPublisher.html", null ]
     ] ],
     [ "UnitySensors.Data.PointCloud.IPointCloudInterface< T >", "interfaceUnitySensors_1_1Data_1_1PointCloud_1_1IPointCloudInterface.html", [
       [ "UnitySensors.Sensor.LiDAR.LiDARSensor< T >", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor.html", null ]
@@ -74,7 +74,7 @@ var hierarchy =
       [ "UnitySensors.ROS.Publisher.LiDAR.DepthBufferLiDARPointCloud2MsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1LiDAR_1_1DepthBufferLiDARPointCloud2MsgPublisher.html", null ]
     ] ],
     [ "UnitySensors.ROS.Publisher.PointCloud.PointCloud2MsgPublisher< DepthCameraSensor, PointXYZ >", "classUnitySensors_1_1ROS_1_1Publisher_1_1PointCloud_1_1PointCloud2MsgPublisher.html", [
-      [ "UnitySensors.ROS.Publisher.LiDAR.DepthCameraPointCloud2MsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1LiDAR_1_1DepthCameraPointCloud2MsgPublisher.html", null ]
+      [ "UnitySensors.ROS.Publisher.PointCloud.DepthCameraPointCloud2MsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1PointCloud_1_1DepthCameraPointCloud2MsgPublisher.html", null ]
     ] ],
     [ "UnitySensors.ROS.Publisher.PointCloud.PointCloud2MsgPublisher< RaycastLiDARSensor, PointXYZI >", "classUnitySensors_1_1ROS_1_1Publisher_1_1PointCloud_1_1PointCloud2MsgPublisher.html", [
       [ "UnitySensors.ROS.Publisher.LiDAR.RaycastLiDARPointCloud2MsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1LiDAR_1_1RaycastLiDARPointCloud2MsgPublisher.html", null ]
@@ -102,7 +102,7 @@ var hierarchy =
       [ "UnitySensors.ROS.Publisher.IMU.IMUMsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1IMU_1_1IMUMsgPublisher.html", null ]
     ] ],
     [ "UnitySensors.ROS.Publisher.RosMsgPublisher< T, ImageMsgSerializer< T >, CompressedImageMsg >", "classUnitySensors_1_1ROS_1_1Publisher_1_1RosMsgPublisher.html", [
-      [ "UnitySensors.ROS.Publisher.PointCloud.ImageMsgPublisher< T >", "classUnitySensors_1_1ROS_1_1Publisher_1_1PointCloud_1_1ImageMsgPublisher.html", null ]
+      [ "UnitySensors.ROS.Publisher.Image.ImageMsgPublisher< T >", "classUnitySensors_1_1ROS_1_1Publisher_1_1Image_1_1ImageMsgPublisher.html", null ]
     ] ],
     [ "UnitySensors.ROS.Publisher.RosMsgPublisher< T, PointCloud2MsgSerializer< T, TT >, PointCloud2Msg >", "classUnitySensors_1_1ROS_1_1Publisher_1_1RosMsgPublisher.html", [
       [ "UnitySensors.ROS.Publisher.PointCloud.PointCloud2MsgPublisher< T, TT >", "classUnitySensors_1_1ROS_1_1Publisher_1_1PointCloud_1_1PointCloud2MsgPublisher.html", null ]

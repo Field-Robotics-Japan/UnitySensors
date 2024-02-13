@@ -44,17 +44,19 @@ var annotated_dup =
           [ "GNSS", "namespaceUnitySensors_1_1ROS_1_1Publisher_1_1GNSS.html", [
             [ "NavSatFixMsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1GNSS_1_1NavSatFixMsgPublisher.html", null ]
           ] ],
+          [ "Image", "namespaceUnitySensors_1_1ROS_1_1Publisher_1_1Image.html", [
+            [ "CameraImageMsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1Image_1_1CameraImageMsgPublisher.html", null ],
+            [ "ImageMsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1Image_1_1ImageMsgPublisher.html", null ]
+          ] ],
           [ "IMU", "namespaceUnitySensors_1_1ROS_1_1Publisher_1_1IMU.html", [
             [ "IMUMsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1IMU_1_1IMUMsgPublisher.html", null ]
           ] ],
           [ "LiDAR", "namespaceUnitySensors_1_1ROS_1_1Publisher_1_1LiDAR.html", [
-            [ "CameraImageMsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1LiDAR_1_1CameraImageMsgPublisher.html", null ],
-            [ "DepthCameraPointCloud2MsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1LiDAR_1_1DepthCameraPointCloud2MsgPublisher.html", null ],
             [ "DepthBufferLiDARPointCloud2MsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1LiDAR_1_1DepthBufferLiDARPointCloud2MsgPublisher.html", null ],
             [ "RaycastLiDARPointCloud2MsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1LiDAR_1_1RaycastLiDARPointCloud2MsgPublisher.html", null ]
           ] ],
           [ "PointCloud", "namespaceUnitySensors_1_1ROS_1_1Publisher_1_1PointCloud.html", [
-            [ "ImageMsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1PointCloud_1_1ImageMsgPublisher.html", null ],
+            [ "DepthCameraPointCloud2MsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1PointCloud_1_1DepthCameraPointCloud2MsgPublisher.html", null ],
             [ "PointCloud2MsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1PointCloud_1_1PointCloud2MsgPublisher.html", "classUnitySensors_1_1ROS_1_1Publisher_1_1PointCloud_1_1PointCloud2MsgPublisher" ]
           ] ],
           [ "TF", "namespaceUnitySensors_1_1ROS_1_1Publisher_1_1TF.html", [

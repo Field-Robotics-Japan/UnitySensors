@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('classUnitySensors_1_1Sensor_1_1IMU_1_1
   <div class="summary">
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -145,6 +146,11 @@ Properties</h2></td></tr>
 <tr class="memitem:a7fe5cc3cdfbd62cad3e641b6b01f1011 inherit properties_classUnitySensors_1_1Sensor_1_1UnitySensor"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1UnitySensor.html#a7fe5cc3cdfbd62cad3e641b6b01f1011">time</a><code> [get]</code></td></tr>
 <tr class="separator:a7fe5cc3cdfbd62cad3e641b6b01f1011 inherit properties_classUnitySensors_1_1Sensor_1_1UnitySensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a01993af8071aa50482e271b759b71672"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a01993af8071aa50482e271b759b71672">FixedUpdate</a> ()</td></tr>
+<tr class="separator:a01993af8071aa50482e271b759b71672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a3f63a0ee374ad7b6047615a408ee820e"><td class="memItemLeft" align="right" valign="top">Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a3f63a0ee374ad7b6047615a408ee820e">_transform</a></td></tr>
@@ -159,16 +165,28 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a93673a1f3584244eca269747aa8b642b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a487c7d96db26e1e316898f4b5cedf09b"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a487c7d96db26e1e316898f4b5cedf09b">_angularVelocity</a></td></tr>
 <tr class="separator:a487c7d96db26e1e316898f4b5cedf09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc509f9705b5f54def49b182df5eaea"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a7bc509f9705b5f54def49b182df5eaea">_position_tmp</a></td></tr>
+<tr class="separator:a7bc509f9705b5f54def49b182df5eaea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c66cd0305a840857a537309db31e9b1"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a5c66cd0305a840857a537309db31e9b1">_velocity_tmp</a></td></tr>
+<tr class="separator:a5c66cd0305a840857a537309db31e9b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99689e2bccf2b7b067839991e0d042db"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a99689e2bccf2b7b067839991e0d042db">_acceleration_tmp</a></td></tr>
+<tr class="separator:a99689e2bccf2b7b067839991e0d042db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0548f8de8b41306102518284b9ff86e1"><td class="memItemLeft" align="right" valign="top">Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a0548f8de8b41306102518284b9ff86e1">_rotation_tmp</a></td></tr>
+<tr class="separator:a0548f8de8b41306102518284b9ff86e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e329e0944dac00538cfc4f82bdfc62a"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a5e329e0944dac00538cfc4f82bdfc62a">_angularVelocity_tmp</a></td></tr>
+<tr class="separator:a5e329e0944dac00538cfc4f82bdfc62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a677f6483571769610878e23863770ff0"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a677f6483571769610878e23863770ff0">_position_last</a></td></tr>
 <tr class="separator:a677f6483571769610878e23863770ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56b4e5a145b2f7f0dacc79bd85b13939"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a56b4e5a145b2f7f0dacc79bd85b13939">_velocity_last</a></td></tr>
 <tr class="separator:a56b4e5a145b2f7f0dacc79bd85b13939"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a708c423959833e321d120f6acaee2fbe"><td class="memItemLeft" align="right" valign="top">Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a708c423959833e321d120f6acaee2fbe">_rotation_last</a></td></tr>
 <tr class="separator:a708c423959833e321d120f6acaee2fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a032016c6dc436a0c8decc21edb0c217b"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a032016c6dc436a0c8decc21edb0c217b">_gravity</a></td></tr>
-<tr class="separator:a032016c6dc436a0c8decc21edb0c217b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac055ffaf8ab328671fc9b6b084f13156"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#ac055ffaf8ab328671fc9b6b084f13156">_gravityDirection</a></td></tr>
+<tr class="separator:ac055ffaf8ab328671fc9b6b084f13156"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56b443efc9ce844dbc2605b302b5d65b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a56b443efc9ce844dbc2605b302b5d65b">_gravityMagnitude</a></td></tr>
 <tr class="separator:a56b443efc9ce844dbc2605b302b5d65b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf1f3a9090bdc16255c12afd8d8f1a30"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#aaf1f3a9090bdc16255c12afd8d8f1a30">_time_last</a></td></tr>
+<tr class="separator:aaf1f3a9090bdc16255c12afd8d8f1a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -180,6 +198,31 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a90abe1d9c46c143bcc3364f3747ff841 inherit pub_attribs_classUnitySensors_1_1Sensor_1_1UnitySensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a01993af8071aa50482e271b759b71672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01993af8071aa50482e271b759b71672">&#9670;&nbsp;</a></span>FixedUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnitySensors.Sensor.IMU.IMUSensor.FixedUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="afd38cf227764bb3337ded45591905fda"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afd38cf227764bb3337ded45591905fda">&#9670;&nbsp;</a></span>Init()</h2>
 
@@ -284,6 +327,28 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a99689e2bccf2b7b067839991e0d042db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99689e2bccf2b7b067839991e0d042db">&#9670;&nbsp;</a></span>_acceleration_tmp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 UnitySensors.Sensor.IMU.IMUSensor._acceleration_tmp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a487c7d96db26e1e316898f4b5cedf09b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a487c7d96db26e1e316898f4b5cedf09b">&#9670;&nbsp;</a></span>_angularVelocity</h2>
 
@@ -306,8 +371,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a032016c6dc436a0c8decc21edb0c217b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a032016c6dc436a0c8decc21edb0c217b">&#9670;&nbsp;</a></span>_gravity</h2>
+<a id="a5e329e0944dac00538cfc4f82bdfc62a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e329e0944dac00538cfc4f82bdfc62a">&#9670;&nbsp;</a></span>_angularVelocity_tmp</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -316,7 +381,29 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Vector3 UnitySensors.Sensor.IMU.IMUSensor._gravity</td>
+          <td class="memname">Vector3 UnitySensors.Sensor.IMU.IMUSensor._angularVelocity_tmp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac055ffaf8ab328671fc9b6b084f13156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac055ffaf8ab328671fc9b6b084f13156">&#9670;&nbsp;</a></span>_gravityDirection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 UnitySensors.Sensor.IMU.IMUSensor._gravityDirection</td>
         </tr>
       </table>
   </td>
@@ -394,6 +481,28 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a7bc509f9705b5f54def49b182df5eaea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bc509f9705b5f54def49b182df5eaea">&#9670;&nbsp;</a></span>_position_tmp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 UnitySensors.Sensor.IMU.IMUSensor._position_tmp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a93673a1f3584244eca269747aa8b642b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a93673a1f3584244eca269747aa8b642b">&#9670;&nbsp;</a></span>_rotation</h2>
 
@@ -427,6 +536,50 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">Quaternion UnitySensors.Sensor.IMU.IMUSensor._rotation_last</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0548f8de8b41306102518284b9ff86e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0548f8de8b41306102518284b9ff86e1">&#9670;&nbsp;</a></span>_rotation_tmp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Quaternion UnitySensors.Sensor.IMU.IMUSensor._rotation_tmp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf1f3a9090bdc16255c12afd8d8f1a30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf1f3a9090bdc16255c12afd8d8f1a30">&#9670;&nbsp;</a></span>_time_last</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnitySensors.Sensor.IMU.IMUSensor._time_last</td>
         </tr>
       </table>
   </td>
@@ -493,6 +646,28 @@ Additional Inherited Members</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">Vector3 UnitySensors.Sensor.IMU.IMUSensor._velocity_last</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c66cd0305a840857a537309db31e9b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c66cd0305a840857a537309db31e9b1">&#9670;&nbsp;</a></span>_velocity_tmp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 UnitySensors.Sensor.IMU.IMUSensor._velocity_tmp</td>
         </tr>
       </table>
   </td>
