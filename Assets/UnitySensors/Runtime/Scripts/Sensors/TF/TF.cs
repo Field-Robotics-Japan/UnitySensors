@@ -54,7 +54,7 @@ namespace UnitySensors.Sensor.TF
             TFData tfData_self;
             tfData_self.frame_id_parent = frame_id_parent;
             tfData_self.frame_id_child = _frame_id;
-            tfData_self.position = worldToLocalMatrix * _transform.position;
+            tfData_self.position = (Vector3)(worldToLocalMatrix * new Vector4(_transform.position.x, _transform.position.y, _transform.position.z, 1.0f));
             tfData_self.rotation = worldToLocalQuaternion * _transform.rotation;
             tfData.Add(tfData_self);
 
