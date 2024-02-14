@@ -29,12 +29,13 @@ namespace UnitySensors.ROS.Serializer.TF
         {
             HeaderMsg headerMsg = _header.Serialize();
             List<TransformStampedMsg> transforms = new List<TransformStampedMsg>();
-            
+
             TFData[] tfData = sensor.GetTFData();
             foreach(TFData data in tfData)
             {
                 TransformStampedMsg transform = new TransformStampedMsg();
-                transform.header = headerMsg;
+                transform.header.seq = headerMsg.seq;
+                transform.header.stamp = headerMsg.stamp;
                 transform.header.frame_id = data.frame_id_parent;
                 transform.child_frame_id = data.frame_id_child;
                 transform.transform.translation = data.position.To<FLU>();
