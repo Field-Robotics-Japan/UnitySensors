@@ -1,11 +1,11 @@
 {
     "name": "com.frj.unity-sensors-ros",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "displayName": "UnitySensorsROS",
     "description": "",
     "unity": "2021.3",
     "dependencies": {
-        "com.frj.unity-sensors": "2.0.1",
+        "com.frj.unity-sensors": "2.0.2",
         "com.unity.robotics.ros-tcp-connector": "0.7.0-preview"
     },
     "keywords": [
