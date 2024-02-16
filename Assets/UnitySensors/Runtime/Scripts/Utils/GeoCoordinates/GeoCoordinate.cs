@@ -1,7 +1,7 @@
 namespace UnitySensors.Utils.GeoCoordinate
 {
     [System.Serializable]
-    public class GeoCoordinate
+    public struct GeoCoordinate
     {
         public GeoCoordinate(double lat, double lon, double alt)
         {
