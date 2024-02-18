@@ -3,20 +3,23 @@ using UnitySensors.Sensor;
 
 namespace UnitySensors.Visualization
 {
-    public abstract class Visualizer<T> : MonoBehaviour where T : UnitySensor
+    public abstract class Visualizer : MonoBehaviour
     {
-        private T _sensor;
-        public T sensor { get => _sensor; }
+        [SerializeField]
+        private MonoBehaviour _source;
 
         private void Start()
         {
-            _sensor = GetComponent<T>();
-            _sensor.onSensorUpdated += Visualize;
+            if(_source is UnitySensor)
+            {
+                UnitySensor sensor = (UnitySensor)_source;
+                sensor.onSensorUpdated += Visualize;
+            }
 
-            Init();
+            Init(_source);
         }
 
-        protected abstract void Init();
+        protected abstract void Init(MonoBehaviour source);
         protected abstract void Visualize();
     }
 }
