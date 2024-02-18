@@ -4,7 +4,7 @@ using UnityEngine;
 using Unity.Robotics.ROSTCPConnector;
 using RosMessageTypes.Rosgraph;
 
-namespace UnitySensors.ROS.Publisher
+namespace UnitySensors.ROS.Utils.Time
 {
     public class ROSClock : MonoBehaviour
     {
@@ -14,7 +14,7 @@ namespace UnitySensors.ROS.Publisher
         private ROSConnection _ros;
         private ClockMsg _message;
 
-        void Start()
+        private void Start()
         {
             this._ros = ROSConnection.GetOrCreateInstance();
 
@@ -25,11 +25,11 @@ namespace UnitySensors.ROS.Publisher
             this._message.clock.nanosec = 0;
         }
 
-        void Update()
+        private void Update()
         {
-            float time = Time.time;
+            float time = UnityEngine.Time.time;
 #if ROS2
-        int sec = (int)Math.Truncate(time);
+            int sec = (int)Math.Truncate(time);
 #else
             uint sec = (uint)Math.Truncate(time);
 #endif
