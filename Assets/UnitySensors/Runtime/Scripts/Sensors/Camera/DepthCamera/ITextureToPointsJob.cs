@@ -5,7 +5,7 @@ using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
 
-using UnitySensors.Data.PointCloud;
+using UnitySensors.DataType.Sensor.PointCloud;
 
 namespace UnitySensors.Sensor.Camera
 {
@@ -19,7 +19,7 @@ namespace UnitySensors.Sensor.Camera
         public NativeArray<float3> directions;
 
         [ReadOnly]
-        public NativeArray<Color> pixels;
+        public NativeArray<Color> depthPixels;
         [ReadOnly]
         public NativeArray<float> noises;
 
@@ -27,7 +27,7 @@ namespace UnitySensors.Sensor.Camera
 
         public void Execute(int index)
         {
-            float distance = (1.0f - Mathf.Clamp01(pixels.AsReadOnly()[index].r)) * far;
+            float distance = (1.0f - Mathf.Clamp01(depthPixels.AsReadOnly()[index].r)) * far;
             float distance_noised = distance + noises[index];
             distance = (near < distance && distance < far && near < distance_noised && distance_noised < far) ? distance_noised : 0;
 
