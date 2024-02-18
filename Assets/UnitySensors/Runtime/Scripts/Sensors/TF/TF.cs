@@ -55,6 +55,15 @@ namespace UnitySensors.Sensor.TF
             tfData_self.frame_id_parent = frame_id_parent;
             tfData_self.frame_id_child = _frame_id;
             tfData_self.position = (Vector3)(worldToLocalMatrix * new Vector4(_transform.position.x, _transform.position.y, _transform.position.z, 1.0f));
+            Vector3 localScale = _transform.localScale;
+            Vector3 lossyScale = _transform.lossyScale;
+            Vector3 scaleVector = new Vector3()
+            {
+                x = localScale.x != 0 ? lossyScale.x / localScale.x : 0,
+                y = localScale.y != 0 ? lossyScale.y / localScale.y : 0,
+                z = localScale.z != 0 ? lossyScale.z / localScale.z : 0
+            };
+            tfData_self.position.Scale(scaleVector);
             tfData_self.rotation = worldToLocalQuaternion * _transform.rotation;
             tfData.Add(tfData_self);
 
