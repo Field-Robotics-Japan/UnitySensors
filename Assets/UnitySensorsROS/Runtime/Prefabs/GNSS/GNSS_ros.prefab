@@ -63,6 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11ec5602b9e12544b78d1d2a4bdd5c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _source: {fileID: 3192925013080293982}
   _frequency: 10
   _topicName: navsat
   _serializer:
