@@ -1,9 +1,8 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using UnityEngine;
+using UnitySensors.DataType.Geometry;
 
-namespace UnitySensors.Utils.GeoCoordinate
+namespace UnitySensors.Utils.Geometry
 {
     /// <summary>
     /// 平面直角座標系と緯度経度の相互変換
@@ -16,35 +15,22 @@ namespace UnitySensors.Utils.GeoCoordinate
         const double dF = 298.257222101d;      //逆扁平率
         const double dM0 = 0.9999;              //平面直角座標系のY軸上における縮尺係数(UTM座標系の場合→0.9996)
 
-        private double _lon0;
-        private double _lat0;
+        private GeoCoordinate _origin;
 
-        /// <summary>
-        /// コンストラクタ
-        /// </summary>
-        /// <param name="lat0">原点:緯度[度]</param>
-        /// <param name="lon0">原点:経度[度]</param>
-        public GeoCoordinateConverter(double lat0, double lon0)
+        public GeoCoordinateConverter(GeoCoordinate origin)
         {
-            this._lat0 = lat0;
-            this._lon0 = lon0;
+            _origin = origin;
         }
 
-        /// <summary>
-        /// 地理座標系（緯度・経度） -> 平面直角座標
-        /// </summary>
-        /// <param name="Lat">緯度[度]</param>
-        /// <param name="Lon">経度[度]</param>
-        /// <returns>X、Y</returns>
-        public (double X, double Z) LatLon2XZ(double Lat, double Lon)
+        public Vector3D Convert(GeoCoordinate coordinate)
         {
             double dn = 1d / (2 * dF - 1);
 
             //ラジアン単位に
-            Lat = Deg2Rad(Lat);
-            Lon = Deg2Rad(Lon);
-            double Lat0 = Deg2Rad(this._lat0);
-            double Lon0 = Deg2Rad(this._lon0);
+            double Lat = Deg2Rad(coordinate.latitude);
+            double Lon = Deg2Rad(coordinate.longitude);
+            double Lat0 = Deg2Rad(_origin.latitude);
+            double Lon0 = Deg2Rad(_origin.longitude);
 
             double dt = Math.Sinh(Atanh(Math.Sin(Lat)) - (2 * Math.Sqrt(dn)) / (1 + dn) * Atanh(2 * Math.Sqrt(dn) / (1 + dn) * Math.Sin(Lat)));
             double dtb = Math.Sqrt(1 + Math.Pow(dt, 2));
@@ -92,25 +78,16 @@ namespace UnitySensors.Utils.GeoCoordinate
                 X += dal[j] * Math.Cos(2 * j * dXi) * Math.Sinh(2 * j * dEt);
             }
 
-            return (
-                dAb * (dEt + X),
-                dAb * (dXi + Z) - dSb
-            );
+            return new Vector3D(dAb * (dEt + X), coordinate.altitude - _origin.altitude, dAb * (dXi + Z) - dSb);
         }
 
-        /// <summary> 
-        /// 平面直角座標系 -> 地理座標系（緯度・経度）
-        /// </summary>
-        /// <param name="X">X座標(東西方向、m)</param>
-        /// <param name="Z">Y座標(南北方向、m)</param>
-        /// <returns>Lon：緯度[度], Lat：経度[度]</returns>
-        public (double Lat, double Lon) XZ2LatLon(double X, double Z)
+        public GeoCoordinate Convert(Vector3D coordinate)
         {
             double dn = 1d / (2 * dF - 1);
 
             //ラジアン単位に
-            double Lon0 = Deg2Rad(this._lon0);
-            double Lat0 = Deg2Rad(this._lat0);
+            double Lat0 = Deg2Rad(_origin.latitude);
+            double Lon0 = Deg2Rad(_origin.longitude);
 
             //Sφ0、A
             double[] dA = new double[6];
@@ -129,8 +106,8 @@ namespace UnitySensors.Utils.GeoCoordinate
             dSb = dM0 * daa / (1 + dn) * (dA[0] * Lat0 + dSb);
 
             //ξ・η
-            double dXi = (Z + dSb) / dAb;
-            double dEt = X / dAb;
+            double dXi = (coordinate.z + dSb) / dAb;
+            double dEt = coordinate.x / dAb;
 
             //β
             double[] dBt = new double[6];
@@ -174,13 +151,8 @@ namespace UnitySensors.Utils.GeoCoordinate
                 Lat += dDt[j] * Math.Sin(2 * j * dCi);
             }
 
-            //度単位に
-            return (
-                Rad2Deg(Lat),
-                Rad2Deg(Lon)
-            );
+            return new GeoCoordinate(Rad2Deg(Lat), Rad2Deg(Lon), coordinate.y + _origin.altitude);
         }
-
         //双曲線正接関数の逆関数
         private static double Atanh(double x) => (1d / 2d * Math.Log((1 + x) / (1 - x), Math.E));
         private static double Deg2Rad(double Deg) => (Math.PI * Deg / 180d);
