@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3192925013080293983}
   - component: {fileID: 3192925013080293982}
-  - component: {fileID: 3192925013080293981}
+  - component: {fileID: 3192925012673096858}
   m_Layer: 0
   m_Name: GNSS_ros
   m_TagString: Untagged
@@ -46,15 +46,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 10
-  _baseCoordinate:
-    latitude: 35.71020206575301
-    longitude: 139.81070039691542
-    altitude: 3
+  _coordinateSystem: {fileID: 0}
   _coordinate:
     latitude: 0
     longitude: 0
     altitude: 0
---- !u!114 &3192925013080293981
+--- !u!114 &3192925012673096858
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,13 +60,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3192925013080293980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 397c445553a6f3a40ac4d6892894ff7f, type: 3}
+  m_Script: {fileID: 11500000, guid: c11ec5602b9e12544b78d1d2a4bdd5c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 10
-  _topicName: /navsat/fix
+  _topicName: navsat
   _serializer:
     _header:
-      _frame_id: /gnss_link
+      _frame_id: map
     _status: 1
     _service: 0
