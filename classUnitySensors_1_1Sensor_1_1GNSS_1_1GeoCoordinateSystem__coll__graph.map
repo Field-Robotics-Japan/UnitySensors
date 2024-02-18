@@ -1,0 +1,6 @@
+<map id="UnitySensors.Sensor.GNSS.GeoCoordinateSystem" name="UnitySensors.Sensor.GNSS.GeoCoordinateSystem">
+<area shape="rect" id="node1" title=" " alt="" coords="381,57,580,98"/>
+<area shape="rect" id="node2" title=" " alt="" coords="67,5,191,32"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinateConverter.html" title="平面直角座標系と緯度経度の相互変換 参照：国土地理院の「測量計算サイト」 http://vldb.gsi.go.jp/sokuchi/surveycal..." alt="" coords="5,57,252,98"/>
+<area shape="rect" id="node4" href="$structUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinate.html" title=" " alt="" coords="5,122,252,163"/>
+</map>

@@ -14,14 +14,15 @@ var NAVTREEINDEX0 =
 "DepthCameraPointCloudVisualizer_8cs.html":[7,0,0,0,1,0,5,0,0,0],
 "DepthCameraSensor_8cs.html":[7,0,0,0,1,0,3,0,0,0],
 "DepthCameraSensor_8cs.html#af25a45c81c9607b8ae5084e850607b0d":[7,0,0,0,1,0,3,0,0,0,1],
-"GNSSSensor_8cs.html":[7,0,0,0,1,0,3,1,0],
+"GNSSSensor_8cs.html":[7,0,0,0,1,0,3,1,1],
 "GPGGA_8cs.html":[7,0,0,1,0,0,2,1,0,0,0],
 "GPGSA_8cs.html":[7,0,0,1,0,0,2,1,0,0,1],
 "GPRMC_8cs.html":[7,0,0,1,0,0,2,1,0,0,2],
 "GPVTG_8cs.html":[7,0,0,1,0,0,2,1,0,0,3],
 "GaussianNoise_8cs.html":[7,0,0,0,1,0,4,2,0],
-"GeoCoordinatesConverter_8cs.html":[7,0,0,0,1,0,4,1,1],
-"GeoCoordinates_8cs.html":[7,0,0,0,1,0,4,1,0],
+"GeoCoordinateConverter_8cs.html":[7,0,0,0,1,0,4,1,1],
+"GeoCoordinateSystem_8cs.html":[7,0,0,0,1,0,3,1,0],
+"GeoCoordinate_8cs.html":[7,0,0,0,1,0,4,1,0],
 "GroundTruthEditor_8cs.html":[7,0,0,0,0,1,0],
 "GroundTruthPublisher_8cs.html":[7,0,0,1,0,0,1,2,0],
 "GroundTruth_8cs.html":[7,0,0,0,1,0,3,2,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#aa397efa4dcb464c9dc0834819e507e78":[6,0,1,5,0,1,14],
 "classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#ab38b7866fa44328af91d646b74ced226":[6,0,1,5,0,1,8],
 "classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#aba900c14037b7c0d7790517efe8eb2a0":[6,0,1,5,0,1,5],
-"classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#ac1afb84b8160d0846f2a2dfd3651eb91":[6,0,1,5,0,1,1],
-"classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#ae8acbdb11e0c0408f9294532ab07a1f6":[6,0,1,5,0,1,10]
+"classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#ac1afb84b8160d0846f2a2dfd3651eb91":[6,0,1,5,0,1,1]
 };

@@ -5,7 +5,7 @@ var hierarchy =
       [ "UnitySensors.Editor.TFEditor", "classUnitySensors_1_1Editor_1_1TFEditor.html", null ]
     ] ],
     [ "UnitySensors.Utils.Noise.GaussianNoise", "classUnitySensors_1_1Utils_1_1Noise_1_1GaussianNoise.html", null ],
-    [ "UnitySensors.Utils.GeoCoordinate.GeoCoordinate", "classUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinate.html", null ],
+    [ "UnitySensors.Utils.GeoCoordinate.GeoCoordinate", "structUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinate.html", null ],
     [ "UnitySensors.Utils.GeoCoordinate.GeoCoordinateConverter", "classUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinateConverter.html", null ],
     [ "IDisposable", null, [
       [ "UnitySensors.Data.PointCloud.PointCloud< T >", "structUnitySensors_1_1Data_1_1PointCloud_1_1PointCloud.html", null ]
@@ -56,6 +56,7 @@ var hierarchy =
       [ "UnitySensors.Demo.PingPongObject", "classUnitySensors_1_1Demo_1_1PingPongObject.html", null ],
       [ "UnitySensors.ROS.Publisher.ROSClock", "classUnitySensors_1_1ROS_1_1Publisher_1_1ROSClock.html", null ],
       [ "UnitySensors.ROS.Publisher.RosMsgPublisher< T, TT, TTT >", "classUnitySensors_1_1ROS_1_1Publisher_1_1RosMsgPublisher.html", null ],
+      [ "UnitySensors.Sensor.GNSS.GeoCoordinateSystem", "classUnitySensors_1_1Sensor_1_1GNSS_1_1GeoCoordinateSystem.html", null ],
       [ "UnitySensors.Sensor.UnitySensor", "classUnitySensors_1_1Sensor_1_1UnitySensor.html", [
         [ "UnitySensors.Sensor.Camera.CameraSensor", "classUnitySensors_1_1Sensor_1_1Camera_1_1CameraSensor.html", null ],
         [ "UnitySensors.Sensor.GNSS.GNSSSensor", "classUnitySensors_1_1Sensor_1_1GNSS_1_1GNSSSensor.html", null ],

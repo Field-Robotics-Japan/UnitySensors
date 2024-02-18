@@ -8,16 +8,17 @@
 <area shape="rect" id="node7" href="$interfaceUnitySensors_1_1Data_1_1Texture_1_1ITextureInterface.html" title=" " alt="" coords="191,357,390,399"/>
 <area shape="rect" id="node8" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1CameraSensor.html" title=" " alt="" coords="466,384,681,425"/>
 <area shape="rect" id="node9" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor.html" title=" " alt="" coords="743,384,957,425"/>
-<area shape="rect" id="node10" title=" " alt="" coords="5,529,129,555"/>
+<area shape="rect" id="node10" title=" " alt="" coords="5,561,129,587"/>
 <area shape="rect" id="node11" href="$classUnitySensors_1_1Demo_1_1PingPongObject.html" title=" " alt="" coords="183,423,398,464"/>
 <area shape="rect" id="node12" href="$classUnitySensors_1_1ROS_1_1Publisher_1_1ROSClock.html" title=" " alt="" coords="187,488,394,529"/>
 <area shape="rect" id="node13" href="$classUnitySensors_1_1ROS_1_1Publisher_1_1RosMsgPublisher.html" title=" " alt="" coords="177,553,404,595"/>
-<area shape="rect" id="node14" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="193,267,388,308"/>
-<area shape="rect" id="node18" href="$classUnitySensors_1_1Utils_1_1Camera_1_1Color2Depth.html" title=" " alt="" coords="190,619,391,660"/>
-<area shape="rect" id="node19" href="$classUnitySensors_1_1Visualization_1_1Visualizer.html" title=" " alt="" coords="191,684,391,725"/>
-<area shape="rect" id="node15" href="$classUnitySensors_1_1Sensor_1_1GNSS_1_1GNSSSensor.html" title=" " alt="" coords="474,201,673,243"/>
-<area shape="rect" id="node16" href="$classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html" title=" " alt="" coords="479,267,668,308"/>
-<area shape="rect" id="node17" href="$classUnitySensors_1_1Sensor_1_1TF_1_1TF.html" title=" " alt="" coords="477,333,670,359"/>
-<area shape="rect" id="node20" href="$classUnitySensors_1_1Visualization_1_1PointCloud_1_1PointCloudVisualizer.html" title=" " alt="" coords="458,639,689,695"/>
-<area shape="rect" id="node21" href="$classUnitySensors_1_1Visualization_1_1Texture_1_1TextureVisualizer.html" title=" " alt="" coords="461,720,685,761"/>
+<area shape="rect" id="node14" href="$classUnitySensors_1_1Sensor_1_1GNSS_1_1GeoCoordinateSystem.html" title=" " alt="" coords="191,619,390,660"/>
+<area shape="rect" id="node15" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="193,267,388,308"/>
+<area shape="rect" id="node19" href="$classUnitySensors_1_1Utils_1_1Camera_1_1Color2Depth.html" title=" " alt="" coords="190,684,391,725"/>
+<area shape="rect" id="node20" href="$classUnitySensors_1_1Visualization_1_1Visualizer.html" title=" " alt="" coords="191,749,391,791"/>
+<area shape="rect" id="node16" href="$classUnitySensors_1_1Sensor_1_1GNSS_1_1GNSSSensor.html" title=" " alt="" coords="474,201,673,243"/>
+<area shape="rect" id="node17" href="$classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html" title=" " alt="" coords="479,267,668,308"/>
+<area shape="rect" id="node18" href="$classUnitySensors_1_1Sensor_1_1TF_1_1TF.html" title=" " alt="" coords="477,333,670,359"/>
+<area shape="rect" id="node21" href="$classUnitySensors_1_1Visualization_1_1PointCloud_1_1PointCloudVisualizer.html" title=" " alt="" coords="458,705,689,761"/>
+<area shape="rect" id="node22" href="$classUnitySensors_1_1Visualization_1_1Texture_1_1TextureVisualizer.html" title=" " alt="" coords="461,785,685,827"/>
 </map>

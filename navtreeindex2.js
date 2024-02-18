@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"dir_c637c2f6f83b98eaa9d24ba819cab8d5.html":[7,0,0,0,1,0,3,4,1],
+"dir_c88040724a4187d2d92157d660baf1c5.html":[7,0,0,1,0,0,2,1,0],
 "dir_cc07bffa28b400360638e6a268bba6b6.html":[7,0,0,1,0,0,1],
 "dir_cdc99a0ea78f362f07950422e090127b.html":[7,0,0,1,0,0,2,1],
 "dir_d3ef72ed3c8e67d8bfc252809ceb092d.html":[7,0,0,0,1,0,3,2],
@@ -177,6 +179,11 @@ var NAVTREEINDEX2 =
 "structUnitySensors_1_1Sensor_1_1TF_1_1TFData.html#a590a285009e2fe20e2ab51ab0a8fb195":[6,0,1,5,5,0,1],
 "structUnitySensors_1_1Sensor_1_1TF_1_1TFData.html#adcbb80e29b39f70e7b45928577f309a6":[6,0,1,5,5,0,3],
 "structUnitySensors_1_1Sensor_1_1TF_1_1TFData.html#af2b9808f9d88a8dfdd0074a0eb7b3b1a":[6,0,1,5,5,0,2],
+"structUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinate.html":[6,0,1,6,1,0],
+"structUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinate.html#a2d711f7951f19279e2193ddb820173ef":[6,0,1,6,1,0,2],
+"structUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinate.html#ac1362c1946593a225d1f67fae0fb7b50":[6,0,1,6,1,0,0],
+"structUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinate.html#ad6c016aa64ecc88008460c78f7e10ffe":[6,0,1,6,1,0,1],
+"structUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinate.html#af057fedbf9eb2ddc1d3c46af6b8de974":[6,0,1,6,1,0,3],
 "structUnitySensors_1_1Utils_1_1Noise_1_1IUpdateGaussianNoisesJob.html":[6,0,1,6,2,1],
 "structUnitySensors_1_1Utils_1_1Noise_1_1IUpdateGaussianNoisesJob.html#a2771c68fd8713f5b0415fb381b4f8490":[6,0,1,6,2,1,2],
 "structUnitySensors_1_1Utils_1_1Noise_1_1IUpdateGaussianNoisesJob.html#a378013d8e647c0860b2c5054c216757a":[6,0,1,6,2,1,0],

@@ -101,6 +101,7 @@ var annotated_dup =
           [ "RGBCameraSensor", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor.html", null ]
         ] ],
         [ "GNSS", "namespaceUnitySensors_1_1Sensor_1_1GNSS.html", [
+          [ "GeoCoordinateSystem", "classUnitySensors_1_1Sensor_1_1GNSS_1_1GeoCoordinateSystem.html", "classUnitySensors_1_1Sensor_1_1GNSS_1_1GeoCoordinateSystem" ],
           [ "GNSSSensor", "classUnitySensors_1_1Sensor_1_1GNSS_1_1GNSSSensor.html", "classUnitySensors_1_1Sensor_1_1GNSS_1_1GNSSSensor" ]
         ] ],
         [ "GroundTruth", "namespaceUnitySensors_1_1Sensor_1_1GroundTruth.html", [
@@ -129,7 +130,7 @@ var annotated_dup =
           [ "Color2Depth", "classUnitySensors_1_1Utils_1_1Camera_1_1Color2Depth.html", "classUnitySensors_1_1Utils_1_1Camera_1_1Color2Depth" ]
         ] ],
         [ "GeoCoordinate", "namespaceUnitySensors_1_1Utils_1_1GeoCoordinate.html", [
-          [ "GeoCoordinate", "classUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinate.html", "classUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinate" ],
+          [ "GeoCoordinate", "structUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinate.html", "structUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinate" ],
           [ "GeoCoordinateConverter", "classUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinateConverter.html", "classUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinateConverter" ]
         ] ],
         [ "Noise", "namespaceUnitySensors_1_1Utils_1_1Noise.html", [
