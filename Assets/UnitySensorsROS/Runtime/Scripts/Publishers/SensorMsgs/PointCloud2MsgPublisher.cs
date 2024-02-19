@@ -5,7 +5,7 @@ using UnitySensors.ROS.Serializer.PointCloud;
 
 namespace UnitySensors.ROS.Publisher.Sensor
 {
-    public class PointCloud2MsgPublisher<T> : RosMsgPublisher<PointCloud2MsgSerializer<T>, PointCloud2Msg> where T : struct, IPointInterface
+    public abstract class PointCloud2MsgPublisher<T> : RosMsgPublisher<PointCloud2MsgSerializer<T>, PointCloud2Msg> where T : struct, IPointInterface
     {
     }
 }

@@ -2,16 +2,12 @@ using UnityEngine;
 using Unity.Robotics.ROSTCPConnector;
 using Unity.Robotics.ROSTCPConnector.MessageGeneration;
 
-using UnitySensors.Sensor;
 using UnitySensors.ROS.Serializer;
 
 namespace UnitySensors.ROS.Publisher
 {
     public class RosMsgPublisher<T, TT> : MonoBehaviour where T : RosMsgSerializer<TT> where TT : Message, new()
     {
-        [SerializeField]
-        protected MonoBehaviour _source;
-
         [SerializeField]
         private float _frequency = 10.0f;
 
@@ -36,8 +32,7 @@ namespace UnitySensors.ROS.Publisher
             _ros = ROSConnection.GetOrCreateInstance();
             _ros.RegisterPublisher<TT>(_topicName);
 
-            Debug.Assert(_serializer.IsCompatible(_source), "No compatibility between source and serializer.", this);
-            _serializer.Init(_source);
+            _serializer.Init();
         }
 
         protected virtual void Update()
@@ -53,14 +48,6 @@ namespace UnitySensors.ROS.Publisher
         private void OnDestroy()
         {
             _serializer.OnDestroy();
-        }
-
-        private void OnValidate()
-        {
-            if (_serializer == null || _source == null) return;
-            if (_serializer.IsCompatible(_source)) return;
-            Debug.Assert(_serializer.IsCompatible(_source), "No compatibility between source and serializer.", this);
-            _source = null;
         }
     }
 }
