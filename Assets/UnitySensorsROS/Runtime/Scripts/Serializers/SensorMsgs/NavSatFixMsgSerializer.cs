@@ -1,6 +1,7 @@
 using UnityEngine;
 using RosMessageTypes.Sensor;
 
+using UnitySensors.Attribute;
 using UnitySensors.Interface.Geometry;
 using UnitySensors.ROS.Serializer.Std;
 
@@ -25,6 +26,8 @@ namespace UnitySensors.ROS.Serializer.Sensor
             GALILEO
         }
 
+        [SerializeField, Interface(typeof(IGeoCoordinateInterface))]
+        private Object _source;
         [SerializeField]
         private HeaderSerializer _header;
 
@@ -33,13 +36,13 @@ namespace UnitySensors.ROS.Serializer.Sensor
         [SerializeField]
         private Service _service = Service.GPS;
 
-        private IGeoCoordinateInterface _source;
+        private IGeoCoordinateInterface _sourceInterface;
 
-        public override void Init(MonoBehaviour source)
+        public override void Init()
         {
-            base.Init(source);
-            _header.Init(source);
-            _source = (IGeoCoordinateInterface)source;
+            base.Init();
+            _header.Init();
+            _sourceInterface = _source as IGeoCoordinateInterface;
 
             _msg.status = new NavSatStatusMsg();
             _msg.status.service = (ushort)Mathf.Pow(2, (int)(_service));
@@ -49,16 +52,11 @@ namespace UnitySensors.ROS.Serializer.Sensor
         {
             _msg.header = _header.Serialize();
             _msg.status.status = (sbyte)((int)(_status) - 1);
-            _msg.latitude = _source.coordinate.latitude;
-            _msg.longitude = _source.coordinate.longitude;
-            _msg.altitude = _source.coordinate.altitude;
+            _msg.latitude = _sourceInterface.coordinate.latitude;
+            _msg.longitude = _sourceInterface.coordinate.longitude;
+            _msg.altitude = _sourceInterface.coordinate.altitude;
             _msg.position_covariance_type = 0;
             return _msg;
-        }
-
-        public override bool IsCompatible(MonoBehaviour source)
-        {
-            return (_header.IsCompatible(source) && source is IGeoCoordinateInterface);
         }
     }
 }

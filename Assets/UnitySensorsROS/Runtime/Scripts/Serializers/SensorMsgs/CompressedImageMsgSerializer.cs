@@ -2,6 +2,7 @@ using UnityEngine;
 
 using RosMessageTypes.Sensor;
 
+using UnitySensors.Attribute;
 using UnitySensors.Interface.Sensor;
 using UnitySensors.ROS.Serializer.Std;
 
@@ -16,6 +17,8 @@ namespace UnitySensors.ROS.Serializer.Sensor
             Texture1
         }
 
+        [SerializeField, Interface(typeof(ITextureInterface))]
+        private Object _source;
         [SerializeField]
         private SourceTexture _sourceTexture;
 
@@ -24,26 +27,21 @@ namespace UnitySensors.ROS.Serializer.Sensor
         [SerializeField, Range(1, 100)]
         private int quality = 75;
 
-        private ITextureInterface _source;
+        private ITextureInterface _sourceInterface;
 
-        public override void Init(MonoBehaviour source)
+        public override void Init()
         {
-            base.Init(source);
-            _header.Init(source);
-            _source = (ITextureInterface)source;
+            base.Init();
+            _header.Init();
+            _sourceInterface = _source as ITextureInterface;
             _msg.format = "jpeg";
         }
 
         public override CompressedImageMsg Serialize()
         {
             _msg.header = _header.Serialize();
-            _msg.data = (_sourceTexture == SourceTexture.Texture0 ? _source.texture0 : _source.texture1).EncodeToJPG(quality);
+            _msg.data = (_sourceTexture == SourceTexture.Texture0 ? _sourceInterface.texture0 : _sourceInterface.texture1).EncodeToJPG(quality);
             return _msg;
-        }
-
-        public override bool IsCompatible(MonoBehaviour source)
-        {
-            return (_header.IsCompatible(source) && source is ITextureInterface);
         }
     }
 }

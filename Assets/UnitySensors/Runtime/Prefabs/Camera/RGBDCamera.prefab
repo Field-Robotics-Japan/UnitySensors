@@ -122,5 +122,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _source: {fileID: 4070371534656761714}
-  _image: {fileID: 0}
   _sourceTexture: 0
+  _image: {fileID: 0}

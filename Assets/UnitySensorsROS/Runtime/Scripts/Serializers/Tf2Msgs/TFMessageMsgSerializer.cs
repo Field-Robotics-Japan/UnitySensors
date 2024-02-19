@@ -17,15 +17,14 @@ namespace UnitySensors.ROS.Serializer.Tf2
     public class TFMessageMsgSerializer : RosMsgSerializer<TFMessageMsg>
     {
         [SerializeField]
+        private TFLink _source;
+        [SerializeField]
         private HeaderSerializer _header;
 
-        private TFLink _source;
-
-        public override void Init(MonoBehaviour source)
+        public override void Init()
         {
-            base.Init(source);
-            _header.Init(source);
-            _source = (TFLink)source;
+            base.Init();
+            _header.Init();
         }
 
         public override TFMessageMsg Serialize()
@@ -47,11 +46,6 @@ namespace UnitySensors.ROS.Serializer.Tf2
             }
             _msg.transforms = transforms.ToArray();
             return _msg;
-        }
-
-        public override bool IsCompatible(MonoBehaviour source)
-        {
-            return (_header.IsCompatible(source) && source is TFLink);
         }
     }
 }

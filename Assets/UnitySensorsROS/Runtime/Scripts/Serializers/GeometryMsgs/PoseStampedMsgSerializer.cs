@@ -3,6 +3,7 @@ using UnityEngine;
 using Unity.Robotics.ROSTCPConnector.ROSGeometry;
 using RosMessageTypes.Geometry;
 
+using UnitySensors.Attribute;
 using UnitySensors.Interface.Geometry;
 using UnitySensors.ROS.Serializer.Std;
 
@@ -11,29 +12,26 @@ namespace UnitySensors.ROS.Serializer.Geometry
     [System.Serializable]
     public class PoseStampedMsgSerializer : RosMsgSerializer<PoseStampedMsg>
     {
+        [SerializeField, Interface(typeof(IPoseInterface))]
+        private Object _source;
         [SerializeField]
         private HeaderSerializer _header;
 
-        private IPoseInterface _source;
+        private IPoseInterface _sourceInterface;
 
-        public override void Init(MonoBehaviour source)
+        public override void Init()
         {
-            base.Init(source);
-            _header.Init(source);
-            _source = (IPoseInterface)source;
+            base.Init();
+            _header.Init();
+            _sourceInterface = _source as IPoseInterface;
         }
 
         public override PoseStampedMsg Serialize()
         {
             _msg.header = _header.Serialize();
-            _msg.pose.position = _source.position.To<FLU>();
-            _msg.pose.orientation = _source.rotation.To<FLU>();
+            _msg.pose.position = _sourceInterface.position.To<FLU>();
+            _msg.pose.orientation = _sourceInterface.rotation.To<FLU>();
             return _msg;
-        }
-
-        public override bool IsCompatible(MonoBehaviour source)
-        {
-            return (_header.IsCompatible(source) && source is IPoseInterface);
         }
     }
 }

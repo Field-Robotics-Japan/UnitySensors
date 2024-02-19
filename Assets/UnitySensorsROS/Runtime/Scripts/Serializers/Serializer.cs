@@ -9,9 +9,8 @@ namespace UnitySensors.ROS.Serializer
         protected T _msg;
         public T msg { get => _msg; }
 
-        public virtual void Init(MonoBehaviour source) { _msg = new T(); }
+        public virtual void Init() { _msg = new T(); }
         public abstract T Serialize();
         public virtual void OnDestroy() { }
-        public abstract bool IsCompatible(MonoBehaviour source);
     }
 }

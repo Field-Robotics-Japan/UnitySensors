@@ -63,9 +63,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c47c42043b800c4a9a6595f963c7c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _source: {fileID: 3526848927119471302}
   _frequency: 20
   _topicName: /imu
   _serializer:
+    _source: {fileID: 3526848927119471302}
     _header:
+      _source: {fileID: 3526848927119471302}
       _frame_id: imu_link

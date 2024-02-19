@@ -18,20 +18,24 @@ namespace UnitySensors.ROS.Serializer.PointCloud
         [SerializeField]
         private HeaderSerializer _header;
 
-        private IPointCloudInterface<T> _source;
+        protected IPointCloudInterface<T> _sourceInterface;
         private int _pointsNum;
 
         private JobHandle _jobHandle;
         private IInvertXJob _invertXJob;
         private NativeArray<byte> _data;
 
-        public override void Init(MonoBehaviour source)
+        public void SetSource(IPointCloudInterface<T> sourceInterface)
         {
-            base.Init(source);
-            _header.Init(source);
+            _sourceInterface = sourceInterface;
+        }
 
-            _source = (IPointCloudInterface<T>)source;
-            _pointsNum = _source.pointCloud.points.Length;
+        public override void Init()
+        {
+            base.Init();
+            _header.Init();
+
+            _pointsNum = _sourceInterface.pointCloud.points.Length;
             int sizeOfPoint = PointUtilities.pointDataSizes[typeof(T)];
             int dataSize = _pointsNum * sizeOfPoint;
 
@@ -59,7 +63,7 @@ namespace UnitySensors.ROS.Serializer.PointCloud
             
             unsafe
             {
-                UnsafeUtility.MemCpy(NativeArrayUnsafeUtility.GetUnsafePtr(_data), NativeArrayUnsafeUtility.GetUnsafePtr(_source.pointCloud.points), _data.Length);
+                UnsafeUtility.MemCpy(NativeArrayUnsafeUtility.GetUnsafePtr(_data), NativeArrayUnsafeUtility.GetUnsafePtr(_sourceInterface.pointCloud.points), _data.Length);
             }
             _jobHandle = _invertXJob.Schedule(_pointsNum, 1);
             _jobHandle.Complete();
@@ -73,11 +77,6 @@ namespace UnitySensors.ROS.Serializer.PointCloud
         {
             _jobHandle.Complete();
             if (_data.IsCreated) _data.Dispose();
-        }
-
-        public override bool IsCompatible(MonoBehaviour source)
-        {
-            return (_header.IsCompatible(source) && source is IPointCloudInterface<T>);
         }
     }
 }

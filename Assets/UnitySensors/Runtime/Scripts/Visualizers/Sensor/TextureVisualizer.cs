@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnitySensors.Attribute;
 using UnitySensors.Sensor;
 using UnitySensors.Interface.Sensor;
 
@@ -13,23 +14,28 @@ namespace UnitySensors.Visualization.Sensor
             Texture1
         }
 
-        [SerializeField]
-        private RawImage _image;
+        [SerializeField, Interface(typeof(ITextureInterface))]
+        private Object _source;
         [SerializeField]
         private SourceTexture _sourceTexture;
+        [SerializeField]
+        private RawImage _image;
 
-        private ITextureInterface _source;
+        private ITextureInterface _sourceInterface;
 
-        protected override void Init(MonoBehaviour source)
+        private void Start()
         {
-            Debug.Assert(source is ITextureInterface, "No compatibility between source and visualizer.", this);
-            _source = (ITextureInterface)source;
+            _sourceInterface = _source as ITextureInterface;
+            if(_source is UnitySensor)
+            {
+                (_source as UnitySensor).onSensorUpdated += Visualize;
+            }
         }
 
         protected override void Visualize()
         {
             if (!_image) return;
-            _image.texture = _sourceTexture == SourceTexture.Texture0 ? _source.texture0 : _source.texture1;
+            _image.texture = _sourceTexture == SourceTexture.Texture0 ? _sourceInterface.texture0 : _sourceInterface.texture1;
         }
     }
 }
