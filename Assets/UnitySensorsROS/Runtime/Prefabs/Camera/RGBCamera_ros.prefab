@@ -107,11 +107,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca85518969b9bf94aa9948188d795075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _source: {fileID: 2016422477619200576}
   _frequency: 10
   _topicName: /camera/color/info
   _serializer:
+    _source: {fileID: 2016422477619200576}
     _header:
+      _source: {fileID: 2016422477619200576}
       _frame_id: /camera_frame
 --- !u!114 &7476313626036288691
 MonoBehaviour:
@@ -125,11 +126,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b474a6242e811f04488e3cb67b65dd35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _source: {fileID: 2016422477619200576}
   _frequency: 10
   _topicName: /camera/color/image/compressed
   _serializer:
+    _source: {fileID: 2016422477619200576}
     _sourceTexture: 0
     _header:
+      _source: {fileID: 2016422477619200576}
       _frame_id: /camera_frame
     quality: 75

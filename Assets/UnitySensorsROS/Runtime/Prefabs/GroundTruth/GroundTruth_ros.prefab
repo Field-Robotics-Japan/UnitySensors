@@ -58,9 +58,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58c946e57b0f2a943abcff0d129aa500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _source: {fileID: 2623422876239157573}
   _frequency: 10
   _topicName: ground_truth
   _serializer:
+    _source: {fileID: 2623422876239157573}
     _header:
+      _source: {fileID: 2623422876239157573}
       _frame_id: map
