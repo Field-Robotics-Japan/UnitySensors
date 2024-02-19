@@ -1,14 +1,16 @@
 using UnityEngine;
+using UnitySensors.Attribute;
 using UnitySensors.Interface.Sensor;
 using UnitySensors.Interface.Sensor.PointCloud;
+using UnitySensors.Sensor;
 using UnitySensors.Utils.PointCloud;
 
 namespace UnitySensors.Visualization.Sensor
 {
     public class PointCloudVisualizer<T> : Visualizer where T : struct, IPointInterface
     {
+        private IPointCloudInterface<T> _sourceInterface;
         private Transform _transform;
-        private IPointCloudInterface<T> _source;
 
         private Material _mat;
         private Mesh _mesh;
@@ -19,11 +21,14 @@ namespace UnitySensors.Visualization.Sensor
         private int _cachedPointsCount = -1;
         private int _bufferSize;
 
-        protected override void Init(MonoBehaviour source)
+        public void SetSource(IPointCloudInterface<T> sourceInterface)
         {
-            Debug.Assert(source is IPointCloudInterface<T>, "No compatibility between source and visualizer.", this);
-            _transform = source.transform;
-            _source = (IPointCloudInterface<T>)source;
+            _sourceInterface = sourceInterface;
+        }
+
+        protected virtual void Start()
+        {
+            _transform = this.transform;
             _bufferSize = PointUtilities.pointDataSizes[typeof(T)];
             _mat = new Material(Shader.Find(PointUtilities.shaderNames[typeof(T)]));
             _mat.renderQueue = 3000;
@@ -36,9 +41,9 @@ namespace UnitySensors.Visualization.Sensor
 
         protected override void Visualize()
         {
-            if (_source.pointsNum != _cachedPointsCount) UpdateBuffers();
+            if (_sourceInterface.pointsNum != _cachedPointsCount) UpdateBuffers();
             _mat.SetMatrix("LocalToWorldMatrix", _transform.localToWorldMatrix);
-            _pointsBuffer.SetData(_source.pointCloud.points);
+            _pointsBuffer.SetData(_sourceInterface.pointCloud.points);
         }
 
         private void Update()
@@ -49,16 +54,16 @@ namespace UnitySensors.Visualization.Sensor
         private void UpdateBuffers()
         {
             if (_pointsBuffer != null) _pointsBuffer.Release();
-            _pointsBuffer = new ComputeBuffer(_source.pointsNum, _bufferSize);
-            _pointsBuffer.SetData(_source.pointCloud.points);
+            _pointsBuffer = new ComputeBuffer(_sourceInterface.pointsNum, _bufferSize);
+            _pointsBuffer.SetData(_sourceInterface.pointCloud.points);
             _mat.SetBuffer("PointsBuffer", _pointsBuffer);
 
             uint numIndices = (_mesh != null) ? (uint)_mesh.GetIndexCount(0) : 0;
             _args[0] = numIndices;
-            _args[1] = (uint)_source.pointsNum;
+            _args[1] = (uint)_sourceInterface.pointsNum;
             _argsBuffer.SetData(_args);
 
-            _cachedPointsCount = _source.pointsNum;
+            _cachedPointsCount = _sourceInterface.pointsNum;
         }
 
         private void OnDisable()
