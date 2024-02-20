@@ -18,6 +18,10 @@ namespace UnitySensors.Sensor.Camera
     public class RGBDCameraSensor : CameraSensor, ITextureInterface, IPointCloudInterface<PointXYZRGB>
     {
         [SerializeField]
+        protected float _minRange = 0.05f;
+        [SerializeField]
+        protected float _maxRange = 100.0f;
+        [SerializeField]
         private float _gaussianNoiseSigma = 0.0f;
 
         private UnityEngine.Camera _depthCamera;
@@ -64,8 +68,8 @@ namespace UnitySensors.Sensor.Camera
             _colorCamera.targetTexture = _colorRt;
 
             _depthCamera.fieldOfView = _colorCamera.fieldOfView = _fov;
-            _depthCamera.nearClipPlane = _colorCamera.nearClipPlane = _minRange;
-            _depthCamera.farClipPlane = _colorCamera.farClipPlane = _maxRange;
+            _depthCamera.nearClipPlane = _minRange;
+            _depthCamera.farClipPlane = _maxRange;
 
             _depthTexture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBAFloat, false);
             _colorTexture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.ARGB32, false);
