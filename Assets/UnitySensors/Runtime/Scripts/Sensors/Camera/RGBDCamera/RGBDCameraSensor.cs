@@ -64,7 +64,7 @@ namespace UnitySensors.Sensor.Camera
             colorCameraTransform.localRotation = Quaternion.identity;
 
             _colorCamera = colorCameraObject.AddComponent<UnityEngine.Camera>();
-            _colorRt = new RenderTexture(_resolution.x, _resolution.y, 32, RenderTextureFormat.ARGB32);
+            _colorRt = new RenderTexture(_resolution.x, _resolution.y, 32, RenderTextureFormat.BGRA32);
             _colorCamera.targetTexture = _colorRt;
 
             _depthCamera.fieldOfView = _colorCamera.fieldOfView = _fov;
@@ -72,7 +72,7 @@ namespace UnitySensors.Sensor.Camera
             _depthCamera.farClipPlane = _maxRange;
 
             _depthTexture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBAFloat, false);
-            _colorTexture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.ARGB32, false);
+            _colorTexture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.BGRA32, false);
 
             _mat = new Material(Shader.Find("UnitySensors/Color2Depth"));
             float f = m_camera.farClipPlane;
