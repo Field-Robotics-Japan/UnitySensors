@@ -1,16 +1,14 @@
-using System;
-
 using UnityEngine;
-
-using Unity.Mathematics;
 using Unity.Collections;
 
-using UnitySensors.Data.PointCloud;
+using UnitySensors.DataType.LiDAR;
+using UnitySensors.DataType.Sensor;
+using UnitySensors.DataType.Sensor.PointCloud;
+using UnitySensors.Interface.Sensor;
 
 namespace UnitySensors.Sensor.LiDAR
 {
-    public abstract class LiDARSensor<T> : UnitySensor, IPointCloudInterface<T>
-        where T : struct, IPointXYZInterface
+    public abstract class LiDARSensor : UnitySensor, IPointCloudInterface<PointXYZI>
     {
         [SerializeField]
         private ScanPattern _scanPattern;
@@ -25,22 +23,22 @@ namespace UnitySensors.Sensor.LiDAR
         [SerializeField]
         private float _maxIntensity = 255.0f;
 
-        private PointCloud<T> _pointCloud;
+        private PointCloud<PointXYZI> _pointCloud;
 
         protected ScanPattern scanPattern { get => _scanPattern; }
         protected float minRange { get => _minRange; }
         protected float maxRange { get => _maxRange; }
         protected float gaussianNoiseSigma { get => _gaussianNoiseSigma; }
         protected float maxIntensity { get => _maxIntensity; }
-        public PointCloud<T> pointCloud { get => _pointCloud; }
+        public PointCloud<PointXYZI> pointCloud { get => _pointCloud; }
         public int pointsNum { get => _pointsNumPerScan; }
 
         protected override void Init()
         {
             _pointsNumPerScan = Mathf.Clamp(_pointsNumPerScan, 1, scanPattern.size);
-            _pointCloud = new PointCloud<T>()
+            _pointCloud = new PointCloud<PointXYZI>()
             {
-                points = new NativeArray<T>(_pointsNumPerScan, Allocator.Persistent)
+                points = new NativeArray<PointXYZI>(_pointsNumPerScan, Allocator.Persistent)
             };
         }
 

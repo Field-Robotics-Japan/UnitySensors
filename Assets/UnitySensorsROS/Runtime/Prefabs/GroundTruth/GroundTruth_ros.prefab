@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5717740228665964843}
   - component: {fileID: 2623422876239157573}
-  - component: {fileID: 8758993239309509226}
+  - component: {fileID: 6365885348317185162}
   m_Layer: 0
   m_Name: GroundTruth_ros
   m_TagString: Untagged
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 10
---- !u!114 &8758993239309509226
+--- !u!114 &6365885348317185162
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,11 +55,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6638955471370723587}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a05b6f4d45a9a844be53576f613e64d, type: 3}
+  m_Script: {fileID: 11500000, guid: 58c946e57b0f2a943abcff0d129aa500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 10
-  _topicName: /groundTruth/poseStamped
+  _topicName: ground_truth
   _serializer:
+    _source: {fileID: 2623422876239157573}
     _header:
-      _frame_id: /map
+      _source: {fileID: 2623422876239157573}
+      _frame_id: map

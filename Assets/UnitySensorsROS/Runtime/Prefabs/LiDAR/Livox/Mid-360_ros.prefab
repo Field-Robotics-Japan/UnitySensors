@@ -75,7 +75,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7522962572353966419}
   - component: {fileID: 7522962572353966418}
-  - component: {fileID: 7522962572353966417}
+  - component: {fileID: 7630058950724618500}
   m_Layer: 0
   m_Name: Sensor
   m_TagString: Untagged
@@ -117,7 +117,7 @@ MonoBehaviour:
   _maxRange: 70
   _gaussianNoiseSigma: 0.02
   _maxIntensity: 255
---- !u!114 &7522962572353966417
+--- !u!114 &7630058950724618500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,14 +126,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 7522962572353966428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e432afcc9ea3ada4b9be4fd86b0024f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 32c6ed908b3e5d74697c679c7798bcc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 10
   _topicName: /livox/lidar
   _serializer:
     _header:
-      _frame_id: /livox_frame
+      _source: {fileID: 7522962572353966418}
+      _frame_id: livox_frame
+  _source: {fileID: 7522962572353966418}
 --- !u!1 &7522962572398341445
 GameObject:
   m_ObjectHideFlags: 0

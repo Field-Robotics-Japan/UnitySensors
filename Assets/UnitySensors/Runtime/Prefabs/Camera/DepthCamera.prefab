@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 1105687583338018336}
   - component: {fileID: 1105687583338018399}
   - component: {fileID: 1105687583338018398}
-  - component: {fileID: 1105687583338018397}
-  - component: {fileID: 1105687583338018396}
+  - component: {fileID: 859923666563037401}
   m_Layer: 0
   m_Name: DepthCamera
   m_TagString: Untagged
@@ -95,7 +94,8 @@ MonoBehaviour:
   _fov: 30
   _minRange: 0.05
   _maxRange: 100
---- !u!114 &1105687583338018397
+  _gaussianNoiseSigma: 0
+--- !u!114 &859923666563037401
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,19 +104,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1105687583338018395}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc838544d115b7741a2cb963bc058b29, type: 3}
+  m_Script: {fileID: 11500000, guid: f2f05a788e73116488577387bd40affc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _image: {fileID: 0}
---- !u!114 &1105687583338018396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1105687583338018395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f34cfe1c27eb79849a7bd77d281a5253, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _source: {fileID: 1105687583338018398}
