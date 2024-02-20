@@ -2,6 +2,7 @@ using UnityEngine;
 using UnitySensors.Attribute;
 using UnitySensors.DataType.Sensor.PointCloud;
 using UnitySensors.Interface.Sensor;
+using UnitySensors.Sensor;
 
 namespace UnitySensors.Visualization.Sensor
 {
@@ -12,6 +13,10 @@ namespace UnitySensors.Visualization.Sensor
 
         protected override void Start()
         {
+            if (_source is UnitySensor)
+            {
+                (_source as UnitySensor).onSensorUpdated += Visualize;
+            }
             base.SetSource(_source as IPointCloudInterface<PointXYZI>);
             base.Start();
         }
