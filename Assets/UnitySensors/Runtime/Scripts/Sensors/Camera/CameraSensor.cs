@@ -12,10 +12,6 @@ namespace UnitySensors.Sensor.Camera
         protected Vector2Int _resolution = new Vector2Int(640, 480);
         [SerializeField]
         protected float _fov = 30.0f;
-        [SerializeField]
-        protected float _minRange = 0.05f;
-        [SerializeField]
-        protected float _maxRange = 100.0f;
 
         public abstract UnityEngine.Camera m_camera { get; }
     }

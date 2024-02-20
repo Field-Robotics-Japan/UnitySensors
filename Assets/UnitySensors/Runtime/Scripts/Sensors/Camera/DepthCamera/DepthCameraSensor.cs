@@ -18,6 +18,10 @@ namespace UnitySensors.Sensor.Camera
     public class DepthCameraSensor : CameraSensor, ITextureInterface, IPointCloudInterface<PointXYZ>
     {
         [SerializeField]
+        protected float _minRange = 0.05f;
+        [SerializeField]
+        protected float _maxRange = 100.0f;
+        [SerializeField]
         private float _gaussianNoiseSigma = 0.0f;
 
         private UnityEngine.Camera _camera;

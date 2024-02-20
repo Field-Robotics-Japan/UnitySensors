@@ -19,8 +19,6 @@ namespace UnitySensors.Sensor.Camera
         {
             _camera = GetComponent<UnityEngine.Camera>();
             _camera.fieldOfView = _fov;
-            _camera.nearClipPlane = _minRange;
-            _camera.farClipPlane = _maxRange;
 
             _rt = new RenderTexture(_resolution.x, _resolution.y, 32, RenderTextureFormat.ARGBFloat);
             _camera.targetTexture = _rt;
