@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnitySensors.Attribute;
+using UnitySensors.Interface.Sensor;
 
 namespace UnitySensors.Sensor.IMU
 {
-    public class IMUSensor : UnitySensor
+    public class IMUSensor : UnitySensor, IImuDataInterface
     {
         private Transform _transform;
 

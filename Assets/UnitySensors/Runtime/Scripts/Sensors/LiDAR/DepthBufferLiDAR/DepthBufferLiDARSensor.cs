@@ -5,8 +5,6 @@ using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
 
-using UnitySensors.Attribute;
-using UnitySensors.Data.PointCloud;
 using UnitySensors.Utils.Noise;
 using UnitySensors.Utils.Camera;
 
@@ -14,7 +12,7 @@ using Random = Unity.Mathematics.Random;
 
 namespace UnitySensors.Sensor.LiDAR
 {
-    public class DepthBufferLiDARSensor : LiDARSensor<PointXYZI>
+    public class DepthBufferLiDARSensor : LiDARSensor
     {
         [SerializeField, Min(1)]
         private int _texturePixelsNum = 1;
@@ -131,7 +129,9 @@ namespace UnitySensors.Sensor.LiDAR
             _textureToPointsJob = new ITextureToPointsJob()
             {
                 near = minRange,
+                sqrNear = minRange * minRange,
                 far = maxRange,
+                maxIntensity = maxIntensity,
                 indexOffset = 0,
                 directions = _directions,
                 pixelIndices = _pixelIndices,

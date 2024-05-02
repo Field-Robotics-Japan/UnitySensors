@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4853532333615570984}
   - component: {fileID: 4853532333615571031}
   - component: {fileID: 4853532333615571030}
-  - component: {fileID: 4853532333615570986}
   - component: {fileID: 4853532333615570985}
-  - component: {fileID: 4853532333615570987}
+  - component: {fileID: 9201004833233192004}
+  - component: {fileID: 3086342091309557783}
   m_Layer: 0
   m_Name: DepthCamera_ros
   m_TagString: Untagged
@@ -96,24 +96,7 @@ MonoBehaviour:
   _fov: 30
   _minRange: 0.05
   _maxRange: 20
---- !u!114 &4853532333615570986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4853532333615571027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5d828eb68e3371438db55311f6be27f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _frequency: 10
-  _topicName: /camera/depth/image/compressed
-  _serializer:
-    _header:
-      _frame_id: /camera_frame
-    quality: 75
+  _gaussianNoiseSigma: 0
 --- !u!114 &4853532333615570985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,9 +112,11 @@ MonoBehaviour:
   _frequency: 10
   _topicName: /camera/depth/info
   _serializer:
+    _source: {fileID: 4853532333615571030}
     _header:
+      _source: {fileID: 4853532333615571030}
       _frame_id: /camera_frame
---- !u!114 &4853532333615570987
+--- !u!114 &9201004833233192004
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,11 +125,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 4853532333615571027}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66f06c73d3d50274d883545c2fbcd881, type: 3}
+  m_Script: {fileID: 11500000, guid: 4840ee4519c33a142a3fb06d6d6b3b50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 10
   _topicName: /camera/depth/points
   _serializer:
     _header:
+      _source: {fileID: 4853532333615571030}
       _frame_id: /camera_frame
+  _source: {fileID: 4853532333615571030}
+--- !u!114 &3086342091309557783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4853532333615571027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b474a6242e811f04488e3cb67b65dd35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _frequency: 10
+  _topicName: /camera/depth/image/compressed
+  _serializer:
+    _source: {fileID: 4853532333615571030}
+    _sourceTexture: 0
+    _header:
+      _source: {fileID: 4853532333615571030}
+      _frame_id: /camera_frame
+    quality: 75

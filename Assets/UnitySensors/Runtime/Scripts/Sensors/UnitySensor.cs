@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnitySensors.Interface.Std;
 
 namespace UnitySensors.Sensor
 {
-    public abstract class UnitySensor : MonoBehaviour
+    public abstract class UnitySensor : MonoBehaviour, ITimeInterface
     {
         [SerializeField]
         private float _frequency = 10.0f;
