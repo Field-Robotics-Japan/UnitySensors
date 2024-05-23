@@ -48,9 +48,9 @@ namespace UnitySensors.Sensor.IMU
             _gravityMagnitude = Physics.gravity.magnitude;
         }
 
-        private void FixedUpdate()
+        protected override void Update()
         {
-            float dt = Time.fixedDeltaTime;
+            float dt = Time.deltaTime;
 
             _position_tmp = _transform.position;
             _velocity_tmp = (_position_tmp - _position_last) / dt;
@@ -58,7 +58,7 @@ namespace UnitySensors.Sensor.IMU
             _acceleration_tmp -= _transform.InverseTransformDirection(_gravityDirection) * _gravityMagnitude;
 
             _rotation_tmp = _transform.rotation;
-            Quaternion rotation_delta = Quaternion.Inverse(_rotation_last) * _rotation;
+            Quaternion rotation_delta = Quaternion.Inverse(_rotation_last) * _rotation_tmp;
             rotation_delta.ToAngleAxis(out float angle, out Vector3 axis);
             float angularSpeed = (angle * Mathf.Deg2Rad) / dt;
             _angularVelocity_tmp = axis * angularSpeed;
@@ -66,6 +66,8 @@ namespace UnitySensors.Sensor.IMU
             _position_last = _position_tmp;
             _velocity_last = _velocity_tmp;
             _rotation_last = _rotation_tmp;
+
+            base.Update();
         }
 
         protected override void UpdateSensor()
