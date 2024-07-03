@@ -1,23 +1,16 @@
+using UnityEngine;
 using Unity.Robotics.ROSTCPConnector.MessageGeneration;
-
-using UnitySensors.Sensor;
 
 namespace UnitySensors.ROS.Serializer
 {
     [System.Serializable]
-    public abstract class RosMsgSerializer<T, TT> where T : UnitySensor where TT : Message, new()
+    public abstract class RosMsgSerializer<T> where T : Message, new ()
     {
-        private T _sensor;
-        protected T sensor { get => _sensor; }
+        protected T _msg;
+        public T msg { get => _msg; }
 
-        protected TT _msg;
-
-        public virtual void Init(T sensor)
-        {
-            _sensor = sensor;
-            _msg = new TT();
-        }
-
-        public abstract TT Serialize();
+        public virtual void Init() { _msg = new T(); }
+        public abstract T Serialize();
+        public virtual void OnDestroy() { }
     }
 }

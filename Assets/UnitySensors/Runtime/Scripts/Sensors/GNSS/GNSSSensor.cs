@@ -1,19 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-using UnitySensors.Attribute;
-using UnitySensors.Utils.GeoCoordinate;
+using UnitySensors.DataType.Geometry;
+using UnitySensors.Interface.Geometry;
 
 namespace UnitySensors.Sensor.GNSS
 {
-    public class GNSSSensor : UnitySensor
+    public class GNSSSensor : UnitySensor, IGeoCoordinateInterface
     {
         [SerializeField]
         private GeoCoordinateSystem _coordinateSystem;
 
         private Transform _transform;
-        private GeoCoordinateConverter _gcc;
 
         [SerializeField]
         private GeoCoordinate _coordinate;

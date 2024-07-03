@@ -6,13 +6,12 @@ using Unity.Jobs;
 using Unity.Mathematics;
 
 using UnitySensors.Utils.Noise;
-using UnitySensors.Data.PointCloud;
 
 using Random = Unity.Mathematics.Random;
 
 namespace UnitySensors.Sensor.LiDAR
 {
-    public class RaycastLiDARSensor : LiDARSensor<PointXYZI>
+    public class RaycastLiDARSensor : LiDARSensor
     {
         private Transform _transform;
 
@@ -73,7 +72,7 @@ namespace UnitySensors.Sensor.LiDAR
             _raycastHitsToPointsJob = new IRaycastHitsToPointsJob()
             {
                 minRange = minRange,
-                minRange_sqr = minRange * minRange,
+                sqrMinRange = minRange * minRange,
                 maxRange = maxRange,
                 maxIntensity = maxIntensity,
                 directions = _directions,

@@ -5,7 +5,7 @@ using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
 
-using UnitySensors.Data.PointCloud;
+using UnitySensors.DataType.Sensor.PointCloud;
 
 namespace UnitySensors.Sensor.LiDAR
 {
@@ -13,7 +13,9 @@ namespace UnitySensors.Sensor.LiDAR
     public struct ITextureToPointsJob : IJobParallelFor
     {
         public float near;
+        public float sqrNear;
         public float far;
+        public float maxIntensity;
         public int indexOffset;
 
         [ReadOnly]
@@ -37,7 +39,8 @@ namespace UnitySensors.Sensor.LiDAR
             distance = (near < distance && distance < far && near < distance_noised && distance_noised < far) ? distance_noised : 0;
             PointXYZI point = new PointXYZI()
             {
-                position = directions[index + indexOffset] * distance
+                position = directions[index + indexOffset] * distance,
+                intensity = (distance != 0) ? maxIntensity * sqrNear / (distance * distance) : 0
             };
             
             points[index] = point;

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6023160553514482209}
   - component: {fileID: 6023160553514482210}
   - component: {fileID: 6023160553514482212}
-  - component: {fileID: 6023160553514482213}
+  - component: {fileID: -4194670642642625912}
   m_Layer: 0
   m_Name: RGBCamera
   m_TagString: Untagged
@@ -94,7 +94,7 @@ MonoBehaviour:
   _fov: 30
   _minRange: 0.05
   _maxRange: 100
---- !u!114 &6023160553514482213
+--- !u!114 &-4194670642642625912
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,7 +103,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6023160553514482222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc838544d115b7741a2cb963bc058b29, type: 3}
+  m_Script: {fileID: 11500000, guid: 5202acb8ddfd0c546b69f23eb10b4e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _source: {fileID: 6023160553514482212}
+  _sourceTexture: 0
   _image: {fileID: 0}

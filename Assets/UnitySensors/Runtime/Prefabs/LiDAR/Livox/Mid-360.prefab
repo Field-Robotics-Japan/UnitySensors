@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9210621271187283362}
   - component: {fileID: 9210621271187283363}
-  - component: {fileID: 9210621271187283360}
+  - component: {fileID: 3771061048342558472}
   m_Layer: 0
   m_Name: Sensor
   m_TagString: Untagged
@@ -52,7 +52,7 @@ MonoBehaviour:
   _maxRange: 70
   _gaussianNoiseSigma: 0.02
   _maxIntensity: 255
---- !u!114 &9210621271187283360
+--- !u!114 &3771061048342558472
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,9 +61,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 9210621271187283373}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8859907edf5114c9beadbee04254ad, type: 3}
+  m_Script: {fileID: 11500000, guid: f2ac6256eabda88478ca2a2fc51a2c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _source: {fileID: 9210621271187283363}
 --- !u!1 &9210621271227589044
 GameObject:
   m_ObjectHideFlags: 0

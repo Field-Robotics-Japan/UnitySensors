@@ -66,5 +66,7 @@ MonoBehaviour:
   _frequency: 20
   _topicName: /imu
   _serializer:
+    _source: {fileID: 3526848927119471302}
     _header:
+      _source: {fileID: 3526848927119471302}
       _frame_id: imu_link

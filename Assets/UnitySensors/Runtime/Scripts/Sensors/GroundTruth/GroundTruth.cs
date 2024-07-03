@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnitySensors.Data.Pose;
+using UnitySensors.Interface.Geometry;
 
 namespace UnitySensors.Sensor.GroundTruth
 {
