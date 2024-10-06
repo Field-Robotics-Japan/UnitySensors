@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9219009776518534085}
   - component: {fileID: 9219009776518534082}
-  - component: {fileID: 9219009776518534083}
+  - component: {fileID: 9107878023928292438}
   m_Layer: 0
   m_Name: Sensor
   m_TagString: Untagged
@@ -137,7 +137,7 @@ MonoBehaviour:
   _maxIntensity: 255
   _texturePixelsNum: 1500000
   _textureSizePerCamera: {x: 0, y: 0}
---- !u!114 &9219009776518534083
+--- !u!114 &9107878023928292438
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,9 +146,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 9219009776518534072}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8859907edf5114c9beadbee04254ad, type: 3}
+  m_Script: {fileID: 11500000, guid: f2ac6256eabda88478ca2a2fc51a2c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _source: {fileID: 9219009776518534082}
 --- !u!1 &9219009777597040757
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
 
-using UnitySensors.Data.PointCloud;
+using UnitySensors.DataType.Sensor.PointCloud;
 
 namespace UnitySensors.Sensor.LiDAR
 {
@@ -15,7 +15,7 @@ namespace UnitySensors.Sensor.LiDAR
         [ReadOnly]
         public float minRange;
         [ReadOnly]
-        public float minRange_sqr;
+        public float sqrMinRange;
         [ReadOnly]
         public float maxRange;
         [ReadOnly]
@@ -39,7 +39,7 @@ namespace UnitySensors.Sensor.LiDAR
             PointXYZI point = new PointXYZI()
             {
                 position = directions[index + indexOffset] * distance,
-                intensity = (distance != 0) ? maxIntensity * minRange_sqr / (distance * distance) : 0
+                intensity = (distance != 0) ? maxIntensity * sqrMinRange / (distance * distance) : 0
             };
             points[index] = point;
         }

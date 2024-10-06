@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-using UnitySensors.Utils.GeoCoordinate;
+using UnitySensors.DataType.Geometry;
+using UnitySensors.Utils.Geometry;
 
 namespace UnitySensors.Sensor.GNSS
 {
@@ -17,15 +16,13 @@ namespace UnitySensors.Sensor.GNSS
         private void Awake()
         {
             _transform = this.transform;
-            _converter = new GeoCoordinateConverter(_coordinate.latitude, _coordinate.longitude);
+            _converter = new GeoCoordinateConverter(_coordinate);
         }
 
         public GeoCoordinate GetCoordinate(Vector3 worldPosition)
         {
             Vector3 localPosition = _transform.InverseTransformPoint(worldPosition);
-            double latitude, longitude;
-            (latitude, longitude) = _converter.XZ2LatLon(localPosition.x, localPosition.z);
-            return new GeoCoordinate(latitude, longitude, localPosition.y + _coordinate.altitude);
+            return _converter.Convert(new Vector3D(localPosition));
         }
     }
 }

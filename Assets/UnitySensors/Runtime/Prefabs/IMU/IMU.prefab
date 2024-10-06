@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5305839302562335606}
-  - component: {fileID: 5305839302562335607}
+  - component: {fileID: 7445696916328043224}
   m_Layer: 0
   m_Name: IMU
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5305839302562335607
+--- !u!114 &7445696916328043224
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de1d05f7ef764aa45be46678498c90e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _frequency: 20
+  _frequency: 10
   _position: {x: 0, y: 0, z: 0}
   _velocity: {x: 0, y: 0, z: 0}
   _acceleration: {x: 0, y: 0, z: 0}

@@ -2,21 +2,20 @@ using UnityEngine;
 using Unity.Robotics.ROSTCPConnector;
 using Unity.Robotics.ROSTCPConnector.MessageGeneration;
 
-using UnitySensors.Sensor;
 using UnitySensors.ROS.Serializer;
 
 namespace UnitySensors.ROS.Publisher
 {
-    public class RosMsgPublisher<T, TT, TTT> : MonoBehaviour where T : UnitySensor where TT : RosMsgSerializer<T, TTT> where TTT : Message, new()
+    public class RosMsgPublisher<T, TT> : MonoBehaviour where T : RosMsgSerializer<TT> where TT : Message, new()
     {
         [SerializeField]
         private float _frequency = 10.0f;
 
         [SerializeField]
-        private string _topicName;
+        protected string _topicName;
 
         [SerializeField]
-        protected TT _serializer;
+        protected T _serializer;
 
         private ROSConnection _ros;
 
@@ -31,9 +30,9 @@ namespace UnitySensors.ROS.Publisher
             _frequency_inv = 1.0f / _frequency;
 
             _ros = ROSConnection.GetOrCreateInstance();
-            _ros.RegisterPublisher<TTT>(_topicName);
+            _ros.RegisterPublisher<TT>(_topicName);
 
-            _serializer.Init(GetComponent<T>());
+            _serializer.Init();
         }
 
         protected virtual void Update()
@@ -44,6 +43,11 @@ namespace UnitySensors.ROS.Publisher
             _ros.Publish(_topicName, _serializer.Serialize());
 
             _dt -= _frequency_inv;
+        }
+
+        private void OnDestroy()
+        {
+            _serializer.OnDestroy();
         }
     }
 }
