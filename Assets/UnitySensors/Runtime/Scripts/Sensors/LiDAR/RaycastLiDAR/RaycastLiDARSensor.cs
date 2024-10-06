@@ -90,7 +90,7 @@ namespace UnitySensors.Sensor.LiDAR
 
             JobHandle updateRaycastCommandsJobHandle = _updateRaycastCommandsJob.Schedule(pointsNum, 1);
             JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(pointsNum, 1, updateRaycastCommandsJobHandle);
-            JobHandle raycastJobHandle = RaycastCommand.ScheduleBatch(_raycastCommands, _raycastHits, pointsNum, updateGaussianNoisesJobHandle);
+            JobHandle raycastJobHandle = RaycastCommand.ScheduleBatch(_raycastCommands, _raycastHits, 256, updateGaussianNoisesJobHandle);
             _jobHandle = _raycastHitsToPointsJob.Schedule(pointsNum, 1, raycastJobHandle);
 
             JobHandle.ScheduleBatchedJobs();
