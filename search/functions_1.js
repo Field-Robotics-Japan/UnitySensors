@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['copyto_595',['CopyTo',['../interfaceUnitySensors_1_1Data_1_1PointCloud_1_1IPointInterface.html#a216969f3087290ba323154eda97d5662',1,'UnitySensors.Data.PointCloud.IPointInterface.CopyTo()'],['../structUnitySensors_1_1Data_1_1PointCloud_1_1PointXYZ.html#a8a46095299ae3d62589c69fc1e61fec6',1,'UnitySensors.Data.PointCloud.PointXYZ.CopyTo()'],['../structUnitySensors_1_1Data_1_1PointCloud_1_1PointXYZI.html#a07cc7ef895f7299708a2fe89e9bc1d06',1,'UnitySensors.Data.PointCloud.PointXYZI.CopyTo()']]]
+  ['convert_612',['Convert',['../classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#a218a7c78c01903bc82ac75c8ebf69463',1,'UnitySensors.Utils.Geometry.GeoCoordinateConverter.Convert(GeoCoordinate coordinate)'],['../classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#aa2753676adfedda41b1bcd4243d294c3',1,'UnitySensors.Utils.Geometry.GeoCoordinateConverter.Convert(Vector3D coordinate)']]]
 ];

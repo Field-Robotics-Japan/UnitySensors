@@ -1,0 +1,10 @@
+<map id="UnitySensors.Sensor.Camera.RGBDCameraSensor" name="UnitySensors.Sensor.Camera.RGBDCameraSensor">
+<area shape="rect" id="node1" title=" " alt="" coords="252,244,467,285"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1CameraSensor.html" title=" " alt="" coords="151,162,269,189"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="89,80,190,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node5" href="$interfaceUnitySensors_1_1Interface_1_1Std_1_1ITimeInterface.html" title=" " alt="" coords="154,5,271,32"/>
+<area shape="rect" id="node6" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1ICameraInterface.html" title=" " alt="" coords="215,80,349,107"/>
+<area shape="rect" id="node7" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1ITextureInterface.html" title=" " alt="" coords="293,162,425,189"/>
+<area shape="rect" id="node8" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1IPointCloudInterface.html" title=" " alt="" coords="450,155,605,196"/>
+</map>

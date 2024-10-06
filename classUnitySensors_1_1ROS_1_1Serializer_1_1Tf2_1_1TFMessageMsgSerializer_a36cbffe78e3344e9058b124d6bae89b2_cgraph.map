@@ -1,0 +1,5 @@
+<map id="UnitySensors.ROS.Serializer.Tf2.TFMessageMsgSerializer.Serialize" name="UnitySensors.ROS.Serializer.Tf2.TFMessageMsgSerializer.Serialize">
+<area shape="rect" id="node1" title=" " alt="" coords="5,63,273,104"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1TF_1_1TFLink.html#ac150aa1caa908f219e6ee8c70b33ad40" title=" " alt="" coords="321,29,545,71"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Std_1_1HeaderSerializer.html#a04c4771911b5d012952f2576863819c4" title=" " alt="" coords="326,95,541,136"/>
+</map>

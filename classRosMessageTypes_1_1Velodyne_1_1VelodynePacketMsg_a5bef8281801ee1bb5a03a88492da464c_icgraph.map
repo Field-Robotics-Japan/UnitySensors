@@ -1,5 +1,0 @@
-<map id="RosMessageTypes.Velodyne.VelodynePacketMsg.Deserialize" name="RosMessageTypes.Velodyne.VelodynePacketMsg.Deserialize">
-<area shape="rect" id="node1" title=" " alt="" coords="316,39,544,80"/>
-<area shape="rect" id="node2" href="$classRosMessageTypes_1_1Velodyne_1_1VelodynePacketMsg.html#a77b1b34bac991734c0c4ebefe1d86210" title=" " alt="" coords="32,5,241,47"/>
-<area shape="rect" id="node3" href="$classRosMessageTypes_1_1Velodyne_1_1VelodyneScanMsg.html#a6be2a9eac00e73a72d5ec7d2d872b39c" title=" " alt="" coords="5,71,268,112"/>
-</map>

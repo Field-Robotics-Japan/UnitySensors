@@ -1,0 +1,6 @@
+<map id="UnitySensors.DataType.Sensor.PointCloud.Dispose" name="UnitySensors.DataType.Sensor.PointCloud.Dispose">
+<area shape="rect" id="node1" title=" " alt="" coords="325,71,549,112"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#a5d0244a86f8441af101a7392410ddcef" title=" " alt="" coords="5,5,277,47"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#ae95561399c5673708ad23506f75357de" title=" " alt="" coords="6,71,277,112"/>
+<area shape="rect" id="node4" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor.html#ae0fa529a076f18d833e990b768eafff8" title=" " alt="" coords="31,136,252,177"/>
+</map>

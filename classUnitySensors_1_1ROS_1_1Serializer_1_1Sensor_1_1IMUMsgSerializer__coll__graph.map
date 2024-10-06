@@ -1,0 +1,9 @@
+<map id="UnitySensors.ROS.Serializer.Sensor.IMUMsgSerializer" name="UnitySensors.ROS.Serializer.Sensor.IMUMsgSerializer">
+<area shape="rect" id="node1" title=" " alt="" coords="748,57,955,98"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1RosMsgSerializer.html" title=" " alt="" coords="368,5,584,32"/>
+<area shape="rect" id="node3" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1IImuDataInterface.html" title=" " alt="" coords="365,57,587,98"/>
+<area shape="rect" id="node4" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Std_1_1HeaderSerializer.html" title=" " alt="" coords="373,122,579,163"/>
+<area shape="rect" id="node5" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1RosMsgSerializer.html" title=" " alt="" coords="7,63,203,105"/>
+<area shape="rect" id="node6" title=" " alt="" coords="54,129,155,156"/>
+<area shape="rect" id="node7" href="$interfaceUnitySensors_1_1Interface_1_1Std_1_1ITimeInterface.html" title=" " alt="" coords="5,181,204,222"/>
+</map>

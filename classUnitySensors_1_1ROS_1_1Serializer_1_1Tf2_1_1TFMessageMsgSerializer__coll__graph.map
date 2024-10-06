@@ -1,0 +1,12 @@
+<map id="UnitySensors.ROS.Serializer.Tf2.TFMessageMsgSerializer" name="UnitySensors.ROS.Serializer.Tf2.TFMessageMsgSerializer">
+<area shape="rect" id="node1" title=" " alt="" coords="867,71,1076,112"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1RosMsgSerializer.html" title=" " alt="" coords="539,5,761,47"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Std_1_1HeaderSerializer.html" title=" " alt="" coords="547,71,753,112"/>
+<area shape="rect" id="node4" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1RosMsgSerializer.html" title=" " alt="" coords="180,8,376,49"/>
+<area shape="rect" id="node5" title=" " alt="" coords="227,74,329,101"/>
+<area shape="rect" id="node6" href="$interfaceUnitySensors_1_1Interface_1_1Std_1_1ITimeInterface.html" title=" " alt="" coords="179,125,377,167"/>
+<area shape="rect" id="node7" href="$classUnitySensors_1_1Sensor_1_1TF_1_1TFLink.html" title=" " alt="" coords="540,178,760,205"/>
+<area shape="rect" id="node8" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="227,191,329,218"/>
+<area shape="rect" id="node9" title=" " alt="" coords="5,166,129,193"/>
+<area shape="rect" id="node10" href="$interfaceUnitySensors_1_1Interface_1_1Std_1_1ITimeInterface.html" title=" " alt="" coords="9,217,126,243"/>
+</map>

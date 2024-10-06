@@ -1,0 +1,15 @@
+<map id="UnitySensors.Interface.Std.ITimeInterface" name="UnitySensors.Interface.Std.ITimeInterface">
+<area shape="rect" id="node1" title=" " alt="" coords="5,235,204,276"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="252,235,447,276"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1CameraSensor.html" title=" " alt="" coords="497,71,712,112"/>
+<area shape="rect" id="node7" href="$classUnitySensors_1_1Sensor_1_1GNSS_1_1GNSSSensor.html" title=" " alt="" coords="505,136,704,177"/>
+<area shape="rect" id="node8" href="$classUnitySensors_1_1Sensor_1_1GroundTruth_1_1GroundTruth.html" title=" " alt="" coords="501,201,708,243"/>
+<area shape="rect" id="node9" href="$classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html" title=" " alt="" coords="510,267,699,308"/>
+<area shape="rect" id="node10" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor.html" title=" " alt="" coords="503,332,706,373"/>
+<area shape="rect" id="node13" href="$classUnitySensors_1_1Sensor_1_1TF_1_1TFLink.html" title=" " alt="" coords="495,398,715,425"/>
+<area shape="rect" id="node4" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html" title=" " alt="" coords="763,5,977,47"/>
+<area shape="rect" id="node5" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor.html" title=" " alt="" coords="763,71,977,112"/>
+<area shape="rect" id="node6" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html" title=" " alt="" coords="763,136,977,177"/>
+<area shape="rect" id="node11" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1DepthBufferLiDARSensor.html" title=" " alt="" coords="769,299,971,340"/>
+<area shape="rect" id="node12" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html" title=" " alt="" coords="769,364,971,405"/>
+</map>

@@ -1,8 +1,10 @@
 <map id="UnitySensors.Sensor.Camera.CameraSensor" name="UnitySensors.Sensor.Camera.CameraSensor">
-<area shape="rect" id="node1" title=" " alt="" coords="357,39,572,80"/>
-<area shape="rect" id="node5" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html" title=" " alt="" coords="620,5,835,47"/>
-<area shape="rect" id="node6" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor.html" title=" " alt="" coords="620,71,835,112"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="193,21,294,47"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,21,129,47"/>
-<area shape="rect" id="node4" href="$interfaceUnitySensors_1_1Data_1_1Texture_1_1ITextureInterface.html" title=" " alt="" coords="177,71,309,98"/>
+<area shape="rect" id="node1" title=" " alt="" coords="360,71,575,112"/>
+<area shape="rect" id="node6" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html" title=" " alt="" coords="623,5,837,47"/>
+<area shape="rect" id="node7" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor.html" title=" " alt="" coords="623,71,837,112"/>
+<area shape="rect" id="node8" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html" title=" " alt="" coords="623,136,837,177"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="194,53,295,79"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,27,129,54"/>
+<area shape="rect" id="node4" href="$interfaceUnitySensors_1_1Interface_1_1Std_1_1ITimeInterface.html" title=" " alt="" coords="9,78,126,105"/>
+<area shape="rect" id="node5" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1ICameraInterface.html" title=" " alt="" coords="177,103,312,130"/>
 </map>

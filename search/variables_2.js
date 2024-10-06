@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['buffer_5fsize_5fdictionary_716',['BUFFER_SIZE_DICTIONARY',['../classUnitySensors_1_1Visualization_1_1PointCloud_1_1PointCloudVisualizer.html#ae64889380e015491eb6cbeb778fb34ca',1,'UnitySensors::Visualization::PointCloud::PointCloudVisualizer']]]
+  ['b_739',['b',['../structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html#a502087f31003a17b19446ef44b08de49',1,'UnitySensors::DataType::Sensor::PointCloud::PointXYZRGB']]]
 ];

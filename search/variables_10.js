@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_761',['X',['../classUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinateConverter.html#a66f768a705047560f411c46d1e096e33',1,'UnitySensors::Utils::GeoCoordinate::GeoCoordinateConverter']]]
+  ['type_786',['type',['../classUnitySensors_1_1Attribute_1_1InterfaceAttribute.html#a80189afc2509e7b5a10981c257c80e32',1,'UnitySensors::Attribute::InterfaceAttribute']]]
 ];

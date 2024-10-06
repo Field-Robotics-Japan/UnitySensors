@@ -1,0 +1,16 @@
+<map id="UnitySensors.Sensor.Camera.RGBDCameraSensor" name="UnitySensors.Sensor.Camera.RGBDCameraSensor">
+<area shape="rect" id="node1" title=" " alt="" coords="869,221,1084,262"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1CameraSensor.html" title=" " alt="" coords="469,60,587,87"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="195,31,297,57"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node5" href="$interfaceUnitySensors_1_1Interface_1_1Std_1_1ITimeInterface.html" title=" " alt="" coords="9,56,126,83"/>
+<area shape="rect" id="node6" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1ICameraInterface.html" title=" " alt="" coords="179,81,313,108"/>
+<area shape="rect" id="node7" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1ITextureInterface.html" title=" " alt="" coords="462,111,594,137"/>
+<area shape="rect" id="node8" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1IPointCloudInterface.html" title=" " alt="" coords="451,162,605,203"/>
+<area shape="rect" id="node9" title=" " alt="" coords="477,228,579,255"/>
+<area shape="rect" id="node10" href="$structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToColorPointsJob.html" title=" " alt="" coords="421,279,635,321"/>
+<area shape="rect" id="node11" title=" " alt="" coords="189,295,303,321"/>
+<area shape="rect" id="node13" href="$structUnitySensors_1_1Utils_1_1Noise_1_1IUpdateGaussianNoisesJob.html" title=" " alt="" coords="429,345,627,386"/>
+<area shape="rect" id="node12" href="$classUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud.html" title=" " alt="" coords="416,410,640,451"/>
+<area shape="rect" id="node14" title=" " alt="" coords="193,355,299,381"/>
+</map>

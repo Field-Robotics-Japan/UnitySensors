@@ -1,7 +1,10 @@
-<map id="UnitySensors.ROS.Serializer.PointCloud.PointCloud2MsgSerializer&lt; T, TT &gt;" name="UnitySensors.ROS.Serializer.PointCloud.PointCloud2MsgSerializer&lt; T, TT &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="757,63,1020,119"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1RosMsgSerializer.html" title=" " alt="" coords="322,5,483,47"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1HeaderSerializer.html" title=" " alt="" coords="299,71,506,112"/>
-<area shape="rect" id="node4" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1RosMsgSerializer.html" title=" " alt="" coords="5,71,237,112"/>
-<area shape="rect" id="node5" href="$structUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1IPointsToPointCloud2MsgJob.html" title=" " alt="" coords="287,137,519,193"/>
+<map id="UnitySensors.ROS.Serializer.PointCloud.PointCloud2MsgSerializer&lt; T &gt;" name="UnitySensors.ROS.Serializer.PointCloud.PointCloud2MsgSerializer&lt; T &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="719,77,1019,119"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1RosMsgSerializer.html" title=" " alt="" coords="365,12,592,53"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Std_1_1HeaderSerializer.html" title=" " alt="" coords="375,77,582,119"/>
+<area shape="rect" id="node4" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1RosMsgSerializer.html" title=" " alt="" coords="7,5,203,47"/>
+<area shape="rect" id="node5" title=" " alt="" coords="54,71,155,98"/>
+<area shape="rect" id="node6" href="$interfaceUnitySensors_1_1Interface_1_1Std_1_1ITimeInterface.html" title=" " alt="" coords="5,123,204,164"/>
+<area shape="rect" id="node7" href="$structUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1IInvertXJob.html" title=" " alt="" coords="375,156,582,197"/>
+<area shape="rect" id="node8" title=" " alt="" coords="47,189,162,215"/>
 </map>

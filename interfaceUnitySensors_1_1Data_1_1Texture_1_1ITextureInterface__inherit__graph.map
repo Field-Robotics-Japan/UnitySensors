@@ -1,6 +1,0 @@
-<map id="UnitySensors.Data.Texture.ITextureInterface" name="UnitySensors.Data.Texture.ITextureInterface">
-<area shape="rect" id="node1" title=" " alt="" coords="5,39,204,80"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1CameraSensor.html" title=" " alt="" coords="252,39,467,80"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html" title=" " alt="" coords="515,5,729,47"/>
-<area shape="rect" id="node4" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor.html" title=" " alt="" coords="515,71,729,112"/>
-</map>

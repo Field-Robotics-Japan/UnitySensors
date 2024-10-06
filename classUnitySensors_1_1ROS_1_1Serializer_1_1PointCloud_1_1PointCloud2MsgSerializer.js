@@ -1,10 +1,13 @@
 var classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer =
 [
-    [ "Dispose", "classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#af604b10beb9764c017dded2327523e7d", null ],
-    [ "Init", "classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#a6112b0386b0dae175f4d123ee657daa9", null ],
-    [ "Serialize", "classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#a59685851b53f50df674dd923ec6b1ba8", null ],
-    [ "_data", "classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#a6727821833d47cf66291ef65f173d9a0", null ],
-    [ "_header", "classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#a71ce3b8c0dc3e48cc9d6307d7742547a", null ],
-    [ "_jobHandle", "classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#aab41ebe94f7308635f2539d66a94ab14", null ],
-    [ "_pointsToPointCloud2MsgJob", "classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#a02ee4df4b3595336a2be2f426f88d5c8", null ]
+    [ "Init", "classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#a8a8d207afb7b8ee546a1061b3eb30ef4", null ],
+    [ "OnDestroy", "classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#a609287fb5501894de194592c142d9b93", null ],
+    [ "Serialize", "classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#a6bf15ebeb1ebb9843eb79a357dec2ff9", null ],
+    [ "SetSource", "classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#a536e82ea3af958172519d4be8ca509fb", null ],
+    [ "_data", "classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#a62617869d25334376a1dda4a08bb9f99", null ],
+    [ "_header", "classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#a435b3c681addf357af16839a23e565a9", null ],
+    [ "_invertXJob", "classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#a0a83b60a11ad175bfd68292f0970b00b", null ],
+    [ "_jobHandle", "classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#a70e362a17edc7b97fbb312c0962f0000", null ],
+    [ "_pointsNum", "classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#af42e03e672810f0197ae99ebac035715", null ],
+    [ "_sourceInterface", "classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#aecbb34444bfc263ad48fd5673f33a886", null ]
 ];

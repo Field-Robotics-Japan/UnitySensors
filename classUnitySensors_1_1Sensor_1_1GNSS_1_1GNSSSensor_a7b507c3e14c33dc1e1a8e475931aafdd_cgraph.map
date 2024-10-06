@@ -1,5 +1,7 @@
 <map id="UnitySensors.Sensor.GNSS.GNSSSensor.UpdateSensor" name="UnitySensors.Sensor.GNSS.GNSSSensor.UpdateSensor">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,204,47"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1GNSS_1_1GeoCoordinateSystem.html#a2cad29c4bdc64ecdf66ef65accacf078" title=" " alt="" coords="252,5,519,47"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinateConverter.html#a0d4ae267ad3d7469fceb0afe188fd261" title=" " alt="" coords="567,5,821,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,39,204,80"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1GNSS_1_1GeoCoordinateSystem.html#a2cad29c4bdc64ecdf66ef65accacf078" title=" " alt="" coords="252,39,519,80"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#a218a7c78c01903bc82ac75c8ebf69463" title=" " alt="" coords="567,39,804,80"/>
+<area shape="rect" id="node4" href="$classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#ae34c3301d9632e6e1f1c93dfb80fb891" title=" " alt="" coords="863,5,1087,47"/>
+<area shape="rect" id="node5" href="$classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#a6d05fb6aac0fddb09ce886c0be124fc1" title=" " alt="" coords="852,71,1097,112"/>
 </map>

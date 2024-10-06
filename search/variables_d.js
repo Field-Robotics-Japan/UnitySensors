@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quality_750',['quality',['../classUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ImageMsgSerializer.html#a31428af8a9c4e56c8308ceb107c6c597',1,'UnitySensors::ROS::Serializer::Image::ImageMsgSerializer']]]
+  ['quality_774',['quality',['../classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1CompressedImageMsgSerializer.html#aa0ad39a4bfbdb5d2b1c1fd5dc63fc3dd',1,'UnitySensors::ROS::Serializer::Sensor::CompressedImageMsgSerializer']]]
 ];

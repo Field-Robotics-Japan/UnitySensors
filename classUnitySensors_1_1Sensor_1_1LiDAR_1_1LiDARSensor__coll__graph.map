@@ -1,8 +1,10 @@
-<map id="UnitySensors.Sensor.LiDAR.LiDARSensor&lt; T &gt;" name="UnitySensors.Sensor.LiDAR.LiDARSensor&lt; T &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="137,185,339,227"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="17,89,118,115"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,5,129,32"/>
-<area shape="rect" id="node4" href="$interfaceUnitySensors_1_1Data_1_1PointCloud_1_1IPointCloudInterface.html" title=" " alt="" coords="142,89,334,115"/>
-<area shape="rect" id="node5" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1ScanPattern.html" title=" " alt="" coords="358,81,561,123"/>
-<area shape="rect" id="node6" title=" " alt="" coords="395,5,524,32"/>
+<map id="UnitySensors.Sensor.LiDAR.LiDARSensor" name="UnitySensors.Sensor.LiDAR.LiDARSensor">
+<area shape="rect" id="node1" title=" " alt="" coords="544,115,747,157"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="245,31,347,57"/>
+<area shape="rect" id="node3" title=" " alt="" coords="8,5,132,32"/>
+<area shape="rect" id="node4" href="$interfaceUnitySensors_1_1Interface_1_1Std_1_1ITimeInterface.html" title=" " alt="" coords="11,56,129,83"/>
+<area shape="rect" id="node5" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1IPointCloudInterface.html" title=" " alt="" coords="219,82,373,123"/>
+<area shape="rect" id="node6" href="$classUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud.html" title=" " alt="" coords="184,147,408,189"/>
+<area shape="rect" id="node7" href="$classUnitySensors_1_1DataType_1_1LiDAR_1_1ScanPattern.html" title=" " alt="" coords="202,213,390,254"/>
+<area shape="rect" id="node8" title=" " alt="" coords="5,220,135,247"/>
 </map>

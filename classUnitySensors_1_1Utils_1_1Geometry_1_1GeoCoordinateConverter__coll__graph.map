@@ -1,0 +1,4 @@
+<map id="UnitySensors.Utils.Geometry.GeoCoordinateConverter" name="UnitySensors.Utils.Geometry.GeoCoordinateConverter">
+<area shape="rect" id="node1" title="平面直角座標系と緯度経度の相互変換 参照：国土地理院の「測量計算サイト」 http://vldb.gsi.go.jp/sokuchi/surveycal..." alt="" coords="21,109,234,151"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1DataType_1_1Geometry_1_1GeoCoordinate.html" title=" " alt="" coords="5,5,249,47"/>
+</map>

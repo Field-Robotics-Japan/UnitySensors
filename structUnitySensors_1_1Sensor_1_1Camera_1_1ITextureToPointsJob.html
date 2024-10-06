@@ -121,11 +121,11 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a02ef2d0181a9a272f21069a539de70db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1894c5d080b92cedbab863d317ad4596"><td class="memItemLeft" align="right" valign="top">NativeArray&lt; float3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToPointsJob.html#a1894c5d080b92cedbab863d317ad4596">directions</a></td></tr>
 <tr class="separator:a1894c5d080b92cedbab863d317ad4596"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abaae2b1f143f926dccf607adaeee6ba2"><td class="memItemLeft" align="right" valign="top">NativeArray&lt; Color &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToPointsJob.html#abaae2b1f143f926dccf607adaeee6ba2">pixels</a></td></tr>
-<tr class="separator:abaae2b1f143f926dccf607adaeee6ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6486b6e2bc0d0b2ebdab7a5958a4991c"><td class="memItemLeft" align="right" valign="top">NativeArray&lt; Color &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToPointsJob.html#a6486b6e2bc0d0b2ebdab7a5958a4991c">depthPixels</a></td></tr>
+<tr class="separator:a6486b6e2bc0d0b2ebdab7a5958a4991c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdc880c69c51b047021333e38965fd9c"><td class="memItemLeft" align="right" valign="top">NativeArray&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToPointsJob.html#abdc880c69c51b047021333e38965fd9c">noises</a></td></tr>
 <tr class="separator:abdc880c69c51b047021333e38965fd9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a430e4462b163348a7c5972cfad5dddc6"><td class="memItemLeft" align="right" valign="top">NativeArray&lt; <a class="el" href="structUnitySensors_1_1Data_1_1PointCloud_1_1PointXYZ.html">PointXYZ</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToPointsJob.html#a430e4462b163348a7c5972cfad5dddc6">points</a></td></tr>
+<tr class="memitem:a430e4462b163348a7c5972cfad5dddc6"><td class="memItemLeft" align="right" valign="top">NativeArray&lt; PointXYZ &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToPointsJob.html#a430e4462b163348a7c5972cfad5dddc6">points</a></td></tr>
 <tr class="separator:a430e4462b163348a7c5972cfad5dddc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -148,6 +148,20 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a6486b6e2bc0d0b2ebdab7a5958a4991c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6486b6e2bc0d0b2ebdab7a5958a4991c">&#9670;&nbsp;</a></span>depthPixels</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NativeArray&lt;Color&gt; UnitySensors.Sensor.Camera.ITextureToPointsJob.depthPixels</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a1894c5d080b92cedbab863d317ad4596"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1894c5d080b92cedbab863d317ad4596">&#9670;&nbsp;</a></span>directions</h2>
 
@@ -204,20 +218,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abaae2b1f143f926dccf607adaeee6ba2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abaae2b1f143f926dccf607adaeee6ba2">&#9670;&nbsp;</a></span>pixels</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">NativeArray&lt;Color&gt; UnitySensors.Sensor.Camera.ITextureToPointsJob.pixels</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a430e4462b163348a7c5972cfad5dddc6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a430e4462b163348a7c5972cfad5dddc6">&#9670;&nbsp;</a></span>points</h2>
 
@@ -225,7 +225,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">NativeArray&lt;<a class="el" href="structUnitySensors_1_1Data_1_1PointCloud_1_1PointXYZ.html">PointXYZ</a>&gt; UnitySensors.Sensor.Camera.ITextureToPointsJob.points</td>
+          <td class="memname">NativeArray&lt;PointXYZ&gt; UnitySensors.Sensor.Camera.ITextureToPointsJob.points</td>
         </tr>
       </table>
 </div><div class="memdoc">

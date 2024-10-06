@@ -1,4 +1,33 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classUnitySensors_1_1ROS_1_1Publisher_1_1PointCloud_1_1PointCloud2MsgPublisher.html" title=" " alt="" coords="5,5,267,61"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Publisher_1_1PointCloud_1_1DepthCameraPointCloud2MsgPublisher.html" title=" " alt="" coords="315,5,579,61"/>
+<area shape="rect" id="node1" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1ICameraInterface.html" title=" " alt="" coords="265,136,486,177"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1CameraSensor.html" title=" " alt="" coords="575,136,789,177"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html" title=" " alt="" coords="865,39,1080,80"/>
+<area shape="rect" id="node4" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor.html" title=" " alt="" coords="865,104,1080,145"/>
+<area shape="rect" id="node5" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html" title=" " alt="" coords="865,169,1080,211"/>
+<area shape="rect" id="node6" href="$interfaceUnitySensors_1_1Interface_1_1Geometry_1_1IGeoCoordinateInterface.html" title=" " alt="" coords="255,259,496,300"/>
+<area shape="rect" id="node7" href="$classUnitySensors_1_1Sensor_1_1GNSS_1_1GNSSSensor.html" title=" " alt="" coords="583,267,781,308"/>
+<area shape="rect" id="node8" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1IImuDataInterface.html" title=" " alt="" coords="265,389,486,431"/>
+<area shape="rect" id="node9" href="$classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html" title=" " alt="" coords="587,385,777,427"/>
+<area shape="rect" id="node10" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1IPointCloudInterface.html" title=" " alt="" coords="561,5,803,47"/>
+<area shape="rect" id="node11" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1IPointCloudInterface.html" title=" " alt="" coords="252,455,499,496"/>
+<area shape="rect" id="node12" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor.html" title=" " alt="" coords="581,453,783,495"/>
+<area shape="rect" id="node13" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1DepthBufferLiDARSensor.html" title=" " alt="" coords="871,487,1074,528"/>
+<area shape="rect" id="node14" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html" title=" " alt="" coords="871,421,1074,463"/>
+<area shape="rect" id="node15" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1IPointCloudInterface.html" title=" " alt="" coords="547,201,817,243"/>
+<area shape="rect" id="node16" href="$interfaceUnitySensors_1_1Interface_1_1Geometry_1_1IPoseInterface.html" title=" " alt="" coords="255,520,496,561"/>
+<area shape="rect" id="node17" href="$classUnitySensors_1_1Sensor_1_1GroundTruth_1_1GroundTruth.html" title=" " alt="" coords="579,520,785,561"/>
+<area shape="rect" id="node18" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1ITextureInterface.html" title=" " alt="" coords="571,71,793,112"/>
+<area shape="rect" id="node19" href="$interfaceUnitySensors_1_1Interface_1_1Std_1_1ITimeInterface.html" title=" " alt="" coords="5,324,204,365"/>
+<area shape="rect" id="node20" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="278,324,473,365"/>
+<area shape="rect" id="node21" href="$classUnitySensors_1_1Sensor_1_1TF_1_1TFLink.html" title=" " alt="" coords="572,333,792,359"/>
+<area shape="rect" id="node22" title=" " alt="" coords="43,755,167,782"/>
+<area shape="rect" id="node23" href="$classUnitySensors_1_1Attribute_1_1Interface.html" title=" " alt="" coords="260,847,491,874"/>
+<area shape="rect" id="node24" href="$classUnitySensors_1_1Demo_1_1PingPongObject.html" title=" " alt="" coords="268,899,483,940"/>
+<area shape="rect" id="node25" href="$classUnitySensors_1_1ROS_1_1Publisher_1_1RosMsgPublisher.html" title=" " alt="" coords="272,964,479,1005"/>
+<area shape="rect" id="node26" href="$classUnitySensors_1_1ROS_1_1Utils_1_1Time_1_1ROSClock.html" title=" " alt="" coords="268,585,483,627"/>
+<area shape="rect" id="node27" href="$classUnitySensors_1_1Sensor_1_1GNSS_1_1GeoCoordinateSystem.html" title=" " alt="" coords="276,651,475,692"/>
+<area shape="rect" id="node28" href="$classUnitySensors_1_1Utils_1_1Camera_1_1Color2Depth.html" title=" " alt="" coords="275,716,476,757"/>
+<area shape="rect" id="node29" href="$classUnitySensors_1_1Visualization_1_1Visualizer.html" title=" " alt="" coords="275,781,475,823"/>
+<area shape="rect" id="node30" href="$classUnitySensors_1_1Visualization_1_1Sensor_1_1PointCloudVisualizer.html" title=" " alt="" coords="561,815,803,856"/>
+<area shape="rect" id="node31" href="$classUnitySensors_1_1Visualization_1_1Sensor_1_1TextureVisualizer.html" title=" " alt="" coords="582,749,782,791"/>
 </map>

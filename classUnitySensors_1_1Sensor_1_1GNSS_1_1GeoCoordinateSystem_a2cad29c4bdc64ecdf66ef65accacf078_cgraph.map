@@ -1,4 +1,6 @@
 <map id="UnitySensors.Sensor.GNSS.GeoCoordinateSystem.GetCoordinate" name="UnitySensors.Sensor.GNSS.GeoCoordinateSystem.GetCoordinate">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,272,47"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1Utils_1_1GeoCoordinate_1_1GeoCoordinateConverter.html#a0d4ae267ad3d7469fceb0afe188fd261" title=" " alt="" coords="320,5,575,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,39,272,80"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#a218a7c78c01903bc82ac75c8ebf69463" title=" " alt="" coords="320,39,557,80"/>
+<area shape="rect" id="node3" href="$classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#ae34c3301d9632e6e1f1c93dfb80fb891" title=" " alt="" coords="616,5,840,47"/>
+<area shape="rect" id="node4" href="$classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#a6d05fb6aac0fddb09ce886c0be124fc1" title=" " alt="" coords="605,71,851,112"/>
 </map>

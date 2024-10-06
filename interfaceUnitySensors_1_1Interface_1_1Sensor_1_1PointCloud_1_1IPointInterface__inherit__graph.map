@@ -1,0 +1,6 @@
+<map id="UnitySensors.Interface.Sensor.PointCloud.IPointInterface" name="UnitySensors.Interface.Sensor.PointCloud.IPointInterface">
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,227,112"/>
+<area shape="rect" id="node2" href="$structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZ.html" title=" " alt="" coords="275,5,499,47"/>
+<area shape="rect" id="node3" href="$structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZI.html" title=" " alt="" coords="275,71,499,112"/>
+<area shape="rect" id="node4" href="$structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html" title=" " alt="" coords="275,136,499,177"/>
+</map>

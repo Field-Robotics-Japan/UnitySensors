@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,13,135,39"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1ScanPattern.html" title=" " alt="" coords="183,5,385,47"/>
+<area shape="rect" id="node1" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1RosMsgSerializer.html" title=" " alt="" coords="5,5,285,47"/>
+<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Geometry_1_1PoseStampedMsgSerializer.html" title=" " alt="" coords="333,5,600,47"/>
 </map>

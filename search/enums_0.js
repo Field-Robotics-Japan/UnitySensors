@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['service_767',['Service',['../classUnitySensors_1_1ROS_1_1Serializer_1_1GNSS_1_1NavSatFixMsgSerializer.html#acd05bc3ec7d2e590df56c7f54048b94f',1,'UnitySensors::ROS::Serializer::GNSS::NavSatFixMsgSerializer']]],
-  ['status_768',['Status',['../classUnitySensors_1_1ROS_1_1Serializer_1_1GNSS_1_1NavSatFixMsgSerializer.html#a90931f9939caae2993b1de11335ffe37',1,'UnitySensors::ROS::Serializer::GNSS::NavSatFixMsgSerializer']]]
+  ['service_794',['Service',['../classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1NavSatFixMsgSerializer.html#ab063746b6af05b35bdc9587545c66789',1,'UnitySensors::ROS::Serializer::Sensor::NavSatFixMsgSerializer']]],
+  ['sourcetexture_795',['SourceTexture',['../classUnitySensors_1_1Visualization_1_1Sensor_1_1TextureVisualizer.html#a82bed10f4eae90a89051eb9d94483950',1,'UnitySensors.Visualization.Sensor.TextureVisualizer.SourceTexture()'],['../classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1CompressedImageMsgSerializer.html#a69159925153e51fcfbd15a20f2b002b9',1,'UnitySensors.ROS.Serializer.Sensor.CompressedImageMsgSerializer.SourceTexture()']]],
+  ['status_796',['Status',['../classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1NavSatFixMsgSerializer.html#a9758971b3fe7049486b132a443d762ac',1,'UnitySensors::ROS::Serializer::Sensor::NavSatFixMsgSerializer']]]
 ];

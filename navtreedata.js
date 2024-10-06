@@ -37,11 +37,7 @@ var NAVTREE =
       [ "LICENSE", "md_README.html#autotoc_md5", null ]
     ] ],
     [ "Packages", "namespaces.html", [
-      [ "Packages", "namespaces.html", "namespaces_dup" ],
-      [ "Package Functions", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
-        [ "Typedefs", "namespacemembers_type.html", null ]
-      ] ]
+      [ "Packages", "namespaces.html", "namespaces_dup" ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -50,7 +46,7 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", null ],
-        [ "Variables", "functions_vars.html", null ],
+        [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Enumerations", "functions_enum.html", null ],
         [ "Properties", "functions_prop.html", null ]
       ] ]
@@ -67,9 +63,10 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"CameraImageMsgPublisher_8cs.html",
-"classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#ae8acbdb11e0c0408f9294532ab07a1f6",
-"dir_c637c2f6f83b98eaa9d24ba819cab8d5.html"
+"CameraInfoMsgPublisher_8cs.html",
+"classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#a8e501399615870eed61f1e34c5b87803",
+"dir_0afa90f913499267ce6cb3faafbf7ca0.html",
+"structUnitySensors_1_1Sensor_1_1LiDAR_1_1IUpdateRaycastCommandsJob.html#acdfe11e1cfdff0c690633eff7ccb66a7"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
