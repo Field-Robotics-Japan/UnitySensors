@@ -15,7 +15,7 @@ jobs:
       fail-fast: false
       matrix:
         unityVersion:
-          - 2022.3.48f1
+          - 2022.3.42f1
 
     steps:
       # リポジトリをチェックアウト
