@@ -14,16 +14,14 @@ jobs:
           - 2021.3.42f1
           - 2022.3.42f1
     steps:
-      # 手動アクティベーションファイルのリクエスト
-      - name: Request manual activation file for Unity ${{ matrix.unityVersion }}
-        id: getManualLicenseFile
-        uses: game-ci/unity-request-manual-activation-file@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Unityのアクティベーション
+      - name: Activate Unity ${{ matrix.unityVersion }}
+        uses: game-ci/unity-activate@v4
         with:
           unityVersion: ${{ matrix.unityVersion }}  # Matrixで指定したUnityバージョンを使用
-
-      # アーティファクトのアップロード
-      - name: Expose artifact for Unity ${{ matrix.unityVersion }}
-        uses: actions/upload-artifact@v4
-        with:
-          name: Unity_${{ matrix.unityVersion }}_activation_file  # バージョンごとのアーティファクト名
-          path: ${{ steps.getManualLicenseFile.outputs.filePath }}  # ファイルパスを使用
+          unityEmail: ${{ secrets.UNITY_EMAIL }}  # Unityのメールアドレスをシークレットに設定
+          unityPassword: ${{ secrets.UNITY_PASSWORD }}  # Unityのパスワードをシークレットに設定
+          unitySerial: ${{ secrets.UNITY_SERIAL }}  # Unityのシリアルキー（必要な場合）
