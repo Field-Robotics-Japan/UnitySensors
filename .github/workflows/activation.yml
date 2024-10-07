@@ -19,7 +19,7 @@ jobs:
 
       # Unityのアクティベーション
       - name: Activate Unity ${{ matrix.unityVersion }}
-        uses: game-ci/unity-activate@v4
+        uses: game-ci/unity-activate@v2  # 正しいバージョンに変更
         with:
           unityVersion: ${{ matrix.unityVersion }}  # Matrixで指定したUnityバージョンを使用
           unityEmail: ${{ secrets.UNITY_EMAIL }}  # Unityのメールアドレスをシークレットに設定
