@@ -6,7 +6,7 @@ using UnitySensors.ROS.Serializer.Image;
 
 namespace UnitySensors.ROS.Publisher.Image
 {
-    public class ImageMsgPublisher<T> : RosMsgPublisher<T, ImageMsgSerializer<T>, CompressedImageMsg> where T : UnitySensor, ITextureInterface
+    public class ImageMsgPublisher<T> : RosMsgPublisher<T, ImageMsgSerializer<T>, ImageMsg> where T : UnitySensor, ITextureInterface
     {
     }
 }

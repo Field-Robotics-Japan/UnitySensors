@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 10
-  _topicName: /camera/color/image/compressed
+  _topicName: /camera/color/image
   _serializer:
     _header:
       _frame_id: /camera_frame
