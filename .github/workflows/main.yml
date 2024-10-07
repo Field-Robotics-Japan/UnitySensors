@@ -8,10 +8,6 @@ on:
   pull_request:
     branches:
     - master
-    - develop
-
-env:
-  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
 
 jobs:
   testAllModes:
@@ -23,28 +19,36 @@ jobs:
         projectPath:
           - ./
         unityVersion:
-          - 2020.1.13f1
+          - 2020.3.48f1
+          - 2021.3.42f1
+          - 2022.3.42f1
         testMode:
           - all
 #           - playmode
 #           - editmode
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           lfs: true
-      - uses: actions/cache@v1.1.0
+      - uses: actions/cache@v4
         with:
           path: ${{ matrix.projectPath }}/Library
-          key: Library-${{ matrix.projectPath }}
+          key: Library-${{ matrix.unityVersion }}-${{ matrix.projectPath }}-${{ matrix.testMode }}
           restore-keys: |
+            Library-${{ matrix.unityVersion }}-${{ matrix.projectPath }}
+            Library-${{ matrix.projectPath }}
             Library-
-      - uses: webbertakken/unity-test-runner@v1.4
+      - uses: actions/download-artifact@v4
+        with:
+          name: Unity_${{ matrix.unityVersion }}_activation_file
+      - uses: game-ci/unity-test-runner@v4
         id: tests
         with:
           projectPath: ${{ matrix.projectPath }}
           unityVersion: ${{ matrix.unityVersion }}
           testMode: ${{ matrix.testMode }}
           artifactsPath: ${{ matrix.testMode }}-artifacts
+          unityLicenses: ${{ secrets.UNITY_LICENSE }}  # ライセンスファイルを使う
       - uses: actions/upload-artifact@v4
         with:
           name: Test results for ${{ matrix.testMode }}

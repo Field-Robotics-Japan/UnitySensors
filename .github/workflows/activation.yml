@@ -1,22 +1,29 @@
-name: Acquire activation file
+name: Acquire multiple activation files
 on: 
   pull_request:
     branches:
-    - master
+      - master
 jobs:
   activation:
-    name: Request manual activation file 🔑
+    name: Request activation files for multiple Unity versions 🔑
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        unityVersion:
+          - 2020.3.48f1
+          - 2021.3.42f1
+          - 2022.3.42f1
     steps:
-    # Request manual activation file
-    - name: Request manual activation file
-      id: getManualLicenseFile
-      uses: webbertakken/unity-request-manual-activation-file@v1.1
-      with:
-        unityVersion: 2020.1.13f1
-    # Upload artifact (Unity_v20XX.X.XXXX.alf)
-    - name: Expose as artifact
-      uses: actions/upload-artifact@v4
-      with:
-        name: ${{ steps.getManualLicenseFile.outputs.filePath }}
-        path: ${{ steps.getManualLicenseFile.outputs.filePath }}
+      # 手動アクティベーションファイルのリクエスト
+      - name: Request manual activation file for Unity ${{ matrix.unityVersion }}
+        id: getManualLicenseFile
+        uses: game-ci/unity-request-manual-activation-file@v4
+        with:
+          unityVersion: ${{ matrix.unityVersion }}  # Matrixで指定したUnityバージョンを使用
+
+      # アーティファクトのアップロード
+      - name: Expose artifact for Unity ${{ matrix.unityVersion }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Unity_${{ matrix.unityVersion }}_activation_file  # バージョンごとのアーティファクト名
+          path: ${{ steps.getManualLicenseFile.outputs.filePath }}  # ファイルパスを使用
