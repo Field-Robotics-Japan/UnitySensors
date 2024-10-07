@@ -1,60 +1,59 @@
-name: CI
+name: Unity Test Runner
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   pull_request:
     branches:
-    - master
+      - master
+      - beta/**
 
 jobs:
-  testAllModes:
-    name: Test in ${{ matrix.testMode }} on version ${{ matrix.unityVersion }}
+  test:
+    name: Test on Unity ${{ matrix.unityVersion }}
     runs-on: ubuntu-latest
+
     strategy:
       fail-fast: false
       matrix:
-        projectPath:
-          - ./
         unityVersion:
           - 2020.3.48f1
           - 2021.3.42f1
           - 2022.3.42f1
-        testMode:
-          - all
-#           - playmode
-#           - editmode
+
     steps:
-      - uses: actions/checkout@v4
+      # リポジトリをチェックアウト
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
-          lfs: true
+          lfs: true  # Large File Storageが必要な場合に true を指定
 
-      - uses: actions/cache@v4
+      # Unity Test Runnerを実行 (エディットモードテスト)
+      - name: Run Edit Mode Tests
+        uses: game-ci/unity-test-runner@v4
         with:
-          path: ${{ matrix.projectPath }}/Library
-          key: Library-${{ matrix.unityVersion }}-${{ matrix.projectPath }}-${{ matrix.testMode }}
-          restore-keys: |
-            Library-${{ matrix.unityVersion }}-${{ matrix.projectPath }}
-            Library-${{ matrix.projectPath }}
-            Library-
-
-      - name: Activate Unity ${{ matrix.unityVersion }}
-        uses: game-ci/unity-activate@v2  # 正しいバージョンに変更
-        with:
+          projectPath: ./
           unityVersion: ${{ matrix.unityVersion }}
-          unityEmail: ${{ secrets.UNITY_EMAIL }}
-          unityPassword: ${{ secrets.UNITY_PASSWORD }}
-          unitySerial: ${{ secrets.UNITY_SERIAL }}  # シリアルキーが必要な場合
+          customParameters: -runTests -testPlatform editmode
+          artifactsPath: editmode-results
 
-      - uses: game-ci/unity-test-runner@v4
-        id: tests
+      # アーティファクトのアップロード（エディットモード）
+      - name: Upload Edit Mode Test results for ${{ matrix.unityVersion }}
+        uses: actions/upload-artifact@v4
         with:
-          projectPath: ${{ matrix.projectPath }}
+          name: Edit Mode Test results for Unity ${{ matrix.unityVersion }}
+          path: editmode-results
+
+      # Unity Test Runnerを実行 (プレイモードテスト)
+      - name: Run Play Mode Tests
+        uses: game-ci/unity-test-runner@v4
+        with:
+          projectPath: ./
           unityVersion: ${{ matrix.unityVersion }}
-          testMode: ${{ matrix.testMode }}
-          artifactsPath: ${{ matrix.testMode }}-artifacts
+          customParameters: -runTests -testPlatform playmode
+          artifactsPath: playmode-results
 
-      - uses: actions/upload-artifact@v4
+      # アーティファクトのアップロード（プレイモード）
+      - name: Upload Play Mode Test results for ${{ matrix.unityVersion }}
+        uses: actions/upload-artifact@v4
         with:
-          name: Test results for ${{ matrix.testMode }}
-          path: ${{ steps.tests.outputs.artifactsPath }}
+          name: Play Mode Test results for Unity ${{ matrix.unityVersion }}
+          path: playmode-results
