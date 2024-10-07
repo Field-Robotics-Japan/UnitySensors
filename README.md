@@ -1,7 +1,6 @@
 ## UnitySensors
 
-[![Acquire activation file](https://github.com/Field-Robotics-Japan/UnitySensorsROSAssets/workflows/Acquire%20activation%20file/badge.svg)](https://github.com/Field-Robotics-Japan/UnitySensorsROSAssets/actions?query=workflow%3A%22Acquire+activation+file%22)
-[![CI](https://github.com/Field-Robotics-Japan/UnitySensorsROSAssets/workflows/CI/badge.svg)](https://github.com/Field-Robotics-Japan/UnitySensorsROSAssets/actions?query=workflow%3ACI)
+[![Unity 2022.3.x Test Runner](https://github.com/Field-Robotics-Japan/UnitySensors/actions/workflows/main.yml/badge.svg)](https://github.com/Field-Robotics-Japan/UnitySensors/actions/workflows/main.yml)
 
 ![unity_sensors_ros_assets](.image/unity_sensors_ros_assets.gif)
 
