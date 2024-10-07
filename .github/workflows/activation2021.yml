@@ -11,7 +11,7 @@ jobs:
       # Request manual activation file
       - name: Request manual activation file
         id: getManualLicenseFile
-        uses: game-ci/unity-activation@v2
+        uses: game-ci/unity-activate@v2
         with:
           unityVersion: 2021.3.42f1
       # Upload artifact (Unity_v20XX.X.XXXX.alf)
