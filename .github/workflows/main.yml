@@ -15,6 +15,8 @@ jobs:
       fail-fast: false
       matrix:
         unityVersion:
+          - 2020.3.48f1
+          - 2021.3.42f1
           - 2022.3.42f1
 
     steps:
@@ -24,6 +26,19 @@ jobs:
         with:
           lfs: true  # Large File Storageが必要な場合に true を指定
 
+      - name: Set up Unity version-specific Packages and ProjectSettings
+        run: |
+          if [[ "${{ matrix.unity_version }}" == "2020.3.48f1" ]]; then
+            cp -r .ProjectSettings2020 ProjectSettings
+            cp -r .Packages2020 Packages
+          elif [[ "${{ matrix.unity_version }}" == "2021.3.42f1" ]]; then
+            cp -r .ProjectSettings2021 ProjectSettings
+            cp -r .Packages2021 Packages
+          elif [[ "${{ matrix.unity_version }}" == "2022.3.42f1" ]]; then
+            cp -r .ProjectSettings2022 ProjectSettings
+            cp -r .Packages2022 Packages
+          fi
+          
       # Unity Test Runnerを実行 (エディットモードテスト)
       - name: Run Edit Mode Tests
         uses: game-ci/unity-test-runner@v4
