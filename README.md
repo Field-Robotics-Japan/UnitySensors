@@ -34,10 +34,10 @@ The following sensors are available inside :
 - (GroundTruth)
 - (TF)
 
-**2. UnitySensorRos**
+**2. UnitySensorROS**
 
-This package is responsible to make the link between sensor and ros by serializing sensor raw data and sending to them to ROS using [RosTCPConnector][external-RosTCPConnector-link] package.
-To receive the data in ROS take a look at [ROSTCPEndpoint][external-RosTCPEndpoint-link].
+This package is responsible to make the link between sensor and ROS by serializing sensor raw data and sending to them to ROS using [ROS-TCP-Connector][external-RosTCPConnector-link] package.
+To receive the data in ROS take a look at [ROS-TCP-Endpoint][external-RosTCPEndpoint-link].
 
 ## 🚀 Quick start
 
@@ -58,7 +58,7 @@ To receive the data in ROS take a look at [ROSTCPEndpoint][external-RosTCPEndpoi
 
 ### Inside ROS workspace
 
-1. Download lastest release of [ROSTCPEndpoint][external-RosTCPEndpoint-release-link].
+1. Download lastest release of [ROS-TCP-Endpoint][external-RosTCPEndpoint-release-link].
 2. Build your workspace.
 3. Launch ROS endpoint node.
 
@@ -73,7 +73,7 @@ A huge thank you to everyone who is helping to improve UnitySensors !
 </div>
 
 ## 🔗 Dependencies
-- [RosTCPConnector][external-RosTCPConnector-link] (Appache 2.0 LICENSE)
+- [ROS-TCP-Connector][external-RosTCPConnector-link] (Appache 2.0 LICENSE)
 
 ## 📄 LICENSE
 Copyright [2020-2024] Ryodo Tanaka (groadpg@gmail.com) and Akiro Harada
