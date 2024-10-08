@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>UnitySensors: UnitySensors</title>
+<title>UnitySensors: README</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -82,16 +82,17 @@ $(document).ready(function(){initNavTree('md_README.html',''); initResizable(); 
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title"><a class="el" href="namespaceUnitySensors.html">UnitySensors</a> </div>  </div>
+<div class="title">README </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a href="https://github.com/Field-Robotics-Japan/UnitySensors/actions/workflows/main.yml"><img src="https://github.com/Field-Robotics-Japan/UnitySensors/actions/workflows/main.yml/badge.svg" alt="Unity 2022.3.x Test Runner" style="pointer-events: none;" class="inline"/></a></p>
-<p><img src=".image/unity_sensors_ros_assets.gif" alt="unity_sensors_ros_assets" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md1"></a>
-Overview</h1>
-<p>Robot sensor packages available on Unity. You can communicate sensor info via ROS and ROS2 using ROSTCPConnector and ROSTCPEndpoint. <br  />
-</p>
-<p>The following sensors are added.</p>
+<div class="textblock"><div align="center"></div><div align="center"></div><h1><a class="anchor" id="autotoc_md0"></a>
+UnitySensors</h1>
+<div align="center"> <a href="https://github.com/Field-Robotics-Japan/UnitySensors/releases"><img src="https://img.shields.io/github/v/release/Field-Robotics-Japan/UnitySensors?color=9BF6FF&amp;logo=github&amp;style=flat-square" alt="" class="inline"/></a> <a href="https://unity.com/"><img src="https://img.shields.io/badge/Unity3D-%3E%202021.3-blue?style=flat-square&amp;logo=unity" alt="" class="inline"/></a> <a href="https://www.ros.org/"><img src="https://img.shields.io/badge/ROS-1%7C2-blue?style=flat-square&amp;logo=ros" alt="" class="inline"/></a> <a href="https://github.com/Field-Robotics-Japan/UnitySensors/actions/workflows/main.yml"><img src="https://img.shields.io/github/actions/workflow/status/Field-Robotics-Japan/UnitySensors/main.yml?style=flat-square&amp;logo=github&amp;label=CI%20check" alt="" class="inline"/></a> <br  />
+ <a href="https://github.com/Field-Robotics-Japan/UnitySensors/graphs/contributors"><img src="https://img.shields.io/github/contributors/Field-Robotics-Japan/UnitySensors?color=B2FFA3&amp;style=flat-square" alt="" class="inline"/></a> <a href="https://github.com/Field-Robotics-Japan/UnitySensors/network/members"><img src="https://img.shields.io/github/forks/Field-Robotics-Japan/UnitySensors?color=8ae8ff&amp;style=flat-square" alt="" class="inline"/></a> <a href="https://github.com/Field-Robotics-Japan/UnitySensors/network/stargazers"><img src="https://img.shields.io/github/stars/Field-Robotics-Japan/UnitySensors?color=F9DC5F&amp;style=flat-square" alt="" class="inline"/></a> <a href="https://github.com/Field-Robotics-Japan/UnitySensors/issues"><img src="https://img.shields.io/github/issues/Field-Robotics-Japan/UnitySensors?color=FFDBFA&amp;style=flat-square" alt="" class="inline"/></a> <a href="https://github.com/Field-Robotics-Japan/UnitySensors/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Field-Robotics-Japan/UnitySensors?color=FFADAD&amp;style=flat-square" alt="" class="inline"/></a></div><div align="center"><img src=".image/unity_sensors_ros_assets.gif" alt="unity_sensors_ros_assets" class="inline"/></div><div align="center"></div><h2><a class="anchor" id="autotoc_md1"></a>
+🔍 Overview</h2>
+<p>UnitySensos is a projet that regroup two Unity3D packages that allow you to <b>easly</b> use Unity3D as robotic simulation ! There are several Prefab and Scene files available for testing each sensor.</p>
+<p><b>1. UnitySensor</b></p>
+<p>The following sensors are available inside :</p>
 <ul>
 <li>Velodyne 3D LiDAR (Velodyne VLP-16, VLP-16-HiRes, VLP-32, HDL-32E, VLS-128)</li>
 <li>Livox 3D LiDAR(Avia, Horizon, Mid40, Mid70, Tele, HAP, Mid360)</li>
@@ -102,28 +103,42 @@ Overview</h1>
 <li>(GroundTruth)</li>
 <li>(TF)</li>
 </ul>
-<p>There are several Prefab and Scene files available for testing each sensor.</p>
-<h1><a class="anchor" id="autotoc_md2"></a>
-Dependencies</h1>
-<ul>
-<li><a href="https://github.com/Unity-Technologies/ROS-TCP-Connector">RosTCPConnector</a> (Appache 2.0 LICENSE)</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md3"></a>
-Package Installation (For using UnitySensors in your project)</h1>
+<p><b>2. UnitySensorROS</b></p>
+<p>This package is responsible to make the link between sensor and ROS by serializing sensor raw data and sending to them to ROS using <a href="https://github.com/Unity-Technologies/ROS-TCP-Connector">ROS-TCP-Connector</a> package. To receive the data in ROS take a look at <a href="https://github.com/Unity-Technologies/ROS-TCP-Endpoint">ROS-TCP-Endpoint</a>.</p>
+<h2><a class="anchor" id="autotoc_md2"></a>
+🚀 Quick start</h2>
+<h3><a class="anchor" id="autotoc_md3"></a>
+Inside Unity3D</h3>
+<blockquote class="doxtable">
+<p>[!NOTE]</p>
+<p>Unitysensor is made for Unity 2021.3 or later </p>
+</blockquote>
 <ol type="1">
-<li>Using Unity 2021.3 or later, open the Package Manager from <code>Window</code> -&gt; <code>Package Manager</code>.</li>
+<li>Open the Package Manager from <code>Window</code> -&gt; <code>Package Manager</code>.</li>
 <li>In the Package Manager window, find and click the + button in the upper lefthand corner of the window. Select <code>Add package from git URL....</code></li>
 <li>Enter the git URL for the desired package.<ol type="a">
-<li>For the <a class="el" href="namespaceUnitySensors.html">UnitySensors</a>, enter <code><a href="https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensors">https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensors</a>#v2.0.4</code>.</li>
-<li>For the UnitySensorsROS, enter <code><a href="https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensorsROS">https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensorsROS</a>#v2.0.4</code>. <b>Note: UnitySensorsROS does not contain <a class="el" href="namespaceUnitySensors.html">UnitySensors</a>.</b></li>
+<li>For the <a class="el" href="namespaceUnitySensors.html">UnitySensors</a>, enter <code><a href="https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensors">https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensors</a>#v2.0.5</code>.</li>
+<li>For the UnitySensorsROS, enter <code><a href="https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensorsROS">https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensorsROS</a>#v2.0.5</code>. <b>Note: UnitySensorsROS does not contain <a class="el" href="namespaceUnitySensors.html">UnitySensors</a>.</b></li>
 </ol>
 </li>
 <li>Click <code>Add</code>.</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md4"></a>
-Documentation</h1>
-<h1><a class="anchor" id="autotoc_md5"></a>
-LICENSE</h1>
+<h3><a class="anchor" id="autotoc_md4"></a>
+Inside ROS workspace</h3>
+<ol type="1">
+<li>Download lastest release of <a href="https://github.com/Unity-Technologies/ROS-TCP-Endpoint/releases">ROS-TCP-Endpoint</a>.</li>
+<li>Build your workspace.</li>
+<li>Launch ROS endpoint node.</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md5"></a>
+🤝 Contributing</h2>
+<div align="center"></div><div align="center">A huge thank you to everyone who is helping to improve <a class="el" href="namespaceUnitySensors.html">UnitySensors</a> !</div><div align="center"><a href="https://github.com/Field-Robotics-Japan/UnitySensors/graphs/contributors"><img src="https://readme-contribs.as93.net/contributors/Field-Robotics-Japan/UnitySensors?avatarSize=40&amp;shape=circle" alt="contributors badge" class="inline"/></a></div><div align="center"></div><h2><a class="anchor" id="autotoc_md6"></a>
+🔗 Dependencies</h2>
+<ul>
+<li><a href="https://github.com/Unity-Technologies/ROS-TCP-Connector">ROS-TCP-Connector</a> (Appache 2.0 LICENSE)</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md7"></a>
+📄 LICENSE</h2>
 <p>Copyright [2020-2024] Ryodo Tanaka (<a href="#" onclick="location.href='mai'+'lto:'+'gro'+'ad'+'pg@'+'gm'+'ail'+'.c'+'om'; return false;">groad<span style="display: none;">.nosp@m.</span>pg@g<span style="display: none;">.nosp@m.</span>mail.<span style="display: none;">.nosp@m.</span>com</a>) and Akiro Harada</p>
 <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at</p>
 <p><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
