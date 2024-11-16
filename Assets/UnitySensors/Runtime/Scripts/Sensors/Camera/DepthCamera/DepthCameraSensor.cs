@@ -59,9 +59,8 @@ namespace UnitySensors.Sensor.Camera
 
             _texture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBAFloat, false);
 
-            _mat = new Material(Shader.Find("UnitySensors/Color2Depth"));
+            _mat = new Material(Shader.Find("UnitySensors/Color2DepthCamera"));
             float f = m_camera.farClipPlane;
-            _mat.SetFloat("_F", f);
 
             SetupDirections();
             SetupJob();
@@ -102,7 +101,7 @@ namespace UnitySensors.Sensor.Camera
 
             _textureToPointsJob = new ITextureToPointsJob()
             {
-                near= m_camera.nearClipPlane,
+                near = m_camera.nearClipPlane,
                 far = m_camera.farClipPlane,
                 directions = _directions,
                 depthPixels = _texture.GetPixelData<Color>(0),
@@ -127,7 +126,8 @@ namespace UnitySensors.Sensor.Camera
         private bool LoadTexture()
         {
             bool result = false;
-            AsyncGPUReadback.Request(_rt, 0, request => {
+            AsyncGPUReadback.Request(_rt, 0, request =>
+            {
                 if (request.hasError)
                 {
                 }
@@ -154,7 +154,7 @@ namespace UnitySensors.Sensor.Camera
 
         private void OnRenderImage(RenderTexture source, RenderTexture dest)
         {
-            Graphics.Blit(source, dest, _mat);
+            Graphics.Blit(null, dest, _mat);
         }
     }
 }
