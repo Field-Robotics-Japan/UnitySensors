@@ -62,6 +62,10 @@ To receive the data in ROS take a look at [ROS-TCP-Endpoint][external-RosTCPEndp
 2. Build your workspace.
 3. Launch ROS endpoint node.
 
+### Migrating to URP/HDRP
+
+Please refer to [Migrating to URP/HDRP](MigrateToURP&HDRP.md).
+
 ## 🤝 Contributing
 
 <div align="center">
@@ -109,3 +113,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
 [github-release-link]: https://github.com/Field-Robotics-Japan/UnitySensors/releases
 [github-release-shield]: https://img.shields.io/github/v/release/Field-Robotics-Japan/UnitySensors?color=9BF6FF&logo=github&style=flat-square
 
+
+
+[MigrateToURP&HDRP.md]: 
