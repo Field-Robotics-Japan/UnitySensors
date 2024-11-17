@@ -24,6 +24,7 @@ namespace UnitySensors.Sensor.LiDAR
 
         public void Execute(int index)
         {
+            // FIXME: Update the api
             raycastCommands[index] = new RaycastCommand(origin, localToWorldMatrix * (Vector3)directions[index + indexOffset], maxRange);
         }
     }

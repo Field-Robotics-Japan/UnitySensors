@@ -23,12 +23,12 @@ namespace UnitySensors.Sensor.Camera
         protected float _maxRange = 100.0f;
         [SerializeField]
         private float _gaussianNoiseSigma = 0.0f;
+        [SerializeField]
+        private Material _depthCameraMat;
 
         private UnityEngine.Camera _camera;
         private RenderTexture _rt = null;
         private Texture2D _texture;
-
-        private Material _mat;
 
         private JobHandle _jobHandle;
 
@@ -58,9 +58,6 @@ namespace UnitySensors.Sensor.Camera
             _camera.targetTexture = _rt;
 
             _texture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBAFloat, false);
-
-            _mat = new Material(Shader.Find("UnitySensors/Color2DepthCamera"));
-            float f = m_camera.farClipPlane;
 
             SetupDirections();
             SetupJob();
@@ -154,7 +151,7 @@ namespace UnitySensors.Sensor.Camera
 
         private void OnRenderImage(RenderTexture source, RenderTexture dest)
         {
-            Graphics.Blit(null, dest, _mat);
+            Graphics.Blit(null, dest, _depthCameraMat);
         }
     }
 }

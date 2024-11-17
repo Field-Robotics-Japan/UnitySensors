@@ -23,6 +23,8 @@ namespace UnitySensors.Sensor.Camera
         protected float _maxRange = 100.0f;
         [SerializeField]
         private float _gaussianNoiseSigma = 0.0f;
+        [SerializeField]
+        private Material _depthCameraMat;
 
         private UnityEngine.Camera _depthCamera;
         private RenderTexture _depthRt = null;
@@ -32,7 +34,6 @@ namespace UnitySensors.Sensor.Camera
         private RenderTexture _colorRt = null;
         private Texture2D _colorTexture;
 
-        private Material _mat;
 
         private JobHandle _jobHandle;
 
@@ -74,9 +75,6 @@ namespace UnitySensors.Sensor.Camera
             _depthTexture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBAFloat, false);
             _colorTexture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.BGRA32, false);
 
-            _mat = new Material(Shader.Find("UnitySensors/Color2Depth"));
-            float f = m_camera.farClipPlane;
-            _mat.SetFloat("_F", f);
 
             SetupDirections();
             SetupJob();
@@ -143,7 +141,8 @@ namespace UnitySensors.Sensor.Camera
         private bool LoadDepthTexture()
         {
             bool result = false;
-            AsyncGPUReadback.Request(_depthRt, 0, request => {
+            AsyncGPUReadback.Request(_depthRt, 0, request =>
+            {
                 if (request.hasError)
                 {
                 }
@@ -162,7 +161,8 @@ namespace UnitySensors.Sensor.Camera
         private bool LoadColorTexture()
         {
             bool result = false;
-            AsyncGPUReadback.Request(_colorRt, 0, request => {
+            AsyncGPUReadback.Request(_colorRt, 0, request =>
+            {
                 if (request.hasError)
                 {
                 }
@@ -190,7 +190,7 @@ namespace UnitySensors.Sensor.Camera
 
         private void OnRenderImage(RenderTexture source, RenderTexture dest)
         {
-            Graphics.Blit(source, dest, _mat);
+            Graphics.Blit(null, dest, _depthCameraMat);
         }
     }
 }

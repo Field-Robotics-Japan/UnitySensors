@@ -18,6 +18,7 @@ namespace UnitySensors.Sensor.LiDAR
         private int _texturePixelsNum = 1;
         [SerializeField, Attribute.ReadOnly]
         private Vector2Int _textureSizePerCamera;
+        [SerializeField] Material _depthBufferLidarMat;
 
         private Transform _transform;
 
@@ -48,7 +49,7 @@ namespace UnitySensors.Sensor.LiDAR
         {
             float azimuthAngleRange = scanPattern.maxAzimuthAngle - scanPattern.minAzimuthAngle;
             _camerasNum = azimuthAngleRange > 0.0f ? Mathf.CeilToInt(azimuthAngleRange / 60.0f) : 1;
-            
+
             _horizontalFOV = azimuthAngleRange / _camerasNum;
             float verticalFOV = Mathf.Max(1.0f, 2.0f * Mathf.Max(Mathf.Abs(scanPattern.maxZenithAngle), Mathf.Abs(scanPattern.minZenithAngle)));
 
@@ -64,7 +65,7 @@ namespace UnitySensors.Sensor.LiDAR
             {
                 GameObject camera_obj = new GameObject();
                 camera_obj.name = "Camera " + i.ToString();
-                
+
                 Transform camera_tf = camera_obj.transform;
                 camera_tf.parent = _transform;
                 camera_tf.localPosition = Vector3.zero;
@@ -82,6 +83,7 @@ namespace UnitySensors.Sensor.LiDAR
                 camera.rect = rect;
 
                 Color2Depth converter = camera_obj.AddComponent<Color2Depth>();
+                converter.mat_source = _depthBufferLidarMat;
                 converter.y_min = (float)i / _camerasNum;
                 converter.y_max = (float)(i + 1.0f) / _camerasNum;
                 converter.y_coef = _camerasNum;
@@ -135,7 +137,7 @@ namespace UnitySensors.Sensor.LiDAR
                 indexOffset = 0,
                 directions = _directions,
                 pixelIndices = _pixelIndices,
-                noises =_noises,
+                noises = _noises,
                 pixels = _pixels,
                 points = pointCloud.points
             };

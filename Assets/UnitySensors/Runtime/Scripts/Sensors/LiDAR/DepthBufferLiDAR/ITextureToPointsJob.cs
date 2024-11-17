@@ -33,6 +33,7 @@ namespace UnitySensors.Sensor.LiDAR
 
         public void Execute(int index)
         {
+            // TODO: there is no need to invert the pixel color
             int pixelIndex = pixelIndices[index + indexOffset];
             float distance = (1.0f - Mathf.Clamp01(pixels.AsReadOnly()[pixelIndex].r)) * far;
             float distance_noised = distance + noises[index];
@@ -42,7 +43,7 @@ namespace UnitySensors.Sensor.LiDAR
                 position = directions[index + indexOffset] * distance,
                 intensity = (distance != 0) ? maxIntensity * sqrNear / (distance * distance) : 0
             };
-            
+
             points[index] = point;
         }
     }

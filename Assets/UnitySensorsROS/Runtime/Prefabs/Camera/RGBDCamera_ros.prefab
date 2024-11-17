@@ -29,13 +29,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4414791596585746458}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &4414791596585746462
 Camera:
@@ -51,9 +51,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -98,6 +106,8 @@ MonoBehaviour:
   _minRange: 0.05
   _maxRange: 100
   _gaussianNoiseSigma: 0
+  _depthCameraMat: {fileID: -876546973899608171, guid: a3c68fd340741ee4597690d59d7509a6,
+    type: 3}
 --- !u!114 &4414791596585746528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,11 +120,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca85518969b9bf94aa9948188d795075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _source: {fileID: 6928715047789551323}
   _frequency: 10
   _topicName: /camera/info
   _serializer:
+    _source: {fileID: 0}
     _header:
+      _source: {fileID: 0}
       _frame_id: /camera_frame
 --- !u!114 &2224187045829796718
 MonoBehaviour:
@@ -128,12 +139,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24143da40ec715f40bf587d63ce67ed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _source: {fileID: 6928715047789551323}
   _frequency: 10
   _topicName: /camera/depth/points
   _serializer:
     _header:
+      _source: {fileID: 0}
       _frame_id: /camera_frame
+  _source: {fileID: 6928715047789551323}
 --- !u!114 &6110166055807567966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,12 +158,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b474a6242e811f04488e3cb67b65dd35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _source: {fileID: 6928715047789551323}
   _frequency: 10
   _topicName: /camera/depth/image/compressed
   _serializer:
+    _source: {fileID: 0}
     _sourceTexture: 0
     _header:
+      _source: {fileID: 0}
       _frame_id: /camera_frame
     quality: 75
 --- !u!114 &8736958369943202624
@@ -166,11 +179,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b474a6242e811f04488e3cb67b65dd35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _source: {fileID: 6928715047789551323}
   _frequency: 10
   _topicName: /camera/color/image/compressed
   _serializer:
+    _source: {fileID: 0}
     _sourceTexture: 1
     _header:
+      _source: {fileID: 0}
       _frame_id: /camera_frame
     quality: 75
