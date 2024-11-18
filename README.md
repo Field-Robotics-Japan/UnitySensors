@@ -113,6 +113,3 @@ Unless required by applicable law or agreed to in writing, software distributed 
 [github-release-link]: https://github.com/Field-Robotics-Japan/UnitySensors/releases
 [github-release-shield]: https://img.shields.io/github/v/release/Field-Robotics-Japan/UnitySensors?color=9BF6FF&logo=github&style=flat-square
 
-
-
-[MigrateToURP&HDRP.md]: 
