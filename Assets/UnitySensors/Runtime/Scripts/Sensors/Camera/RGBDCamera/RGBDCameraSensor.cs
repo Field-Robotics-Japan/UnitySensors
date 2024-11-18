@@ -51,6 +51,7 @@ namespace UnitySensors.Sensor.Camera
         public Texture2D texture1 { get => _colorTexture; }
         public PointCloud<PointXYZRGB> pointCloud { get => _pointCloud; }
         public int pointsNum { get => _pointsNum; }
+        public float texture0FarClipPlane { get => _depthCamera.farClipPlane; }
 
         protected override void Init()
         {

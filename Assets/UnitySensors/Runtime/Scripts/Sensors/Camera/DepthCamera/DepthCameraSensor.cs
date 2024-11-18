@@ -47,6 +47,8 @@ namespace UnitySensors.Sensor.Camera
         public PointCloud<PointXYZ> pointCloud { get => _pointCloud; }
         public int pointsNum { get => _pointsNum; }
 
+        public float texture0FarClipPlane { get => _camera.farClipPlane; }
+
         protected override void Init()
         {
             _camera = GetComponent<UnityEngine.Camera>();

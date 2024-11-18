@@ -6,6 +6,7 @@ namespace UnitySensors.Interface.Sensor
     {
         public Texture2D texture0 { get; }
         public Texture2D texture1 { get; }
+        public float texture0FarClipPlane { get; }
 
         // public byte[] data { get; }
         // public int width { get; }
