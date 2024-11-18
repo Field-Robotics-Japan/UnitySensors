@@ -20,10 +20,10 @@ namespace UnitySensors.Sensor.Camera
             _camera = GetComponent<UnityEngine.Camera>();
             _camera.fieldOfView = _fov;
 
-            _rt = new RenderTexture(_resolution.x, _resolution.y, 32, RenderTextureFormat.ARGBFloat);
+            _rt = new RenderTexture(_resolution.x, _resolution.y, 32, RenderTextureFormat.ARGB32);
             _camera.targetTexture = _rt;
 
-            _texture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBAFloat, false);
+            _texture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBA32, false);
         }
 
         protected override void UpdateSensor()
@@ -37,7 +37,8 @@ namespace UnitySensors.Sensor.Camera
         protected bool LoadTexture()
         {
             bool result = false;
-            AsyncGPUReadback.Request(_rt, 0, request => {
+            AsyncGPUReadback.Request(_rt, 0, request =>
+            {
                 if (request.hasError)
                 {
                 }

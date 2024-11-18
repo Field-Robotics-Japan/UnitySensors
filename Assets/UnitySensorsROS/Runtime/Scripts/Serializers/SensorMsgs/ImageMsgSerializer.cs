@@ -24,26 +24,31 @@ namespace UnitySensors.ROS.Serializer.Sensor
 
         [SerializeField]
         private HeaderSerializer _header;
-        [SerializeField, Range(1, 100)]
-        private int quality = 75;
 
         private ITextureInterface _sourceInterface;
+        private RenderTexture _tempRT;
 
         public override void Init()
         {
             base.Init();
             _header.Init();
             _sourceInterface = _source as ITextureInterface;
-            // _msg.format = "jpeg";
             // FIXME: Depth image should not be compressed as jpeg.
             //        It is normally encoded as 32FC1 and 16UC1, whose units are meters and millimeters respectively.
             //        So we need a new serializer for depth images.
+
+            _msg.encoding = "rgba8";
+            _msg.is_bigendian = 0;
+            _msg.width = (uint)(_sourceTexture == SourceTexture.Texture0 ? _sourceInterface.texture0 : _sourceInterface.texture1).width;
+            _msg.height = (uint)(_sourceTexture == SourceTexture.Texture0 ? _sourceInterface.texture0 : _sourceInterface.texture1).height;
+            _msg.step = 1 * 4 * _msg.width;
         }
 
         public override ImageMsg Serialize()
         {
             _msg.header = _header.Serialize();
-            _msg.data = (_sourceTexture == SourceTexture.Texture0 ? _sourceInterface.texture0 : _sourceInterface.texture1).EncodeToJPG(quality);
+            // FIXME: The image is upside down.
+            _msg.data = (_sourceTexture == SourceTexture.Texture0 ? _sourceInterface.texture0 : _sourceInterface.texture1).GetRawTextureData();
             return _msg;
         }
     }
