@@ -43,6 +43,7 @@ namespace UnitySensors.Sensor.Camera
             {
                 if (request.hasError)
                 {
+                    Debug.LogError("GPU readback error detected.");
                 }
                 else
                 {

@@ -5,6 +5,9 @@ using RosMessageTypes.Sensor;
 using UnitySensors.Attribute;
 using UnitySensors.Interface.Sensor;
 using UnitySensors.ROS.Serializer.Std;
+using UnitySensors.ROS.Utils.Image;
+using Unity.Jobs;
+using Unity.Collections;
 
 namespace UnitySensors.ROS.Serializer.Sensor
 {
@@ -16,26 +19,6 @@ namespace UnitySensors.ROS.Serializer.Sensor
             Texture0,
             Texture1
         }
-        private enum Encoding
-        {
-            _RGB8,
-            _32FC1,
-            _16UC1
-        }
-        private struct ColorRGB24
-        {
-            public byte r;
-            public byte g;
-            public byte b;
-        }
-        private struct Color32FC1
-        {
-            public float r;
-        }
-        private struct Color16UC1
-        {
-            public ushort r;
-        }
 
         [SerializeField, Interface(typeof(ITextureInterface))]
         private Object _source;
@@ -43,18 +26,15 @@ namespace UnitySensors.ROS.Serializer.Sensor
         private SourceTexture _sourceTexture;
         [SerializeField]
         private Encoding _encoding;
+        [SerializeField, Attribute.ReadOnly]
+        private Texture2D _encodedTexture;
 
         [SerializeField]
         private HeaderSerializer _header;
 
         private ITextureInterface _sourceInterface;
-        private Texture2D _flippedTexture;
-        private float distanceFactor;
+        private ImageEncodeJob _imageEncodeJob;
 
-        private Color[] _sourcePixels;
-        private ColorRGB24[] _targetPixelsRGB24;
-        private Color32FC1[] _targetPixels32FC1;
-        private Color16UC1[] _targetPixels16UC1;
 
         public override void Init()
         {
@@ -81,15 +61,31 @@ namespace UnitySensors.ROS.Serializer.Sensor
                     _msg.encoding = "32FC1";
                     bytesPerPixel = 1 * 4;
                     textureFormat = TextureFormat.RFloat;
-                    distanceFactor = _sourceInterface.texture0FarClipPlane;
-                    _targetPixels32FC1 = new Color32FC1[width * height];
+                    float distanceFactor = _sourceInterface.texture0FarClipPlane;
+                    _imageEncodeJob = new()
+                    {
+                        width = width,
+                        height = height,
+                        distanceFactor = distanceFactor,
+                        encoding = _encoding,
+                        targetTexture16UC1 = new NativeArray<Color16UC1>(0, Allocator.Persistent),
+                        targetTextureRGB8 = new NativeArray<ColorRGB8>(0, Allocator.Persistent)
+                    };
                     break;
                 case Encoding._16UC1:
                     _msg.encoding = "16UC1";
                     bytesPerPixel = 1 * 2;
                     textureFormat = TextureFormat.R16;
                     distanceFactor = _sourceInterface.texture0FarClipPlane * 1000;
-                    _targetPixels16UC1 = new Color16UC1[width * height];
+                    _imageEncodeJob = new()
+                    {
+                        width = width,
+                        height = height,
+                        distanceFactor = distanceFactor,
+                        encoding = _encoding,
+                        targetTexture32FC1 = new NativeArray<Color32FC1>(0, Allocator.Persistent),
+                        targetTextureRGB8 = new NativeArray<ColorRGB8>(0, Allocator.Persistent)
+                    };
                     break;
                 case Encoding._RGB8:
                 default:
@@ -97,10 +93,17 @@ namespace UnitySensors.ROS.Serializer.Sensor
                     bytesPerPixel = 3 * 1;
                     textureFormat = TextureFormat.RGB24;
                     distanceFactor = 1;
-                    _targetPixelsRGB24 = new ColorRGB24[width * height];
+                    _imageEncodeJob = new()
+                    {
+                        width = width,
+                        height = height,
+                        distanceFactor = distanceFactor,
+                        encoding = _encoding,
+                        targetTexture32FC1 = new NativeArray<Color32FC1>(0, Allocator.Persistent),
+                        targetTexture16UC1 = new NativeArray<Color16UC1>(0, Allocator.Persistent),
+                    };
                     break;
             }
-            _sourcePixels = new Color[width * height];
 
             _msg.is_bigendian = 0;
             _msg.width = (uint)width;
@@ -108,7 +111,7 @@ namespace UnitySensors.ROS.Serializer.Sensor
             _msg.step = (uint)(bytesPerPixel * width);
             _msg.data = new byte[_msg.step * height];
 
-            _flippedTexture = new Texture2D(width, height, textureFormat, false);
+            _encodedTexture = new Texture2D(width, height, textureFormat, false);
 
         }
 
@@ -117,58 +120,37 @@ namespace UnitySensors.ROS.Serializer.Sensor
             _msg.header = _header.Serialize();
             var texture = _sourceTexture == SourceTexture.Texture0 ? _sourceInterface.texture0 : _sourceInterface.texture1;
 
-            FlipTextureVertically(texture, _flippedTexture);
-
-            // Manually copy the data to the message to avoid GC allocation
-            _flippedTexture.GetRawTextureData<byte>().CopyTo(_msg.data);
-            return _msg;
-        }
-        private void FlipTextureVertically(Texture2D sourceTexture, Texture2D targetTexture)
-        {
-            // TODO: Use shader or jobs to flip the texture
-            int width = sourceTexture.width;
-            int height = sourceTexture.height;
-
-            // Manually copy the data to the message to avoid GC allocation
-            sourceTexture.GetPixelData<Color>(0).CopyTo(_sourcePixels);
+            _imageEncodeJob.sourceTextureRawData = texture.GetRawTextureData<Color>();
 
             switch (_encoding)
             {
                 case Encoding._32FC1:
-                    for (int j = 0; j < height; j++)
-                    {
-                        for (int i = 0; i < width; i++)
-                        {
-                            _targetPixels32FC1[j * width + i].r = _sourcePixels[(height - j - 1) * width + i].r * distanceFactor;
-                        }
-                    }
-                    targetTexture.SetPixelData(_targetPixels32FC1, 0);
+                    _imageEncodeJob.targetTexture32FC1 = _encodedTexture.GetRawTextureData<Color32FC1>();
                     break;
                 case Encoding._16UC1:
-                    for (int j = 0; j < height; j++)
-                    {
-                        for (int i = 0; i < width; i++)
-                        {
-                            _targetPixels16UC1[j * width + i].r = (ushort)(_sourcePixels[(height - j - 1) * width + i].r * distanceFactor);
-                        }
-                    }
-                    targetTexture.SetPixelData(_targetPixels16UC1, 0);
+                    _imageEncodeJob.targetTexture16UC1 = _encodedTexture.GetRawTextureData<Color16UC1>();
                     break;
                 case Encoding._RGB8:
                 default:
-                    for (int j = 0; j < height; j++)
-                    {
-                        for (int i = 0; i < width; i++)
-                        {
-                            _targetPixelsRGB24[j * width + i].r = (byte)(_sourcePixels[(height - j - 1) * width + i].r * 255);
-                            _targetPixelsRGB24[j * width + i].g = (byte)(_sourcePixels[(height - j - 1) * width + i].g * 255);
-                            _targetPixelsRGB24[j * width + i].b = (byte)(_sourcePixels[(height - j - 1) * width + i].b * 255);
-                        }
-                    }
-                    targetTexture.SetPixelData(_targetPixelsRGB24, 0);
+                    _imageEncodeJob.targetTextureRGB8 = _encodedTexture.GetRawTextureData<ColorRGB8>();
                     break;
             }
-            targetTexture.Apply();
+
+            _imageEncodeJob.Schedule(texture.width * texture.height, 1024).Complete();
+
+            _encodedTexture.Apply();
+
+            // Manually copy the data to the message to avoid GC allocation
+            _encodedTexture.GetRawTextureData<byte>().CopyTo(_msg.data);
+            return _msg;
+        }
+
+        public override void OnDestroy()
+        {
+            base.OnDestroy();
+            _imageEncodeJob.targetTexture32FC1.Dispose();
+            _imageEncodeJob.targetTexture16UC1.Dispose();
+            _imageEncodeJob.targetTextureRGB8.Dispose();
         }
     }
 }

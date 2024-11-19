@@ -125,7 +125,7 @@ MonoBehaviour:
     _source: {fileID: 4853532333615571030}
     _header:
       _source: {fileID: 4853532333615571030}
-      _frame_id: /camera_frame
+      _frame_id: camera_frame
 --- !u!114 &9201004833233192004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
   _serializer:
     _header:
       _source: {fileID: 4853532333615571030}
-      _frame_id: /camera_frame
+      _frame_id: camera_frame
   _source: {fileID: 4853532333615571030}
 --- !u!114 &7171801529083048031
 MonoBehaviour:
@@ -165,4 +165,5 @@ MonoBehaviour:
     _encoding: 2
     _header:
       _source: {fileID: 4853532333615571030}
-      _frame_id: /camera_frame
+      _frame_id: camera_frame
+    _encodedTexture: {fileID: 0}

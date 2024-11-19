@@ -147,8 +147,8 @@ namespace UnitySensors.Sensor.LiDAR
         {
             if (!LoadTexture()) return;
 
-            JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(pointsNum, 1);
-            _jobHandle = _textureToPointsJob.Schedule(pointsNum, 1, updateGaussianNoisesJobHandle);
+            JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(pointsNum, 1024);
+            _jobHandle = _textureToPointsJob.Schedule(pointsNum, 1024, updateGaussianNoisesJobHandle);
 
             JobHandle.ScheduleBatchedJobs();
             _jobHandle.Complete();
@@ -166,6 +166,7 @@ namespace UnitySensors.Sensor.LiDAR
             {
                 if (request.hasError)
                 {
+                    Debug.LogError("GPU readback error detected.");
                 }
                 else
                 {

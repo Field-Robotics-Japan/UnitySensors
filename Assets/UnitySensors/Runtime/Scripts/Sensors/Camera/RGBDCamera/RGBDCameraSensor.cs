@@ -130,8 +130,8 @@ namespace UnitySensors.Sensor.Camera
         {
             if (!LoadDepthTexture() || !LoadColorTexture()) return;
 
-            JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(_pointsNum, 1);
-            _jobHandle = _textureToPointsJob.Schedule(_pointsNum, 1, updateGaussianNoisesJobHandle);
+            JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(_pointsNum, 1024);
+            _jobHandle = _textureToPointsJob.Schedule(_pointsNum, 1024, updateGaussianNoisesJobHandle);
             JobHandle.ScheduleBatchedJobs();
             _jobHandle.Complete();
 
@@ -146,6 +146,7 @@ namespace UnitySensors.Sensor.Camera
             {
                 if (request.hasError)
                 {
+                    Debug.LogError("GPU readback error detected.");
                 }
                 else
                 {
@@ -166,6 +167,7 @@ namespace UnitySensors.Sensor.Camera
             {
                 if (request.hasError)
                 {
+                    Debug.LogError("GPU readback error detected.");
                 }
                 else
                 {

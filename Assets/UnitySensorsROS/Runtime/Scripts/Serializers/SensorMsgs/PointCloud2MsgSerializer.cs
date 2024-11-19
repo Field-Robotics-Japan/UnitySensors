@@ -1,6 +1,5 @@
 using UnityEngine;
 using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
 using Unity.Jobs;
 using RosMessageTypes.Sensor;
 
@@ -61,11 +60,8 @@ namespace UnitySensors.ROS.Serializer.PointCloud
         {
             _msg.header = _header.Serialize();
 
-            unsafe
-            {
-                UnsafeUtility.MemCpy(NativeArrayUnsafeUtility.GetUnsafePtr(_data), NativeArrayUnsafeUtility.GetUnsafePtr(_sourceInterface.pointCloud.points), _data.Length);
-            }
-            _jobHandle = _invertXJob.Schedule(_pointsNum, 1);
+            _sourceInterface.pointCloud.points.Reinterpret<byte>(PointUtilitiesSO.pointDataSizes[typeof(T)]).CopyTo(_data);
+            _jobHandle = _invertXJob.Schedule(_pointsNum, 1024);
             _jobHandle.Complete();
 
             _data.CopyTo(_msg.data);
