@@ -36,7 +36,7 @@ namespace UnitySensors.ROS.Serializer.PointCloud
             _header.Init();
 
             _pointsNum = _sourceInterface.pointCloud.points.Length;
-            int sizeOfPoint = PointUtilities.pointDataSizes[typeof(T)];
+            int sizeOfPoint = PointUtilitiesSO.pointDataSizes[typeof(T)];
             int dataSize = _pointsNum * sizeOfPoint;
 
             _msg.height = 1;
@@ -60,7 +60,7 @@ namespace UnitySensors.ROS.Serializer.PointCloud
         public override PointCloud2Msg Serialize()
         {
             _msg.header = _header.Serialize();
-            
+
             unsafe
             {
                 UnsafeUtility.MemCpy(NativeArrayUnsafeUtility.GetUnsafePtr(_data), NativeArrayUnsafeUtility.GetUnsafePtr(_sourceInterface.pointCloud.points), _data.Length);
@@ -69,7 +69,7 @@ namespace UnitySensors.ROS.Serializer.PointCloud
             _jobHandle.Complete();
 
             _data.CopyTo(_msg.data);
-            
+
             return _msg;
         }
 
