@@ -16,16 +16,18 @@ namespace UnitySensors.Sensor.LiDAR
         public Matrix4x4 localToWorldMatrix;
         [ReadOnly]
         public float maxRange;
-        [ReadOnly, NativeDisableParallelForRestriction]
+        [ReadOnly]
+        public QueryParameters queryParameters;
+        [ReadOnly]
         public NativeArray<float3> directions;
         [ReadOnly]
         public int indexOffset;
+        [WriteOnly]
         public NativeArray<RaycastCommand> raycastCommands;
 
         public void Execute(int index)
         {
-            // FIXME: Update the api
-            raycastCommands[index] = new RaycastCommand(origin, localToWorldMatrix * (Vector3)directions[index + indexOffset], maxRange);
+            raycastCommands[index] = new(origin, localToWorldMatrix * (Vector3)directions[index + indexOffset], queryParameters, maxRange);
         }
     }
 }

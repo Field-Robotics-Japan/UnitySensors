@@ -35,9 +35,6 @@ namespace UnitySensors.ROS.Serializer.Sensor
             _header.Init();
             _sourceInterface = _source as ITextureInterface;
             _msg.format = "jpeg";
-            // FIXME: Depth image should not be compressed as jpeg.
-            //        It is normally encoded as 32FC1 and 16UC1, whose units are meters and millimeters respectively.
-            //        So we need a new serializer for depth images.
         }
 
         public override CompressedImageMsg Serialize()

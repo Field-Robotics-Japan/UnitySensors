@@ -33,9 +33,8 @@ namespace UnitySensors.Sensor.LiDAR
 
         public void Execute(int index)
         {
-            // TODO: there is no need to invert the pixel color
             int pixelIndex = pixelIndices[index + indexOffset];
-            float distance = (1.0f - Mathf.Clamp01(pixels.AsReadOnly()[pixelIndex].r)) * far;
+            float distance = pixels.AsReadOnly()[pixelIndex].r * far;
             float distance_noised = distance + noises[index];
             distance = (near < distance && distance < far && near < distance_noised && distance_noised < far) ? distance_noised : 0;
             PointXYZI point = new PointXYZI()

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6928715047789551323}
   - component: {fileID: 4414791596585746528}
   - component: {fileID: 2224187045829796718}
-  - component: {fileID: 6110166055807567966}
+  - component: {fileID: 6818158337698568988}
   - component: {fileID: 8736958369943202624}
   m_Layer: 0
   m_Name: RGBDCamera_ros
@@ -146,7 +146,7 @@ MonoBehaviour:
       _source: {fileID: 6928715047789551323}
       _frame_id: /camera_frame
   _source: {fileID: 6928715047789551323}
---- !u!114 &6110166055807567966
+--- !u!114 &6818158337698568988
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,18 +155,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 4414791596585746458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b474a6242e811f04488e3cb67b65dd35, type: 3}
+  m_Script: {fileID: 11500000, guid: e226440246ae84f438f484a93cb23d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 10
-  _topicName: /camera/depth/image/compressed
+  _topicName: /camera/depth/image
   _serializer:
     _source: {fileID: 6928715047789551323}
     _sourceTexture: 0
+    _encoding: 2
     _header:
       _source: {fileID: 6928715047789551323}
       _frame_id: /camera_frame
-    quality: 75
 --- !u!114 &8736958369943202624
 MonoBehaviour:
   m_ObjectHideFlags: 0

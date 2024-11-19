@@ -129,6 +129,7 @@ namespace UnitySensors.Sensor.Camera
             {
                 if (request.hasError)
                 {
+                    Debug.LogError("GPU readback error detected.");
                 }
                 else
                 {
@@ -138,6 +139,7 @@ namespace UnitySensors.Sensor.Camera
                     result = true;
                 }
             });
+            // TODO: Use coroutine to wait for the request
             AsyncGPUReadback.WaitAllRequests();
             return result;
         }

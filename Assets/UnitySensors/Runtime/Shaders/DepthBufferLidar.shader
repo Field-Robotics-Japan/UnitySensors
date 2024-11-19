@@ -55,8 +55,7 @@ Shader "UnitySensors/DepthBufferLidar"
                 float depth01 = Linear01Depth(tex2D(_CameraDepthTexture, float2 (i.uv.x, (i.uv.y - _Y_MIN) * _Y_COEF)).r);
                 float3 viewPos = (i.viewDir.xyz / i.viewDir.w) * depth01;
                 
-                // TODO: there is no need to invert the pixel color
-                float distance = 1.0f - length(viewPos) / _F;
+                float distance = length(viewPos) / _F;
                 return float4(distance, distance, distance, 1.0f);
             }
             ENDCG
