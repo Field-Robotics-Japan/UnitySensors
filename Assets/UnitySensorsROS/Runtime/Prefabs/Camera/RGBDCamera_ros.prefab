@@ -126,7 +126,7 @@ MonoBehaviour:
     _source: {fileID: 6928715047789551323}
     _header:
       _source: {fileID: 6928715047789551323}
-      _frame_id: /camera_frame
+      _frame_id: camera_frame
 --- !u!114 &2224187045829796718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,9 +164,10 @@ MonoBehaviour:
     _source: {fileID: 6928715047789551323}
     _sourceTexture: 0
     _encoding: 2
+    _encodedTexture: {fileID: 0}
     _header:
       _source: {fileID: 6928715047789551323}
-      _frame_id: /camera_frame
+      _frame_id: camera_frame
 --- !u!114 &8736958369943202624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,5 +187,5 @@ MonoBehaviour:
     _sourceTexture: 1
     _header:
       _source: {fileID: 6928715047789551323}
-      _frame_id: /camera_frame
+      _frame_id: camera_frame
     quality: 75

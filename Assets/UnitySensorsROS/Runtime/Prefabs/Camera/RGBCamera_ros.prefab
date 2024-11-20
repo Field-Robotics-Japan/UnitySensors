@@ -119,7 +119,7 @@ MonoBehaviour:
     _source: {fileID: 2016422477619200576}
     _header:
       _source: {fileID: 2016422477619200576}
-      _frame_id: /camera_frame
+      _frame_id: camera_frame
 --- !u!114 &7476313626036288691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,5 +139,5 @@ MonoBehaviour:
     _sourceTexture: 0
     _header:
       _source: {fileID: 2016422477619200576}
-      _frame_id: /camera_frame
+      _frame_id: camera_frame
     quality: 75

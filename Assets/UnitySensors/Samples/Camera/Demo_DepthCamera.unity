@@ -794,11 +794,6 @@ PrefabInstance:
       propertyPath: _maxRange
       value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 1105687583338018398, guid: 20f112f7f4e74c84693eb6c82e49358f,
-        type: 3}
-      propertyPath: _gaussianNoiseSigma
-      value: 0.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

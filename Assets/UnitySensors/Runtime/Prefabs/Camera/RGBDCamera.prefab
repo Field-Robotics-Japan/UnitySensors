@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4070371534656761714}
   - component: {fileID: 4022873546115888586}
   - component: {fileID: 421189727119020206}
+  - component: {fileID: 4330187045351998600}
   m_Layer: 0
   m_Name: RGBDCamera
   m_TagString: Untagged
@@ -118,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3dffef534585740aa9f93736bdd5ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pointUtilitiesSO: {fileID: 11400000, guid: 5e210d04f3c81dc4986b2270af79835f, type: 2}
   _source: {fileID: 4070371534656761714}
 --- !u!114 &421189727119020206
 MonoBehaviour:
@@ -133,4 +135,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _source: {fileID: 4070371534656761714}
   _sourceTexture: 0
+  _image: {fileID: 0}
+--- !u!114 &4330187045351998600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785895639420286579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5202acb8ddfd0c546b69f23eb10b4e60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _source: {fileID: 4070371534656761714}
+  _sourceTexture: 1
   _image: {fileID: 0}
