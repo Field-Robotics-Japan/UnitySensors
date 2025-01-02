@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 4414791596585746462}
   - component: {fileID: 6928715047789551323}
   - component: {fileID: 4414791596585746528}
+  - component: {fileID: 4599957145802266335}
   - component: {fileID: 2224187045829796718}
   - component: {fileID: 6818158337698568988}
   - component: {fileID: 8736958369943202624}
+  - component: {fileID: 2416155857216474984}
   m_Layer: 0
   m_Name: RGBDCamera_ros
   m_TagString: Untagged
@@ -108,6 +110,7 @@ MonoBehaviour:
   _gaussianNoiseSigma: 0
   _depthCameraMat: {fileID: -876546973899608171, guid: a3c68fd340741ee4597690d59d7509a6,
     type: 3}
+  _convertToPointCloud: 0
 --- !u!114 &4414791596585746528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +124,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 10
-  _topicName: /camera/info
+  _topicName: /camera/color/camera_info
+  _serializer:
+    _source: {fileID: 6928715047789551323}
+    _header:
+      _source: {fileID: 6928715047789551323}
+      _frame_id: camera_frame
+--- !u!114 &4599957145802266335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4414791596585746458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca85518969b9bf94aa9948188d795075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _frequency: 10
+  _topicName: /camera/depth/camera_info
   _serializer:
     _source: {fileID: 6928715047789551323}
     _header:
@@ -134,7 +156,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4414791596585746458}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24143da40ec715f40bf587d63ce67ed2, type: 3}
   m_Name: 
@@ -144,7 +166,7 @@ MonoBehaviour:
   _serializer:
     _header:
       _source: {fileID: 6928715047789551323}
-      _frame_id: /camera_frame
+      _frame_id: camera_frame
   _source: {fileID: 6928715047789551323}
 --- !u!114 &6818158337698568988
 MonoBehaviour:
@@ -189,3 +211,18 @@ MonoBehaviour:
       _source: {fileID: 6928715047789551323}
       _frame_id: camera_frame
     quality: 75
+--- !u!114 &2416155857216474984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4414791596585746458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a6512c6d49c2244a1a77e382c678b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _frequency: 10
+  _frame_id: camera_frame
+  _children: []

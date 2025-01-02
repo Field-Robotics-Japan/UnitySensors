@@ -25,6 +25,8 @@ namespace UnitySensors.Sensor.Camera
         private float _gaussianNoiseSigma = 0.0f;
         [SerializeField]
         private Material _depthCameraMat;
+        [SerializeField]
+        private bool _convertToPointCloud = false;
 
         private UnityEngine.Camera _camera;
         private RenderTexture _rt = null;
@@ -48,6 +50,7 @@ namespace UnitySensors.Sensor.Camera
         public int pointsNum { get => _pointsNum; }
 
         public float texture0FarClipPlane { get => _camera.farClipPlane; }
+        public bool convertToPointCloud { get => _convertToPointCloud; set => _convertToPointCloud = value; }
 
         protected override void Init()
         {
@@ -61,8 +64,11 @@ namespace UnitySensors.Sensor.Camera
 
             _texture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBAFloat, false);
 
-            SetupDirections();
-            SetupJob();
+            if (_convertToPointCloud)
+            {
+                SetupDirections();
+                SetupJob();
+            }
         }
 
         private void SetupDirections()
@@ -113,10 +119,13 @@ namespace UnitySensors.Sensor.Camera
         {
             if (!LoadTexture()) return;
 
-            JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(_pointsNum, 1024);
-            _jobHandle = _textureToPointsJob.Schedule(_pointsNum, 1024, updateGaussianNoisesJobHandle);
-            JobHandle.ScheduleBatchedJobs();
-            _jobHandle.Complete();
+            if (_convertToPointCloud)
+            {
+                JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(_pointsNum, 1024);
+                _jobHandle = _textureToPointsJob.Schedule(_pointsNum, 1024, updateGaussianNoisesJobHandle);
+                JobHandle.ScheduleBatchedJobs();
+                _jobHandle.Complete();
+            }
 
             if (onSensorUpdated != null)
                 onSensorUpdated.Invoke();

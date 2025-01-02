@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4853532333615570985}
   - component: {fileID: 9201004833233192004}
   - component: {fileID: 7171801529083048031}
+  - component: {fileID: 3984213723041468144}
   m_Layer: 0
   m_Name: DepthCamera_ros
   m_TagString: Untagged
@@ -107,6 +108,7 @@ MonoBehaviour:
   _gaussianNoiseSigma: 0
   _depthCameraMat: {fileID: -876546973899608171, guid: a3c68fd340741ee4597690d59d7509a6,
     type: 3}
+  _convertToPointCloud: 0
 --- !u!114 &4853532333615570985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 10
-  _topicName: /camera/depth/info
+  _topicName: /camera/depth/camera_info
   _serializer:
     _source: {fileID: 4853532333615571030}
     _header:
@@ -133,7 +135,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4853532333615571027}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4840ee4519c33a142a3fb06d6d6b3b50, type: 3}
   m_Name: 
@@ -163,7 +165,22 @@ MonoBehaviour:
     _source: {fileID: 4853532333615571030}
     _sourceTexture: 0
     _encoding: 2
+    _encodedTexture: {fileID: 0}
     _header:
       _source: {fileID: 4853532333615571030}
       _frame_id: camera_frame
-    _encodedTexture: {fileID: 0}
+--- !u!114 &3984213723041468144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4853532333615571027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a6512c6d49c2244a1a77e382c678b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _frequency: 10
+  _frame_id: camera_frame
+  _children: []

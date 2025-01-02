@@ -36,7 +36,7 @@ namespace UnitySensors.ROS.Serializer.Tf2
             foreach (TFData data in tfData)
             {
                 TransformStampedMsg transform = new TransformStampedMsg();
-                transform.header = new HeaderMsg();
+                transform.header = new();
                 transform.header.stamp = headerMsg.stamp;
 #if ROS2
 #else

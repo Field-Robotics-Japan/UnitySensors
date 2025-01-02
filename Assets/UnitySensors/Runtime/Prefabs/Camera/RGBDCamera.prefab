@@ -107,6 +107,7 @@ MonoBehaviour:
   _gaussianNoiseSigma: 0
   _depthCameraMat: {fileID: -876546973899608171, guid: a3c68fd340741ee4597690d59d7509a6,
     type: 3}
+  _convertToPointCloud: 0
 --- !u!114 &4022873546115888586
 MonoBehaviour:
   m_ObjectHideFlags: 0
