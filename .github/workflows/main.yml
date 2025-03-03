@@ -1,4 +1,4 @@
-name: Unity 2022.3.x Test Runner
+name: CI check for Unity 2021.3.x, 2022.3.x
 
 on:
   pull_request:
@@ -15,6 +15,7 @@ jobs:
       fail-fast: false
       matrix:
         unityVersion:
+          - 2021.3.42f1
           - 2022.3.42f1
 
     steps:
@@ -23,10 +24,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           lfs: true  # Large File Storageが必要な場合に true を指定
-
+          
       # Unity Test Runnerを実行 (エディットモードテスト)
       - name: Run Edit Mode Tests
-        uses: game-ci/unity-test-runner@v4
+        uses: game-ci/unity-test-runner@v4.3.1
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
@@ -46,7 +47,7 @@ jobs:
 
       # Unity Test Runnerを実行 (プレイモードテスト)
       - name: Run Play Mode Tests
-        uses: game-ci/unity-test-runner@v4
+        uses: game-ci/unity-test-runner@v4.3.1
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
