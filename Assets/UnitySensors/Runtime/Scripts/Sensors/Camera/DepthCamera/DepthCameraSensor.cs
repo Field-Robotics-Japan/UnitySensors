@@ -37,7 +37,7 @@ namespace UnitySensors.Sensor.Camera
             base.Init();
 
             _mat = new Material(Shader.Find("UnitySensors/Color2Depth"));
-            float f = m_camera.farClipPlane;
+            float f = sensorCamera.farClipPlane;
             _mat.SetFloat("_F", f);
 
             SetupDirections();
@@ -46,17 +46,17 @@ namespace UnitySensors.Sensor.Camera
 
         private void SetupDirections()
         {
-            _pointsNum = resolution.x * resolution.y;
+            _pointsNum = width * height;
 
             _directions = new NativeArray<float3>(_pointsNum, Allocator.Persistent);
 
-            float z = resolution.y * 0.5f / Mathf.Tan(m_camera.fieldOfView * 0.5f * Mathf.Deg2Rad);
-            for (int y = 0; y < resolution.y; y++)
+            float z = height * 0.5f / Mathf.Tan(sensorCamera.fieldOfView * 0.5f * Mathf.Deg2Rad);
+            for (int y = 0; y < height; y++)
             {
-                for (int x = 0; x < resolution.x; x++)
+                for (int x = 0; x < width; x++)
                 {
-                    Vector3 vec = new Vector3(-resolution.x / 2 + x, -resolution.y / 2 + y, z);
-                    _directions[y * resolution.x + x] = vec.normalized;
+                    Vector3 vec = new Vector3(-width / 2 + x, -height / 2 + y, z);
+                    _directions[y * width + x] = vec.normalized;
                 }
             }
         }
@@ -79,12 +79,12 @@ namespace UnitySensors.Sensor.Camera
 
             _textureToPointsJob = new ITextureToPointsJob()
             {
-                near= m_camera.nearClipPlane,
-                far = m_camera.farClipPlane,
+                near       = sensorCamera.nearClipPlane,
+                far        = sensorCamera.farClipPlane,
                 directions = _directions,
-                pixels = texture.GetPixelData<Color>(0),
-                noises = _noises,
-                points = _pointCloud.points
+                pixels     = texture.GetPixelData<Color>(0),
+                noises     = _noises,
+                points     = _pointCloud.points
             };
         }
 
@@ -97,8 +97,7 @@ namespace UnitySensors.Sensor.Camera
             JobHandle.ScheduleBatchedJobs();
             _jobHandle.Complete();
 
-            if (onSensorUpdated != null)
-                onSensorUpdated.Invoke();
+            onSensorUpdated?.Invoke();
         }
 
         protected override void OnSensorDestroy()

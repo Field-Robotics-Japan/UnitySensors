@@ -19,7 +19,7 @@ namespace UnitySensors.ROS.Serializer.Camera
 
         public override CameraInfoMsg Serialize()
         {
-            _msg = CameraInfoGenerator.ConstructCameraInfoMessage(sensor.m_camera, _header.Serialize());
+            _msg = CameraInfoGenerator.ConstructCameraInfoMessage(sensor.sensorCamera, _header.Serialize());
             return _msg;
         }
     }
