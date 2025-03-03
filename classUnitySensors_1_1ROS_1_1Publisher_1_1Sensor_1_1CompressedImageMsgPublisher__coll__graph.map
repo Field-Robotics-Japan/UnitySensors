@@ -1,4 +1,5 @@
 <map id="UnitySensors.ROS.Publisher.Sensor.CompressedImageMsgPublisher" name="UnitySensors.ROS.Publisher.Sensor.CompressedImageMsgPublisher">
-<area shape="rect" id="node1" title=" " alt="" coords="27,95,306,136"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Publisher_1_1RosMsgPublisher.html" title=" " alt="" coords="5,5,328,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="27,93,306,133"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1ROS_1_1Publisher_1_1RosMsgPublisher.html" title=" " alt="" coords="5,5,328,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,59,169,93,164,93,164,59"/>
 </map>

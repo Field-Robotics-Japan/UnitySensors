@@ -1,7 +1,11 @@
 <map id="UnitySensors.Sensor.GroundTruth.GroundTruth" name="UnitySensors.Sensor.GroundTruth.GroundTruth">
-<area shape="rect" id="node1" title=" " alt="" coords="101,155,308,196"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="89,80,190,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,5,129,32"/>
-<area shape="rect" id="node4" href="$interfaceUnitySensors_1_1Interface_1_1Std_1_1ITimeInterface.html" title=" " alt="" coords="154,5,271,32"/>
-<area shape="rect" id="node5" href="$interfaceUnitySensors_1_1Interface_1_1Geometry_1_1IPoseInterface.html" title=" " alt="" coords="214,80,329,107"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="101,152,308,192"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="89,79,190,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,113,191,150,187,154,156,116"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,129,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="91,39,130,77,126,80,87,43"/>
+<area shape="rect" id="Node000004" href="$interfaceUnitySensors_1_1Interface_1_1Std_1_1ITimeInterface.html" title=" " alt="" coords="154,5,271,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="193,42,153,80,149,77,189,38"/>
+<area shape="rect" id="Node000005" href="$interfaceUnitySensors_1_1Interface_1_1Geometry_1_1IPoseInterface.html" title=" " alt="" coords="214,79,329,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="255,116,223,154,219,150,251,113"/>
 </map>

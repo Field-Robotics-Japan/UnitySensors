@@ -1,4 +1,5 @@
 <map id="UnitySensors.Sensor.Camera.DepthCameraSensor.OnSensorDestroy" name="UnitySensors.Sensor.Camera.DepthCameraSensor.OnSensorDestroy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,277,47"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud.html#a1b1fd1ead93387275388cfabbc68d74e" title=" " alt="" coords="325,5,549,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,277,45"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud.html#a1b1fd1ead93387275388cfabbc68d74e" title=" " alt="" coords="325,5,549,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="278,23,311,23,311,28,278,28"/>
 </map>

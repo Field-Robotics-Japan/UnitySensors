@@ -1,4 +1,5 @@
 <map id="UnitySensors.ROS.Serializer.Sensor.CompressedImageMsgSerializer.Serialize" name="UnitySensors.ROS.Serializer.Sensor.CompressedImageMsgSerializer.Serialize">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,288,61"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Std_1_1HeaderSerializer.html#a04c4771911b5d012952f2576863819c4" title=" " alt="" coords="336,13,551,54"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,288,60"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Std_1_1HeaderSerializer.html#a04c4771911b5d012952f2576863819c4" title=" " alt="" coords="336,13,551,53"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="288,30,322,30,322,35,288,35"/>
 </map>

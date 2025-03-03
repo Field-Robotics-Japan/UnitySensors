@@ -1,6 +1,10 @@
 <map id="UnitySensors.Sensor.GNSS.GeoCoordinateSystem" name="UnitySensors.Sensor.GNSS.GeoCoordinateSystem">
-<area shape="rect" id="node1" title=" " alt="" coords="681,50,880,91"/>
-<area shape="rect" id="node2" title=" " alt="" coords="391,5,515,32"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html" title="平面直角座標系と緯度経度の相互変換 参照：国土地理院の「測量計算サイト」 http://vldb.gsi.go.jp/sokuchi/surveycal..." alt="" coords="347,119,560,161"/>
-<area shape="rect" id="node4" href="$classUnitySensors_1_1DataType_1_1Geometry_1_1GeoCoordinate.html" title=" " alt="" coords="5,85,249,126"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="681,50,880,90"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="391,5,515,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="529,27,682,52,681,57,529,33"/>
+<area shape="rect" id="Node000003" href="$classUnitySensors_1_1DataType_1_1Geometry_1_1GeoCoordinate.html" title=" " alt="" coords="5,83,249,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="263,94,681,72,681,78,263,99"/>
+<area shape="rect" id="Node000004" href="$classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html" title="平面直角座標系と緯度経度の相互変換 参照：国土地理院の「測量計算サイト」 http://vldb.gsi.go.jp/sokuchi/surveycal..." alt="" coords="347,118,560,158"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="263,115,346,124,346,129,263,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="573,117,657,101,710,87,711,93,658,106,574,122"/>
 </map>

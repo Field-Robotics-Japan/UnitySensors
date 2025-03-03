@@ -1,4 +1,5 @@
 <map id="UnitySensors.Visualization.Sensor.LiDARPointCloudVisualizer.Start" name="UnitySensors.Visualization.Sensor.LiDARPointCloudVisualizer.Start">
-<area shape="rect" id="node1" title=" " alt="" coords="5,13,281,54"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1Visualization_1_1Sensor_1_1PointCloudVisualizer.html#a955d671ecdecbe536f94304499be5460" title=" " alt="" coords="329,5,532,61"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,281,53"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Visualization_1_1Sensor_1_1PointCloudVisualizer.html#a955d671ecdecbe536f94304499be5460" title=" " alt="" coords="329,5,532,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="282,30,316,30,316,35,282,35"/>
 </map>

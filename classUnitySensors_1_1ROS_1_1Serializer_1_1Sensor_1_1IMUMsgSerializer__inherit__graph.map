@@ -1,4 +1,5 @@
 <map id="UnitySensors.ROS.Serializer.Sensor.IMUMsgSerializer" name="UnitySensors.ROS.Serializer.Sensor.IMUMsgSerializer">
-<area shape="rect" id="node1" title=" " alt="" coords="10,80,217,121"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1RosMsgSerializer.html" title=" " alt="" coords="5,5,221,32"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="10,79,217,119"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1RosMsgSerializer.html" title=" " alt="" coords="5,5,221,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,44,116,79,111,79,111,44"/>
 </map>

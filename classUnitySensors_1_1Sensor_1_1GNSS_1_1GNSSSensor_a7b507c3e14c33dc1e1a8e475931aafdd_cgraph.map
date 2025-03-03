@@ -1,7 +1,11 @@
 <map id="UnitySensors.Sensor.GNSS.GNSSSensor.UpdateSensor" name="UnitySensors.Sensor.GNSS.GNSSSensor.UpdateSensor">
-<area shape="rect" id="node1" title=" " alt="" coords="5,39,204,80"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1GNSS_1_1GeoCoordinateSystem.html#a2cad29c4bdc64ecdf66ef65accacf078" title=" " alt="" coords="252,39,519,80"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#a218a7c78c01903bc82ac75c8ebf69463" title=" " alt="" coords="567,39,804,80"/>
-<area shape="rect" id="node4" href="$classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#ae34c3301d9632e6e1f1c93dfb80fb891" title=" " alt="" coords="863,5,1087,47"/>
-<area shape="rect" id="node5" href="$classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#a6d05fb6aac0fddb09ce886c0be124fc1" title=" " alt="" coords="852,71,1097,112"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,204,77"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1GNSS_1_1GeoCoordinateSystem.html#a2cad29c4bdc64ecdf66ef65accacf078" title=" " alt="" coords="252,37,519,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,55,238,55,238,60,204,60"/>
+<area shape="rect" id="Node000003" href="$classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#a218a7c78c01903bc82ac75c8ebf69463" title=" " alt="" coords="567,37,804,77"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="519,55,553,55,553,60,519,60"/>
+<area shape="rect" id="Node000004" href="$classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#ae34c3301d9632e6e1f1c93dfb80fb891" title=" " alt="" coords="863,5,1087,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="804,42,849,37,849,42,804,47"/>
+<area shape="rect" id="Node000005" href="$classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#a6d05fb6aac0fddb09ce886c0be124fc1" title=" " alt="" coords="852,69,1097,109"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="804,68,839,72,838,77,804,73"/>
 </map>

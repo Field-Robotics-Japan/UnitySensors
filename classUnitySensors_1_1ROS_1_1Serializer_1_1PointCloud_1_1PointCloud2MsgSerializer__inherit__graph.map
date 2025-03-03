@@ -1,4 +1,5 @@
 <map id="UnitySensors.ROS.Serializer.PointCloud.PointCloud2MsgSerializer&lt; T &gt;" name="UnitySensors.ROS.Serializer.PointCloud.PointCloud2MsgSerializer&lt; T &gt;">
-<area shape="rect" id="node1" title=" " alt="" coords="5,95,305,136"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1RosMsgSerializer.html" title=" " alt="" coords="42,5,269,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,93,305,133"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1RosMsgSerializer.html" title=" " alt="" coords="42,5,269,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,59,158,93,153,93,153,59"/>
 </map>

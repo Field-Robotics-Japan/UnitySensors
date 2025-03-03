@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['readme_829',['README',['../md_Assets_UnitySensors_README.html',1,'(Global Namespace)'],['../md_Assets_UnitySensorsROS_README.html',1,'(Global Namespace)'],['../md_README.html',1,'(Global Namespace)']]]
+  ['readme_0',['readme',['../md_Assets_2UnitySensors_2README.html',1,'README'],['../md_Assets_2UnitySensorsROS_2README.html',1,'README'],['../md_README.html',1,'README']]]
 ];

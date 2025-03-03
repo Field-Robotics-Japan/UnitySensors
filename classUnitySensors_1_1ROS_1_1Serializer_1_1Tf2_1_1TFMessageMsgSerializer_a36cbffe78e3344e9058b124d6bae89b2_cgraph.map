@@ -1,5 +1,8 @@
 <map id="UnitySensors.ROS.Serializer.Tf2.TFMessageMsgSerializer.Serialize" name="UnitySensors.ROS.Serializer.Tf2.TFMessageMsgSerializer.Serialize">
-<area shape="rect" id="node1" title=" " alt="" coords="5,63,273,104"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1TF_1_1TFLink.html#ac150aa1caa908f219e6ee8c70b33ad40" title=" " alt="" coords="321,29,545,71"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Std_1_1HeaderSerializer.html#a04c4771911b5d012952f2576863819c4" title=" " alt="" coords="326,95,541,136"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,61,273,101"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1TF_1_1TFLink.html#ac596d2dc1aab6ed0627a9b07b6cbd0cf" title=" " alt="" coords="321,29,545,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="273,64,307,60,308,66,274,69"/>
+<area shape="rect" id="Node000003" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Std_1_1HeaderSerializer.html#a04c4771911b5d012952f2576863819c4" title=" " alt="" coords="326,93,541,133"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="274,93,313,98,312,103,273,99"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="379,30,376,20,385,10,404,5,433,3,467,5,486,13,484,18,466,11,433,8,405,10,387,15,381,21,384,28"/>
 </map>

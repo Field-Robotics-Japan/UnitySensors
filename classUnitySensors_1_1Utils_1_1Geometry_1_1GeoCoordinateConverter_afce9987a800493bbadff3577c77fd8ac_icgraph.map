@@ -1,4 +1,5 @@
 <map id="UnitySensors.Utils.Geometry.GeoCoordinateConverter.Rad2Deg" name="UnitySensors.Utils.Geometry.GeoCoordinateConverter.Rad2Deg">
-<area shape="rect" id="node1" title=" " alt="" coords="291,5,536,47"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#aa2753676adfedda41b1bcd4243d294c3" title=" " alt="" coords="5,5,243,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="291,5,536,45"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#aa2753676adfedda41b1bcd4243d294c3" title=" " alt="" coords="5,5,243,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="277,28,243,28,243,23,277,23"/>
 </map>

@@ -45,9 +45,9 @@ var hierarchy =
       [ "UnitySensors.Sensor.Camera.RGBDCameraSensor", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html", null ]
     ] ],
     [ "UnitySensors.Interface.Sensor.PointCloud.IPointInterface", "interfaceUnitySensors_1_1Interface_1_1Sensor_1_1PointCloud_1_1IPointInterface.html", [
-      [ "UnitySensors.DataType.Sensor.PointCloud< T >.PointXYZ", "structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZ.html", null ],
-      [ "UnitySensors.DataType.Sensor.PointCloud< T >.PointXYZI", "structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZI.html", null ],
-      [ "UnitySensors.DataType.Sensor.PointCloud< T >.PointXYZRGB", "structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html", null ]
+      [ "UnitySensors.DataType.Sensor.PointCloud.PointXYZ", "structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZ.html", null ],
+      [ "UnitySensors.DataType.Sensor.PointCloud.PointXYZI", "structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZI.html", null ],
+      [ "UnitySensors.DataType.Sensor.PointCloud.PointXYZRGB", "structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html", null ]
     ] ],
     [ "UnitySensors.Interface.Geometry.IPoseInterface", "interfaceUnitySensors_1_1Interface_1_1Geometry_1_1IPoseInterface.html", [
       [ "UnitySensors.Sensor.GroundTruth.GroundTruth", "classUnitySensors_1_1Sensor_1_1GroundTruth_1_1GroundTruth.html", null ]

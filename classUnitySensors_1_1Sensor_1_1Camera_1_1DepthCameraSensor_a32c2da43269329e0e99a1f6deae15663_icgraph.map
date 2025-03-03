@@ -1,4 +1,5 @@
 <map id="UnitySensors.Sensor.Camera.DepthCameraSensor.LoadTexture" name="UnitySensors.Sensor.Camera.DepthCameraSensor.LoadTexture">
-<area shape="rect" id="node1" title=" " alt="" coords="304,5,543,47"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#aba900c14037b7c0d7790517efe8eb2a0" title=" " alt="" coords="5,5,256,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="304,5,543,45"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#aba900c14037b7c0d7790517efe8eb2a0" title=" " alt="" coords="5,5,256,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="290,28,256,28,256,23,290,23"/>
 </map>

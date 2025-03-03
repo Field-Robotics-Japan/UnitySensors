@@ -1,5 +1,7 @@
 <map id="UnitySensors.Utils.Geometry.GeoCoordinateConverter.Convert" name="UnitySensors.Utils.Geometry.GeoCoordinateConverter.Convert">
-<area shape="rect" id="node1" title=" " alt="" coords="567,5,804,47"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1GNSS_1_1GeoCoordinateSystem.html#a2cad29c4bdc64ecdf66ef65accacf078" title=" " alt="" coords="252,5,519,47"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1Sensor_1_1GNSS_1_1GNSSSensor.html#a7b507c3e14c33dc1e1a8e475931aafdd" title=" " alt="" coords="5,5,204,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="567,5,804,45"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1GNSS_1_1GeoCoordinateSystem.html#a2cad29c4bdc64ecdf66ef65accacf078" title=" " alt="" coords="252,5,519,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="553,28,519,28,519,23,553,23"/>
+<area shape="rect" id="Node000003" href="$classUnitySensors_1_1Sensor_1_1GNSS_1_1GNSSSensor.html#a7b507c3e14c33dc1e1a8e475931aafdd" title=" " alt="" coords="5,5,204,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="238,28,204,28,204,23,238,23"/>
 </map>

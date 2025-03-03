@@ -1,10 +1,17 @@
 <map id="UnitySensors.ROS.Serializer.Std.HeaderSerializer.Init" name="UnitySensors.ROS.Serializer.Std.HeaderSerializer.Init">
-<area shape="rect" id="node1" title=" " alt="" coords="356,201,563,243"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Geometry_1_1PoseStampedMsgSerializer.html#ac51c91313d17c08d87badfb13bcbd8da" title=" " alt="" coords="11,5,302,47"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1CameraInfoMsgSerializer.html#af21820d401d317037d3c620bba2aa69c" title=" " alt="" coords="28,71,285,112"/>
-<area shape="rect" id="node4" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1CompressedImageMsgSerializer.html#a32388a08cc3da75ab7cd0845801982d5" title=" " alt="" coords="5,136,308,177"/>
-<area shape="rect" id="node5" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1IMUMsgSerializer.html#a04165b8d064d58b408c65ae952c983ea" title=" " alt="" coords="53,201,260,243"/>
-<area shape="rect" id="node6" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1NavSatFixMsgSerializer.html#a2d7aa39d74d44812d6a96a77ac6456db" title=" " alt="" coords="33,267,280,308"/>
-<area shape="rect" id="node7" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#a8a8d207afb7b8ee546a1061b3eb30ef4" title=" " alt="" coords="13,332,300,373"/>
-<area shape="rect" id="node8" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Tf2_1_1TFMessageMsgSerializer.html#a54da9ac037350a765af4d94fc9599c75" title=" " alt="" coords="40,397,273,439"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="356,197,563,237"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Geometry_1_1PoseStampedMsgSerializer.html#ac51c91313d17c08d87badfb13bcbd8da" title=" " alt="" coords="11,5,302,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="435,188,382,121,347,88,307,60,281,48,283,43,309,55,350,84,386,118,440,184"/>
+<area shape="rect" id="Node000003" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1CameraInfoMsgSerializer.html#af21820d401d317037d3c620bba2aa69c" title=" " alt="" coords="28,69,285,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="421,191,368,156,307,124,272,112,274,107,309,119,371,151,424,187"/>
+<area shape="rect" id="Node000004" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1CompressedImageMsgSerializer.html#a32388a08cc3da75ab7cd0845801982d5" title=" " alt="" coords="5,133,308,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="350,197,251,176,252,171,351,192"/>
+<area shape="rect" id="Node000005" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1IMUMsgSerializer.html#a04165b8d064d58b408c65ae952c983ea" title=" " alt="" coords="53,197,260,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="342,220,260,220,260,215,342,215"/>
+<area shape="rect" id="Node000006" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1NavSatFixMsgSerializer.html#a2d7aa39d74d44812d6a96a77ac6456db" title=" " alt="" coords="33,261,280,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="351,243,252,264,251,259,350,238"/>
+<area shape="rect" id="Node000007" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#a8a8d207afb7b8ee546a1061b3eb30ef4" title=" " alt="" coords="13,325,300,365"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="424,248,371,283,309,316,274,328,272,323,307,311,368,279,421,243"/>
+<area shape="rect" id="Node000008" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Tf2_1_1TFMessageMsgSerializer.html#a54da9ac037350a765af4d94fc9599c75" title=" " alt="" coords="40,389,273,429"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="440,251,386,317,350,351,309,380,275,395,273,390,307,375,347,347,382,313,435,247"/>
 </map>

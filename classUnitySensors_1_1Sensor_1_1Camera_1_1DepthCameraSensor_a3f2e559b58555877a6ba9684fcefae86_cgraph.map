@@ -1,5 +1,7 @@
 <map id="UnitySensors.Sensor.Camera.DepthCameraSensor.Init" name="UnitySensors.Sensor.Camera.DepthCameraSensor.Init">
-<area shape="rect" id="node1" title=" " alt="" coords="5,39,220,80"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#a80eaf14f0e242e71405eb491a35cbe83" title=" " alt="" coords="268,5,531,47"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#a3d6852ac681ffc4b0bf46f97dff9d8ae" title=" " alt="" coords="291,71,507,112"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,220,77"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#a80eaf14f0e242e71405eb491a35cbe83" title=" " alt="" coords="268,5,531,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="220,43,254,39,255,44,220,48"/>
+<area shape="rect" id="Node000003" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#a3d6852ac681ffc4b0bf46f97dff9d8ae" title=" " alt="" coords="291,69,507,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="220,67,278,73,277,78,220,72"/>
 </map>

@@ -1,4 +1,5 @@
 <map id="UnitySensors.ROS.Serializer.Sensor.NavSatFixMsgSerializer.Init" name="UnitySensors.ROS.Serializer.Sensor.NavSatFixMsgSerializer.Init">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,252,47"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Std_1_1HeaderSerializer.html#a546692fc0cce043e42dbc59a91540abb" title=" " alt="" coords="300,5,507,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,252,45"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Std_1_1HeaderSerializer.html#a546692fc0cce043e42dbc59a91540abb" title=" " alt="" coords="300,5,507,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="252,23,286,23,286,28,252,28"/>
 </map>

@@ -1,4 +1,5 @@
 <map id="UnitySensors.Sensor.LiDAR.DepthBufferLiDARSensor.UpdateSensor" name="UnitySensors.Sensor.LiDAR.DepthBufferLiDARSensor.UpdateSensor">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,283,47"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1DepthBufferLiDARSensor.html#ae347942fb28488a54948cb4fd39b9d04" title=" " alt="" coords="331,5,596,47"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,283,45"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1DepthBufferLiDARSensor.html#ae347942fb28488a54948cb4fd39b9d04" title=" " alt="" coords="331,5,596,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="283,23,317,23,317,28,283,28"/>
 </map>

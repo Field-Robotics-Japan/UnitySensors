@@ -1,6 +1,9 @@
 <map id="UnitySensors.Visualization.Visualizer" name="UnitySensors.Visualization.Visualizer">
-<area shape="rect" id="node1" title=" " alt="" coords="177,39,377,80"/>
-<area shape="rect" id="node3" href="$classUnitySensors_1_1Visualization_1_1Sensor_1_1PointCloudVisualizer.html" title=" " alt="" coords="425,5,667,47"/>
-<area shape="rect" id="node4" href="$classUnitySensors_1_1Visualization_1_1Sensor_1_1TextureVisualizer.html" title=" " alt="" coords="446,71,646,112"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,46,129,73"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="177,37,377,77"/>
+<area shape="rect" id="Node000003" href="$classUnitySensors_1_1Visualization_1_1Sensor_1_1PointCloudVisualizer.html" title=" " alt="" coords="425,5,667,45"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="391,41,425,37,425,42,391,46"/>
+<area shape="rect" id="Node000004" href="$classUnitySensors_1_1Visualization_1_1Sensor_1_1TextureVisualizer.html" title=" " alt="" coords="446,69,646,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="391,68,446,75,445,80,391,74"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,45,129,70"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,55,177,55,177,60,143,60"/>
 </map>

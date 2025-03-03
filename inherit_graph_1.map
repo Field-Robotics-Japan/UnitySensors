@@ -1,4 +1,17 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,13,129,39"/>
-<area shape="rect" id="node2" href="$classUnitySensors_1_1Attribute_1_1InterfaceTypeDrawer.html" title=" " alt="" coords="177,5,408,47"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,205,120,230"/>
+<area shape="rect" id="Node000001" href="$structUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1IInvertXJob.html" title=" " alt="" coords="174,5,381,45"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="71,191,107,123,133,87,166,55,187,43,189,48,170,59,137,90,111,126,76,193"/>
+<area shape="rect" id="Node000002" href="$structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToColorPointsJob.html" title=" " alt="" coords="170,69,385,109"/>
+<area shape="poly" id="edge3_Node000000_Node000002" title=" " alt="" coords="82,192,119,155,167,119,192,107,195,112,169,124,122,159,86,196"/>
+<area shape="rect" id="Node000003" href="$structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToPointsJob.html" title=" " alt="" coords="170,133,385,173"/>
+<area shape="poly" id="edge4_Node000000_Node000003" title=" " alt="" coords="117,198,167,183,207,171,209,176,169,188,119,203"/>
+<area shape="rect" id="Node000004" href="$structUnitySensors_1_1Sensor_1_1LiDAR_1_1IRaycastHitsToPointsJob.html" title=" " alt="" coords="176,197,379,237"/>
+<area shape="poly" id="edge5_Node000000_Node000004" title=" " alt="" coords="134,215,176,215,176,220,134,220"/>
+<area shape="rect" id="Node000005" href="$structUnitySensors_1_1Sensor_1_1LiDAR_1_1ITextureToPointsJob.html" title=" " alt="" coords="176,261,379,301"/>
+<area shape="poly" id="edge6_Node000000_Node000005" title=" " alt="" coords="119,232,169,247,209,259,207,264,167,252,117,237"/>
+<area shape="rect" id="Node000006" href="$structUnitySensors_1_1Sensor_1_1LiDAR_1_1IUpdateRaycastCommandsJob.html" title=" " alt="" coords="168,325,387,365"/>
+<area shape="poly" id="edge7_Node000000_Node000006" title=" " alt="" coords="86,239,122,276,169,311,195,323,192,328,167,316,119,280,82,243"/>
+<area shape="rect" id="Node000007" href="$structUnitySensors_1_1Utils_1_1Noise_1_1IUpdateGaussianNoisesJob.html" title=" " alt="" coords="179,389,376,429"/>
+<area shape="poly" id="edge8_Node000000_Node000007" title=" " alt="" coords="76,242,111,309,137,345,170,375,189,387,187,391,166,379,133,348,107,312,71,244"/>
 </map>

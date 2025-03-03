@@ -1,9 +1,9 @@
 var structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB =
 [
-    [ "_position", "structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html#ab145ba089afc157979ea456d962a3f4a", null ],
-    [ "a", "structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html#ac618ffede56a75205071f1c944b208eb", null ],
-    [ "b", "structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html#a502087f31003a17b19446ef44b08de49", null ],
-    [ "g", "structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html#a30321f461a88dd2d8088806b6cfa3fad", null ],
-    [ "r", "structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html#a22f666b254368bcad3304fe54f4b5d19", null ],
-    [ "position", "structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html#ae174900cc0d84fda9610b7f25e0d40af", null ]
+    [ "_position", "structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html#a3ffb6fdce6acc6bcd5e96f27520d2805", null ],
+    [ "a", "structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html#add31f878939b5ec098f21bd0d3ccf282", null ],
+    [ "b", "structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html#ae35e33f0ed13bc77535a9c460cb8c4d7", null ],
+    [ "g", "structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html#a728b6f906a56f5a340a81542c38c9319", null ],
+    [ "r", "structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html#a722044af4f8246cc157cfaac849505d6", null ],
+    [ "position", "structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html#ac44204439b8eb1d05a5cbe3a5aa678ab", null ]
 ];
