@@ -13,6 +13,7 @@ namespace UnitySensors.Sensor.LiDAR
 {
     public class RaycastLiDARSensor : LiDARSensor
     {
+        [SerializeField] private LayerMask _raycastLayerMask = 1;
         private Transform _transform;
 
         private JobHandle _jobHandle;
@@ -24,7 +25,7 @@ namespace UnitySensors.Sensor.LiDAR
         private NativeArray<float3> _directions;
         private NativeArray<RaycastCommand> _raycastCommands;
         private NativeArray<RaycastHit> _raycastHits;
-        
+
         private NativeArray<float> _noises;
 
         protected override void Init()
@@ -40,7 +41,7 @@ namespace UnitySensors.Sensor.LiDAR
         private void LoadScanData()
         {
             _directions = new NativeArray<float3>(scanPattern.size * 2, Allocator.Persistent);
-            for(int i = 0; i < scanPattern.size; i++)
+            for (int i = 0; i < scanPattern.size; i++)
             {
                 _directions[i] = _directions[i + scanPattern.size] = scanPattern.scans[i];
             }
@@ -57,9 +58,11 @@ namespace UnitySensors.Sensor.LiDAR
                 origin = _transform.position,
                 localToWorldMatrix = _transform.localToWorldMatrix,
                 maxRange = maxRange,
+                queryParameters = new() { layerMask = _raycastLayerMask },
                 directions = _directions,
                 indexOffset = 0,
-                raycastCommands = _raycastCommands
+                raycastCommands = _raycastCommands,
+
             };
 
             _updateGaussianNoisesJob = new IUpdateGaussianNoisesJob()
@@ -88,10 +91,10 @@ namespace UnitySensors.Sensor.LiDAR
             _updateRaycastCommandsJob.origin = _transform.position;
             _updateRaycastCommandsJob.localToWorldMatrix = _transform.localToWorldMatrix;
 
-            JobHandle updateRaycastCommandsJobHandle = _updateRaycastCommandsJob.Schedule(pointsNum, 1);
+            JobHandle updateRaycastCommandsJobHandle = _updateRaycastCommandsJob.Schedule(pointsNum, 1024);
             JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(pointsNum, 1, updateRaycastCommandsJobHandle);
-            JobHandle raycastJobHandle = RaycastCommand.ScheduleBatch(_raycastCommands, _raycastHits, 256, updateGaussianNoisesJobHandle);
-            _jobHandle = _raycastHitsToPointsJob.Schedule(pointsNum, 1, raycastJobHandle);
+            JobHandle raycastJobHandle = RaycastCommand.ScheduleBatch(_raycastCommands, _raycastHits, 1024, updateGaussianNoisesJobHandle);
+            _jobHandle = _raycastHitsToPointsJob.Schedule(pointsNum, 1024, raycastJobHandle);
 
             JobHandle.ScheduleBatchedJobs();
             _jobHandle.Complete();

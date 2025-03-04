@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
 using UnitySensors.Interface.Sensor;
 

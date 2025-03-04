@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4070371534656761714}
   - component: {fileID: 4022873546115888586}
   - component: {fileID: 421189727119020206}
+  - component: {fileID: 4330187045351998600}
   m_Layer: 0
   m_Name: RGBDCamera
   m_TagString: Untagged
@@ -27,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785895639420286579}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &1785895639420286583
 Camera:
@@ -49,9 +50,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -96,6 +105,9 @@ MonoBehaviour:
   _minRange: 0.05
   _maxRange: 100
   _gaussianNoiseSigma: 0
+  _depthCameraMat: {fileID: -876546973899608171, guid: a3c68fd340741ee4597690d59d7509a6,
+    type: 3}
+  _convertToPointCloud: 0
 --- !u!114 &4022873546115888586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a3dffef534585740aa9f93736bdd5ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pointUtilitiesSO: {fileID: 11400000, guid: 5e210d04f3c81dc4986b2270af79835f, type: 2}
   _source: {fileID: 4070371534656761714}
 --- !u!114 &421189727119020206
 MonoBehaviour:
@@ -123,4 +136,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _source: {fileID: 4070371534656761714}
   _sourceTexture: 0
+  _image: {fileID: 0}
+--- !u!114 &4330187045351998600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785895639420286579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5202acb8ddfd0c546b69f23eb10b4e60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _source: {fileID: 4070371534656761714}
+  _sourceTexture: 1
   _image: {fileID: 0}

@@ -3,6 +3,7 @@ using UnitySensors.Attribute;
 using UnitySensors.DataType.Sensor.PointCloud;
 using UnitySensors.Interface.Sensor;
 using UnitySensors.Sensor;
+using UnitySensors.Sensor.Camera;
 
 namespace UnitySensors.Visualization.Sensor
 {
@@ -10,6 +11,13 @@ namespace UnitySensors.Visualization.Sensor
     {
         [SerializeField, Interface(typeof(IPointCloudInterface<PointXYZRGB>))]
         private Object _source;
+        private void OnEnable()
+        {
+            if (_source is DepthCameraSensor)
+                (_source as DepthCameraSensor).convertToPointCloud = true;
+            else if (_source is RGBDCameraSensor)
+                (_source as RGBDCameraSensor).convertToPointCloud = true;
+        }
 
         protected override void Start()
         {

@@ -34,7 +34,7 @@ namespace UnitySensors.Sensor.LiDAR
         public void Execute(int index)
         {
             int pixelIndex = pixelIndices[index + indexOffset];
-            float distance = (1.0f - Mathf.Clamp01(pixels.AsReadOnly()[pixelIndex].r)) * far;
+            float distance = pixels.AsReadOnly()[pixelIndex].r * far;
             float distance_noised = distance + noises[index];
             distance = (near < distance && distance < far && near < distance_noised && distance_noised < far) ? distance_noised : 0;
             PointXYZI point = new PointXYZI()
@@ -42,7 +42,7 @@ namespace UnitySensors.Sensor.LiDAR
                 position = directions[index + indexOffset] * distance,
                 intensity = (distance != 0) ? maxIntensity * sqrNear / (distance * distance) : 0
             };
-            
+
             points[index] = point;
         }
     }

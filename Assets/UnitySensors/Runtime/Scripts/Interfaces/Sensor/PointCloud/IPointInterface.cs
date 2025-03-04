@@ -1,4 +1,3 @@
-using Unity.Collections;
 using Unity.Mathematics;
 
 namespace UnitySensors.Interface.Sensor.PointCloud

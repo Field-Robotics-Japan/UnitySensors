@@ -2,6 +2,7 @@ using UnityEngine;
 using UnitySensors.Attribute;
 using UnitySensors.DataType.Sensor.PointCloud;
 using UnitySensors.Interface.Sensor;
+using UnitySensors.Sensor.Camera;
 
 namespace UnitySensors.ROS.Publisher.Sensor
 {
@@ -13,6 +14,7 @@ namespace UnitySensors.ROS.Publisher.Sensor
         private void Awake()
         {
             _serializer.SetSource(_source as IPointCloudInterface<PointXYZRGB>);
+            (_source as RGBDCameraSensor).convertToPointCloud = true;
         }
     }
 }
