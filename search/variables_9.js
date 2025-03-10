@@ -1,10 +1,5 @@
 var searchData=
 [
-  ['maxazimuthangle_0',['maxAzimuthAngle',['../classUnitySensors_1_1DataType_1_1LiDAR_1_1ScanPattern.html#a5ef3bed383cdf8dc1590b230fbd863b8',1,'UnitySensors::DataType::LiDAR::ScanPattern']]],
-  ['maxintensity_1',['maxintensity',['../structUnitySensors_1_1Sensor_1_1LiDAR_1_1ITextureToPointsJob.html#a6dd538c81567b8411bec95d0b8798a92',1,'UnitySensors.Sensor.LiDAR.ITextureToPointsJob.maxIntensity'],['../structUnitySensors_1_1Sensor_1_1LiDAR_1_1IRaycastHitsToPointsJob.html#a588ddb22bcd5cee279d07a37c5361ebc',1,'UnitySensors.Sensor.LiDAR.IRaycastHitsToPointsJob.maxIntensity']]],
-  ['maxrange_2',['maxrange',['../structUnitySensors_1_1Sensor_1_1LiDAR_1_1IRaycastHitsToPointsJob.html#ab7e899a2ff6495009195e0c8c3c55169',1,'UnitySensors.Sensor.LiDAR.IRaycastHitsToPointsJob.maxRange'],['../structUnitySensors_1_1Sensor_1_1LiDAR_1_1IUpdateRaycastCommandsJob.html#ae9165abefad65036f4d4bc7073a22fa1',1,'UnitySensors.Sensor.LiDAR.IUpdateRaycastCommandsJob.maxRange']]],
-  ['maxzenithangle_3',['maxZenithAngle',['../classUnitySensors_1_1DataType_1_1LiDAR_1_1ScanPattern.html#a2ce08b744de42d4571acd9c3dfae2b42',1,'UnitySensors::DataType::LiDAR::ScanPattern']]],
-  ['minazimuthangle_4',['minAzimuthAngle',['../classUnitySensors_1_1DataType_1_1LiDAR_1_1ScanPattern.html#a7a3a008fa707657dd74baff8efb1efed',1,'UnitySensors::DataType::LiDAR::ScanPattern']]],
-  ['minrange_5',['minRange',['../structUnitySensors_1_1Sensor_1_1LiDAR_1_1IRaycastHitsToPointsJob.html#aca2de09489753eac8c0458e225320e0e',1,'UnitySensors::Sensor::LiDAR::IRaycastHitsToPointsJob']]],
-  ['minzenithangle_6',['minZenithAngle',['../classUnitySensors_1_1DataType_1_1LiDAR_1_1ScanPattern.html#a14a295225d9631ab759cba0f248d0230',1,'UnitySensors::DataType::LiDAR::ScanPattern']]]
+  ['indexoffset_0',['indexoffset',['../structUnitySensors_1_1Sensor_1_1LiDAR_1_1ITextureToPointsJob.html#aaedc5e5284444afb02ff5a7576dee127',1,'UnitySensors.Sensor.LiDAR.ITextureToPointsJob.indexOffset'],['../structUnitySensors_1_1Sensor_1_1LiDAR_1_1IRaycastHitsToPointsJob.html#a48853a919dffd621c13fb107ab32f514',1,'UnitySensors.Sensor.LiDAR.IRaycastHitsToPointsJob.indexOffset'],['../structUnitySensors_1_1Sensor_1_1LiDAR_1_1IUpdateRaycastCommandsJob.html#acb94482030929948f8186dfe5c5f6463',1,'UnitySensors.Sensor.LiDAR.IUpdateRaycastCommandsJob.indexOffset']]],
+  ['intensity_1',['intensity',['../structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZI.html#ab2b011c38198ec4e0a7d71e4ba2353ab',1,'UnitySensors::DataType::Sensor::PointCloud::PointXYZI']]]
 ];

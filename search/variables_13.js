@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['z_0',['z',['../classUnitySensors_1_1DataType_1_1Geometry_1_1Vector3D.html#ae05a3573957495ebe3fc36b5681cc59d',1,'UnitySensors::DataType::Geometry::Vector3D']]]
+  ['width_0',['width',['../structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ImageEncodeJob.html#a849710e9a7f2681cc733d6a8c5c37e91',1,'UnitySensors::ROS::Serializer::Image::ImageEncodeJob']]]
 ];

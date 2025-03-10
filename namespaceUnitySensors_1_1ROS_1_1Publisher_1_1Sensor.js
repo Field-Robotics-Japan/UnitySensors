@@ -2,6 +2,7 @@ var namespaceUnitySensors_1_1ROS_1_1Publisher_1_1Sensor =
 [
     [ "CompressedImageMsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1CompressedImageMsgPublisher.html", null ],
     [ "DepthCameraPointCloud2MsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1DepthCameraPointCloud2MsgPublisher.html", "classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1DepthCameraPointCloud2MsgPublisher" ],
+    [ "ImageMsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1ImageMsgPublisher.html", null ],
     [ "IMUMsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1IMUMsgPublisher.html", null ],
     [ "LiDARPointCloud2MsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1LiDARPointCloud2MsgPublisher.html", "classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1LiDARPointCloud2MsgPublisher" ],
     [ "NavSatFixMsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1NavSatFixMsgPublisher.html", null ],

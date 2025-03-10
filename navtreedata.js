@@ -29,20 +29,29 @@ var NAVTREE =
     [ "README", "md_Assets_2UnitySensors_2README.html", null ],
     [ "LICENSE", "md_Assets_2UnitySensorsROS_2LICENSE.html", null ],
     [ "README", "md_Assets_2UnitySensorsROS_2README.html", null ],
+    [ "Migrating To URP/HDRP", "md_MigrateToURP_6HDRP.html", [
+      [ "Migrating to URP", "md_MigrateToURP_6HDRP.html#autotoc_md1", null ],
+      [ "Migrating to HDRP", "md_MigrateToURP_6HDRP.html#autotoc_md2", null ]
+    ] ],
     [ "README", "md_README.html", [
-      [ "UnitySensors", "md_README.html#autotoc_md0", [
-        [ "🔍 Overview", "md_README.html#autotoc_md1", null ],
-        [ "🚀 Quick start", "md_README.html#autotoc_md2", [
-          [ "Inside Unity3D", "md_README.html#autotoc_md3", null ],
-          [ "Inside ROS workspace", "md_README.html#autotoc_md4", null ]
+      [ "UnitySensors", "md_README.html#autotoc_md3", [
+        [ "🔍 Overview", "md_README.html#autotoc_md4", null ],
+        [ "🚀 Quick start", "md_README.html#autotoc_md5", [
+          [ "Inside Unity3D", "md_README.html#autotoc_md6", null ],
+          [ "Inside ROS workspace", "md_README.html#autotoc_md7", null ],
+          [ "Migrating to URP/HDRP", "md_README.html#autotoc_md8", null ]
         ] ],
-        [ "🤝 Contributing", "md_README.html#autotoc_md5", null ],
-        [ "🔗 Dependencies", "md_README.html#autotoc_md6", null ],
-        [ "📄 LICENSE", "md_README.html#autotoc_md7", null ]
+        [ "🤝 Contributing", "md_README.html#autotoc_md9", null ],
+        [ "🔗 Dependencies", "md_README.html#autotoc_md10", null ],
+        [ "📄 LICENSE", "md_README.html#autotoc_md11", null ]
       ] ]
     ] ],
     [ "Packages", "namespaces.html", [
-      [ "Package List", "namespaces.html", "namespaces_dup" ]
+      [ "Package List", "namespaces.html", "namespaces_dup" ],
+      [ "Package Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Enumerations", "namespacemembers_enum.html", null ]
+      ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -69,11 +78,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "CameraInfoMsgPublisher_8cs.html",
-"classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#af42e03e672810f0197ae99ebac035715",
-"classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a5e07c78933f6e06a17612aa8232af0d9",
-"classUnitySensors_1_1Sensor_1_1TF_1_1TFLink.html#ac596d2dc1aab6ed0627a9b07b6cbd0cf",
-"functions_vars.html",
-"structUnitySensors_1_1Sensor_1_1LiDAR_1_1IUpdateRaycastCommandsJob.html#acb94482030929948f8186dfe5c5f6463"
+"classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#a6bf15ebeb1ebb9843eb79a357dec2ff9",
+"classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#afb1b85d3051b8b77ff862f07d2c49a5c",
+"classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor.html#a42246fd79bf5a7027b037a35dfeb11f3",
+"dir_15a75b7e95ee73a49b9a9771b7b17fe5.html",
+"structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html#a728b6f906a56f5a340a81542c38c9319"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

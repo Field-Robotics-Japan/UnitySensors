@@ -11,6 +11,7 @@ var classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor =
     [ "_raycastCommands", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html#a9054437173c93cfabdf3f701d843c75a", null ],
     [ "_raycastHits", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html#a4cdd787fd2e011d1bf804c0842dd6d63", null ],
     [ "_raycastHitsToPointsJob", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html#ad25697fc34575d9107533e116725f62d", null ],
+    [ "_raycastLayerMask", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html#a06a9025e97ecbc01a165d916cc747584", null ],
     [ "_transform", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html#aa15f55bf354ef2d8e1d747aecfe7219a", null ],
     [ "_updateGaussianNoisesJob", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html#a042017da6d9bf6f7b93d4ad2a0059980", null ],
     [ "_updateRaycastCommandsJob", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html#acfe4de64e77535966e7343cab7cfd5d5", null ]

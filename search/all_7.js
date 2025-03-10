@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['g_0',['g',['../structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html#a728b6f906a56f5a340a81542c38c9319',1,'UnitySensors::DataType::Sensor::PointCloud::PointXYZRGB']]],
+  ['g_0',['g',['../structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ColorRGB8.html#a125a510789ca9f164a567a9ffc9620ce',1,'UnitySensors.ROS.Serializer.Image.ColorRGB8.g'],['../structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html#a728b6f906a56f5a340a81542c38c9319',1,'UnitySensors.DataType.Sensor.PointCloud.PointXYZRGB.g']]],
   ['galileo_1',['GALILEO',['../classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1NavSatFixMsgSerializer.html#ab063746b6af05b35bdc9587545c66789a002aa3295f27b9c1aa3c602fd2a37c35',1,'UnitySensors::ROS::Serializer::Sensor::NavSatFixMsgSerializer']]],
   ['gaussiannoise_2',['gaussiannoise',['../classUnitySensors_1_1Utils_1_1Noise_1_1GaussianNoise.html',1,'UnitySensors.Utils.Noise.GaussianNoise'],['../classUnitySensors_1_1Utils_1_1Noise_1_1GaussianNoise.html#a8ee8d5f9b8a05fa548ae581b954294d9',1,'UnitySensors.Utils.Noise.GaussianNoise.GaussianNoise(int seed)'],['../classUnitySensors_1_1Utils_1_1Noise_1_1GaussianNoise.html#a927405b4db8ca8d5207f6dc4673b53c8',1,'UnitySensors.Utils.Noise.GaussianNoise.GaussianNoise()']]],
   ['gaussiannoise_2ecs_3',['GaussianNoise.cs',['../GaussianNoise_8cs.html',1,'']]],
@@ -8,18 +8,19 @@ var searchData=
   ['gbas_5ffix_5',['GBAS_FIX',['../classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1NavSatFixMsgSerializer.html#a9758971b3fe7049486b132a443d762aca32a4b873a10709f0c9d4c0f0e3922e24',1,'UnitySensors::ROS::Serializer::Sensor::NavSatFixMsgSerializer']]],
   ['geocoordinate_6',['geocoordinate',['../classUnitySensors_1_1DataType_1_1Geometry_1_1GeoCoordinate.html',1,'UnitySensors.DataType.Geometry.GeoCoordinate'],['../classUnitySensors_1_1DataType_1_1Geometry_1_1GeoCoordinate.html#a83e8f167f1a95f8ea1173fdb2195240d',1,'UnitySensors.DataType.Geometry.GeoCoordinate.GeoCoordinate()']]],
   ['geocoordinate_2ecs_7',['GeoCoordinate.cs',['../GeoCoordinate_8cs.html',1,'']]],
-  ['geocoordinateconverter_8',['geocoordinateconverter',['../classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#a0a9bc5536c0e44c2a0a25764f3924e95',1,'UnitySensors.Utils.Geometry.GeoCoordinateConverter.GeoCoordinateConverter()'],['../classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html',1,'UnitySensors.Utils.Geometry.GeoCoordinateConverter']]],
+  ['geocoordinateconverter_8',['geocoordinateconverter',['../classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html',1,'UnitySensors.Utils.Geometry.GeoCoordinateConverter'],['../classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#a0a9bc5536c0e44c2a0a25764f3924e95',1,'UnitySensors.Utils.Geometry.GeoCoordinateConverter.GeoCoordinateConverter()']]],
   ['geocoordinateconverter_2ecs_9',['GeoCoordinateConverter.cs',['../GeoCoordinateConverter_8cs.html',1,'']]],
   ['geocoordinatesystem_10',['GeoCoordinateSystem',['../classUnitySensors_1_1Sensor_1_1GNSS_1_1GeoCoordinateSystem.html',1,'UnitySensors::Sensor::GNSS']]],
   ['geocoordinatesystem_2ecs_11',['GeoCoordinateSystem.cs',['../GeoCoordinateSystem_8cs.html',1,'']]],
   ['getcoordinate_12',['GetCoordinate',['../classUnitySensors_1_1Sensor_1_1GNSS_1_1GeoCoordinateSystem.html#a2cad29c4bdc64ecdf66ef65accacf078',1,'UnitySensors::Sensor::GNSS::GeoCoordinateSystem']]],
   ['getnoise_13',['GetNoise',['../classUnitySensors_1_1Utils_1_1Noise_1_1GaussianNoise.html#a60dd73da2ffbb4e1a4a2550268ac6822',1,'UnitySensors::Utils::Noise::GaussianNoise']]],
-  ['gettfdata_14',['gettfdata',['../classUnitySensors_1_1Sensor_1_1TF_1_1TFLink.html#ac596d2dc1aab6ed0627a9b07b6cbd0cf',1,'UnitySensors.Sensor.TF.TFLink.GetTFData()'],['../classUnitySensors_1_1Sensor_1_1TF_1_1TFLink.html#a713d3cfdcbea48f3d5a29c531f0d4076',1,'UnitySensors.Sensor.TF.TFLink.GetTFData(string frame_id_parent, Matrix4x4 worldToLocalMatrix, Quaternion worldToLocalQuaternion)']]],
-  ['glonass_15',['GLONASS',['../classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1NavSatFixMsgSerializer.html#ab063746b6af05b35bdc9587545c66789a48549df6f41418cb94b963fe84894cd6',1,'UnitySensors::ROS::Serializer::Sensor::NavSatFixMsgSerializer']]],
-  ['gnsssensor_16',['GNSSSensor',['../classUnitySensors_1_1Sensor_1_1GNSS_1_1GNSSSensor.html',1,'UnitySensors::Sensor::GNSS']]],
-  ['gnsssensor_2ecs_17',['GNSSSensor.cs',['../GNSSSensor_8cs.html',1,'']]],
-  ['gps_18',['GPS',['../classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1NavSatFixMsgSerializer.html#ab063746b6af05b35bdc9587545c66789a8c578de37278ada488d763ea86c5cf20',1,'UnitySensors::ROS::Serializer::Sensor::NavSatFixMsgSerializer']]],
-  ['groundtruth_19',['GroundTruth',['../classUnitySensors_1_1Sensor_1_1GroundTruth_1_1GroundTruth.html',1,'UnitySensors::Sensor::GroundTruth']]],
-  ['groundtruth_2ecs_20',['GroundTruth.cs',['../GroundTruth_8cs.html',1,'']]],
-  ['groundtrutheditor_2ecs_21',['GroundTruthEditor.cs',['../GroundTruthEditor_8cs.html',1,'']]]
+  ['getpointmaterialtemplate_14',['GetPointMaterialTemplate',['../classUnitySensors_1_1Utils_1_1PointCloud_1_1PointUtilitiesSO.html#ab8c2572abe7fec370b1acc7aa0aa4688',1,'UnitySensors::Utils::PointCloud::PointUtilitiesSO']]],
+  ['gettfdata_15',['gettfdata',['../classUnitySensors_1_1Sensor_1_1TF_1_1TFLink.html#a713d3cfdcbea48f3d5a29c531f0d4076',1,'UnitySensors.Sensor.TF.TFLink.GetTFData(string frame_id_parent, Matrix4x4 worldToLocalMatrix, Quaternion worldToLocalQuaternion)'],['../classUnitySensors_1_1Sensor_1_1TF_1_1TFLink.html#ac596d2dc1aab6ed0627a9b07b6cbd0cf',1,'UnitySensors.Sensor.TF.TFLink.GetTFData()']]],
+  ['glonass_16',['GLONASS',['../classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1NavSatFixMsgSerializer.html#ab063746b6af05b35bdc9587545c66789a48549df6f41418cb94b963fe84894cd6',1,'UnitySensors::ROS::Serializer::Sensor::NavSatFixMsgSerializer']]],
+  ['gnsssensor_17',['GNSSSensor',['../classUnitySensors_1_1Sensor_1_1GNSS_1_1GNSSSensor.html',1,'UnitySensors::Sensor::GNSS']]],
+  ['gnsssensor_2ecs_18',['GNSSSensor.cs',['../GNSSSensor_8cs.html',1,'']]],
+  ['gps_19',['GPS',['../classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1NavSatFixMsgSerializer.html#ab063746b6af05b35bdc9587545c66789a8c578de37278ada488d763ea86c5cf20',1,'UnitySensors::ROS::Serializer::Sensor::NavSatFixMsgSerializer']]],
+  ['groundtruth_20',['GroundTruth',['../classUnitySensors_1_1Sensor_1_1GroundTruth_1_1GroundTruth.html',1,'UnitySensors::Sensor::GroundTruth']]],
+  ['groundtruth_2ecs_21',['GroundTruth.cs',['../GroundTruth_8cs.html',1,'']]],
+  ['groundtrutheditor_2ecs_22',['GroundTruthEditor.cs',['../GroundTruthEditor_8cs.html',1,'']]]
 ];

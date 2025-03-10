@@ -1,5 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1RosMsgSerializer.html" title=" " alt="" coords="5,5,271,45"/>
-<area shape="rect" id="Node000001" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Tf2_1_1TFMessageMsgSerializer.html" title=" " alt="" coords="319,5,528,45"/>
-<area shape="poly" id="edge66_Node000000_Node000001" title=" " alt="" coords="284,23,318,23,318,28,284,28"/>
+<area shape="rect" id="Node000000" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1RosMsgSerializer.html" title=" " alt="" coords="5,5,221,45"/>
+<area shape="rect" id="Node000001" href="$classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1IMUMsgSerializer.html" title=" " alt="" coords="269,5,476,45"/>
+<area shape="poly" id="edge67_Node000000_Node000001" title=" " alt="" coords="235,23,269,23,269,28,235,28"/>
 </map>

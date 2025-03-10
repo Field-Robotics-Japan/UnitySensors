@@ -1,7 +1,7 @@
 var searchData=
 [
   ['latitude_0',['latitude',['../classUnitySensors_1_1DataType_1_1Geometry_1_1GeoCoordinate.html#a9a1f35c076f4c135afe7932e37f00773',1,'UnitySensors::DataType::Geometry::GeoCoordinate']]],
-  ['license_1',['license',['../md_README.html#autotoc_md7',1,'📄 LICENSE'],['../md_Assets_2UnitySensorsROS_2LICENSE.html',1,'LICENSE'],['../md_Assets_2UnitySensors_2LICENSE.html',1,'LICENSE']]],
+  ['license_1',['license',['../md_README.html#autotoc_md11',1,'📄 LICENSE'],['../md_Assets_2UnitySensorsROS_2LICENSE.html',1,'LICENSE'],['../md_Assets_2UnitySensors_2LICENSE.html',1,'LICENSE']]],
   ['license_2emd_2',['license.md',['../UnitySensors_2LICENSE_8md.html',1,'(Global Namespace)'],['../UnitySensorsROS_2LICENSE_8md.html',1,'(Global Namespace)']]],
   ['lidarpointcloud2msgpublisher_3',['LiDARPointCloud2MsgPublisher',['../classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1LiDARPointCloud2MsgPublisher.html',1,'UnitySensors::ROS::Publisher::Sensor']]],
   ['lidarpointcloud2msgpublisher_2ecs_4',['LiDARPointCloud2MsgPublisher.cs',['../LiDARPointCloud2MsgPublisher_8cs.html',1,'']]],

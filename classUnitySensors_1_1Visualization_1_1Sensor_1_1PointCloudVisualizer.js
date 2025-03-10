@@ -13,6 +13,7 @@ var classUnitySensors_1_1Visualization_1_1Sensor_1_1PointCloudVisualizer =
     [ "_mat", "classUnitySensors_1_1Visualization_1_1Sensor_1_1PointCloudVisualizer.html#a258b4824f4799d936707bff2f8a1231c", null ],
     [ "_mesh", "classUnitySensors_1_1Visualization_1_1Sensor_1_1PointCloudVisualizer.html#adbaca002cbb93472d53da9164996dd10", null ],
     [ "_pointsBuffer", "classUnitySensors_1_1Visualization_1_1Sensor_1_1PointCloudVisualizer.html#a53ced34fbdd4e0afb20fddd9b654daea", null ],
+    [ "_pointUtilitiesSO", "classUnitySensors_1_1Visualization_1_1Sensor_1_1PointCloudVisualizer.html#a3b1b9ec54f070966bb88690cf95c1fcb", null ],
     [ "_sourceInterface", "classUnitySensors_1_1Visualization_1_1Sensor_1_1PointCloudVisualizer.html#a71bc6e31a9fb5f0f17ab908d9246d932", null ],
     [ "_transform", "classUnitySensors_1_1Visualization_1_1Sensor_1_1PointCloudVisualizer.html#a2bdb89b0e2edfb6a1f534b7227ede8f5", null ]
 ];

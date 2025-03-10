@@ -9,5 +9,6 @@ var classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor =
     [ "_texture", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor.html#a47847ce0e95422a2b7224c20d55b69ab", null ],
     [ "m_camera", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor.html#a760c54827468504f811bedabcfb1682c", null ],
     [ "texture0", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor.html#a1d5382bbf409cf9b164891306f696873", null ],
+    [ "texture0FarClipPlane", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor.html#aed86124e2207c75dbbcd36ba22f8dff6", null ],
     [ "texture1", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor.html#a7a69ceaa852d121919c4f2b5bb6d9389", null ]
 ];
