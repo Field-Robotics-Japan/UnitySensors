@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnitySensors.Attribute;
-using UnitySensors.Sensor;
 
 namespace UnitySensors.Visualization
 {

@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 4414791596585746462}
   - component: {fileID: 6928715047789551323}
   - component: {fileID: 4414791596585746528}
+  - component: {fileID: 4599957145802266335}
   - component: {fileID: 2224187045829796718}
-  - component: {fileID: 6110166055807567966}
+  - component: {fileID: 6818158337698568988}
   - component: {fileID: 8736958369943202624}
+  - component: {fileID: 2416155857216474984}
   m_Layer: 0
   m_Name: RGBDCamera_ros
   m_TagString: Untagged
@@ -29,13 +31,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4414791596585746458}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &4414791596585746462
 Camera:
@@ -51,9 +53,17 @@ Camera:
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -98,6 +108,9 @@ MonoBehaviour:
   _minRange: 0.05
   _maxRange: 100
   _gaussianNoiseSigma: 0
+  _depthCameraMat: {fileID: -876546973899608171, guid: a3c68fd340741ee4597690d59d7509a6,
+    type: 3}
+  _convertToPointCloud: 0
 --- !u!114 &4414791596585746528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,12 +123,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca85518969b9bf94aa9948188d795075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _source: {fileID: 6928715047789551323}
   _frequency: 10
-  _topicName: /camera/info
+  _topicName: /camera/color/camera_info
   _serializer:
+    _source: {fileID: 6928715047789551323}
     _header:
-      _frame_id: /camera_frame
+      _source: {fileID: 6928715047789551323}
+      _frame_id: camera_frame
+--- !u!114 &4599957145802266335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4414791596585746458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca85518969b9bf94aa9948188d795075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _frequency: 10
+  _topicName: /camera/depth/camera_info
+  _serializer:
+    _source: {fileID: 6928715047789551323}
+    _header:
+      _source: {fileID: 6928715047789551323}
+      _frame_id: camera_frame
 --- !u!114 &2224187045829796718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,18 +156,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4414791596585746458}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24143da40ec715f40bf587d63ce67ed2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _source: {fileID: 6928715047789551323}
   _frequency: 10
   _topicName: /camera/depth/points
   _serializer:
     _header:
-      _frame_id: /camera_frame
---- !u!114 &6110166055807567966
+      _source: {fileID: 6928715047789551323}
+      _frame_id: camera_frame
+  _source: {fileID: 6928715047789551323}
+--- !u!114 &6818158337698568988
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,17 +177,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 4414791596585746458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b474a6242e811f04488e3cb67b65dd35, type: 3}
+  m_Script: {fileID: 11500000, guid: e226440246ae84f438f484a93cb23d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _source: {fileID: 6928715047789551323}
   _frequency: 10
-  _topicName: /camera/depth/image/compressed
+  _topicName: /camera/depth/image
   _serializer:
+    _source: {fileID: 6928715047789551323}
     _sourceTexture: 0
+    _encoding: 2
+    _encodedTexture: {fileID: 0}
     _header:
-      _frame_id: /camera_frame
-    quality: 75
+      _source: {fileID: 6928715047789551323}
+      _frame_id: camera_frame
 --- !u!114 &8736958369943202624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,11 +202,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b474a6242e811f04488e3cb67b65dd35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _source: {fileID: 6928715047789551323}
   _frequency: 10
   _topicName: /camera/color/image/compressed
   _serializer:
+    _source: {fileID: 6928715047789551323}
     _sourceTexture: 1
     _header:
-      _frame_id: /camera_frame
+      _source: {fileID: 6928715047789551323}
+      _frame_id: camera_frame
     quality: 75
+--- !u!114 &2416155857216474984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4414791596585746458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a6512c6d49c2244a1a77e382c678b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _frequency: 10
+  _frame_id: camera_frame
+  _children: []

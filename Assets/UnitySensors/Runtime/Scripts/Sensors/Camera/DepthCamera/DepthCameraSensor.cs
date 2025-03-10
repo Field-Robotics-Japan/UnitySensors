@@ -23,12 +23,14 @@ namespace UnitySensors.Sensor.Camera
         protected float _maxRange = 100.0f;
         [SerializeField]
         private float _gaussianNoiseSigma = 0.0f;
+        [SerializeField]
+        private Material _depthCameraMat;
+        [SerializeField]
+        private bool _convertToPointCloud = false;
 
         private UnityEngine.Camera _camera;
         private RenderTexture _rt = null;
         private Texture2D _texture;
-
-        private Material _mat;
 
         private JobHandle _jobHandle;
 
@@ -47,6 +49,9 @@ namespace UnitySensors.Sensor.Camera
         public PointCloud<PointXYZ> pointCloud { get => _pointCloud; }
         public int pointsNum { get => _pointsNum; }
 
+        public float texture0FarClipPlane { get => _camera.farClipPlane; }
+        public bool convertToPointCloud { get => _convertToPointCloud; set => _convertToPointCloud = value; }
+
         protected override void Init()
         {
             _camera = GetComponent<UnityEngine.Camera>();
@@ -59,12 +64,11 @@ namespace UnitySensors.Sensor.Camera
 
             _texture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBAFloat, false);
 
-            _mat = new Material(Shader.Find("UnitySensors/Color2Depth"));
-            float f = m_camera.farClipPlane;
-            _mat.SetFloat("_F", f);
-
-            SetupDirections();
-            SetupJob();
+            if (_convertToPointCloud)
+            {
+                SetupDirections();
+                SetupJob();
+            }
         }
 
         private void SetupDirections()
@@ -102,7 +106,7 @@ namespace UnitySensors.Sensor.Camera
 
             _textureToPointsJob = new ITextureToPointsJob()
             {
-                near= m_camera.nearClipPlane,
+                near = m_camera.nearClipPlane,
                 far = m_camera.farClipPlane,
                 directions = _directions,
                 depthPixels = _texture.GetPixelData<Color>(0),
@@ -115,10 +119,13 @@ namespace UnitySensors.Sensor.Camera
         {
             if (!LoadTexture()) return;
 
-            JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(_pointsNum, 1);
-            _jobHandle = _textureToPointsJob.Schedule(_pointsNum, 1, updateGaussianNoisesJobHandle);
-            JobHandle.ScheduleBatchedJobs();
-            _jobHandle.Complete();
+            if (_convertToPointCloud)
+            {
+                JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(_pointsNum, 1024);
+                _jobHandle = _textureToPointsJob.Schedule(_pointsNum, 1024, updateGaussianNoisesJobHandle);
+                JobHandle.ScheduleBatchedJobs();
+                _jobHandle.Complete();
+            }
 
             if (onSensorUpdated != null)
                 onSensorUpdated.Invoke();
@@ -127,9 +134,11 @@ namespace UnitySensors.Sensor.Camera
         private bool LoadTexture()
         {
             bool result = false;
-            AsyncGPUReadback.Request(_rt, 0, request => {
+            AsyncGPUReadback.Request(_rt, 0, request =>
+            {
                 if (request.hasError)
                 {
+                    Debug.LogError("GPU readback error detected.");
                 }
                 else
                 {
@@ -139,22 +148,26 @@ namespace UnitySensors.Sensor.Camera
                     result = true;
                 }
             });
+            // TODO: Use coroutine to wait for the request
             AsyncGPUReadback.WaitAllRequests();
             return result;
         }
 
         protected override void OnSensorDestroy()
         {
-            _jobHandle.Complete();
-            _pointCloud.Dispose();
-            _noises.Dispose();
-            _directions.Dispose();
+            if (_convertToPointCloud)
+            {
+                _jobHandle.Complete();
+                _pointCloud.Dispose();
+                _noises.Dispose();
+                _directions.Dispose();
+            }
             _rt.Release();
         }
 
         private void OnRenderImage(RenderTexture source, RenderTexture dest)
         {
-            Graphics.Blit(source, dest, _mat);
+            Graphics.Blit(null, dest, _depthCameraMat);
         }
     }
 }

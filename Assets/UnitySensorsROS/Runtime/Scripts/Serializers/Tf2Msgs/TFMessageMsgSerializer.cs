@@ -33,10 +33,15 @@ namespace UnitySensors.ROS.Serializer.Tf2
             List<TransformStampedMsg> transforms = new List<TransformStampedMsg>();
 
             TFData[] tfData = _source.GetTFData();
-            foreach(TFData data in tfData)
+            foreach (TFData data in tfData)
             {
                 TransformStampedMsg transform = new TransformStampedMsg();
-                transform.header = headerMsg;
+                transform.header = new();
+                transform.header.stamp = headerMsg.stamp;
+#if ROS2
+#else
+                transform.header.seq = headerMsg.seq;
+#endif
                 transform.header.frame_id = data.frame_id_parent;
                 transform.child_frame_id = data.frame_id_child;
                 transform.transform.translation = data.position.To<FLU>();

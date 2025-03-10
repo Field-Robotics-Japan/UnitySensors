@@ -23,6 +23,10 @@ namespace UnitySensors.Sensor.Camera
         protected float _maxRange = 100.0f;
         [SerializeField]
         private float _gaussianNoiseSigma = 0.0f;
+        [SerializeField]
+        private Material _depthCameraMat;
+        [SerializeField]
+        private bool _convertToPointCloud = false;
 
         private UnityEngine.Camera _depthCamera;
         private RenderTexture _depthRt = null;
@@ -32,7 +36,6 @@ namespace UnitySensors.Sensor.Camera
         private RenderTexture _colorRt = null;
         private Texture2D _colorTexture;
 
-        private Material _mat;
 
         private JobHandle _jobHandle;
 
@@ -50,6 +53,8 @@ namespace UnitySensors.Sensor.Camera
         public Texture2D texture1 { get => _colorTexture; }
         public PointCloud<PointXYZRGB> pointCloud { get => _pointCloud; }
         public int pointsNum { get => _pointsNum; }
+        public float texture0FarClipPlane { get => _depthCamera.farClipPlane; }
+        public bool convertToPointCloud { get => _convertToPointCloud; set => _convertToPointCloud = value; }
 
         protected override void Init()
         {
@@ -64,7 +69,7 @@ namespace UnitySensors.Sensor.Camera
             colorCameraTransform.localRotation = Quaternion.identity;
 
             _colorCamera = colorCameraObject.AddComponent<UnityEngine.Camera>();
-            _colorRt = new RenderTexture(_resolution.x, _resolution.y, 32, RenderTextureFormat.BGRA32);
+            _colorRt = new RenderTexture(_resolution.x, _resolution.y, 32, RenderTextureFormat.ARGB32);
             _colorCamera.targetTexture = _colorRt;
 
             _depthCamera.fieldOfView = _colorCamera.fieldOfView = _fov;
@@ -72,14 +77,14 @@ namespace UnitySensors.Sensor.Camera
             _depthCamera.farClipPlane = _maxRange;
 
             _depthTexture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBAFloat, false);
-            _colorTexture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.BGRA32, false);
+            _colorTexture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBA32, false);
 
-            _mat = new Material(Shader.Find("UnitySensors/Color2Depth"));
-            float f = m_camera.farClipPlane;
-            _mat.SetFloat("_F", f);
 
-            SetupDirections();
-            SetupJob();
+            if (_convertToPointCloud)
+            {
+                SetupDirections();
+                SetupJob();
+            }
         }
 
         private void SetupDirections()
@@ -131,10 +136,13 @@ namespace UnitySensors.Sensor.Camera
         {
             if (!LoadDepthTexture() || !LoadColorTexture()) return;
 
-            JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(_pointsNum, 1);
-            _jobHandle = _textureToPointsJob.Schedule(_pointsNum, 1, updateGaussianNoisesJobHandle);
-            JobHandle.ScheduleBatchedJobs();
-            _jobHandle.Complete();
+            if (_convertToPointCloud)
+            {
+                JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(_pointsNum, 1024);
+                _jobHandle = _textureToPointsJob.Schedule(_pointsNum, 1024, updateGaussianNoisesJobHandle);
+                JobHandle.ScheduleBatchedJobs();
+                _jobHandle.Complete();
+            }
 
             if (onSensorUpdated != null)
                 onSensorUpdated.Invoke();
@@ -143,9 +151,11 @@ namespace UnitySensors.Sensor.Camera
         private bool LoadDepthTexture()
         {
             bool result = false;
-            AsyncGPUReadback.Request(_depthRt, 0, request => {
+            AsyncGPUReadback.Request(_depthRt, 0, request =>
+            {
                 if (request.hasError)
                 {
+                    Debug.LogError("GPU readback error detected.");
                 }
                 else
                 {
@@ -162,9 +172,11 @@ namespace UnitySensors.Sensor.Camera
         private bool LoadColorTexture()
         {
             bool result = false;
-            AsyncGPUReadback.Request(_colorRt, 0, request => {
+            AsyncGPUReadback.Request(_colorRt, 0, request =>
+            {
                 if (request.hasError)
                 {
+                    Debug.LogError("GPU readback error detected.");
                 }
                 else
                 {
@@ -180,17 +192,20 @@ namespace UnitySensors.Sensor.Camera
 
         protected override void OnSensorDestroy()
         {
-            _jobHandle.Complete();
-            _pointCloud.Dispose();
-            _noises.Dispose();
-            _directions.Dispose();
+            if (_convertToPointCloud)
+            {
+                _jobHandle.Complete();
+                _pointCloud.Dispose();
+                _noises.Dispose();
+                _directions.Dispose();
+            }
             _depthRt.Release();
             _colorRt.Release();
         }
 
         private void OnRenderImage(RenderTexture source, RenderTexture dest)
         {
-            Graphics.Blit(source, dest, _mat);
+            Graphics.Blit(null, dest, _depthCameraMat);
         }
     }
 }

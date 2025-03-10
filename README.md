@@ -62,6 +62,10 @@ To receive the data in ROS take a look at [ROS-TCP-Endpoint][external-RosTCPEndp
 2. Build your workspace.
 3. Launch ROS endpoint node.
 
+### Migrating to URP/HDRP
+
+Please refer to [Migrating to URP/HDRP](MigrateToURP&HDRP.md).
+
 ## 🤝 Contributing
 
 <div align="center">
