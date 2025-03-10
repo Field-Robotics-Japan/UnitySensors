@@ -19,6 +19,10 @@ jobs:
           - 2022.3.42f1
 
     steps:
+      # Create cache directory for Unity
+      - name: Create Unity cache directory
+        run: mkdir -p /root/.cache/unity3d
+
       # リポジトリをチェックアウト
       - name: Checkout repository
         uses: actions/checkout@v4
