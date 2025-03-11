@@ -1,7 +1,11 @@
-name: CI check for Unity 2021.3.x, 2022.3.x
+name: CI check for Unity
 
 on:
   pull_request:
+    branches:
+      - master
+      - beta/**
+  push:
     branches:
       - master
       - beta/**
@@ -15,8 +19,8 @@ jobs:
       fail-fast: false
       matrix:
         unityVersion:
-          - 2021.3.42f1
-          - 2022.3.42f1
+          - 2022.3.59f1
+          - 2023.2.20f1
 
     steps:
       # リポジトリをチェックアウト
