@@ -5,6 +5,10 @@ on:
     branches:
       - master
       - beta/**
+  push:
+    branches:
+      - master
+      - beta/**
 
 jobs:
   test:
