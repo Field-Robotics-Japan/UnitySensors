@@ -90,7 +90,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 <!-- LINK GROUP -->
 
-[external-unity-shield]: https://img.shields.io/badge/Unity3D-%3E%202021.3-blue?style=flat-square&logo=unity
+[external-unity-shield]: https://img.shields.io/badge/Unity3D-%3E%202022.3-blue?style=flat-square&logo=unity
 [external-unity-link]: https://unity.com/
 [external-ros-shield]: https://img.shields.io/badge/ROS-1%7C2-blue?style=flat-square&logo=ros
 [external-ros-link]: https://www.ros.org/
