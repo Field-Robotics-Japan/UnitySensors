@@ -51,6 +51,7 @@ namespace UnitySensors.Sensor.IMU
 
         protected override void Update()
         {
+            //FIXME: IMU sensor should be updated at a fixed frequency
             float dt = Time.deltaTime;
 
             _position_tmp = _transform.position;
@@ -73,6 +74,7 @@ namespace UnitySensors.Sensor.IMU
 
         protected override void UpdateSensor()
         {
+            //FIXME: The linear acceleration and angular velocity should be in imu local frame
             _position = _position_tmp;
             _velocity = _velocity_tmp;
             _acceleration = _acceleration_tmp;

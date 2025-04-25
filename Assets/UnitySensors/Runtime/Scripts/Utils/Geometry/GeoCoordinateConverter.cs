@@ -1,19 +1,18 @@
 using System;
-using UnityEngine;
 using UnitySensors.DataType.Geometry;
 
 namespace UnitySensors.Utils.Geometry
 {
     /// <summary>
-    /// •½–Ê’¼ŠpÀ•WŒn‚ÆˆÜ“xŒo“x‚Ì‘ŠŒİ•ÏŠ·
-    /// QÆF‘“y’n—‰@‚Ìu‘ª—ÊŒvZƒTƒCƒgv
+    /// ï¿½ï¿½ï¿½Ê’ï¿½ï¿½pï¿½ï¿½ï¿½Wï¿½nï¿½ÆˆÜ“xï¿½oï¿½xï¿½Ì‘ï¿½ï¿½İ•ÏŠï¿½
+    /// ï¿½Qï¿½ÆFï¿½ï¿½ï¿½yï¿½nï¿½ï¿½ï¿½@ï¿½Ìuï¿½ï¿½ï¿½ÊŒvï¿½Zï¿½Tï¿½Cï¿½gï¿½v
     /// http://vldb.gsi.go.jp/sokuchi/surveycalc/main.html
     /// </summary>
     public class GeoCoordinateConverter
     {
-        const double daa = 6378137;             //’·”¼Œa
-        const double dF = 298.257222101d;      //‹tG•½—¦
-        const double dM0 = 0.9999;              //•½–Ê’¼ŠpÀ•WŒn‚ÌY²ã‚É‚¨‚¯‚ékÚŒW”(UTMÀ•WŒn‚Ìê‡¨0.9996)
+        const double daa = 6378137;             //ï¿½ï¿½ï¿½ï¿½ï¿½a
+        const double dF = 298.257222101d;      //ï¿½tï¿½Gï¿½ï¿½ï¿½ï¿½
+        const double dM0 = 0.9999;              //ï¿½ï¿½ï¿½Ê’ï¿½ï¿½pï¿½ï¿½ï¿½Wï¿½nï¿½ï¿½Yï¿½ï¿½ï¿½ï¿½É‚ï¿½ï¿½ï¿½ï¿½ï¿½kï¿½ÚŒWï¿½ï¿½(UTMï¿½ï¿½ï¿½Wï¿½nï¿½Ìê‡ï¿½ï¿½0.9996)
 
         private GeoCoordinate _origin;
 
@@ -26,7 +25,7 @@ namespace UnitySensors.Utils.Geometry
         {
             double dn = 1d / (2 * dF - 1);
 
-            //ƒ‰ƒWƒAƒ“’PˆÊ‚É
+            //ï¿½ï¿½ï¿½Wï¿½Aï¿½ï¿½ï¿½Pï¿½Ê‚ï¿½
             double Lat = Deg2Rad(coordinate.latitude);
             double Lon = Deg2Rad(coordinate.longitude);
             double Lat0 = Deg2Rad(_origin.latitude);
@@ -39,7 +38,7 @@ namespace UnitySensors.Utils.Geometry
             double dXi = Math.Atan(dt / dLmc);
             double dEt = Atanh(dLms / dtb);
 
-            //ƒ¿1¨0`ƒ¿5¨4
+            //ï¿½ï¿½1ï¿½ï¿½0ï¿½`ï¿½ï¿½5ï¿½ï¿½4
             double[] dal = new double[6];
             dal[0] = 0;
             dal[1] = 1d / 2d * dn - 2d / 3d * Math.Pow(dn, 2) + 5d / 16d * Math.Pow(dn, 3) + 41d / 180d * Math.Pow(dn, 4) - 127d / 288d * Math.Pow(dn, 5);
@@ -85,11 +84,11 @@ namespace UnitySensors.Utils.Geometry
         {
             double dn = 1d / (2 * dF - 1);
 
-            //ƒ‰ƒWƒAƒ“’PˆÊ‚É
+            //ï¿½ï¿½ï¿½Wï¿½Aï¿½ï¿½ï¿½Pï¿½Ê‚ï¿½
             double Lat0 = Deg2Rad(_origin.latitude);
             double Lon0 = Deg2Rad(_origin.longitude);
 
-            //SƒÓ0AA
+            //Sï¿½ï¿½0ï¿½AA
             double[] dA = new double[6];
             dA[0] = 1 + Math.Pow(dn, 2) / 4 + Math.Pow(dn, 4) / 64;
             dA[1] = -3d / 2d * (dn - Math.Pow(dn, 3) / 8 - Math.Pow(dn, 5) / 64);
@@ -105,11 +104,11 @@ namespace UnitySensors.Utils.Geometry
             }
             dSb = dM0 * daa / (1 + dn) * (dA[0] * Lat0 + dSb);
 
-            //ƒÌEƒÅ
+            //ï¿½ÌEï¿½ï¿½
             double dXi = (coordinate.z + dSb) / dAb;
             double dEt = coordinate.x / dAb;
 
-            //ƒÀ
+            //ï¿½ï¿½
             double[] dBt = new double[6];
             dBt[1] = 1d / 2d * dn - 2d / 3d * Math.Pow(dn, 2) + 37d / 96d * Math.Pow(dn, 3) - 1d / 360d * Math.Pow(dn, 4) - 81d / 512d * Math.Pow(dn, 5);
             dBt[2] = 1d / 48d * Math.Pow(dn, 2) + 1d / 15d * Math.Pow(dn, 3) - 437d / 1440d * Math.Pow(dn, 4) + 46d / 105d * Math.Pow(dn, 5);
@@ -117,7 +116,7 @@ namespace UnitySensors.Utils.Geometry
             dBt[4] = 4397d / 161280d * Math.Pow(dn, 4) - 11d / 504d * Math.Pow(dn, 5);
             dBt[5] = 4583d / 161280d * Math.Pow(dn, 5);
 
-            //ƒÌfEƒÅ'EƒĞ'EƒÑ'EƒÔ
+            //ï¿½Ìfï¿½Eï¿½ï¿½'ï¿½Eï¿½ï¿½'ï¿½Eï¿½ï¿½'ï¿½Eï¿½ï¿½
             double dXi2 = 0;
             double dEt2 = 0;
             double dSg2 = 0;
@@ -134,7 +133,7 @@ namespace UnitySensors.Utils.Geometry
             dSg2 = 1 - dSg2;
             double dCi = Math.Asin(Math.Sin(dXi2) / Math.Cosh(dEt2));
 
-            //ƒÂ
+            //ï¿½ï¿½
             double[] dDt = new double[7];
             dDt[1] = 2 * dn - 2d / 3d * Math.Pow(dn, 2) - 2 * Math.Pow(dn, 3) + 116d / 45d * Math.Pow(dn, 4) + 26d / 45d * Math.Pow(dn, 5) - 2854d / 675d * Math.Pow(dn, 6);
             dDt[2] = 7d / 3d * Math.Pow(dn, 2) - 8d / 5d * Math.Pow(dn, 3) - 227d / 45d * Math.Pow(dn, 4) + 2704d / 315d * Math.Pow(dn, 5) + 2323d / 945d * Math.Pow(dn, 6);
@@ -143,7 +142,7 @@ namespace UnitySensors.Utils.Geometry
             dDt[5] = 4174d / 315d * Math.Pow(dn, 5) - 144838d / 6237d * Math.Pow(dn, 6);
             dDt[6] = 601676d / 22275d * Math.Pow(dn, 6);
 
-            //ƒ‰ƒWƒAƒ“’PˆÊ‚ÌˆÜ“xŒo“x
+            //ï¿½ï¿½ï¿½Wï¿½Aï¿½ï¿½ï¿½Pï¿½Ê‚ÌˆÜ“xï¿½oï¿½x
             double Lat = dCi;
             double Lon = Lon0 + Math.Atan(Math.Sinh(dEt2) / Math.Cos(dXi2));
             for (int j = 1; j <= 6; j++)
@@ -153,7 +152,7 @@ namespace UnitySensors.Utils.Geometry
 
             return new GeoCoordinate(Rad2Deg(Lat), Rad2Deg(Lon), coordinate.y + _origin.altitude);
         }
-        //‘o‹Èü³ÚŠÖ”‚Ì‹tŠÖ”
+        //ï¿½oï¿½Èï¿½ï¿½ï¿½ï¿½ÚŠÖï¿½ï¿½Ì‹tï¿½Öï¿½
         private static double Atanh(double x) => (1d / 2d * Math.Log((1 + x) / (1 - x), Math.E));
         private static double Deg2Rad(double Deg) => (Math.PI * Deg / 180d);
         private static double Rad2Deg(double Rad) => (180d * Rad / Math.PI);

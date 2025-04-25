@@ -1,5 +1,6 @@
-Shader "UnitySensors/Color2Depth"
+Shader "UnitySensors/DepthBufferLidar"
 {
+    // TODO: rewrite it in shader graph to support URP/HDRP
     Properties
     {
         _F("_F", float) = 0.0
@@ -20,7 +21,6 @@ Shader "UnitySensors/Color2Depth"
             #include "UnityCG.cginc"
 
             sampler2D _CameraDepthTexture;
-            float4 _CameraDepthTexture_ST;
             float _F;
             float _Y_MIN;
             float _Y_MAX;
@@ -54,7 +54,8 @@ Shader "UnitySensors/Color2Depth"
                 clip(_Y_MAX - i.uv.y);
                 float depth01 = Linear01Depth(tex2D(_CameraDepthTexture, float2 (i.uv.x, (i.uv.y - _Y_MIN) * _Y_COEF)).r);
                 float3 viewPos = (i.viewDir.xyz / i.viewDir.w) * depth01;
-                float distance = 1.0f - length(viewPos) / _F;
+                
+                float distance = length(viewPos) / _F;
                 return float4(distance, distance, distance, 1.0f);
             }
             ENDCG

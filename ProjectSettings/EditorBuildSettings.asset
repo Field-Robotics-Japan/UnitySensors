@@ -5,9 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/UnitySensors/Samples/TF/TF.unity
     guid: e84e2ab71efe63b4a984b45a10c6ff38
+  - enabled: 1
+    path: Assets/Tests/Scenes/Demo_Depth.unity
+    guid: cbce8c5c5c7011d4b951431b0b177324
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 18f8076c387088155a4fefb632dbebe6,
       type: 2}
+  m_UseUCBPForAssetBundles: 0

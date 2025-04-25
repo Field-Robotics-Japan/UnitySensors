@@ -27,13 +27,14 @@ namespace UnitySensors.Sensor.Camera
 
         public void Execute(int index)
         {
-            float distance = (1.0f - Mathf.Clamp01(depthPixels.AsReadOnly()[index].r)) * far;
+            float distance = depthPixels.AsReadOnly()[index].r * far;
             float distance_noised = distance + noises[index];
             distance = (near < distance && distance < far && near < distance_noised && distance_noised < far) ? distance_noised : 0;
 
+            float radius = distance / directions[index].z;
             PointXYZ point = new PointXYZ()
             {
-                position = directions[index] * distance
+                position = directions[index] * radius
             };
             points[index] = point;
         }

@@ -1,14 +1,13 @@
 using UnityEngine;
-using UnitySensors.Attribute;
 using UnitySensors.Interface.Sensor;
 using UnitySensors.Interface.Sensor.PointCloud;
-using UnitySensors.Sensor;
 using UnitySensors.Utils.PointCloud;
 
 namespace UnitySensors.Visualization.Sensor
 {
     public class PointCloudVisualizer<T> : Visualizer where T : struct, IPointInterface
     {
+        [SerializeField] private PointUtilitiesSO _pointUtilitiesSO;
         private IPointCloudInterface<T> _sourceInterface;
         private Transform _transform;
 
@@ -28,9 +27,11 @@ namespace UnitySensors.Visualization.Sensor
 
         protected virtual void Start()
         {
+
+
             _transform = this.transform;
-            _bufferSize = PointUtilities.pointDataSizes[typeof(T)];
-            _mat = new Material(Shader.Find(PointUtilities.shaderNames[typeof(T)]));
+            _bufferSize = PointUtilitiesSO.pointDataSizes[typeof(T)];
+            _mat = new Material(_pointUtilitiesSO.GetPointMaterialTemplate(typeof(T)));
             _mat.renderQueue = 3000;
             _mesh = new Mesh();
             _mesh.vertices = new Vector3[1] { Vector3.zero };

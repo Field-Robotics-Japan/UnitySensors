@@ -1,5 +1,6 @@
 Shader "UnitySensors/PointCloudXYZ"
 {
+    // TODO: rewrite it in shader graph to support URP/HDRP
 	Properties{
 		_MainTex("Albedo (RGB)", 2D) = "white" {}
 	_Glossiness("Smoothness", Range(0,1)) = 0.5

@@ -45,7 +45,7 @@ To receive the data in ROS take a look at [ROS-TCP-Endpoint][external-RosTCPEndp
 
 > \[!NOTE]
 >
-> Unitysensor is made for Unity 2021.3 or later
+> Unitysensor is made for Unity 2022.3 or later
 
 1. Open the Package Manager from `Window` -> `Package Manager`.
 2. In the Package Manager window, find and click the + button in the upper lefthand corner of the window. Select `Add package from git URL....`
@@ -61,6 +61,10 @@ To receive the data in ROS take a look at [ROS-TCP-Endpoint][external-RosTCPEndp
 1. Download lastest release of [ROS-TCP-Endpoint][external-RosTCPEndpoint-release-link].
 2. Build your workspace.
 3. Launch ROS endpoint node.
+
+### Migrating to URP/HDRP
+
+Please refer to [Migrating to URP/HDRP](MigrateToURP&HDRP.md).
 
 ## 🤝 Contributing
 
@@ -86,7 +90,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 <!-- LINK GROUP -->
 
-[external-unity-shield]: https://img.shields.io/badge/Unity3D-%3E%202021.3-blue?style=flat-square&logo=unity
+[external-unity-shield]: https://img.shields.io/badge/Unity3D-%3E%202022.3-blue?style=flat-square&logo=unity
 [external-unity-link]: https://unity.com/
 [external-ros-shield]: https://img.shields.io/badge/ROS-1%7C2-blue?style=flat-square&logo=ros
 [external-ros-link]: https://www.ros.org/
