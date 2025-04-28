@@ -30,7 +30,16 @@ namespace UnitySensors.Sensor.LiDAR
 
         protected override void Init()
         {
-            base.Init();
+            if (scanPattern == null)
+            {
+                return;
+            }
+            Initialize();
+        }
+
+        public override void Initialize()
+        {
+            base.Initialize();
 
             _transform = this.transform;
 

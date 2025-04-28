@@ -12,6 +12,11 @@ namespace UnitySensors.ROS.Publisher.Sensor
 
         private void Awake()
         {
+            if (_source == null)
+            {
+                Debug.LogError("Source is not set.");
+                return;
+            }
             _serializer.SetSource(_source as IPointCloudInterface<PointXYZI>);
         }
     }
