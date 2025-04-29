@@ -32,6 +32,7 @@ namespace UnitySensors.Sensor.LiDAR
         {
             if (scanPattern == null)
             {
+                Debug.LogWarning("RaycastLiDARSensor: scanPattern is null. Initialization is delayed until scanPattern is set.");
                 return;
             }
             Initialize();
