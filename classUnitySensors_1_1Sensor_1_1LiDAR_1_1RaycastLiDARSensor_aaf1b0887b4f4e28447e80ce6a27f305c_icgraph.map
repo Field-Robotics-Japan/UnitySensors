@@ -1,5 +1,7 @@
 <map id="UnitySensors.Sensor.LiDAR.RaycastLiDARSensor.SetupJobs" name="UnitySensors.Sensor.LiDAR.RaycastLiDARSensor.SetupJobs">
-<area shape="rect" id="Node000001" title=" " alt="" coords="256,5,480,45"/>
-<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html#a7ad846f7113d6e8a362ea51ebb94a237" title=" " alt="" coords="5,5,208,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,28,208,28,208,23,242,23"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="520,5,744,45"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html#af287f04bee1ac79935d0d9d4c0852be9" title=" " alt="" coords="256,5,472,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="506,28,472,28,472,23,506,23"/>
+<area shape="rect" id="Node000003" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html#a7ad846f7113d6e8a362ea51ebb94a237" title=" " alt="" coords="5,5,208,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="242,28,208,28,208,23,242,23"/>
 </map>

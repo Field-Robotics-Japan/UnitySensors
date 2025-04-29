@@ -1,6 +1,7 @@
 var classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor =
 [
     [ "Init", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html#a7ad846f7113d6e8a362ea51ebb94a237", null ],
+    [ "Initialize", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html#af287f04bee1ac79935d0d9d4c0852be9", null ],
     [ "LoadScanData", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html#a4e92b552dd61998b35ecc50e57d073f2", null ],
     [ "OnSensorDestroy", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html#af7902080be52fb2cb673877b0f5487a8", null ],
     [ "SetupJobs", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html#aaf1b0887b4f4e28447e80ce6a27f305c", null ],

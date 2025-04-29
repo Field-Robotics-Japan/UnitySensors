@@ -1,6 +1,7 @@
 var classUnitySensors_1_1Sensor_1_1LiDAR_1_1DepthBufferLiDARSensor =
 [
     [ "Init", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1DepthBufferLiDARSensor.html#a67886574e53e64fd0b7c1ae76c6c6c4e", null ],
+    [ "Initialize", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1DepthBufferLiDARSensor.html#a78e05f207744146e84b80d30db497a1d", null ],
     [ "LoadScanData", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1DepthBufferLiDARSensor.html#ac85367cccf7a3f20888be86345c3afee", null ],
     [ "LoadTexture", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1DepthBufferLiDARSensor.html#ae347942fb28488a54948cb4fd39b9d04", null ],
     [ "OnSensorDestroy", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1DepthBufferLiDARSensor.html#a8450c588e718eb4c4a02310dc7a3917a", null ],

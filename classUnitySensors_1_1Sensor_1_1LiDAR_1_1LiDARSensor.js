@@ -1,6 +1,7 @@
 var classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor =
 [
     [ "Init", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor.html#aaa9f6b2f334666030c82e1e18fc8aac9", null ],
+    [ "Initialize", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor.html#acc5adc708899083a8c43077d53fbd471", null ],
     [ "OnSensorDestroy", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor.html#ae0fa529a076f18d833e990b768eafff8", null ],
     [ "_gaussianNoiseSigma", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor.html#ab9413e5b7e1a68d970fd2166bf85333b", null ],
     [ "_maxIntensity", "classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor.html#a196dda4b1991c93fd47d8b4192744f8f", null ],
