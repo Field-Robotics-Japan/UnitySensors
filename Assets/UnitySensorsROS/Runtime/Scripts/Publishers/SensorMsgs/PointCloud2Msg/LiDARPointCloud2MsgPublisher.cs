@@ -12,6 +12,11 @@ namespace UnitySensors.ROS.Publisher.Sensor
 
         private void Awake()
         {
+            if (_source == null)
+            {
+                Debug.LogError("Source is not set in LiDARPointCloud2MsgPublisher. Please ensure that the '_source' field is assigned in the Unity Editor or via code. Expected type: IPointCloudInterface<PointXYZI>.");
+                return;
+            }
             _serializer.SetSource(_source as IPointCloudInterface<PointXYZI>);
         }
     }

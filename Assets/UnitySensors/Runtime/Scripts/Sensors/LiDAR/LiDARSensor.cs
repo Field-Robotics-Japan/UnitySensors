@@ -35,6 +35,15 @@ namespace UnitySensors.Sensor.LiDAR
 
         protected override void Init()
         {
+            if (_scanPattern == null)
+            {
+                return;
+            }
+            Initialize();
+        }
+
+        public virtual void Initialize()
+        {
             _pointsNumPerScan = Mathf.Clamp(_pointsNumPerScan, 1, scanPattern.size);
             _pointCloud = new PointCloud<PointXYZI>()
             {

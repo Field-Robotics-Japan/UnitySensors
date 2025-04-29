@@ -38,7 +38,17 @@ namespace UnitySensors.Sensor.LiDAR
 
         protected override void Init()
         {
-            base.Init();
+            if (scanPattern == null)
+            {
+                Debug.LogWarning("Initialization postponed: scanPattern is null. Ensure that scanPattern is assigned before calling Init.");
+                return;
+            }
+            Initialize();
+        }
+
+        public override void Initialize()
+        {
+            base.Initialize();
             _transform = this.transform;
             SetupCamera();
             LoadScanData();

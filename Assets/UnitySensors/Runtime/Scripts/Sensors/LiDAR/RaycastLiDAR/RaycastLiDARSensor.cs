@@ -30,7 +30,17 @@ namespace UnitySensors.Sensor.LiDAR
 
         protected override void Init()
         {
-            base.Init();
+            if (scanPattern == null)
+            {
+                Debug.LogWarning("RaycastLiDARSensor: scanPattern is null. Initialization is delayed until scanPattern is set.");
+                return;
+            }
+            Initialize();
+        }
+
+        public override void Initialize()
+        {
+            base.Initialize();
 
             _transform = this.transform;
 
