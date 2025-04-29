@@ -40,6 +40,7 @@ namespace UnitySensors.Sensor.LiDAR
         {
             if (scanPattern == null)
             {
+                Debug.LogWarning("Initialization postponed: scanPattern is null. Ensure that scanPattern is assigned before calling Init.");
                 return;
             }
             Initialize();
