@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Rendering;
 using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
@@ -15,7 +14,7 @@ using Random = Unity.Mathematics.Random;
 namespace UnitySensors.Sensor.Camera
 {
     [RequireComponent(typeof(UnityEngine.Camera))]
-    public class DepthCameraSensor : CameraSensor, ITextureInterface, IPointCloudInterface<PointXYZ>
+    public class DepthCameraSensor : CameraSensor, IPointCloudInterface<PointXYZ>
     {
         [SerializeField]
         protected float _minRange = 0.05f;
@@ -28,10 +27,6 @@ namespace UnitySensors.Sensor.Camera
         [SerializeField]
         private bool _convertToPointCloud = false;
 
-        private UnityEngine.Camera _camera;
-        private RenderTexture _rt = null;
-        private Texture2D _texture;
-
         private JobHandle _jobHandle;
 
         private IUpdateGaussianNoisesJob _updateGaussianNoisesJob;
@@ -43,19 +38,14 @@ namespace UnitySensors.Sensor.Camera
         private PointCloud<PointXYZ> _pointCloud;
         private int _pointsNum;
 
-        public override UnityEngine.Camera m_camera { get => _camera; }
-        public Texture2D texture0 { get => _texture; }
-        public Texture2D texture1 { get => _texture; }
         public PointCloud<PointXYZ> pointCloud { get => _pointCloud; }
         public int pointsNum { get => _pointsNum; }
 
-        public float texture0FarClipPlane { get => _camera.farClipPlane; }
         public bool convertToPointCloud { get => _convertToPointCloud; set => _convertToPointCloud = value; }
 
         protected override void Init()
         {
-            _camera = GetComponent<UnityEngine.Camera>();
-            _camera.fieldOfView = _fov;
+            base.Init();
             _camera.nearClipPlane = _minRange;
             _camera.farClipPlane = _maxRange;
 
@@ -117,7 +107,7 @@ namespace UnitySensors.Sensor.Camera
 
         protected override void UpdateSensor()
         {
-            if (!LoadTexture()) return;
+            if (!LoadTexture(_rt, ref _texture)) return;
 
             if (_convertToPointCloud)
             {
@@ -128,28 +118,6 @@ namespace UnitySensors.Sensor.Camera
             }
 
             onSensorUpdated?.Invoke();
-        }
-
-        private bool LoadTexture()
-        {
-            bool result = false;
-            AsyncGPUReadback.Request(_rt, 0, request =>
-            {
-                if (request.hasError)
-                {
-                    Debug.LogError("GPU readback error detected.");
-                }
-                else
-                {
-                    var data = request.GetData<Color>();
-                    _texture.LoadRawTextureData(data);
-                    _texture.Apply();
-                    result = true;
-                }
-            });
-            // TODO: Use coroutine to wait for the request
-            AsyncGPUReadback.WaitAllRequests();
-            return result;
         }
 
         protected override void OnSensorDestroy()
