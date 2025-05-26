@@ -127,8 +127,7 @@ namespace UnitySensors.Sensor.Camera
                 _jobHandle.Complete();
             }
 
-            if (onSensorUpdated != null)
-                onSensorUpdated.Invoke();
+            onSensorUpdated?.Invoke();
         }
 
         private bool LoadTexture()

@@ -29,6 +29,7 @@ The following sensors are available inside :
 - Livox 3D LiDAR(Avia, Horizon, Mid40, Mid70, Tele, HAP, Mid360)
 - RGB Camera
 - RGBD Camera
+- Panoramic Camera
 - IMU
 - GNSS
 - (GroundTruth)
