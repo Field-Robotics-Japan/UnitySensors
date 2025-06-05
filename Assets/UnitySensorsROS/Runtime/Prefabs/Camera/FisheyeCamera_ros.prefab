@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &431380551188723393
+--- !u!1 &3069757406263986279
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 431380551188723406}
-  - component: {fileID: 431380551188723405}
-  - component: {fileID: 431380551188723404}
-  - component: {fileID: 769876242129936710}
+  - component: {fileID: 8964218494652523351}
+  - component: {fileID: 1440127890685067463}
+  - component: {fileID: 9052829084107625070}
+  - component: {fileID: 8928244098186655159}
   m_Layer: 0
-  m_Name: PanoramicCamera_ros
+  m_Name: FisheyeCamera_ros
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &431380551188723406
+--- !u!4 &8964218494652523351
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 431380551188723393}
+  m_GameObject: {fileID: 3069757406263986279}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.6, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &431380551188723405
+--- !u!20 &1440127890685067463
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 431380551188723393}
+  m_GameObject: {fileID: 3069757406263986279}
   m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
@@ -85,30 +85,32 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &431380551188723404
+--- !u!114 &9052829084107625070
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 431380551188723393}
+  m_GameObject: {fileID: 3069757406263986279}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6618a3eeb546cbde1b85333be7bf7400, type: 3}
+  m_Script: {fileID: 11500000, guid: 7515c4d2c4b465c48a43ee62a0f51ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _frequency: 20
-  _resolution: {x: 1920, y: 540}
+  _resolution: {x: 1024, y: 1024}
   _fov: 30
-  _panoramicMat: {fileID: 2100000, guid: ee1fd7ab1b7c4594d82420f12a43bb94, type: 2}
-  _cubemapResolution: {x: 1024, y: 1024}
---- !u!114 &769876242129936710
+  _fisheyeMat: {fileID: -876546973899608171, guid: b077db22e4fb5a1478542d42122b443d,
+    type: 3}
+  _cubemapResolution: {x: 512, y: 512}
+  viewAngle: 210
+--- !u!114 &8928244098186655159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 431380551188723393}
+  m_GameObject: {fileID: 3069757406263986279}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b474a6242e811f04488e3cb67b65dd35, type: 3}
@@ -117,9 +119,9 @@ MonoBehaviour:
   _frequency: 20
   _topicName: /camera/color/image/compressed
   _serializer:
-    _source: {fileID: 431380551188723404}
+    _source: {fileID: 9052829084107625070}
     _sourceTexture: 0
     _header:
-      _source: {fileID: 431380551188723404}
+      _source: {fileID: 9052829084107625070}
       _frame_id: camera_frame
     quality: 75
