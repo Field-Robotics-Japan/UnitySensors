@@ -7,7 +7,7 @@ namespace UnitySensors.Sensor.Camera
         protected override void Init()
         {
             base.Init();
-            _rt = new RenderTexture(_resolution.x, _resolution.y, 16, RenderTextureFormat.ARGB32);
+            _rt = new RenderTexture(_resolution.x, _resolution.y, 0, RenderTextureFormat.ARGB32);
             _camera.targetTexture = _rt;
 
             _texture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBA32, false);

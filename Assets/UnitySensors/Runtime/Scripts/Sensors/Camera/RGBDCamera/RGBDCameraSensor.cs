@@ -44,6 +44,7 @@ namespace UnitySensors.Sensor.Camera
         private PointCloud<PointXYZRGB> _pointCloud;
         private int _pointsNum;
 
+        //TODO: Maybe can output color in RGB channel and depth in alpha channel of the same texture.
         protected UnityEngine.Camera _depthCamera { get => _camera; }
         public override Texture2D texture0 { get => _depthTexture; }
         public override Texture2D texture1 { get => _colorTexture; }
@@ -54,7 +55,7 @@ namespace UnitySensors.Sensor.Camera
         protected override void Init()
         {
             base.Init();
-            _depthRt = new RenderTexture(_resolution.x, _resolution.y, 32, RenderTextureFormat.ARGBFloat);
+            _depthRt = new RenderTexture(_resolution.x, _resolution.y, 0, RenderTextureFormat.ARGBFloat);
             _depthCamera.targetTexture = _depthRt;
 
             GameObject colorCameraObject = new GameObject();
@@ -64,7 +65,7 @@ namespace UnitySensors.Sensor.Camera
             colorCameraTransform.localRotation = Quaternion.identity;
 
             _colorCamera = colorCameraObject.AddComponent<UnityEngine.Camera>();
-            _colorRt = new RenderTexture(_resolution.x, _resolution.y, 16, RenderTextureFormat.ARGB32);
+            _colorRt = new RenderTexture(_resolution.x, _resolution.y, 0, RenderTextureFormat.ARGB32);
             _colorCamera.targetTexture = _colorRt;
 
             _depthCamera.fieldOfView = _colorCamera.fieldOfView = _fov;

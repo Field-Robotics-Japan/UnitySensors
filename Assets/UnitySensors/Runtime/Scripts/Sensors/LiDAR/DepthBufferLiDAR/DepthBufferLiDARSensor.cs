@@ -67,7 +67,7 @@ namespace UnitySensors.Sensor.LiDAR
             _textureSizePerCamera.y = Mathf.RoundToInt(Mathf.Sqrt((_texturePixelsNum / _camerasNum) / aspectRatio));
             _textureSizePerCamera.x = Mathf.RoundToInt(_textureSizePerCamera.y * aspectRatio);
 
-            _rt = new RenderTexture(_textureSizePerCamera.x, _textureSizePerCamera.y * _camerasNum, 32, RenderTextureFormat.ARGBFloat);
+            _rt = new RenderTexture(_textureSizePerCamera.x, _textureSizePerCamera.y * _camerasNum, 0, RenderTextureFormat.ARGBFloat);
             _texture = new Texture2D(_textureSizePerCamera.x, _textureSizePerCamera.y * _camerasNum, TextureFormat.RGBAFloat, false);
             _pixels = _texture.GetPixelData<Color>(0);
 

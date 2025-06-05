@@ -13,11 +13,11 @@ namespace UnitySensors.Sensor.Camera
         protected override void Init()
         {
             base.Init();
-            _cubemap = new RenderTexture(_cubemapResolution.x, _cubemapResolution.y, 16, RenderTextureFormat.ARGB32)
+            _cubemap = new RenderTexture(_cubemapResolution.x, _cubemapResolution.y, 0, RenderTextureFormat.ARGB32)
             {
                 dimension = TextureDimension.Cube
             };
-            _rt = new RenderTexture(_resolution.x, _resolution.y, 16, RenderTextureFormat.ARGB32);
+            _rt = new RenderTexture(_resolution.x, _resolution.y, 0, RenderTextureFormat.ARGB32);
             _texture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBA32, false);
         }
 

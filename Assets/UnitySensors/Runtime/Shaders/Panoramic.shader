@@ -1,18 +1,21 @@
 Shader "UnitySensors/Panoramic"
 {
 
-	Properties
+    Properties
     {
-        [NoScaleOffset] _MainTex("Cubemap", Cube) = "" {}
-        _Rotation("Rotation", Vector) = (0, 0, 0, 0)
-	}
+        [NoScaleOffset] _MainTex ("Cubemap", Cube) = "" { }
+        _Rotation ("Rotation", Vector) = (0, 0, 0, 0)
+    }
 
     Subshader
     {
         Pass
         {
             ZTest Always Cull Off ZWrite Off
-            Fog { Mode off }
+            Fog
+            {
+                Mode off
+            }
 
             CGPROGRAM
             #pragma vertex vert
@@ -20,13 +23,12 @@ Shader "UnitySensors/Panoramic"
             #pragma fragmentoption ARB_precision_hint_fastest
             #include "UnityCG.cginc"
 
-            #define PI    3.141592653589793
-            #define TAU   6.283185307179587
 
-            float3      _Rotation;
+            float3 _Rotation;
             samplerCUBE _MainTex;
 
-            struct v2f {
+            struct v2f
+            {
                 float4 pos : POSITION;
                 float2 uv : TEXCOORD0;
             };
@@ -41,13 +43,13 @@ Shader "UnitySensors/Panoramic"
 
             float3 EquirectangularProjection(float2 In)
             {
-                float a = In.x * TAU;
-                float b = In.y * PI;
+                float a = In.x * UNITY_TWO_PI;
+                float b = In.y * UNITY_PI;
 
                 return float3(
-                    -sin(a) * sin(b),
-                    -cos(b),
-                    -cos(a) * sin(b)
+                    - sin(a) * sin(b),
+                    - cos(b),
+                    - cos(a) * sin(b)
                 );
             }
 
@@ -59,37 +61,37 @@ Shader "UnitySensors/Panoramic"
                 float3 c = cos(In);
 
                 float3x3 x = float3x3(
-                    float3(1,   0,    0),
+                    float3(1, 0, 0),
                     float3(0, c.x, -s.x),
-                    float3(0, s.x,  c.x)
+                    float3(0, s.x, c.x)
                 );
 
                 float3x3 y = float3x3(
-                    float3( c.y, 0, s.y),
-                    float3(   0, 1,   0),
+                    float3(c.y, 0, s.y),
+                    float3(0, 1, 0),
                     float3(-s.y, 0, c.y)
                 );
 
                 float3x3 z = float3x3(
                     float3(c.z, -s.z, 0),
-                    float3(s.z,  c.z, 0),
-                    float3(  0,    0, 1)
+                    float3(s.z, c.z, 0),
+                    float3(0, 0, 1)
                 );
 
-                return mul(mul(x,y),z);
+                return mul(mul(x, y), z);
             }
 
             fixed4 frag(v2f i) : COLOR
             {
                 float3 unit = EquirectangularProjection(i.uv);
-                float3x3 rotMatrix = EulerToRotMatrix(mul(_Rotation,PI/180.0));
+                float3x3 rotMatrix = EulerToRotMatrix(radians(_Rotation));
 
                 unit = mul(rotMatrix, unit);
 
                 return texCUBE(_MainTex, unit);
             }
 
-        ENDCG
+            ENDCG
         }
     }
     Fallback Off
