@@ -10,7 +10,7 @@ namespace UnitySensors.Sensor.Camera
         private Material _fisheyeMat;
         [SerializeField]
         private Vector2Int _cubemapResolution = new Vector2Int(1024, 1024);
-        [Range(120, 360)]
+        [Range(90, 360)]
         public float viewAngle = 210;
         private RenderTexture _cubemap;
         protected override void Init()
@@ -28,13 +28,12 @@ namespace UnitySensors.Sensor.Camera
         {
             m_camera.RenderToCubemap(_cubemap);
 
-            _fisheyeMat.SetTexture("_Cubemap", _cubemap);
             _fisheyeMat.SetFloat("_Angle", viewAngle);
             var eulerAngles = transform.rotation.eulerAngles;
             var rot = Quaternion.Euler(eulerAngles.x + 90, eulerAngles.y, eulerAngles.z);
             var mat = Matrix4x4.TRS(Vector3.zero, rot, Vector3.one);
-            _fisheyeMat.SetMatrix("_CubeToDome_WorldTransform", mat);
-            Graphics.Blit(null, _rt, _fisheyeMat);
+            _fisheyeMat.SetMatrix("_WorldTransform", mat);
+            Graphics.Blit(_cubemap, _rt, _fisheyeMat);
 
             if (!LoadTexture(_rt, ref _texture)) return;
             onSensorUpdated?.Invoke();

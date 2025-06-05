@@ -100,8 +100,7 @@ MonoBehaviour:
   _frequency: 20
   _resolution: {x: 1024, y: 1024}
   _fov: 30
-  _fisheyeMat: {fileID: -876546973899608171, guid: b077db22e4fb5a1478542d42122b443d,
-    type: 3}
+  _fisheyeMat: {fileID: 2100000, guid: 54d1a4a7d74dd4945ad614037e38fbb0, type: 2}
   _cubemapResolution: {x: 512, y: 512}
   viewAngle: 210
 --- !u!114 &2845392135782433157
