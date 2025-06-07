@@ -18,7 +18,7 @@
 
 ## 🔍 Overview
 
-UnitySensos is a projet that regroup two Unity3D packages that allow you to **easly** use Unity3D as robotic simulation !
+UnitySensos is a projet that regroup two Unity3D packages that allow you to **easily** use Unity3D as robotic simulation !
 There are several Prefab and Scene files available for testing each sensor.
 
 **1. UnitySensor**
@@ -30,10 +30,14 @@ The following sensors are available inside :
 - RGB Camera
 - RGBD Camera
 - Panoramic Camera
+- Fisheye Camera
 - IMU
 - GNSS
 - (GroundTruth)
 - (TF)
+
+Both the `Panoramic Camera` and `Fisheye Camera` are based on cubemap projection. 
+To avoid seams between cubemap faces, you may need to disable some post-processing effects and use fixed exposure.
 
 **2. UnitySensorROS**
 
@@ -46,7 +50,7 @@ To receive the data in ROS take a look at [ROS-TCP-Endpoint][external-RosTCPEndp
 
 > \[!NOTE]
 >
-> Unitysensor is made for Unity 2022.3 or later
+> UnitySensors is made for Unity 2022.3 or later
 
 1. Open the Package Manager from `Window` -> `Package Manager`.
 2. In the Package Manager window, find and click the + button in the upper lefthand corner of the window. Select `Add package from git URL....`
