@@ -25,10 +25,10 @@ namespace UnitySensors.Sensor.LiDAR
         [ReadOnly]
         public NativeArray<float> noises;
 
-        [ReadOnly, NativeDisableParallelForRestriction]
+        [ReadOnly]
         public NativeArray<Color> pixels;
 
-        [NativeDisableParallelForRestriction]
+        [WriteOnly]
         public NativeArray<PointXYZI> points;
 
         public void Execute(int index)

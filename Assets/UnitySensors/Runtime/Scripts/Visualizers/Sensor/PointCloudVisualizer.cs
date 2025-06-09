@@ -33,9 +33,23 @@ namespace UnitySensors.Visualization.Sensor
             _bufferSize = PointUtilitiesSO.pointDataSizes[typeof(T)];
             _mat = new Material(_pointUtilitiesSO.GetPointMaterialTemplate(typeof(T)));
             _mat.renderQueue = 3000;
+            // Quad
             _mesh = new Mesh();
-            _mesh.vertices = new Vector3[1] { Vector3.zero };
-            _mesh.SetIndices(new int[1] { 0 }, MeshTopology.Points, 0);
+            _mesh.vertices = new Vector3[]
+            {
+                new Vector3(-0.5f, -0.5f, 0),
+                new Vector3( 0.5f, -0.5f, 0),
+                new Vector3( 0.5f,  0.5f, 0),
+                new Vector3(-0.5f,  0.5f, 0)
+            };
+            _mesh.uv = new Vector2[]
+            {
+                new Vector2(0, 0),
+                new Vector2(1, 0),
+                new Vector2(1, 1),
+                new Vector2(0, 1)
+            };
+            _mesh.SetIndices(new int[] { 0, 1, 2, 2, 3, 0 }, MeshTopology.Triangles, 0);
             _argsBuffer = new ComputeBuffer(1, _args.Length * sizeof(uint), ComputeBufferType.IndirectArguments);
             UpdateBuffers();
         }
