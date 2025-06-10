@@ -19,7 +19,6 @@ namespace UnitySensors.Utils.Camera
         private void Start()
         {
             _mat = new(mat_source);
-            _mat.SetFloat("_F", GetComponent<UnityEngine.Camera>().farClipPlane);
             _mat.SetFloat("_Y_MIN", y_min);
             _mat.SetFloat("_Y_MAX", y_max);
             _mat.SetFloat("_Y_COEF", y_coef);

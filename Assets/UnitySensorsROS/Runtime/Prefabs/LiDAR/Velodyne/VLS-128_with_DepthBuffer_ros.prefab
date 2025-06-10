@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2088006137881723819}
   - component: {fileID: 6242245505790055791}
   - component: {fileID: 4172439335183973428}
+  - component: {fileID: 4184507570743424975}
   m_Layer: 0
   m_Name: Sensor
   m_TagString: Untagged
@@ -55,8 +56,10 @@ MonoBehaviour:
   _maxIntensity: 255
   _texturePixelsNum: 1500000
   _textureSizePerCamera: {x: 0, y: 0}
-  _depthBufferLidarMat: {fileID: 2100000, guid: 4d25d3a0a13f3d9489db78fe07061f16,
-    type: 2}
+  _depthBufferLidarMat: {fileID: -876546973899608171, guid: 84b516aab729000469ee4cfc05acfcb7,
+    type: 3}
+  _rasterizeScans: 0
+  _singleCameraFOV: 60
 --- !u!114 &6242245505790055791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,6 +93,21 @@ MonoBehaviour:
       _source: {fileID: 2088006137881723819}
       _frame_id: velodyne_link
   _source: {fileID: 2088006137881723819}
+--- !u!114 &4184507570743424975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582244255403429774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a6512c6d49c2244a1a77e382c678b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _frequency: 10
+  _frame_id: velodyne_link
+  _children: []
 --- !u!1 &821409546266044101
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,6 +166,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -231,6 +251,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -314,6 +336,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

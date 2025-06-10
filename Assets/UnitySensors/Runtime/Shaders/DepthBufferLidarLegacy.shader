@@ -3,7 +3,6 @@ Shader "UnitySensors/DepthBufferLidar"
     // TODO: rewrite it in shader graph to support URP/HDRP
     Properties
     {
-        _F ("_F", float) = 0.0
         _Y_MIN ("_Y_MIN", float) = 0.0
         _Y_MAX ("_Y_MAX", float) = 1.0
         _Y_COEF ("_Y_COEF", float) = 1.0
@@ -21,10 +20,11 @@ Shader "UnitySensors/DepthBufferLidar"
             #include "UnityCG.cginc"
 
             sampler2D _CameraDepthTexture;
-            float _F;
             float _Y_MIN;
             float _Y_MAX;
             float _Y_COEF;
+
+            #include "DepthBufferLidar.cginc"
 
             struct appdata
             {
@@ -48,18 +48,18 @@ Shader "UnitySensors/DepthBufferLidar"
 
             float4 frag(v2f i) : SV_Target
             {
-                clip(i.uv.y - _Y_MIN);
-                clip(_Y_MAX - i.uv.y);
+                float overlapAlpha;
+                GetOverlapAlpha_float(i.uv, overlapAlpha);
+                clip(overlapAlpha - 0.5);
 
-                float2 uv_local = float2(i.uv.x, (i.uv.y - _Y_MIN) * _Y_COEF);
-                float2 ndc = uv_local * 2 - 1;
-                float4 viewDir = mul(unity_CameraInvProjection, float4(ndc, 1, 1));
+                float2 sceneDepthUV;
+                GetSceneDepthUV_float(i.uv, sceneDepthUV);
 
-                float depth01 = Linear01Depth(tex2D(_CameraDepthTexture, uv_local).r);
-                float3 viewPos = (viewDir.xyz / viewDir.w) * depth01;
+                float depth01 = Linear01Depth(tex2D(_CameraDepthTexture, sceneDepthUV));
                 
-                float distance = length(viewPos) / _F;
-                return float4(distance, distance, distance, 1);
+                float distance;
+                Depth2Distance_float(depth01, sceneDepthUV, distance);
+                return float4(distance.xxx, 1);
             }
             ENDCG
         }

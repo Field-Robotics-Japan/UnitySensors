@@ -9,6 +9,7 @@ using UnitySensors.Utils.Noise;
 using UnitySensors.Utils.Camera;
 
 using Random = Unity.Mathematics.Random;
+using UnityEngine.UI;
 
 namespace UnitySensors.Sensor.LiDAR
 {
@@ -51,7 +52,7 @@ namespace UnitySensors.Sensor.LiDAR
         public override void Initialize()
         {
             base.Initialize();
-            _transform = this.transform;
+            _transform = transform;
             SetupCamera();
             LoadScanData();
             SetupJobs();
@@ -64,6 +65,7 @@ namespace UnitySensors.Sensor.LiDAR
 
             _horizontalFOV = azimuthAngleRange / _camerasNum;
             float originalVerticalFOV = Mathf.Max(1.0f, 2.0f * Mathf.Max(Mathf.Abs(scanPattern.maxZenithAngle), Mathf.Abs(scanPattern.minZenithAngle)));
+            // Critical vertical FOV calculation
             float verticalFOV = Mathf.Atan(Mathf.Tan(originalVerticalFOV * 0.5f * Mathf.Deg2Rad) / Mathf.Cos(_horizontalFOV * 0.5f * Mathf.Deg2Rad)) * 2.0f * Mathf.Rad2Deg;
 
             // h/v aspect ratio calculation
