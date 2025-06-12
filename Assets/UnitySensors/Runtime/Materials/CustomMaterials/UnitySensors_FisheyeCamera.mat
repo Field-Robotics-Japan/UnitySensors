@@ -27,9 +27,17 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Ints: []
+    m_Ints:
+    - _EquiDistant: 0
+    - _Equidistant: 1
     m_Floats:
     - _Angle: 210
+    - _alpha: 1
+    - _beta: 0
+    - _cx: 1
+    - _cy: 1
+    - _fx: 0.0009765625
+    - _fy: 0.0009765625
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

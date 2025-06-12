@@ -8,9 +8,9 @@ namespace UnitySensors.Sensor.Camera
     public abstract class CameraSensor : UnitySensor, ICameraInterface, ITextureInterface
     {
         [SerializeField]
-        protected Vector2Int _resolution = new Vector2Int(640, 480);
+        protected internal Vector2Int _resolution = new Vector2Int(640, 480);
         [SerializeField]
-        protected float _fov = 30.0f;
+        protected internal float _fov = 30.0f;
 
         protected RenderTexture _rt = null;
         protected UnityEngine.Camera _camera;
@@ -23,8 +23,6 @@ namespace UnitySensors.Sensor.Camera
         public virtual Texture2D texture1 { get => _texture; }
 
         public float texture0FarClipPlane { get => _camera.farClipPlane; }
-
-        //TODO: Refactor
 
         protected override void Init()
         {
