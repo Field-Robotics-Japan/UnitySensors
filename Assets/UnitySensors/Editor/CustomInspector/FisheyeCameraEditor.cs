@@ -1,5 +1,4 @@
 using UnityEditor;
-using UnityEngine;
 using UnitySensors.Sensor.Camera;
 
 namespace UnitySensors.Editor
@@ -12,14 +11,12 @@ namespace UnitySensors.Editor
         SerializedProperty betaProp;
         SerializedProperty focalLengthProp;
         SerializedProperty principalPointProp;
-        SerializedProperty resolutionProp;
         readonly string cameraModelLabel = nameof(FisheyeCameraSensor._cameraModel);
         readonly string alphaLabel = nameof(FisheyeCameraSensor._alpha);
         readonly string betaLabel = nameof(FisheyeCameraSensor._beta);
         readonly string focalLengthLabel = nameof(FisheyeCameraSensor._focalLength);
         readonly string principalPointLabel = nameof(FisheyeCameraSensor._principalPoint);
         readonly string fovLabel = nameof(FisheyeCameraSensor._fov);
-        readonly string resolutionLabel = nameof(FisheyeCameraSensor._resolution);
         readonly string scriptLabel = "m_Script";
 
         void OnEnable()
@@ -29,7 +26,6 @@ namespace UnitySensors.Editor
             betaProp = serializedObject.FindProperty(betaLabel);
             focalLengthProp = serializedObject.FindProperty(focalLengthLabel);
             principalPointProp = serializedObject.FindProperty(principalPointLabel);
-            resolutionProp = serializedObject.FindProperty(resolutionLabel);
         }
 
         public override void OnInspectorGUI()
@@ -41,10 +37,7 @@ namespace UnitySensors.Editor
             EditorGUI.EndDisabledGroup();
 
             DrawPropertiesExcluding(serializedObject,
-                cameraModelLabel, alphaLabel, betaLabel, focalLengthLabel, principalPointLabel, fovLabel, resolutionLabel, scriptLabel);
-
-            int resValue = Mathf.Max(0, EditorGUILayout.IntField("Resolution", resolutionProp.vector2IntValue.x));
-            resolutionProp.vector2IntValue = new Vector2Int(resValue, resValue);
+                cameraModelLabel, alphaLabel, betaLabel, focalLengthLabel, principalPointLabel, fovLabel, scriptLabel);
 
             EditorGUILayout.PropertyField(cameraModelProp);
             if (cameraModelProp.enumValueIndex == (int)FisheyeCameraSensor.CameraModel.EUCM)

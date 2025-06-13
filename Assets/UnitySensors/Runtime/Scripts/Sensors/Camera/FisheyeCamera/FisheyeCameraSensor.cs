@@ -20,7 +20,7 @@ namespace UnitySensors.Sensor.Camera
         internal CameraModel _cameraModel = CameraModel.Equidistant;
         [SerializeField, Range(0.0f, 1.0f)]
         internal float _alpha = 1.0f;
-        [SerializeField, Min(0.01f)]
+        [SerializeField, Min(0)]
         internal float _beta = 0.0f;
         [SerializeField]
         internal Vector2 _focalLength = new Vector2(1.0f, 1.0f);

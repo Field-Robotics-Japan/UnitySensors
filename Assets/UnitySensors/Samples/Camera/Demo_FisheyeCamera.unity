@@ -479,6 +479,11 @@ PrefabInstance:
       propertyPath: _cameraModel
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6005907688980854987, guid: 258ef1358d72c2f47b009c2ea3644b8d,
+        type: 3}
+      propertyPath: _cubemapResolution
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 6074865834702253757, guid: 258ef1358d72c2f47b009c2ea3644b8d,
         type: 3}
       propertyPath: m_Name
@@ -813,6 +818,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _cameraModel
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6005907688980854987, guid: 258ef1358d72c2f47b009c2ea3644b8d,
+        type: 3}
+      propertyPath: _cubemapResolution
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 6074865834702253757, guid: 258ef1358d72c2f47b009c2ea3644b8d,
         type: 3}
