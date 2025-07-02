@@ -9,6 +9,7 @@ using UnitySensors.Utils.Noise;
 using UnitySensors.Utils.Camera;
 
 using Random = Unity.Mathematics.Random;
+using UnityEngine.UI;
 
 namespace UnitySensors.Sensor.LiDAR
 {
@@ -19,6 +20,8 @@ namespace UnitySensors.Sensor.LiDAR
         [SerializeField, Attribute.ReadOnly]
         private Vector2Int _textureSizePerCamera;
         [SerializeField] Material _depthBufferLidarMat;
+        [SerializeField] bool _rasterizeScans = false;
+        [SerializeField] float _singleCameraFOV = 60.0f;
 
         private Transform _transform;
 
@@ -49,7 +52,7 @@ namespace UnitySensors.Sensor.LiDAR
         public override void Initialize()
         {
             base.Initialize();
-            _transform = this.transform;
+            _transform = transform;
             SetupCamera();
             LoadScanData();
             SetupJobs();
@@ -58,16 +61,19 @@ namespace UnitySensors.Sensor.LiDAR
         private void SetupCamera()
         {
             float azimuthAngleRange = scanPattern.maxAzimuthAngle - scanPattern.minAzimuthAngle;
-            _camerasNum = azimuthAngleRange > 0.0f ? Mathf.CeilToInt(azimuthAngleRange / 60.0f) : 1;
+            _camerasNum = azimuthAngleRange > 0.0f ? Mathf.CeilToInt(azimuthAngleRange / _singleCameraFOV) : 1;
 
             _horizontalFOV = azimuthAngleRange / _camerasNum;
-            float verticalFOV = Mathf.Max(1.0f, 2.0f * Mathf.Max(Mathf.Abs(scanPattern.maxZenithAngle), Mathf.Abs(scanPattern.minZenithAngle)));
+            float originalVerticalFOV = Mathf.Max(1.0f, 2.0f * Mathf.Max(Mathf.Abs(scanPattern.maxZenithAngle), Mathf.Abs(scanPattern.minZenithAngle)));
+            // Critical vertical FOV calculation
+            float verticalFOV = Mathf.Atan(Mathf.Tan(originalVerticalFOV * 0.5f * Mathf.Deg2Rad) / Mathf.Cos(_horizontalFOV * 0.5f * Mathf.Deg2Rad)) * 2.0f * Mathf.Rad2Deg;
 
+            // h/v aspect ratio calculation
             float aspectRatio = Mathf.Tan(0.5f * _horizontalFOV * Mathf.Deg2Rad) / Mathf.Tan(0.5f * verticalFOV * Mathf.Deg2Rad);
-            _textureSizePerCamera.y = Mathf.RoundToInt(Mathf.Sqrt((_texturePixelsNum / _camerasNum) / aspectRatio));
+            _textureSizePerCamera.y = Mathf.RoundToInt(Mathf.Sqrt(_texturePixelsNum / _camerasNum / aspectRatio));
             _textureSizePerCamera.x = Mathf.RoundToInt(_textureSizePerCamera.y * aspectRatio);
 
-            _rt = new RenderTexture(_textureSizePerCamera.x, _textureSizePerCamera.y * _camerasNum, 32, RenderTextureFormat.ARGBFloat);
+            _rt = new RenderTexture(_textureSizePerCamera.x, _textureSizePerCamera.y * _camerasNum, 0, RenderTextureFormat.ARGBFloat);
             _texture = new Texture2D(_textureSizePerCamera.x, _textureSizePerCamera.y * _camerasNum, TextureFormat.RGBAFloat, false);
             _pixels = _texture.GetPixelData<Color>(0);
 
@@ -82,7 +88,7 @@ namespace UnitySensors.Sensor.LiDAR
                 camera_tf.localEulerAngles = new Vector3(0, scanPattern.minAzimuthAngle + _horizontalFOV * (i + 0.5f), 0);
 
                 UnityEngine.Camera camera = camera_obj.AddComponent<UnityEngine.Camera>();
-                camera.fieldOfView = verticalFOV;
+                camera.fieldOfView = UnityEngine.Camera.HorizontalToVerticalFieldOfView(_horizontalFOV, aspectRatio);
                 camera.nearClipPlane = minRange;
                 camera.farClipPlane = maxRange;
                 camera.targetTexture = _rt;
@@ -111,19 +117,33 @@ namespace UnitySensors.Sensor.LiDAR
 
             for (int i = 0; i < scanPattern.size; i++)
             {
-                float3 scan = scanPattern.scans[i];
+                float3 scan = math.normalize(scanPattern.scans[i]);
 
-                _directions[i] = _directions[i + scanPattern.size] = scan;
 
                 float azimuthAngle = Mathf.Atan2(scan.x, scan.z) * Mathf.Rad2Deg;
                 int cameraIndex = Mathf.FloorToInt(_camerasNum * Mathf.InverseLerp(scanPattern.minAzimuthAngle, scanPattern.maxAzimuthAngle, azimuthAngle));
-                Vector3 dir = scan;
+                float3 dir = scan;
                 dir = Quaternion.Euler(0, -(cameraIndex - camerasNum_2) * _horizontalFOV, 0) * dir;
-                dir *= (radius / dir.z);
+                dir *= radius / dir.z;
 
-                int index_x = (int)Mathf.Clamp(_textureSizePerCamera.x * 0.5f + dir.x, 0, _textureSizePerCamera.x - 1);
-                int index_y = (int)Mathf.Clamp(_textureSizePerCamera.y * 0.5f + dir.y, 0, _textureSizePerCamera.y - 1);
+                int index_x = (int)(_textureSizePerCamera.x * 0.5f + dir.x);
+                int index_y = (int)(_textureSizePerCamera.y * 0.5f + dir.y);
                 _pixelIndices[i] = _pixelIndices[i + scanPattern.size] = cameraIndex * textureSizePerCamera + index_y * _textureSizePerCamera.x + index_x;
+                if (_rasterizeScans)
+                {
+                    float3 scanRastered = new(
+                        index_x - _textureSizePerCamera.x * 0.5f,
+                        index_y - _textureSizePerCamera.y * 0.5f,
+                        radius
+                    );
+                    scanRastered = math.normalize(scanRastered);
+                    scanRastered = Quaternion.Euler(0, (cameraIndex - camerasNum_2) * _horizontalFOV, 0) * scanRastered;
+                    _directions[i] = _directions[i + scanPattern.size] = scanRastered;
+                }
+                else
+                {
+                    _directions[i] = _directions[i + scanPattern.size] = scan;
+                }
             }
         }
 

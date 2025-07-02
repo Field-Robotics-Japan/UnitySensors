@@ -1,12 +1,15 @@
 using UnityEngine;
 using UnitySensors.Interface.Std;
+using System.Runtime.CompilerServices;
 
+[assembly: InternalsVisibleTo("UnitySensorsEditor")]
+[assembly: InternalsVisibleTo("UnitySensorsROSEditor")]
 namespace UnitySensors.Sensor
 {
     public abstract class UnitySensor : MonoBehaviour, ITimeInterface
     {
         [SerializeField]
-        private float _frequency = 10.0f;
+        internal float _frequency = 10.0f;
 
         private float _time;
         private float _dt;
@@ -43,6 +46,11 @@ namespace UnitySensors.Sensor
         {
             onSensorUpdated = null;
             OnSensorDestroy();
+        }
+
+        public void UpdateSensorManually()
+        {
+            UpdateSensor();
         }
 
         protected abstract void Init();

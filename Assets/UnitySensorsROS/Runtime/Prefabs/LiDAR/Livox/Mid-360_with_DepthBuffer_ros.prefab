@@ -86,10 +86,12 @@ MonoBehaviour:
   _maxRange: 70
   _gaussianNoiseSigma: 0.02
   _maxIntensity: 255
-  _texturePixelsNum: 1500000
+  _texturePixelsNum: 150000
   _textureSizePerCamera: {x: 0, y: 0}
-  _depthBufferLidarMat: {fileID: 2100000, guid: 4d25d3a0a13f3d9489db78fe07061f16,
-    type: 2}
+  _depthBufferLidarMat: {fileID: -876546973899608171, guid: 84b516aab729000469ee4cfc05acfcb7,
+    type: 3}
+  _rasterizeScans: 0
+  _singleCameraFOV: 60
 --- !u!114 &6522381260155033343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +231,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
