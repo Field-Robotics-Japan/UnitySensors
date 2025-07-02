@@ -1,5 +1,5 @@
 <map id="UnitySensors.Sensor.Camera.DepthCameraSensor.UpdateSensor" name="UnitySensors.Sensor.Camera.DepthCameraSensor.UpdateSensor">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,5,256,45"/>
-<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#a32c2da43269329e0e99a1f6deae15663" title=" " alt="" coords="304,5,543,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="256,23,291,23,291,28,256,28"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1CameraSensor.html#aa2722b386dc6b097b6681f2b64cfc314" title=" " alt="" coords="304,5,519,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="256,23,290,23,290,28,256,28"/>
 </map>

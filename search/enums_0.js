@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['encoding_0',['Encoding',['../namespaceUnitySensors_1_1ROS_1_1Serializer_1_1Image.html#a45413946aa10cfd900289b8fc5e37a69',1,'UnitySensors::ROS::Serializer::Image']]]
+  ['cameramodel_0',['CameraModel',['../classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#ad90a3d7d0ecbbe327d9beea99781900d',1,'UnitySensors::Sensor::Camera::FisheyeCameraSensor']]]
 ];

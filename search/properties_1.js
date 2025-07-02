@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['converttopointcloud_0',['converttopointcloud',['../classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#a4be389a4709568c135dc95546873b60f',1,'UnitySensors.Sensor.Camera.DepthCameraSensor.convertToPointCloud'],['../classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a49ceb222ffc53bc01e883ce23f579df8',1,'UnitySensors.Sensor.Camera.RGBDCameraSensor.convertToPointCloud']]],
-  ['coordinate_1',['coordinate',['../interfaceUnitySensors_1_1Interface_1_1Geometry_1_1IGeoCoordinateInterface.html#a3268bdf12c1e20b7b135013e283243cd',1,'UnitySensors.Interface.Geometry.IGeoCoordinateInterface.coordinate'],['../classUnitySensors_1_1Sensor_1_1GNSS_1_1GNSSSensor.html#a9e6aeef1ef0fe82c54a2a2648872abb3',1,'UnitySensors.Sensor.GNSS.GNSSSensor.coordinate']]]
+  ['acceleration_0',['acceleration',['../interfaceUnitySensors_1_1Interface_1_1Sensor_1_1IImuDataInterface.html#a055171f003d7565fe449bbf73a84956f',1,'UnitySensors.Interface.Sensor.IImuDataInterface.acceleration'],['../classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a7e8dd33a0c66f4042c5068eb10641e93',1,'UnitySensors.Sensor.IMU.IMUSensor.acceleration']]],
+  ['angularvelocity_1',['angularvelocity',['../interfaceUnitySensors_1_1Interface_1_1Sensor_1_1IImuDataInterface.html#a149b3e659aad40af5c3b3b48a5923603',1,'UnitySensors.Interface.Sensor.IImuDataInterface.angularVelocity'],['../classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a7d80f038b4ff10e861b370f86cb2d06f',1,'UnitySensors.Sensor.IMU.IMUSensor.angularVelocity']]]
 ];

@@ -1,5 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="5,13,129,38"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,45,129,70"/>
 <area shape="rect" id="Node000001" href="$classUnitySensors_1_1Attribute_1_1InterfaceTypeDrawer.html" title=" " alt="" coords="177,5,408,45"/>
-<area shape="poly" id="edge12_Node000000_Node000001" title=" " alt="" coords="143,23,177,23,177,28,143,28"/>
+<area shape="poly" id="edge12_Node000000_Node000001" title=" " alt="" coords="143,44,177,39,177,44,143,49"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Attribute_1_1ReadOnlyDrawer.html" title=" " alt="" coords="189,69,396,109"/>
+<area shape="poly" id="edge13_Node000000_Node000002" title=" " alt="" coords="143,65,189,72,189,77,142,71"/>
 </map>

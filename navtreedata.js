@@ -78,11 +78,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "CameraInfoMsgPublisher_8cs.html",
-"classUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1PointCloud2MsgSerializer.html#a6bf15ebeb1ebb9843eb79a357dec2ff9",
-"classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#afb1b85d3051b8b77ff862f07d2c49a5c",
-"classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor.html#a2588b2686c69135a1a2798852c577c56",
-"classUnitySensors_1_1Visualization_1_1Visualizer.html#ab838c87cd14fc56414967293b4666f1e",
-"structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html"
+"classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1LiDARPointCloud2MsgPublisher.html",
+"classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html",
+"classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#aaf1f3a9090bdc16255c12afd8d8f1a30",
+"classUnitySensors_1_1Visualization_1_1Sensor_1_1LiDARPointCloudVisualizer.html",
+"md_README.html#autotoc_md7"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

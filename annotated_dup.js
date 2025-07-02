@@ -5,7 +5,8 @@ var annotated_dup =
         [ "Interface", "classUnitySensors_1_1Attribute_1_1Interface.html", null ],
         [ "InterfaceAttribute", "classUnitySensors_1_1Attribute_1_1InterfaceAttribute.html", "classUnitySensors_1_1Attribute_1_1InterfaceAttribute" ],
         [ "InterfaceTypeDrawer", "classUnitySensors_1_1Attribute_1_1InterfaceTypeDrawer.html", "classUnitySensors_1_1Attribute_1_1InterfaceTypeDrawer" ],
-        [ "ReadOnlyAttribute", "classUnitySensors_1_1Attribute_1_1ReadOnlyAttribute.html", null ]
+        [ "ReadOnlyAttribute", "classUnitySensors_1_1Attribute_1_1ReadOnlyAttribute.html", null ],
+        [ "ReadOnlyDrawer", "classUnitySensors_1_1Attribute_1_1ReadOnlyDrawer.html", "classUnitySensors_1_1Attribute_1_1ReadOnlyDrawer" ]
       ] ],
       [ "DataType", "namespaceUnitySensors_1_1DataType.html", [
         [ "Geometry", "namespaceUnitySensors_1_1DataType_1_1Geometry.html", [
@@ -26,6 +27,9 @@ var annotated_dup =
       ] ],
       [ "Demo", "namespaceUnitySensors_1_1Demo.html", [
         [ "PingPongObject", "classUnitySensors_1_1Demo_1_1PingPongObject.html", "classUnitySensors_1_1Demo_1_1PingPongObject" ]
+      ] ],
+      [ "Editor", "namespaceUnitySensors_1_1Editor.html", [
+        [ "FisheyeCameraEditor", "classUnitySensors_1_1Editor_1_1FisheyeCameraEditor.html", "classUnitySensors_1_1Editor_1_1FisheyeCameraEditor" ]
       ] ],
       [ "Interface", "namespaceUnitySensors_1_1Interface.html", [
         [ "Geometry", "namespaceUnitySensors_1_1Interface_1_1Geometry.html", [
@@ -113,8 +117,10 @@ var annotated_dup =
         [ "Camera", "namespaceUnitySensors_1_1Sensor_1_1Camera.html", [
           [ "CameraSensor", "classUnitySensors_1_1Sensor_1_1Camera_1_1CameraSensor.html", "classUnitySensors_1_1Sensor_1_1Camera_1_1CameraSensor" ],
           [ "DepthCameraSensor", "classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html", "classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor" ],
+          [ "FisheyeCameraSensor", "classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html", "classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor" ],
           [ "ITextureToColorPointsJob", "structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToColorPointsJob.html", "structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToColorPointsJob" ],
           [ "ITextureToPointsJob", "structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToPointsJob.html", "structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToPointsJob" ],
+          [ "PanoramicCameraSensor", "classUnitySensors_1_1Sensor_1_1Camera_1_1PanoramicCameraSensor.html", "classUnitySensors_1_1Sensor_1_1Camera_1_1PanoramicCameraSensor" ],
           [ "RGBCameraSensor", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor.html", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor" ],
           [ "RGBDCameraSensor", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor" ]
         ] ],

@@ -4,6 +4,7 @@ var hierarchy =
     [ "UnitySensors.ROS.Serializer.Image.Color32FC1", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1Color32FC1.html", null ],
     [ "UnitySensors.ROS.Serializer.Image.ColorRGB8", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ColorRGB8.html", null ],
     [ "UnityEditor.Editor", null, [
+      [ "UnitySensors.Editor.FisheyeCameraEditor", "classUnitySensors_1_1Editor_1_1FisheyeCameraEditor.html", null ],
       [ "UnitySensors.ROS.Editor.TFLinkEditor", "classUnitySensors_1_1ROS_1_1Editor_1_1TFLinkEditor.html", null ]
     ] ],
     [ "UnitySensors.Utils.Noise.GaussianNoise", "classUnitySensors_1_1Utils_1_1Noise_1_1GaussianNoise.html", null ],
@@ -12,6 +13,8 @@ var hierarchy =
     [ "UnitySensors.Interface.Sensor.ICameraInterface", "interfaceUnitySensors_1_1Interface_1_1Sensor_1_1ICameraInterface.html", [
       [ "UnitySensors.Sensor.Camera.CameraSensor", "classUnitySensors_1_1Sensor_1_1Camera_1_1CameraSensor.html", [
         [ "UnitySensors.Sensor.Camera.DepthCameraSensor", "classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html", null ],
+        [ "UnitySensors.Sensor.Camera.FisheyeCameraSensor", "classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html", null ],
+        [ "UnitySensors.Sensor.Camera.PanoramicCameraSensor", "classUnitySensors_1_1Sensor_1_1Camera_1_1PanoramicCameraSensor.html", null ],
         [ "UnitySensors.Sensor.Camera.RGBCameraSensor", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor.html", null ],
         [ "UnitySensors.Sensor.Camera.RGBDCameraSensor", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html", null ]
       ] ]
@@ -57,9 +60,7 @@ var hierarchy =
       [ "UnitySensors.Sensor.GroundTruth.GroundTruth", "classUnitySensors_1_1Sensor_1_1GroundTruth_1_1GroundTruth.html", null ]
     ] ],
     [ "UnitySensors.Interface.Sensor.ITextureInterface", "interfaceUnitySensors_1_1Interface_1_1Sensor_1_1ITextureInterface.html", [
-      [ "UnitySensors.Sensor.Camera.DepthCameraSensor", "classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html", null ],
-      [ "UnitySensors.Sensor.Camera.RGBCameraSensor", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor.html", null ],
-      [ "UnitySensors.Sensor.Camera.RGBDCameraSensor", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html", null ]
+      [ "UnitySensors.Sensor.Camera.CameraSensor", "classUnitySensors_1_1Sensor_1_1Camera_1_1CameraSensor.html", null ]
     ] ],
     [ "UnitySensors.Interface.Std.ITimeInterface", "interfaceUnitySensors_1_1Interface_1_1Std_1_1ITimeInterface.html", [
       [ "UnitySensors.ROS.Utils.Time.ROSClock", "classUnitySensors_1_1ROS_1_1Utils_1_1Time_1_1ROSClock.html", null ],
@@ -112,7 +113,8 @@ var hierarchy =
       [ "UnitySensors.Attribute.ReadOnlyAttribute", "classUnitySensors_1_1Attribute_1_1ReadOnlyAttribute.html", null ]
     ] ],
     [ "PropertyDrawer", null, [
-      [ "UnitySensors.Attribute.InterfaceTypeDrawer", "classUnitySensors_1_1Attribute_1_1InterfaceTypeDrawer.html", null ]
+      [ "UnitySensors.Attribute.InterfaceTypeDrawer", "classUnitySensors_1_1Attribute_1_1InterfaceTypeDrawer.html", null ],
+      [ "UnitySensors.Attribute.ReadOnlyDrawer", "classUnitySensors_1_1Attribute_1_1ReadOnlyDrawer.html", null ]
     ] ],
     [ "UnitySensors.ROS.Publisher.RosMsgPublisher< CameraInfoMsgSerializer, CameraInfoMsg >", "classUnitySensors_1_1ROS_1_1Publisher_1_1RosMsgPublisher.html", [
       [ "UnitySensors.ROS.Publisher.Camera.CameraInfoMsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1Camera_1_1CameraInfoMsgPublisher.html", null ]

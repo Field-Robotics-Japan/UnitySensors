@@ -1,66 +1,68 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1ICameraInterface.html" title=" " alt="" coords="265,132,486,172"/>
-<area shape="rect" id="Node000001" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1CameraSensor.html" title=" " alt="" coords="575,133,789,173"/>
-<area shape="poly" id="edge16_Node000000_Node000001" title=" " alt="" coords="500,150,575,150,575,156,500,155"/>
-<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html" title=" " alt="" coords="865,37,1080,77"/>
-<area shape="poly" id="edge17_Node000001_Node000002" title=" " alt="" coords="797,127,816,119,840,103,864,87,894,75,896,80,867,92,843,108,819,124,799,131"/>
-<area shape="rect" id="Node000005" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor.html" title=" " alt="" coords="865,101,1080,141"/>
-<area shape="poly" id="edge18_Node000001_Node000005" title=" " alt="" coords="803,137,865,130,865,136,803,143"/>
-<area shape="rect" id="Node000006" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html" title=" " alt="" coords="865,165,1080,205"/>
-<area shape="poly" id="edge19_Node000001_Node000006" title=" " alt="" coords="803,164,865,171,865,176,803,169"/>
-<area shape="rect" id="Node000010" href="$interfaceUnitySensors_1_1Interface_1_1Geometry_1_1IGeoCoordinateInterface.html" title=" " alt="" coords="255,196,496,236"/>
-<area shape="rect" id="Node000009" href="$classUnitySensors_1_1Sensor_1_1GNSS_1_1GNSSSensor.html" title=" " alt="" coords="583,263,781,303"/>
-<area shape="poly" id="edge20_Node000010_Node000009" title=" " alt="" coords="482,236,590,260,588,265,481,242"/>
-<area shape="rect" id="Node000014" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1IImuDataInterface.html" title=" " alt="" coords="265,324,486,364"/>
-<area shape="rect" id="Node000013" href="$classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html" title=" " alt="" coords="587,328,777,368"/>
-<area shape="poly" id="edge21_Node000014_Node000013" title=" " alt="" coords="500,343,587,344,587,349,500,348"/>
+<area shape="rect" id="Node000000" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1ICameraInterface.html" title=" " alt="" coords="265,117,486,157"/>
+<area shape="rect" id="Node000001" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1CameraSensor.html" title=" " alt="" coords="575,149,789,189"/>
+<area shape="poly" id="edge18_Node000000_Node000001" title=" " alt="" coords="500,148,575,156,574,161,499,153"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html" title=" " alt="" coords="865,5,1080,45"/>
+<area shape="poly" id="edge19_Node000001_Node000002" title=" " alt="" coords="721,139,786,96,864,55,895,43,897,48,866,60,789,101,724,143"/>
+<area shape="rect" id="Node000004" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html" title=" " alt="" coords="865,69,1080,109"/>
+<area shape="poly" id="edge20_Node000001_Node000004" title=" " alt="" coords="768,143,898,107,900,112,770,148"/>
+<area shape="rect" id="Node000005" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1PanoramicCameraSensor.html" title=" " alt="" coords="865,133,1080,173"/>
+<area shape="poly" id="edge21_Node000001_Node000005" title=" " alt="" coords="803,160,865,157,865,162,803,165"/>
+<area shape="rect" id="Node000006" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor.html" title=" " alt="" coords="865,197,1080,237"/>
+<area shape="poly" id="edge22_Node000001_Node000006" title=" " alt="" coords="803,187,866,197,865,202,802,192"/>
+<area shape="rect" id="Node000007" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html" title=" " alt="" coords="865,261,1080,301"/>
+<area shape="poly" id="edge23_Node000001_Node000007" title=" " alt="" coords="738,193,866,247,901,259,899,264,864,252,736,198"/>
+<area shape="rect" id="Node000012" href="$interfaceUnitySensors_1_1Interface_1_1Geometry_1_1IGeoCoordinateInterface.html" title=" " alt="" coords="255,301,496,341"/>
+<area shape="rect" id="Node000011" href="$classUnitySensors_1_1Sensor_1_1GNSS_1_1GNSSSensor.html" title=" " alt="" coords="583,309,781,349"/>
+<area shape="poly" id="edge24_Node000012_Node000011" title=" " alt="" coords="510,322,583,324,583,329,510,328"/>
+<area shape="rect" id="Node000016" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1IImuDataInterface.html" title=" " alt="" coords="265,429,486,469"/>
+<area shape="rect" id="Node000015" href="$classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html" title=" " alt="" coords="587,425,777,465"/>
+<area shape="poly" id="edge25_Node000016_Node000015" title=" " alt="" coords="500,445,587,444,587,449,500,450"/>
 <area shape="rect" id="Node000003" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1IPointCloudInterface.html" title=" " alt="" coords="561,5,803,45"/>
-<area shape="poly" id="edge22_Node000003_Node000002" title=" " alt="" coords="817,38,866,43,865,48,817,43"/>
-<area shape="rect" id="Node000018" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1IPointCloudInterface.html" title=" " alt="" coords="252,452,499,492"/>
-<area shape="rect" id="Node000015" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor.html" title=" " alt="" coords="581,449,783,489"/>
-<area shape="poly" id="edge23_Node000018_Node000015" title=" " alt="" coords="512,468,580,468,581,473,512,473"/>
-<area shape="rect" id="Node000016" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1DepthBufferLiDARSensor.html" title=" " alt="" coords="871,481,1074,521"/>
-<area shape="poly" id="edge24_Node000015_Node000016" title=" " alt="" coords="797,479,871,488,871,493,797,485"/>
-<area shape="rect" id="Node000017" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html" title=" " alt="" coords="871,417,1074,457"/>
-<area shape="poly" id="edge25_Node000015_Node000017" title=" " alt="" coords="797,454,871,446,871,451,797,459"/>
-<area shape="rect" id="Node000007" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1IPointCloudInterface.html" title=" " alt="" coords="547,197,817,237"/>
-<area shape="poly" id="edge26_Node000007_Node000006" title=" " alt="" coords="831,198,865,194,866,200,831,204"/>
-<area shape="rect" id="Node000012" href="$interfaceUnitySensors_1_1Interface_1_1Geometry_1_1IPoseInterface.html" title=" " alt="" coords="255,516,496,556"/>
-<area shape="rect" id="Node000011" href="$classUnitySensors_1_1Sensor_1_1GroundTruth_1_1GroundTruth.html" title=" " alt="" coords="579,515,785,555"/>
-<area shape="poly" id="edge27_Node000012_Node000011" title=" " alt="" coords="510,533,578,532,578,538,510,538"/>
-<area shape="rect" id="Node000004" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1ITextureInterface.html" title=" " alt="" coords="571,69,793,109"/>
-<area shape="poly" id="edge28_Node000004_Node000002" title=" " alt="" coords="806,73,865,66,866,72,807,78"/>
-<area shape="poly" id="edge29_Node000004_Node000005" title=" " alt="" coords="807,100,866,107,865,112,806,106"/>
-<area shape="poly" id="edge30_Node000004_Node000006" title=" " alt="" coords="799,111,819,119,843,135,867,151,896,163,894,168,864,156,840,139,816,124,797,116"/>
-<area shape="rect" id="Node000020" href="$interfaceUnitySensors_1_1Interface_1_1Std_1_1ITimeInterface.html" title=" " alt="" coords="5,324,204,364"/>
-<area shape="rect" id="Node000021" href="$classUnitySensors_1_1ROS_1_1Utils_1_1Time_1_1ROSClock.html" title=" " alt="" coords="268,260,483,300"/>
-<area shape="poly" id="edge31_Node000020_Node000021" title=" " alt="" coords="203,318,290,297,291,303,204,323"/>
-<area shape="rect" id="Node000008" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="278,388,473,428"/>
-<area shape="poly" id="edge32_Node000020_Node000008" title=" " alt="" coords="204,365,291,385,290,391,203,370"/>
-<area shape="poly" id="edge33_Node000008_Node000001" title=" " alt="" coords="483,385,497,374,513,351,521,328,522,305,520,281,518,256,519,232,527,207,545,183,573,164,576,169,549,187,532,210,524,233,523,256,525,280,527,305,526,329,518,354,501,378,486,389"/>
-<area shape="poly" id="edge34_Node000008_Node000009" title=" " alt="" coords="484,381,497,374,512,360,520,345,529,329,545,314,581,297,584,302,548,318,533,332,525,347,516,363,500,378,487,386"/>
-<area shape="poly" id="edge36_Node000008_Node000013" title=" " alt="" coords="486,384,587,364,588,369,487,389"/>
-<area shape="poly" id="edge37_Node000008_Node000015" title=" " alt="" coords="487,427,582,447,581,452,486,433"/>
-<area shape="poly" id="edge35_Node000008_Node000011" title=" " alt="" coords="487,430,500,438,516,453,525,469,533,485,548,499,580,515,577,519,545,504,529,488,520,472,512,457,497,442,484,435"/>
-<area shape="rect" id="Node000019" href="$classUnitySensors_1_1Sensor_1_1TF_1_1TFLink.html" title=" " alt="" coords="572,395,792,421"/>
-<area shape="poly" id="edge38_Node000008_Node000019" title=" " alt="" coords="486,405,572,405,572,411,486,411"/>
-<area shape="rect" id="Node000022" title=" " alt="" coords="43,683,167,709"/>
-<area shape="poly" id="edge42_Node000022_Node000021" title=" " alt="" coords="110,669,132,588,166,480,207,377,228,337,250,310,267,298,270,302,254,314,233,340,212,379,171,482,137,589,115,671"/>
-<area shape="poly" id="edge44_Node000022_Node000008" title=" " alt="" coords="111,669,128,620,157,557,197,493,222,463,250,438,277,423,279,427,254,442,226,467,201,496,161,560,133,622,116,671"/>
-<area shape="rect" id="Node000023" href="$classUnitySensors_1_1Attribute_1_1Interface.html" title=" " alt="" coords="260,773,491,798"/>
-<area shape="poly" id="edge39_Node000022_Node000023" title=" " alt="" coords="144,712,195,736,253,757,301,770,300,775,251,763,193,740,142,717"/>
-<area shape="rect" id="Node000024" href="$classUnitySensors_1_1Demo_1_1PingPongObject.html" title=" " alt="" coords="268,823,483,863"/>
-<area shape="poly" id="edge40_Node000022_Node000024" title=" " alt="" coords="130,716,183,763,217,787,253,808,282,820,280,825,251,813,214,792,180,767,126,720"/>
-<area shape="rect" id="Node000025" href="$classUnitySensors_1_1ROS_1_1Publisher_1_1RosMsgPublisher.html" title=" " alt="" coords="272,887,479,927"/>
-<area shape="poly" id="edge41_Node000022_Node000025" title=" " alt="" coords="122,719,143,754,173,796,210,837,253,872,276,884,274,889,251,877,206,841,169,799,138,757,117,722"/>
-<area shape="rect" id="Node000026" href="$classUnitySensors_1_1Sensor_1_1GNSS_1_1GeoCoordinateSystem.html" title=" " alt="" coords="276,580,475,620"/>
-<area shape="poly" id="edge43_Node000022_Node000026" title=" " alt="" coords="143,675,251,629,289,618,291,623,253,635,145,680"/>
-<area shape="rect" id="Node000027" href="$classUnitySensors_1_1Utils_1_1Camera_1_1Color2Depth.html" title=" " alt="" coords="275,644,476,684"/>
-<area shape="poly" id="edge45_Node000022_Node000027" title=" " alt="" coords="180,684,274,673,275,679,181,690"/>
-<area shape="rect" id="Node000028" href="$classUnitySensors_1_1Visualization_1_1Visualizer.html" title=" " alt="" coords="275,708,475,748"/>
-<area shape="poly" id="edge46_Node000022_Node000028" title=" " alt="" coords="181,702,275,714,275,719,180,708"/>
-<area shape="rect" id="Node000029" href="$classUnitySensors_1_1Visualization_1_1Sensor_1_1PointCloudVisualizer.html" title=" " alt="" coords="561,740,803,780"/>
-<area shape="poly" id="edge47_Node000028_Node000029" title=" " alt="" coords="489,737,562,745,561,750,489,742"/>
-<area shape="rect" id="Node000030" href="$classUnitySensors_1_1Visualization_1_1Sensor_1_1TextureVisualizer.html" title=" " alt="" coords="582,676,782,716"/>
-<area shape="poly" id="edge48_Node000028_Node000030" title=" " alt="" coords="488,714,582,704,582,709,489,719"/>
+<area shape="poly" id="edge26_Node000003_Node000002" title=" " alt="" coords="817,23,865,23,865,28,817,28"/>
+<area shape="rect" id="Node000020" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1IPointCloudInterface.html" title=" " alt="" coords="252,493,499,533"/>
+<area shape="rect" id="Node000017" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor.html" title=" " alt="" coords="581,492,783,532"/>
+<area shape="poly" id="edge27_Node000020_Node000017" title=" " alt="" coords="512,510,580,510,580,515,512,515"/>
+<area shape="rect" id="Node000018" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1DepthBufferLiDARSensor.html" title=" " alt="" coords="871,524,1074,564"/>
+<area shape="poly" id="edge28_Node000017_Node000018" title=" " alt="" coords="797,522,871,530,871,535,797,527"/>
+<area shape="rect" id="Node000019" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html" title=" " alt="" coords="871,460,1074,500"/>
+<area shape="poly" id="edge29_Node000017_Node000019" title=" " alt="" coords="797,497,871,489,871,494,797,502"/>
+<area shape="rect" id="Node000008" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1IPointCloudInterface.html" title=" " alt="" coords="547,245,817,285"/>
+<area shape="poly" id="edge30_Node000008_Node000007" title=" " alt="" coords="831,271,865,273,865,278,831,276"/>
+<area shape="rect" id="Node000014" href="$interfaceUnitySensors_1_1Interface_1_1Geometry_1_1IPoseInterface.html" title=" " alt="" coords="255,557,496,597"/>
+<area shape="rect" id="Node000013" href="$classUnitySensors_1_1Sensor_1_1GroundTruth_1_1GroundTruth.html" title=" " alt="" coords="579,557,785,597"/>
+<area shape="poly" id="edge31_Node000014_Node000013" title=" " alt="" coords="510,575,578,575,578,580,510,580"/>
+<area shape="rect" id="Node000009" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1ITextureInterface.html" title=" " alt="" coords="265,181,486,221"/>
+<area shape="poly" id="edge32_Node000009_Node000001" title=" " alt="" coords="499,186,574,178,575,183,500,191"/>
+<area shape="rect" id="Node000022" href="$interfaceUnitySensors_1_1Interface_1_1Std_1_1ITimeInterface.html" title=" " alt="" coords="5,493,204,533"/>
+<area shape="rect" id="Node000023" href="$classUnitySensors_1_1ROS_1_1Utils_1_1Time_1_1ROSClock.html" title=" " alt="" coords="268,621,483,661"/>
+<area shape="poly" id="edge33_Node000022_Node000023" title=" " alt="" coords="143,540,194,575,253,607,285,619,283,624,251,612,191,579,140,544"/>
+<area shape="rect" id="Node000010" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="278,365,473,405"/>
+<area shape="poly" id="edge34_Node000022_Node000010" title=" " alt="" coords="140,483,191,448,251,415,283,403,285,408,253,420,194,452,143,487"/>
+<area shape="poly" id="edge35_Node000010_Node000001" title=" " alt="" coords="483,361,497,351,509,337,516,324,521,294,526,264,533,248,545,231,577,206,614,187,616,192,580,210,549,235,537,250,531,265,527,295,521,325,514,340,500,355,486,365"/>
+<area shape="poly" id="edge36_Node000010_Node000011" title=" " alt="" coords="486,363,582,345,583,350,487,368"/>
+<area shape="poly" id="edge38_Node000010_Node000015" title=" " alt="" coords="487,404,588,424,587,429,486,410"/>
+<area shape="poly" id="edge39_Node000010_Node000017" title=" " alt="" coords="487,408,500,415,516,430,525,446,533,461,548,475,582,491,579,496,545,480,529,464,520,449,512,434,497,419,484,412"/>
+<area shape="poly" id="edge37_Node000010_Node000013" title=" " alt="" coords="487,405,500,415,514,431,521,448,525,480,529,512,536,527,548,542,580,561,577,565,545,546,531,530,524,514,520,481,516,449,509,434,497,419,483,409"/>
+<area shape="rect" id="Node000021" href="$classUnitySensors_1_1Sensor_1_1TF_1_1TFLink.html" title=" " alt="" coords="572,374,792,399"/>
+<area shape="poly" id="edge40_Node000010_Node000021" title=" " alt="" coords="486,383,572,384,572,389,486,388"/>
+<area shape="rect" id="Node000024" title=" " alt="" coords="43,775,167,801"/>
+<area shape="poly" id="edge44_Node000024_Node000023" title=" " alt="" coords="126,764,180,717,214,692,251,671,280,659,282,664,253,676,217,697,183,721,130,768"/>
+<area shape="poly" id="edge46_Node000024_Node000010" title=" " alt="" coords="114,761,201,544,212,507,217,475,226,445,250,415,276,399,279,403,254,419,231,448,222,476,217,508,207,546,119,763"/>
+<area shape="rect" id="Node000025" href="$classUnitySensors_1_1Attribute_1_1Interface.html" title=" " alt="" coords="260,686,491,711"/>
+<area shape="poly" id="edge41_Node000024_Node000025" title=" " alt="" coords="142,767,193,744,251,721,300,709,301,714,253,727,195,748,144,772"/>
+<area shape="rect" id="Node000026" href="$classUnitySensors_1_1Demo_1_1PingPongObject.html" title=" " alt="" coords="268,736,483,776"/>
+<area shape="poly" id="edge42_Node000024_Node000026" title=" " alt="" coords="180,776,267,766,268,771,180,782"/>
+<area shape="rect" id="Node000027" href="$classUnitySensors_1_1ROS_1_1Publisher_1_1RosMsgPublisher.html" title=" " alt="" coords="272,800,479,840"/>
+<area shape="poly" id="edge43_Node000024_Node000027" title=" " alt="" coords="181,794,272,805,272,810,180,800"/>
+<area shape="rect" id="Node000028" href="$classUnitySensors_1_1Sensor_1_1GNSS_1_1GeoCoordinateSystem.html" title=" " alt="" coords="276,864,475,904"/>
+<area shape="poly" id="edge45_Node000024_Node000028" title=" " alt="" coords="145,804,253,849,291,861,289,866,251,855,143,809"/>
+<area shape="rect" id="Node000029" href="$classUnitySensors_1_1Utils_1_1Camera_1_1Color2Depth.html" title=" " alt="" coords="275,928,476,968"/>
+<area shape="poly" id="edge47_Node000024_Node000029" title=" " alt="" coords="128,809,181,862,216,890,253,914,280,925,278,930,251,918,213,894,178,866,124,813"/>
+<area shape="rect" id="Node000030" href="$classUnitySensors_1_1Visualization_1_1Visualizer.html" title=" " alt="" coords="275,992,475,1032"/>
+<area shape="poly" id="edge48_Node000024_Node000030" title=" " alt="" coords="121,812,141,850,171,895,209,940,253,978,276,990,274,995,251,982,205,943,167,898,137,852,116,815"/>
+<area shape="rect" id="Node000031" href="$classUnitySensors_1_1Visualization_1_1Sensor_1_1PointCloudVisualizer.html" title=" " alt="" coords="561,960,803,1000"/>
+<area shape="poly" id="edge49_Node000030_Node000031" title=" " alt="" coords="489,998,561,990,562,995,489,1003"/>
+<area shape="rect" id="Node000032" href="$classUnitySensors_1_1Visualization_1_1Sensor_1_1TextureVisualizer.html" title=" " alt="" coords="582,1024,782,1064"/>
+<area shape="poly" id="edge50_Node000030_Node000032" title=" " alt="" coords="489,1021,582,1031,582,1036,488,1026"/>
 </map>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['vector3d_0',['Vector3D',['../classUnitySensors_1_1DataType_1_1Geometry_1_1Vector3D.html',1,'UnitySensors::DataType::Geometry']]],
-  ['visualizer_1',['Visualizer',['../classUnitySensors_1_1Visualization_1_1Visualizer.html',1,'UnitySensors::Visualization']]]
+  ['unitysensor_0',['UnitySensor',['../classUnitySensors_1_1Sensor_1_1UnitySensor.html',1,'UnitySensors::Sensor']]]
 ];

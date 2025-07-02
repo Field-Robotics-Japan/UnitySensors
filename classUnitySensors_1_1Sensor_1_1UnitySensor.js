@@ -7,6 +7,7 @@ var classUnitySensors_1_1Sensor_1_1UnitySensor =
     [ "OnSensorUpdated", "classUnitySensors_1_1Sensor_1_1UnitySensor.html#a0fe047d20acaf5ff9b4e4acfe7e9e91e", null ],
     [ "Update", "classUnitySensors_1_1Sensor_1_1UnitySensor.html#a58546100f0d5c0b340e2c1bcf0ee0004", null ],
     [ "UpdateSensor", "classUnitySensors_1_1Sensor_1_1UnitySensor.html#abab23018f364e23dfcb77b261c7e3a8b", null ],
+    [ "UpdateSensorManually", "classUnitySensors_1_1Sensor_1_1UnitySensor.html#aecd3328e2512a27225d6a4f0ff7235d2", null ],
     [ "_dt", "classUnitySensors_1_1Sensor_1_1UnitySensor.html#a580594ce90214660288188636e48c565", null ],
     [ "_frequency", "classUnitySensors_1_1Sensor_1_1UnitySensor.html#a433eba390402a1586e7a71830c3d3433", null ],
     [ "_frequency_inv", "classUnitySensors_1_1Sensor_1_1UnitySensor.html#a8d800ee39810e7c5b3c3d7188de7c08d", null ],

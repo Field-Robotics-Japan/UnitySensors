@@ -1,8 +1,6 @@
 var classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor =
 [
     [ "Init", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a513281628b7fe14dd23b48db9c1a68b1", null ],
-    [ "LoadColorTexture", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a0cc52b25bc19c805ffcd3a9fa74e81a8", null ],
-    [ "LoadDepthTexture", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#afd7dbdbbd5697a37dca6ef3b98e0e2b2", null ],
     [ "OnRenderImage", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a614c8b122f3f17f60a11ea39e71c4540", null ],
     [ "OnSensorDestroy", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#ae95561399c5673708ad23506f75357de", null ],
     [ "SetupDirections", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a9a30ab264bae61aea4d9ef222719e134", null ],
@@ -12,7 +10,6 @@ var classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor =
     [ "_colorRt", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a872ece30358c5a018cee56e95c1264c0", null ],
     [ "_colorTexture", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a7b1908097bade305ad5d58103e3aa009", null ],
     [ "_convertToPointCloud", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#add77cb3ba19d291622548cba823a1214", null ],
-    [ "_depthCamera", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a5e07c78933f6e06a17612aa8232af0d9", null ],
     [ "_depthCameraMat", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a284cbbfc99011f81a289c8cbd8b22d4c", null ],
     [ "_depthRt", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a8cf7ceca8013e184df6dd0ad2079780f", null ],
     [ "_depthTexture", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#aae299858485fbb6b8baac894dea9bb66", null ],
@@ -26,11 +23,10 @@ var classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor =
     [ "_pointsNum", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a3cfde414f07969384bac5edc622a316a", null ],
     [ "_textureToPointsJob", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a02bf2ccd5a637b9a12e304796225f6cf", null ],
     [ "_updateGaussianNoisesJob", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a2aa1a91f0da6e28a996bd73b129ca826", null ],
+    [ "_depthCamera", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a5e07c78933f6e06a17612aa8232af0d9", null ],
     [ "convertToPointCloud", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a49ceb222ffc53bc01e883ce23f579df8", null ],
-    [ "m_camera", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a11efe06f8d7089526b93d60735a40642", null ],
     [ "pointCloud", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a3d0173137fd1fe904dc9f82881adb8ae", null ],
     [ "pointsNum", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a1f032c523d28ca72f9d6dfaeeb7701b4", null ],
-    [ "texture0", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a3dc69f196cb9b441549e7da2510f5884", null ],
-    [ "texture0FarClipPlane", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a76b235b08e607aea6e1751b117381c96", null ],
-    [ "texture1", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a20ee858d0c7697d1c928e08b84004db2", null ]
+    [ "texture0", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#aa4db57b22b1a6eb164b8354d379468b6", null ],
+    [ "texture1", "classUnitySensors_1_1Sensor_1_1Camera_1_1RGBDCameraSensor.html#a41e2f9f729dbcf8486e4c474f77722f6", null ]
 ];

@@ -97,7 +97,7 @@ UnitySensors</h1>
 <div align="center"></div><div align="center"><a href="https://github.com/Field-Robotics-Japan/UnitySensors/releases"><img src="https://img.shields.io/github/v/release/Field-Robotics-Japan/UnitySensors?color=9BF6FF&amp;logo=github&amp;style=flat-square" alt="" class="inline"/></a> <a href="https://unity.com/"><img src="https://img.shields.io/badge/Unity3D-%3E%202022.3-blue?style=flat-square&amp;logo=unity" alt="" class="inline"/></a> <a href="https://www.ros.org/"><img src="https://img.shields.io/badge/ROS-1%7C2-blue?style=flat-square&amp;logo=ros" alt="" class="inline"/></a> <a href="https://github.com/Field-Robotics-Japan/UnitySensors/actions/workflows/main.yml"><img src="https://img.shields.io/github/actions/workflow/status/Field-Robotics-Japan/UnitySensors/main.yml?style=flat-square&amp;logo=github&amp;label=CI%20check" alt="" class="inline"/></a> <br  />
  <a href="https://github.com/Field-Robotics-Japan/UnitySensors/graphs/contributors"><img src="https://img.shields.io/github/contributors/Field-Robotics-Japan/UnitySensors?color=B2FFA3&amp;style=flat-square" alt="" class="inline"/></a> <a href="https://github.com/Field-Robotics-Japan/UnitySensors/network/members"><img src="https://img.shields.io/github/forks/Field-Robotics-Japan/UnitySensors?color=8ae8ff&amp;style=flat-square" alt="" class="inline"/></a> <a href="https://github.com/Field-Robotics-Japan/UnitySensors/network/stargazers"><img src="https://img.shields.io/github/stars/Field-Robotics-Japan/UnitySensors?color=F9DC5F&amp;style=flat-square" alt="" class="inline"/></a> <a href="https://github.com/Field-Robotics-Japan/UnitySensors/issues"><img src="https://img.shields.io/github/issues/Field-Robotics-Japan/UnitySensors?color=FFDBFA&amp;style=flat-square" alt="" class="inline"/></a> <a href="https://github.com/Field-Robotics-Japan/UnitySensors/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Field-Robotics-Japan/UnitySensors?color=FFADAD&amp;style=flat-square" alt="" class="inline"/></a></div><div align="center"><img src=".image/unity_sensors_ros_assets.gif" alt="unity_sensors_ros_assets" class="inline"/></div><div align="center"></div><h2><a class="anchor" id="autotoc_md4"></a>
 🔍 Overview</h2>
-<p>UnitySensos is a projet that regroup two Unity3D packages that allow you to <b>easly</b> use Unity3D as robotic simulation ! There are several Prefab and Scene files available for testing each sensor.</p>
+<p>UnitySensos is a projet that regroup two Unity3D packages that allow you to <b>easily</b> use Unity3D as robotic simulation ! There are several Prefab and Scene files available for testing each sensor.</p>
 <p><b>1. UnitySensor</b></p>
 <p>The following sensors are available inside :</p>
 <ul>
@@ -105,11 +105,14 @@ UnitySensors</h1>
 <li>Livox 3D LiDAR(Avia, Horizon, Mid40, Mid70, Tele, HAP, Mid360)</li>
 <li>RGB Camera</li>
 <li>RGBD Camera</li>
+<li>Panoramic Camera</li>
+<li>Fisheye Camera (Equidistant and <a href="https://github.com/ethz-asl/kalibr/wiki/supported-models">EUCM</a> models with adjustable parameters)</li>
 <li>IMU</li>
 <li>GNSS</li>
 <li>(GroundTruth)</li>
 <li>(TF)</li>
 </ul>
+<p>Both the <code>Panoramic Camera</code> and <code>Fisheye Camera</code> are based on cubemap projection. To avoid seams between cubemap faces, you may need to disable some post-processing effects and use fixed exposure.</p>
 <p><b>2. UnitySensorROS</b></p>
 <p>This package is responsible to make the link between sensor and ROS by serializing sensor raw data and sending to them to ROS using <a href="https://github.com/Unity-Technologies/ROS-TCP-Connector">ROS-TCP-Connector</a> package. To receive the data in ROS take a look at <a href="https://github.com/Unity-Technologies/ROS-TCP-Endpoint">ROS-TCP-Endpoint</a>.</p>
 <h2><a class="anchor" id="autotoc_md5"></a>
@@ -118,7 +121,7 @@ UnitySensors</h1>
 Inside Unity3D</h3>
 <blockquote class="doxtable">
 <p>&zwj;[!NOTE]</p>
-<p>Unitysensor is made for Unity 2022.3 or later </p>
+<p><a class="el" href="namespaceUnitySensors.html">UnitySensors</a> is made for Unity 2022.3 or later </p>
 </blockquote>
 <ol type="1">
 <li>Open the Package Manager from <code>Window</code> -&gt; <code>Package Manager</code>.</li>
