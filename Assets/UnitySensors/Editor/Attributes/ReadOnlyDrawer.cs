@@ -1,11 +1,8 @@
 using UnityEngine;
-#if UNITY_EDITOR
 using UnityEditor;
-#endif
 
 namespace UnitySensors.Attribute
 {
-#if UNITY_EDITOR
     [CustomPropertyDrawer(typeof(ReadOnlyAttribute))]
     public class ReadOnlyDrawer : PropertyDrawer
     {
@@ -16,5 +13,4 @@ namespace UnitySensors.Attribute
             EditorGUI.EndDisabledGroup();
         }
     }
-#endif
 }

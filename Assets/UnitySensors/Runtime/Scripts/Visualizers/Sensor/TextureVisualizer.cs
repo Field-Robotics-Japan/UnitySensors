@@ -20,16 +20,18 @@ namespace UnitySensors.Visualization.Sensor
         private SourceTexture _sourceTexture;
         [SerializeField]
         private RawImage _image;
-
         private ITextureInterface _sourceInterface;
-
         private void Start()
         {
             _sourceInterface = _source as ITextureInterface;
-            if(_source is UnitySensor)
+            var rectTransform = _image.GetComponent<RectTransform>();
+            rectTransform.sizeDelta = new(rectTransform.sizeDelta.x, rectTransform.sizeDelta.x * _sourceInterface.texture0.height / _sourceInterface.texture0.width);
+
+            if (_source is UnitySensor)
             {
                 (_source as UnitySensor).onSensorUpdated += Visualize;
             }
+
         }
 
         protected override void Visualize()

@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Rendering;
 using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
@@ -9,13 +8,12 @@ using UnitySensors.DataType.Sensor;
 using UnitySensors.DataType.Sensor.PointCloud;
 using UnitySensors.Interface.Sensor;
 using UnitySensors.Utils.Noise;
-
 using Random = Unity.Mathematics.Random;
 
 namespace UnitySensors.Sensor.Camera
 {
     [RequireComponent(typeof(UnityEngine.Camera))]
-    public class RGBDCameraSensor : CameraSensor, ITextureInterface, IPointCloudInterface<PointXYZRGB>
+    public class RGBDCameraSensor : CameraSensor, IPointCloudInterface<PointXYZRGB>
     {
         [SerializeField]
         protected float _minRange = 0.05f;
@@ -28,14 +26,12 @@ namespace UnitySensors.Sensor.Camera
         [SerializeField]
         private bool _convertToPointCloud = false;
 
-        private UnityEngine.Camera _depthCamera;
         private RenderTexture _depthRt = null;
         private Texture2D _depthTexture;
 
         private UnityEngine.Camera _colorCamera;
         private RenderTexture _colorRt = null;
         private Texture2D _colorTexture;
-
 
         private JobHandle _jobHandle;
 
@@ -48,28 +44,28 @@ namespace UnitySensors.Sensor.Camera
         private PointCloud<PointXYZRGB> _pointCloud;
         private int _pointsNum;
 
-        public override UnityEngine.Camera m_camera { get => _depthCamera; }
-        public Texture2D texture0 { get => _depthTexture; }
-        public Texture2D texture1 { get => _colorTexture; }
+        //TODO: Maybe can output color in RGB channel and depth in alpha channel of the same texture.
+        protected UnityEngine.Camera _depthCamera { get => _camera; }
+        public override Texture2D texture0 { get => _depthTexture; }
+        public override Texture2D texture1 { get => _colorTexture; }
         public PointCloud<PointXYZRGB> pointCloud { get => _pointCloud; }
         public int pointsNum { get => _pointsNum; }
-        public float texture0FarClipPlane { get => _depthCamera.farClipPlane; }
         public bool convertToPointCloud { get => _convertToPointCloud; set => _convertToPointCloud = value; }
 
         protected override void Init()
         {
-            _depthCamera = GetComponent<UnityEngine.Camera>();
-            _depthRt = new RenderTexture(_resolution.x, _resolution.y, 32, RenderTextureFormat.ARGBFloat);
+            base.Init();
+            _depthRt = new RenderTexture(_resolution.x, _resolution.y, 0, RenderTextureFormat.ARGBFloat);
             _depthCamera.targetTexture = _depthRt;
 
             GameObject colorCameraObject = new GameObject();
             Transform colorCameraTransform = colorCameraObject.transform;
-            colorCameraTransform.parent = this.transform;
+            colorCameraTransform.parent = transform;
             colorCameraTransform.localPosition = Vector3.zero;
             colorCameraTransform.localRotation = Quaternion.identity;
 
             _colorCamera = colorCameraObject.AddComponent<UnityEngine.Camera>();
-            _colorRt = new RenderTexture(_resolution.x, _resolution.y, 32, RenderTextureFormat.ARGB32);
+            _colorRt = new RenderTexture(_resolution.x, _resolution.y, 0, RenderTextureFormat.ARGB32);
             _colorCamera.targetTexture = _colorRt;
 
             _depthCamera.fieldOfView = _colorCamera.fieldOfView = _fov;
@@ -134,7 +130,7 @@ namespace UnitySensors.Sensor.Camera
 
         protected override void UpdateSensor()
         {
-            if (!LoadDepthTexture() || !LoadColorTexture()) return;
+            if (!LoadTexture(_depthRt, ref _depthTexture) || !LoadTexture(_colorRt, ref _colorTexture)) return;
 
             if (_convertToPointCloud)
             {
@@ -146,48 +142,6 @@ namespace UnitySensors.Sensor.Camera
 
             if (onSensorUpdated != null)
                 onSensorUpdated.Invoke();
-        }
-
-        private bool LoadDepthTexture()
-        {
-            bool result = false;
-            AsyncGPUReadback.Request(_depthRt, 0, request =>
-            {
-                if (request.hasError)
-                {
-                    Debug.LogError("GPU readback error detected.");
-                }
-                else
-                {
-                    var data = request.GetData<Color>();
-                    _depthTexture.LoadRawTextureData(data);
-                    _depthTexture.Apply();
-                    result = true;
-                }
-            });
-            AsyncGPUReadback.WaitAllRequests();
-            return result;
-        }
-
-        private bool LoadColorTexture()
-        {
-            bool result = false;
-            AsyncGPUReadback.Request(_colorRt, 0, request =>
-            {
-                if (request.hasError)
-                {
-                    Debug.LogError("GPU readback error detected.");
-                }
-                else
-                {
-                    var data = request.GetData<Color32>();
-                    _colorTexture.LoadRawTextureData(data);
-                    _colorTexture.Apply();
-                    result = true;
-                }
-            });
-            AsyncGPUReadback.WaitAllRequests();
-            return result;
         }
 
         protected override void OnSensorDestroy()

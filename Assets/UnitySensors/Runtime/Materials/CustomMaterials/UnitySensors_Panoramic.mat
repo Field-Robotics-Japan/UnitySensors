@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: UnitySensors_DepthBufferLidar
-  m_Shader: {fileID: 4800000, guid: 9f39b9c496a4e9f489f510e6d57c5126, type: 3}
+  m_Name: UnitySensors_Panoramic
+  m_Shader: {fileID: 4800000, guid: 569ddeeee83cba249ab918801ca7ccc2, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -22,13 +22,17 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _F: 150
     - _Y_COEF: 6
     - _Y_MAX: 1
     - _Y_MIN: 0.8333333
-    m_Colors: []
+    m_Colors:
+    - _Rotation: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
-  m_AllowLocking: 1
