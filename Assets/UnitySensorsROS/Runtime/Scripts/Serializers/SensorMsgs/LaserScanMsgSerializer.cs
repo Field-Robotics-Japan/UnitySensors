@@ -89,6 +89,7 @@ namespace UnitySensors.ROS.Serializer.PointCloud
 
         public override void OnDestroy()
         {
+            base.OnDestroy();
         }
     }
 }
