@@ -21,16 +21,16 @@ namespace UnitySensors.ROS.Serializer.PointCloud
     public class LaserScanMsgSerializer : RosMsgSerializer<LaserScanMsg>
     {
         [SerializeField]
-        private float _min_range = 0.5f;
+        private float _minRange = 0.5f;
 
         [SerializeField]
-        private float _max_range = 100.0f;
+        private float _maxRange = 100.0f;
 
         [SerializeField]
-        private float _gaussian_noise_sigma = 0.0f;
+        private float _gaussianNoiseSigma = 0.0f;
 
         [SerializeField]
-        private ScanPattern _scan_pattern;
+        private ScanPattern _scanPattern;
 
         [SerializeField]
         private HeaderSerializer _header;
@@ -50,13 +50,13 @@ namespace UnitySensors.ROS.Serializer.PointCloud
 
             _pointsNum = _sourceInterface.pointCloud.points.Length;
 
-            _msg.angle_min = _scan_pattern.minAzimuthAngle;
-            _msg.angle_max = _scan_pattern.maxAzimuthAngle;
+            _msg.angle_min = _scanPattern.minAzimuthAngle;
+            _msg.angle_max = _scanPattern.maxAzimuthAngle;
             _msg.angle_increment = (_msg.angle_max - _msg.angle_min) / _pointsNum;
             _msg.time_increment = 0.0f;
             _msg.scan_time = 0.0f;
-            _msg.range_min = _min_range;
-            _msg.range_max = _max_range;
+            _msg.range_min = _minRange;
+            _msg.range_max = _maxRange;
             _msg.ranges = new float[_pointsNum];
             _msg.intensities = new float[_pointsNum];
         }
@@ -69,7 +69,7 @@ namespace UnitySensors.ROS.Serializer.PointCloud
             {
                 var point = _sourceInterface.pointCloud.points[i];
                 _msg.ranges[i] = Mathf.Sqrt(point.position.x * point.position.x + point.position.z * point.position.z);
-                if (_msg.ranges[i] < _min_range || _msg.ranges[i] > _max_range)
+                if (_msg.ranges[i] < _minRange || _msg.ranges[i] > _maxRange)
                 {
                     _msg.ranges[i] = float.NaN;
                 }
@@ -79,7 +79,7 @@ namespace UnitySensors.ROS.Serializer.PointCloud
                     double u2 = 1.0-UnityEngine.Random.Range(0f, 1f);
                     double randStdNormal = Math.Sqrt(-2.0 * Math.Log(u1)) *
                         Math.Sin(2.0 * Math.PI * u2); //random normal(0,1)
-                    _msg.ranges[i] += (float)randStdNormal * _gaussian_noise_sigma; //random normal(mean,stdDev^2)
+                    _msg.ranges[i] += (float)randStdNormal * _gaussianNoiseSigma; //random normal(mean,stdDev^2)
                 }
                 _msg.intensities[i] = point.intensity;
             }
