@@ -15,7 +15,7 @@ using UnitySensors.Utils.PointCloud;
 using UnitySensors.ROS.Serializer.Std;
 using UnitySensors.ROS.Utils.PointCloud;
 
-namespace UnitySensors.ROS.Serializer.PointCloud
+namespace UnitySensors.ROS.Serializer.Sensor
 {
     [System.Serializable]
     public class LaserScanMsgSerializer : RosMsgSerializer<LaserScanMsg>
