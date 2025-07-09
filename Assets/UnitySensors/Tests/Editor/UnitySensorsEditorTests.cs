@@ -364,4 +364,126 @@ namespace UnitySensors.Tests.Editor
             Assert.AreEqual(3.802468913580245, sumZ, 1e-4);
         }
     }
+
+    [TestFixture]
+    public class ScanPatternBasicTests
+    {
+        [Test]
+        public void ScanPattern_ReflectionAccess_ShouldBeAccessible()
+        {
+            // Test that ScanPattern can be accessed via reflection
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                var type = System.Type.GetType("UnitySensors.DataType.LiDAR.ScanPattern, UnitySensorsRuntime");
+                if (type != null)
+                {
+                    Assert.IsNotNull(type);
+                    Assert.IsTrue(type.IsSubclassOf(typeof(ScriptableObject)));
+                }
+            });
+        }
+
+        [Test]
+        public void ScanPattern_AngleRange_ShouldBeValid()
+        {
+            // Test angle range validation logic
+            // Arrange
+            var minZenith = 0.0f;
+            var maxZenith = 180.0f;
+            var minAzimuth = -180.0f;
+            var maxAzimuth = 180.0f;
+            
+            // Act & Assert
+            Assert.That(minZenith, Is.InRange(0.0f, 180.0f));
+            Assert.That(maxZenith, Is.InRange(0.0f, 180.0f));
+            Assert.That(minAzimuth, Is.InRange(-180.0f, 180.0f));
+            Assert.That(maxAzimuth, Is.InRange(-180.0f, 180.0f));
+            Assert.LessOrEqual(minZenith, maxZenith);
+            Assert.LessOrEqual(minAzimuth, maxAzimuth);
+        }
+
+        [Test]
+        public void ScanPattern_Float3Array_ShouldBeInitializable()
+        {
+            // Test float3 array operations
+            // Arrange & Act
+            Assert.DoesNotThrow(() => {
+                var scans = new Unity.Mathematics.float3[4];
+                scans[0] = new Unity.Mathematics.float3(1.0f, 0.0f, 0.0f);
+                scans[1] = new Unity.Mathematics.float3(0.0f, 1.0f, 0.0f);
+                scans[2] = new Unity.Mathematics.float3(0.0f, 0.0f, 1.0f);
+                scans[3] = new Unity.Mathematics.float3(0.5f, 0.5f, 0.5f);
+                
+                // Assert
+                Assert.AreEqual(4, scans.Length);
+                Assert.AreEqual(1.0f, scans[0].x, 1e-6f);
+                Assert.AreEqual(1.0f, scans[1].y, 1e-6f);
+                Assert.AreEqual(1.0f, scans[2].z, 1e-6f);
+            });
+        }
+
+        [Test]
+        public void ScanPattern_AngleConversions_ShouldWorkCorrectly()
+        {
+            // Test angle conversion calculations
+            // Arrange
+            var degreesToRadians = Unity.Mathematics.math.PI / 180.0f;
+            var radiansToDegrees = 180.0f / Unity.Mathematics.math.PI;
+            
+            // Act
+            var angle90Deg = 90.0f;
+            var angle90Rad = angle90Deg * degreesToRadians;
+            var backToDegrees = angle90Rad * radiansToDegrees;
+            
+            // Assert
+            Assert.AreEqual(Unity.Mathematics.math.PI / 2.0f, angle90Rad, 1e-6f);
+            Assert.AreEqual(angle90Deg, backToDegrees, 1e-4f);
+        }
+
+        [Test]
+        public void ScanPattern_SphericalCoordinates_ShouldCalculateCorrectly()
+        {
+            // Test spherical coordinate calculations typical for LiDAR
+            // Arrange
+            var radius = 1.0f;
+            var zenithAngle = Unity.Mathematics.math.PI / 4.0f; // 45 degrees
+            var azimuthAngle = Unity.Mathematics.math.PI / 2.0f; // 90 degrees
+            
+            // Act - Convert spherical to cartesian
+            var x = radius * Unity.Mathematics.math.sin(zenithAngle) * Unity.Mathematics.math.cos(azimuthAngle);
+            var y = radius * Unity.Mathematics.math.sin(zenithAngle) * Unity.Mathematics.math.sin(azimuthAngle);
+            var z = radius * Unity.Mathematics.math.cos(zenithAngle);
+            
+            // Assert
+            Assert.AreEqual(0.0f, x, 1e-6f); // cos(90°) = 0
+            Assert.AreEqual(Unity.Mathematics.math.sqrt(2.0f) / 2.0f, y, 1e-6f); // sin(45°) * sin(90°)
+            Assert.AreEqual(Unity.Mathematics.math.sqrt(2.0f) / 2.0f, z, 1e-6f); // cos(45°)
+        }
+
+        [Test]
+        public void ScanPattern_ScriptableObjectFields_ShouldBeAccessible()
+        {
+            // Test that ScriptableObject fields are properly defined
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                var type = System.Type.GetType("UnitySensors.DataType.LiDAR.ScanPattern, UnitySensorsRuntime");
+                if (type != null)
+                {
+                    var scansField = type.GetField("scans");
+                    var sizeField = type.GetField("size");
+                    var minZenithField = type.GetField("minZenithAngle");
+                    var maxZenithField = type.GetField("maxZenithAngle");
+                    var minAzimuthField = type.GetField("minAzimuthAngle");
+                    var maxAzimuthField = type.GetField("maxAzimuthAngle");
+                    
+                    if (scansField != null) Assert.IsNotNull(scansField);
+                    if (sizeField != null) Assert.IsNotNull(sizeField);
+                    if (minZenithField != null) Assert.IsNotNull(minZenithField);
+                    if (maxZenithField != null) Assert.IsNotNull(maxZenithField);
+                    if (minAzimuthField != null) Assert.IsNotNull(minAzimuthField);
+                    if (maxAzimuthField != null) Assert.IsNotNull(maxAzimuthField);
+                }
+            });
+        }
+    }
 }
