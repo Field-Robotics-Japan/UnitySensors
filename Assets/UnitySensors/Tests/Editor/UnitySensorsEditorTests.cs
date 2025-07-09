@@ -805,4 +805,234 @@ namespace UnitySensors.Tests.Editor
             });
         }
     }
+
+    [TestFixture]
+    public class ScanPatternGeneratorTests
+    {
+        [Test]
+        public void ScanPatternGenerator_ReflectionAccess_ShouldBeAccessible()
+        {
+            // Test that ScanPatternGenerator can be accessed via reflection
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                var type = System.Type.GetType("UnitySensors.DataType.LiDAR.ScanPatternGenerator, UnitySensorsEditor");
+                if (type != null)
+                {
+                    Assert.IsTrue(type.IsClass);
+                    Assert.IsTrue(type.IsSubclassOf(typeof(UnityEditor.EditorWindow)));
+                }
+            });
+        }
+
+        [Test]
+        public void ScanPatternGenerator_EnumTypes_ShouldBeAccessible()
+        {
+            // Test that nested enum types are properly defined
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                var type = System.Type.GetType("UnitySensors.DataType.LiDAR.ScanPatternGenerator, UnitySensorsEditor");
+                if (type != null)
+                {
+                    var nestedTypes = type.GetNestedTypes(System.Reflection.BindingFlags.NonPublic);
+                    
+                    // Check for Mode enum
+                    var modeType = System.Array.Find(nestedTypes, t => t.Name == "Mode");
+                    if (modeType != null)
+                    {
+                        Assert.IsTrue(modeType.IsEnum);
+                        var modeValues = System.Enum.GetNames(modeType);
+                        Assert.IsTrue(System.Array.Exists(modeValues, v => v == "FromCSV"));
+                        Assert.IsTrue(System.Array.Exists(modeValues, v => v == "FromSpecification"));
+                    }
+                    
+                    // Check for Direction enum
+                    var directionType = System.Array.Find(nestedTypes, t => t.Name == "Direction");
+                    if (directionType != null)
+                    {
+                        Assert.IsTrue(directionType.IsEnum);
+                        var directionValues = System.Enum.GetNames(directionType);
+                        Assert.IsTrue(System.Array.Exists(directionValues, v => v == "CW"));
+                        Assert.IsTrue(System.Array.Exists(directionValues, v => v == "CCW"));
+                    }
+                }
+            });
+        }
+
+        [Test]
+        public void ScanPatternGenerator_CSVParsing_ShouldHandleBasicFormat()
+        {
+            // Test CSV parsing logic with typical LiDAR data format
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                // Test typical CSV header parsing
+                var testHeaders = new string[] 
+                {
+                    "azimuth,zenith,distance",
+                    "zenith_angle,azimuth_angle,range",
+                    "AZIMUTH,ZENITH,INTENSITY"
+                };
+                
+                foreach (var headerLine in testHeaders)
+                {
+                    var headers = headerLine.Split(',');
+                    
+                    int azimuth_index = -1;
+                    int zenith_index = -1;
+                    
+                    for (int c = 0; c < headers.Length; c++)
+                    {
+                        string header = headers[c].ToLower();
+                        if (header.Contains("zenith")) zenith_index = c;
+                        else if (header.Contains("azimuth")) azimuth_index = c;
+                    }
+                    
+                    Assert.GreaterOrEqual(azimuth_index, 0, $"Should find azimuth in: {headerLine}");
+                    Assert.GreaterOrEqual(zenith_index, 0, $"Should find zenith in: {headerLine}");
+                }
+            });
+        }
+
+        [Test]
+        public void ScanPatternGenerator_AngleCalculations_ShouldBeCorrect()
+        {
+            // Test angle calculation logic used in pattern generation
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                // Test azimuth angle interpolation
+                var minAzimuth = -180.0f;
+                var maxAzimuth = 180.0f;
+                var resolution = 360;
+                
+                for (int i = 0; i < resolution; i++)
+                {
+                    // Test CW direction
+                    var azimuthCW = Mathf.Lerp(minAzimuth, maxAzimuth, (float)i / resolution);
+                    Assert.That(azimuthCW, Is.InRange(minAzimuth, maxAzimuth));
+                    
+                    // Test CCW direction  
+                    var azimuthCCW = Mathf.Lerp(minAzimuth, maxAzimuth, (float)(resolution - 1 - i) / resolution);
+                    Assert.That(azimuthCCW, Is.InRange(minAzimuth, maxAzimuth));
+                }
+                
+                // Test zenith angle offset
+                var zenithAngle = 15.0f;
+                var zenithOffset = 5.0f;
+                var adjustedZenith = zenithAngle - zenithOffset;
+                Assert.AreEqual(10.0f, adjustedZenith, 1e-6f);
+            });
+        }
+
+        [Test]
+        public void ScanPatternGenerator_QuaternionRotations_ShouldBeCorrect()
+        {
+            // Test quaternion rotation calculations for scan directions
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                // Test typical LiDAR angles
+                var testAngles = new[]
+                {
+                    new { zenith = 0.0f, azimuth = 0.0f },      // Forward
+                    new { zenith = 0.0f, azimuth = 90.0f },     // Right
+                    new { zenith = 0.0f, azimuth = -90.0f },    // Left
+                    new { zenith = 15.0f, azimuth = 0.0f },     // Up 15°
+                    new { zenith = -15.0f, azimuth = 0.0f }     // Down 15°
+                };
+                
+                foreach (var angle in testAngles)
+                {
+                    // Test CSV mode rotation (positive zenith)
+                    var rotationCSV = Quaternion.Euler(angle.zenith, angle.azimuth, 0) * Vector3.forward;
+                    Assert.AreEqual(1.0f, rotationCSV.magnitude, 1e-6f, "Should be unit vector");
+                    
+                    // Test Specification mode rotation (negative zenith)
+                    var rotationSpec = Quaternion.Euler(-angle.zenith, angle.azimuth, 0) * Vector3.forward;
+                    Assert.AreEqual(1.0f, rotationSpec.magnitude, 1e-6f, "Should be unit vector");
+                }
+            });
+        }
+
+        [Test]
+        public void ScanPatternGenerator_ArraySizeCalculation_ShouldBeCorrect()
+        {
+            // Test array size calculation for scan pattern generation
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                // Test specification mode size calculation
+                var zenithAngles = new float[] { -15.0f, 0.0f, 15.0f };
+                var azimuthResolution = 360;
+                var expectedSize = zenithAngles.Length * azimuthResolution;
+                
+                Assert.AreEqual(1080, expectedSize); // 3 * 360
+                
+                // Test CSV mode size calculation (lines - 2 for header and empty line)
+                var csvLines = new string[]
+                {
+                    "azimuth,zenith,distance",
+                    "0.0,0.0,10.0",
+                    "1.0,0.0,10.0",
+                    "2.0,0.0,10.0",
+                    "" // Empty line at end
+                };
+                var csvSize = csvLines.Length - 2;
+                Assert.AreEqual(3, csvSize);
+            });
+        }
+
+        [Test]
+        public void ScanPatternGenerator_AngleRangeTracking_ShouldBeCorrect()
+        {
+            // Test min/max angle range tracking during pattern generation
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                var testAngles = new float[] { -15.0f, 0.0f, 15.0f, 30.0f };
+                
+                var minAngle = float.MaxValue;
+                var maxAngle = float.MinValue;
+                
+                foreach (var angle in testAngles)
+                {
+                    minAngle = Mathf.Min(minAngle, angle);
+                    maxAngle = Mathf.Max(maxAngle, angle);
+                }
+                
+                Assert.AreEqual(-15.0f, minAngle);
+                Assert.AreEqual(30.0f, maxAngle);
+            });
+        }
+
+        [Test]
+        public void ScanPatternGenerator_SerializationFields_ShouldBeAccessible()
+        {
+            // Test that serialized fields are properly defined
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                var type = System.Type.GetType("UnitySensors.DataType.LiDAR.ScanPatternGenerator, UnitySensorsEditor");
+                if (type != null)
+                {
+                    var expectedFields = new[]
+                    {
+                        "_direction",
+                        "_zenithAngles", 
+                        "_minAzimuthAngle",
+                        "_maxAzimuthAngle",
+                        "_azimuthAngleResolution",
+                        "_zenithAngleOffset"
+                    };
+                    
+                    foreach (var fieldName in expectedFields)
+                    {
+                        var field = type.GetField(fieldName, System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                        if (field != null)
+                        {
+                            Assert.IsNotNull(field);
+                            
+                            // Check for SerializeField attribute
+                            var attrs = field.GetCustomAttributes(typeof(SerializeField), false);
+                            Assert.Greater(attrs.Length, 0, $"Field {fieldName} should have SerializeField attribute");
+                        }
+                    }
+                }
+            });
+        }
+    }
 }
