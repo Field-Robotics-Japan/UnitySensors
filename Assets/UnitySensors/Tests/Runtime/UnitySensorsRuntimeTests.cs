@@ -348,4 +348,116 @@ namespace UnitySensors.Tests.Runtime
             });
         }
     }
+
+    [TestFixture]
+    public class UnitySensorsIntegrationTests
+    {
+        private GameObject _testObject;
+
+        [SetUp]
+        public void SetUp()
+        {
+            _testObject = new GameObject("TestUnitySensorsObject");
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            if (_testObject != null)
+                Object.DestroyImmediate(_testObject);
+        }
+
+        [UnityTest]
+        public IEnumerator UnitySensors_GameObject_ShouldSupportSensorLikeOperations()
+        {
+            // Test basic operations that sensors typically perform
+            // Act
+            var initialPosition = _testObject.transform.position;
+            var newPosition = new Vector3(1.0f, 2.0f, 3.0f);
+            _testObject.transform.position = newPosition;
+            
+            yield return null; // Wait one frame
+            
+            // Assert
+            Assert.AreNotEqual(initialPosition, _testObject.transform.position);
+            Assert.AreEqual(newPosition, _testObject.transform.position);
+        }
+
+        [UnityTest]
+        public IEnumerator UnitySensors_Timing_ShouldSupportFrequencyCalculations()
+        {
+            // Test timing calculations that sensors use
+            // Arrange
+            var frequency = 30.0f;
+            var expectedDeltaTime = 1.0f / frequency;
+            var startTime = Time.time;
+            
+            // Act
+            yield return new WaitForSeconds(expectedDeltaTime);
+            var endTime = Time.time;
+            var actualDeltaTime = endTime - startTime;
+            
+            // Assert
+            Assert.That(actualDeltaTime, Is.EqualTo(expectedDeltaTime).Within(0.02f)); // 20ms tolerance
+        }
+
+        [UnityTest]
+        public IEnumerator UnitySensors_Camera_ShouldSupportSensorOperations()
+        {
+            // Test camera operations that camera sensors use
+            // Act
+            var camera = _testObject.AddComponent<Camera>();
+            camera.fieldOfView = 60.0f;
+            camera.nearClipPlane = 0.1f;
+            camera.farClipPlane = 100.0f;
+            
+            yield return null; // Wait one frame
+            
+            // Assert
+            Assert.IsNotNull(camera);
+            Assert.AreEqual(60.0f, camera.fieldOfView, 0.001f);
+            Assert.AreEqual(0.1f, camera.nearClipPlane, 0.001f);
+            Assert.AreEqual(100.0f, camera.farClipPlane, 0.001f);
+        }
+
+        [UnityTest]
+        public IEnumerator UnitySensors_RenderTexture_ShouldSupportCameraSensors()
+        {
+            // Test render texture operations used by camera sensors
+            // Arrange
+            var camera = _testObject.AddComponent<Camera>();
+            var renderTexture = new RenderTexture(256, 256, 24);
+            
+            // Act
+            camera.targetTexture = renderTexture;
+            yield return null; // Wait one frame
+            
+            // Assert
+            Assert.IsNotNull(camera.targetTexture);
+            Assert.AreEqual(256, camera.targetTexture.width);
+            Assert.AreEqual(256, camera.targetTexture.height);
+            
+            // Cleanup
+            renderTexture.Release();
+        }
+
+        [UnityTest]
+        public IEnumerator UnitySensors_Transform_ShouldSupportSensorMovement()
+        {
+            // Test transform operations that moving sensors use
+            // Act
+            var startPosition = _testObject.transform.position;
+            var targetPosition = new Vector3(10.0f, 5.0f, 0.0f);
+            
+            // Simulate sensor movement
+            _testObject.transform.position = Vector3.Lerp(startPosition, targetPosition, 0.5f);
+            yield return null; // Wait one frame
+            
+            var intermediatePosition = _testObject.transform.position;
+            
+            // Assert
+            Assert.AreNotEqual(startPosition, intermediatePosition);
+            Assert.AreEqual(new Vector3(5.0f, 2.5f, 0.0f), intermediatePosition);
+        }
+    }
 }
