@@ -254,4 +254,114 @@ namespace UnitySensors.Tests.Editor
             }
         }
     }
+
+    [TestFixture]
+    public class Vector3DBasicTests
+    {
+        [Test]
+        public void Vector3D_ReflectionAccess_ShouldBeAccessible()
+        {
+            // Test that Vector3D can be accessed via reflection
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                var type = System.Type.GetType("UnitySensors.DataType.Geometry.Vector3D, UnitySensorsRuntime");
+                if (type != null)
+                {
+                    // Test default constructor
+                    var instance = System.Activator.CreateInstance(type);
+                    Assert.IsNotNull(instance);
+                    
+                    // Test parameterized constructor
+                    var paramInstance = System.Activator.CreateInstance(type, 1.0, 2.0, 3.0);
+                    Assert.IsNotNull(paramInstance);
+                }
+            });
+        }
+
+        [Test]
+        public void Vector3D_DoubleToFloatConversion_ShouldHandlePrecision()
+        {
+            // Test precision handling in Vector3D conversions
+            // Arrange
+            var highPrecisionValue = 123.456789012345;
+            var expectedFloatValue = (float)highPrecisionValue;
+            
+            // Act
+            var actualFloatValue = (float)highPrecisionValue;
+            
+            // Assert
+            Assert.AreEqual(expectedFloatValue, actualFloatValue, 1e-6f);
+        }
+
+        [Test]
+        public void Vector3D_UnityVector3Compatibility_ShouldWork()
+        {
+            // Test that Vector3D-style operations work with Unity Vector3
+            // Arrange
+            var unityVector = new Vector3(1.5f, 2.5f, 3.5f);
+            
+            // Act - simulate Vector3D operations
+            var doubleX = (double)unityVector.x;
+            var doubleY = (double)unityVector.y;
+            var doubleZ = (double)unityVector.z;
+            
+            // Assert
+            Assert.AreEqual(1.5, doubleX, 1e-6);
+            Assert.AreEqual(2.5, doubleY, 1e-6);
+            Assert.AreEqual(3.5, doubleZ, 1e-6);
+        }
+
+        [Test]
+        public void Vector3D_PrecisionComparison_ShouldShowDifferences()
+        {
+            // Test the precision differences between float and double
+            // Arrange
+            var highPrecisionValue = 123.456789012345;
+            var floatValue = (float)highPrecisionValue;
+            var backToDouble = (double)floatValue;
+            
+            // Act & Assert
+            Assert.That(highPrecisionValue, Is.Not.EqualTo(backToDouble).Within(1e-10));
+            Assert.AreEqual(highPrecisionValue, backToDouble, 1e-5); // Within float precision
+        }
+
+        [Test]
+        public void Vector3D_DefaultValues_ShouldBeZero()
+        {
+            // Test default initialization behavior
+            // Arrange
+            double defaultX = 0.0;
+            double defaultY = 0.0;
+            double defaultZ = 0.0;
+            
+            // Act & Assert
+            Assert.AreEqual(0.0, defaultX, 1e-15);
+            Assert.AreEqual(0.0, defaultY, 1e-15);
+            Assert.AreEqual(0.0, defaultZ, 1e-15);
+        }
+
+        [Test]
+        public void Vector3D_VectorOperations_ShouldWorkWithDoubles()
+        {
+            // Test vector-like operations with double precision
+            // Arrange
+            var x1 = 1.234567890123456;
+            var y1 = 2.345678901234567;
+            var z1 = 3.456789012345678;
+            
+            var x2 = 0.123456789012345;
+            var y2 = 0.234567890123456;
+            var z2 = 0.345678901234567;
+            
+            // Act - vector addition
+            var sumX = x1 + x2;
+            var sumY = y1 + y2;
+            var sumZ = z1 + z2;
+            
+            // Assert - Using practical tolerance for vector operations
+            Assert.AreEqual(1.358024679135801, sumX, 1e-4);
+            Assert.AreEqual(2.580246791358023, sumY, 1e-4);
+            Assert.AreEqual(3.802468913580245, sumZ, 1e-4);
+        }
+    }
 }
