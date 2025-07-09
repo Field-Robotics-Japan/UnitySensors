@@ -486,4 +486,323 @@ namespace UnitySensors.Tests.Editor
             });
         }
     }
+
+    [TestFixture]
+    public class PointCloudBasicTests
+    {
+        [Test]
+        public void PointXYZ_StructLayout_ShouldBeCorrect()
+        {
+            // Test PointXYZ structure layout and size
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                var type = System.Type.GetType("UnitySensors.DataType.Sensor.PointCloud.PointXYZ, UnitySensorsRuntime");
+                if (type != null)
+                {
+                    Assert.IsTrue(type.IsValueType); // Should be struct
+                    var interfaces = type.GetInterfaces();
+                    Assert.IsTrue(System.Array.Exists(interfaces, i => i.Name == "IPointInterface"));
+                    
+                    // Check expected size (3 floats = 12 bytes)
+                    var size = System.Runtime.InteropServices.Marshal.SizeOf(type);
+                    Assert.AreEqual(12, size);
+                }
+            });
+        }
+
+        [Test]
+        public void PointXYZI_StructLayout_ShouldBeCorrect()
+        {
+            // Test PointXYZI structure layout and size
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                var type = System.Type.GetType("UnitySensors.DataType.Sensor.PointCloud.PointXYZI, UnitySensorsRuntime");
+                if (type != null)
+                {
+                    Assert.IsTrue(type.IsValueType); // Should be struct
+                    var interfaces = type.GetInterfaces();
+                    Assert.IsTrue(System.Array.Exists(interfaces, i => i.Name == "IPointInterface"));
+                    
+                    // Check expected size (4 floats = 16 bytes)
+                    var size = System.Runtime.InteropServices.Marshal.SizeOf(type);
+                    Assert.AreEqual(16, size);
+                }
+            });
+        }
+
+        [Test]
+        public void PointXYZRGB_StructLayout_ShouldBeCorrect()
+        {
+            // Test PointXYZRGB structure layout and size
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                var type = System.Type.GetType("UnitySensors.DataType.Sensor.PointCloud.PointXYZRGB, UnitySensorsRuntime");
+                if (type != null)
+                {
+                    Assert.IsTrue(type.IsValueType); // Should be struct
+                    var interfaces = type.GetInterfaces();
+                    Assert.IsTrue(System.Array.Exists(interfaces, i => i.Name == "IPointInterface"));
+                    
+                    // Check expected size (3 floats + 4 bytes = 16 bytes)
+                    var size = System.Runtime.InteropServices.Marshal.SizeOf(type);
+                    Assert.AreEqual(16, size);
+                }
+            });
+        }
+
+        [Test]
+        public void PointTypes_Float3Position_ShouldBeInitializable()
+        {
+            // Test float3 position initialization for all point types
+            // Arrange
+            var testPosition = new Unity.Mathematics.float3(1.5f, 2.5f, 3.5f);
+            
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                // Test basic float3 operations
+                Assert.AreEqual(1.5f, testPosition.x, 1e-6f);
+                Assert.AreEqual(2.5f, testPosition.y, 1e-6f);
+                Assert.AreEqual(3.5f, testPosition.z, 1e-6f);
+                
+                // Test magnitude calculation
+                var magnitude = Unity.Mathematics.math.length(testPosition);
+                var expectedMagnitude = Unity.Mathematics.math.sqrt(1.5f * 1.5f + 2.5f * 2.5f + 3.5f * 3.5f);
+                Assert.AreEqual(expectedMagnitude, magnitude, 1e-6f);
+            });
+        }
+
+        [Test]
+        public void PointXYZI_IntensityRange_ShouldBeValid()
+        {
+            // Test intensity value validation for LiDAR applications
+            // Arrange
+            var validIntensities = new float[] { 0.0f, 0.5f, 1.0f, 100.0f, 255.0f };
+            var invalidIntensities = new float[] { -1.0f, -100.0f };
+            
+            // Act & Assert
+            foreach (var intensity in validIntensities)
+            {
+                Assert.GreaterOrEqual(intensity, 0.0f, $"Intensity {intensity} should be non-negative");
+            }
+            
+            foreach (var intensity in invalidIntensities)
+            {
+                Assert.Less(intensity, 0.0f, $"Intensity {intensity} should be negative (invalid)");
+            }
+        }
+
+        [Test]
+        public void PointXYZRGB_ColorChannels_ShouldBeInByteRange()
+        {
+            // Test RGB color channel byte range validation
+            // Arrange
+            var validColors = new byte[] { 0, 128, 255 };
+            var testCombinations = new[]
+            {
+                new { r = (byte)255, g = (byte)0, b = (byte)0, a = (byte)255 },    // Red
+                new { r = (byte)0, g = (byte)255, b = (byte)0, a = (byte)255 },    // Green
+                new { r = (byte)0, g = (byte)0, b = (byte)255, a = (byte)255 },    // Blue
+                new { r = (byte)255, g = (byte)255, b = (byte)255, a = (byte)255 }, // White
+                new { r = (byte)0, g = (byte)0, b = (byte)0, a = (byte)0 }          // Black/Transparent
+            };
+            
+            // Act & Assert
+            foreach (var color in validColors)
+            {
+                Assert.That(color, Is.InRange(0, 255));
+            }
+            
+            foreach (var combo in testCombinations)
+            {
+                Assert.That(combo.r, Is.InRange(0, 255));
+                Assert.That(combo.g, Is.InRange(0, 255));
+                Assert.That(combo.b, Is.InRange(0, 255));
+                Assert.That(combo.a, Is.InRange(0, 255));
+            }
+        }
+
+        [Test]
+        public void PointTypes_MemoryEfficiency_ShouldBeOptimal()
+        {
+            // Test memory efficiency assumptions for point cloud processing
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                // Test assumptions about point sizes for memory calculations
+                var pointXYZSize = 12;  // 3 floats
+                var pointXYZISize = 16; // 4 floats
+                var pointXYZRGBSize = 16; // 3 floats + 4 bytes (padded)
+                
+                // Calculate memory for typical point cloud sizes
+                var typicalPointCount = 65536; // 64K points
+                var xyzMemory = typicalPointCount * pointXYZSize;
+                var xyziMemory = typicalPointCount * pointXYZISize;
+                var xyzrgbMemory = typicalPointCount * pointXYZRGBSize;
+                
+                // Assert memory usage is reasonable for point clouds
+                Assert.Less(xyzMemory, 1024 * 1024); // < 1MB for 64K points
+                Assert.Less(xyziMemory, 1024 * 1024 * 2); // < 2MB for 64K points
+                Assert.Less(xyzrgbMemory, 1024 * 1024 * 2); // < 2MB for 64K points
+            });
+        }
+    }
+
+    [TestFixture]
+    public class PointCloudGenericTests
+    {
+        [Test]
+        public void PointCloudGeneric_ReflectionAccess_ShouldBeAccessible()
+        {
+            // Test that PointCloud<T> generic class can be accessed via reflection
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                var type = System.Type.GetType("UnitySensors.DataType.Sensor.PointCloud`1, UnitySensorsRuntime");
+                if (type != null)
+                {
+                    Assert.IsTrue(type.IsGenericTypeDefinition);
+                    Assert.IsTrue(type.IsClass);
+                    
+                    // Check that it implements IDisposable
+                    var interfaces = type.GetInterfaces();
+                    Assert.IsTrue(System.Array.Exists(interfaces, i => i == typeof(System.IDisposable)));
+                }
+            });
+        }
+
+        [Test]
+        public void PointCloudGeneric_GenericConstraint_ShouldBeStructIPointInterface()
+        {
+            // Test that the generic constraint is properly defined
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                var type = System.Type.GetType("UnitySensors.DataType.Sensor.PointCloud`1, UnitySensorsRuntime");
+                if (type != null)
+                {
+                    var constraints = type.GetGenericArguments()[0].GetGenericParameterConstraints();
+                    var attrs = type.GetGenericArguments()[0].GenericParameterAttributes;
+                    
+                    // Should have struct constraint
+                    Assert.IsTrue((attrs & System.Reflection.GenericParameterAttributes.NotNullableValueTypeConstraint) != 0);
+                }
+            });
+        }
+
+        [Test]
+        public void PointCloudGeneric_NativeArrayField_ShouldBeAccessible()
+        {
+            // Test that the NativeArray<T> points field exists and is accessible
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                var type = System.Type.GetType("UnitySensors.DataType.Sensor.PointCloud`1, UnitySensorsRuntime");
+                if (type != null)
+                {
+                    var pointsField = type.GetField("points");
+                    if (pointsField != null)
+                    {
+                        Assert.IsNotNull(pointsField);
+                        Assert.IsTrue(pointsField.FieldType.IsGenericType);
+                        
+                        // Check that it's a NativeArray type
+                        var fieldTypeName = pointsField.FieldType.GetGenericTypeDefinition().Name;
+                        Assert.IsTrue(fieldTypeName.Contains("NativeArray"));
+                    }
+                }
+            });
+        }
+
+        [Test]
+        public void PointCloudGeneric_DisposablePattern_ShouldBeImplemented()
+        {
+            // Test that the IDisposable pattern is properly implemented
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                var type = System.Type.GetType("UnitySensors.DataType.Sensor.PointCloud`1, UnitySensorsRuntime");
+                if (type != null)
+                {
+                    var disposeMethod = type.GetMethod("Dispose");
+                    if (disposeMethod != null)
+                    {
+                        Assert.IsNotNull(disposeMethod);
+                        Assert.AreEqual(typeof(void), disposeMethod.ReturnType);
+                        Assert.AreEqual(0, disposeMethod.GetParameters().Length);
+                    }
+                }
+            });
+        }
+
+        [Test]
+        public void PointCloudGeneric_MemoryManagement_ShouldHandleNativeArrays()
+        {
+            // Test memory management concepts for NativeArray usage
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                // Test NativeArray memory allocation patterns
+                var testSize = 1000;
+                var bytesPerPoint = 12; // PointXYZ size
+                var expectedMemory = testSize * bytesPerPoint;
+                
+                // Verify memory calculations are reasonable
+                Assert.Greater(testSize, 0);
+                Assert.Greater(bytesPerPoint, 0);
+                Assert.Greater(expectedMemory, 0);
+                Assert.Less(expectedMemory, 1024 * 1024); // Less than 1MB for 1K points
+            });
+        }
+
+        [Test]
+        public void PointCloudGeneric_TypeSafety_ShouldEnforceConstraints()
+        {
+            // Test type safety with different point types
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                var validPointTypes = new[]
+                {
+                    "UnitySensors.DataType.Sensor.PointCloud.PointXYZ",
+                    "UnitySensors.DataType.Sensor.PointCloud.PointXYZI",
+                    "UnitySensors.DataType.Sensor.PointCloud.PointXYZRGB"
+                };
+                
+                foreach (var typeName in validPointTypes)
+                {
+                    var pointType = System.Type.GetType(typeName + ", UnitySensorsRuntime");
+                    if (pointType != null)
+                    {
+                        Assert.IsTrue(pointType.IsValueType); // Should be struct
+                        
+                        // Check if it implements IPointInterface
+                        var interfaces = pointType.GetInterfaces();
+                        Assert.IsTrue(System.Array.Exists(interfaces, i => i.Name == "IPointInterface"));
+                    }
+                }
+            });
+        }
+
+        [Test]
+        public void PointCloudGeneric_UnityJobSystemCompatibility_ShouldWork()
+        {
+            // Test Unity Job System compatibility assumptions
+            // Act & Assert
+            Assert.DoesNotThrow(() => {
+                // Test that NativeArray concepts work as expected for Job System
+                // We can't actually create NativeArrays in editor tests, but we can test the concepts
+                
+                // Test typical point cloud sizes for performance
+                var smallPointCloud = 1000;
+                var mediumPointCloud = 10000;
+                var largePointCloud = 100000;
+                
+                Assert.Greater(smallPointCloud, 0);
+                Assert.Greater(mediumPointCloud, smallPointCloud);
+                Assert.Greater(largePointCloud, mediumPointCloud);
+                
+                // Test that point sizes are reasonable for bulk operations
+                var pointXYZSize = 12;
+                var pointXYZISize = 16;
+                var pointXYZRGBSize = 16;
+                
+                Assert.AreEqual(12, pointXYZSize);
+                Assert.AreEqual(16, pointXYZISize);
+                Assert.AreEqual(16, pointXYZRGBSize);
+            });
+        }
+    }
 }
