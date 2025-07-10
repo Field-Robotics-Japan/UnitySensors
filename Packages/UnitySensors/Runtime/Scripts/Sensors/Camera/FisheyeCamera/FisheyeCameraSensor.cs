@@ -49,7 +49,7 @@ namespace UnitySensors.Sensor.Camera
             _fisheyeMat.SetFloat("_fx", _focalLength.x / _resolution.x);
             _fisheyeMat.SetFloat("_fy", _focalLength.y / _resolution.y);
             _fisheyeMat.SetFloat("_cx", _principalPoint.x / _resolution.x);
-            _fisheyeMat.SetFloat("_cy", _principalPoint.y / _resolution.y);
+            _fisheyeMat.SetFloat("_cy", 1 - _principalPoint.y / _resolution.y);
             var eulerAngles = transform.rotation.eulerAngles;
             var rot = Quaternion.Euler(eulerAngles.x, eulerAngles.y, eulerAngles.z);
             var mat = Matrix4x4.TRS(Vector3.zero, rot, Vector3.one);

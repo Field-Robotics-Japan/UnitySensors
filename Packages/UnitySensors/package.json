@@ -1,0 +1,24 @@
+{
+    "name": "com.frj.unity-sensors",
+    "version": "2.0.4",
+    "displayName": "UnitySensors",
+    "description": "",
+    "unity": "2022.3",
+    "dependencies": {
+        "com.unity.burst": "1.6.6"
+    },
+    "keywords": [
+        "unitysensors",
+        "robot",
+        "robotics",
+        "sensor",
+        "simulation"
+    ],
+    "samples": [
+        {
+            "displayName": "Sample",
+            "description": "Sample prefabs and scenes that demonstrate the UnitySensors. Note that some materials and shaders may need to be modified according to your rendering pipeline.",
+            "path": "Samples~"
+        }
+    ]
+}

@@ -82,3 +82,7 @@ crashlytics-build.properties
 
 # Test results
 results*.xml
+
+# Sample
+Assets/Samples
+Assets/Samples.meta
