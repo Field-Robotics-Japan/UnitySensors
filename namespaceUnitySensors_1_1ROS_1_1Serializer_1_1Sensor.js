@@ -4,5 +4,6 @@ var namespaceUnitySensors_1_1ROS_1_1Serializer_1_1Sensor =
     [ "CompressedImageMsgSerializer", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1CompressedImageMsgSerializer.html", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1CompressedImageMsgSerializer" ],
     [ "ImageMsgSerializer", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1ImageMsgSerializer.html", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1ImageMsgSerializer" ],
     [ "IMUMsgSerializer", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1IMUMsgSerializer.html", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1IMUMsgSerializer" ],
+    [ "LaserScanMsgSerializer", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1LaserScanMsgSerializer.html", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1LaserScanMsgSerializer" ],
     [ "NavSatFixMsgSerializer", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1NavSatFixMsgSerializer.html", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1NavSatFixMsgSerializer" ]
 ];

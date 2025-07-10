@@ -65,6 +65,7 @@ var annotated_dup =
             [ "DepthCameraPointCloud2MsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1DepthCameraPointCloud2MsgPublisher.html", "classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1DepthCameraPointCloud2MsgPublisher" ],
             [ "ImageMsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1ImageMsgPublisher.html", null ],
             [ "IMUMsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1IMUMsgPublisher.html", null ],
+            [ "LaserScanMsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1LaserScanMsgPublisher.html", null ],
             [ "LiDARPointCloud2MsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1LiDARPointCloud2MsgPublisher.html", "classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1LiDARPointCloud2MsgPublisher" ],
             [ "NavSatFixMsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1NavSatFixMsgPublisher.html", null ],
             [ "PointCloud2MsgPublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1PointCloud2MsgPublisher.html", null ],
@@ -94,6 +95,7 @@ var annotated_dup =
             [ "CompressedImageMsgSerializer", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1CompressedImageMsgSerializer.html", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1CompressedImageMsgSerializer" ],
             [ "ImageMsgSerializer", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1ImageMsgSerializer.html", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1ImageMsgSerializer" ],
             [ "IMUMsgSerializer", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1IMUMsgSerializer.html", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1IMUMsgSerializer" ],
+            [ "LaserScanMsgSerializer", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1LaserScanMsgSerializer.html", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1LaserScanMsgSerializer" ],
             [ "NavSatFixMsgSerializer", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1NavSatFixMsgSerializer.html", "classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1NavSatFixMsgSerializer" ]
           ] ],
           [ "Std", "namespaceUnitySensors_1_1ROS_1_1Serializer_1_1Std.html", [
@@ -148,6 +150,34 @@ var annotated_dup =
         ] ],
         [ "UnitySensor", "classUnitySensors_1_1Sensor_1_1UnitySensor.html", "classUnitySensors_1_1Sensor_1_1UnitySensor" ]
       ] ],
+      [ "Tests", "namespaceUnitySensors_1_1Tests.html", [
+        [ "Editor", "namespaceUnitySensors_1_1Tests_1_1Editor.html", [
+          [ "BasicUnityTests", "classUnitySensors_1_1Tests_1_1Editor_1_1BasicUnityTests.html", "classUnitySensors_1_1Tests_1_1Editor_1_1BasicUnityTests" ],
+          [ "GeoCoordinateBasicTests", "classUnitySensors_1_1Tests_1_1Editor_1_1GeoCoordinateBasicTests.html", "classUnitySensors_1_1Tests_1_1Editor_1_1GeoCoordinateBasicTests" ],
+          [ "HeaderSerializerTests", "classUnitySensors_1_1Tests_1_1Editor_1_1HeaderSerializerTests.html", "classUnitySensors_1_1Tests_1_1Editor_1_1HeaderSerializerTests" ],
+          [ "IPointInterfaceTests", "classUnitySensors_1_1Tests_1_1Editor_1_1IPointInterfaceTests.html", "classUnitySensors_1_1Tests_1_1Editor_1_1IPointInterfaceTests" ],
+          [ "ITimeInterfaceTests", "classUnitySensors_1_1Tests_1_1Editor_1_1ITimeInterfaceTests.html", "classUnitySensors_1_1Tests_1_1Editor_1_1ITimeInterfaceTests" ],
+          [ "LaserScanMsgPublisherTests", "classUnitySensors_1_1Tests_1_1Editor_1_1LaserScanMsgPublisherTests.html", "classUnitySensors_1_1Tests_1_1Editor_1_1LaserScanMsgPublisherTests" ],
+          [ "LaserScanMsgSerializerTests", "classUnitySensors_1_1Tests_1_1Editor_1_1LaserScanMsgSerializerTests.html", "classUnitySensors_1_1Tests_1_1Editor_1_1LaserScanMsgSerializerTests" ],
+          [ "PointCloudBasicTests", "classUnitySensors_1_1Tests_1_1Editor_1_1PointCloudBasicTests.html", "classUnitySensors_1_1Tests_1_1Editor_1_1PointCloudBasicTests" ],
+          [ "PointCloudGenericTests", "classUnitySensors_1_1Tests_1_1Editor_1_1PointCloudGenericTests.html", "classUnitySensors_1_1Tests_1_1Editor_1_1PointCloudGenericTests" ],
+          [ "RosMsgPublisherTests", "classUnitySensors_1_1Tests_1_1Editor_1_1RosMsgPublisherTests.html", "classUnitySensors_1_1Tests_1_1Editor_1_1RosMsgPublisherTests" ],
+          [ "RosMsgSerializerTests", "classUnitySensors_1_1Tests_1_1Editor_1_1RosMsgSerializerTests.html", "classUnitySensors_1_1Tests_1_1Editor_1_1RosMsgSerializerTests" ],
+          [ "ScanPatternBasicTests", "classUnitySensors_1_1Tests_1_1Editor_1_1ScanPatternBasicTests.html", "classUnitySensors_1_1Tests_1_1Editor_1_1ScanPatternBasicTests" ],
+          [ "ScanPatternGeneratorTests", "classUnitySensors_1_1Tests_1_1Editor_1_1ScanPatternGeneratorTests.html", "classUnitySensors_1_1Tests_1_1Editor_1_1ScanPatternGeneratorTests" ],
+          [ "UnitySensorBasicTests", "classUnitySensors_1_1Tests_1_1Editor_1_1UnitySensorBasicTests.html", "classUnitySensors_1_1Tests_1_1Editor_1_1UnitySensorBasicTests" ],
+          [ "UnitySensorsEditorTestsInfo", "classUnitySensors_1_1Tests_1_1Editor_1_1UnitySensorsEditorTestsInfo.html", "classUnitySensors_1_1Tests_1_1Editor_1_1UnitySensorsEditorTestsInfo" ],
+          [ "Vector3DBasicTests", "classUnitySensors_1_1Tests_1_1Editor_1_1Vector3DBasicTests.html", "classUnitySensors_1_1Tests_1_1Editor_1_1Vector3DBasicTests" ]
+        ] ],
+        [ "Runtime", "namespaceUnitySensors_1_1Tests_1_1Runtime.html", [
+          [ "BasicGameObjectTests", "classUnitySensors_1_1Tests_1_1Runtime_1_1BasicGameObjectTests.html", "classUnitySensors_1_1Tests_1_1Runtime_1_1BasicGameObjectTests" ],
+          [ "ComponentLifecycleTests", "classUnitySensors_1_1Tests_1_1Runtime_1_1ComponentLifecycleTests.html", "classUnitySensors_1_1Tests_1_1Runtime_1_1ComponentLifecycleTests" ],
+          [ "RenderingTests", "classUnitySensors_1_1Tests_1_1Runtime_1_1RenderingTests.html", "classUnitySensors_1_1Tests_1_1Runtime_1_1RenderingTests" ],
+          [ "TimingTests", "classUnitySensors_1_1Tests_1_1Runtime_1_1TimingTests.html", "classUnitySensors_1_1Tests_1_1Runtime_1_1TimingTests" ],
+          [ "UnitySensorRuntimeTests", "classUnitySensors_1_1Tests_1_1Runtime_1_1UnitySensorRuntimeTests.html", "classUnitySensors_1_1Tests_1_1Runtime_1_1UnitySensorRuntimeTests" ],
+          [ "UnitySensorsIntegrationTests", "classUnitySensors_1_1Tests_1_1Runtime_1_1UnitySensorsIntegrationTests.html", "classUnitySensors_1_1Tests_1_1Runtime_1_1UnitySensorsIntegrationTests" ]
+        ] ]
+      ] ],
       [ "Utils", "namespaceUnitySensors_1_1Utils.html", [
         [ "Camera", "namespaceUnitySensors_1_1Utils_1_1Camera.html", [
           [ "Color2Depth", "classUnitySensors_1_1Utils_1_1Camera_1_1Color2Depth.html", "classUnitySensors_1_1Utils_1_1Camera_1_1Color2Depth" ]
@@ -172,6 +202,18 @@ var annotated_dup =
           [ "TextureVisualizer", "classUnitySensors_1_1Visualization_1_1Sensor_1_1TextureVisualizer.html", "classUnitySensors_1_1Visualization_1_1Sensor_1_1TextureVisualizer" ]
         ] ],
         [ "Visualizer", "classUnitySensors_1_1Visualization_1_1Visualizer.html", "classUnitySensors_1_1Visualization_1_1Visualizer" ]
+      ] ]
+    ] ],
+    [ "UnitySensorsROS", "namespaceUnitySensorsROS.html", [
+      [ "Tests", "namespaceUnitySensorsROS_1_1Tests.html", [
+        [ "Editor", "namespaceUnitySensorsROS_1_1Tests_1_1Editor.html", [
+          [ "HeaderSerializerTests", "classUnitySensorsROS_1_1Tests_1_1Editor_1_1HeaderSerializerTests.html", "classUnitySensorsROS_1_1Tests_1_1Editor_1_1HeaderSerializerTests" ],
+          [ "LaserScanMsgPublisherTests", "classUnitySensorsROS_1_1Tests_1_1Editor_1_1LaserScanMsgPublisherTests.html", "classUnitySensorsROS_1_1Tests_1_1Editor_1_1LaserScanMsgPublisherTests" ],
+          [ "LaserScanMsgSerializerTests", "classUnitySensorsROS_1_1Tests_1_1Editor_1_1LaserScanMsgSerializerTests.html", "classUnitySensorsROS_1_1Tests_1_1Editor_1_1LaserScanMsgSerializerTests" ],
+          [ "RosMsgPublisherTests", "classUnitySensorsROS_1_1Tests_1_1Editor_1_1RosMsgPublisherTests.html", "classUnitySensorsROS_1_1Tests_1_1Editor_1_1RosMsgPublisherTests" ],
+          [ "RosMsgSerializerTests", "classUnitySensorsROS_1_1Tests_1_1Editor_1_1RosMsgSerializerTests.html", "classUnitySensorsROS_1_1Tests_1_1Editor_1_1RosMsgSerializerTests" ],
+          [ "UnitySensorsROSTestsInfo", "classUnitySensorsROS_1_1Tests_1_1Editor_1_1UnitySensorsROSTestsInfo.html", "classUnitySensorsROS_1_1Tests_1_1Editor_1_1UnitySensorsROSTestsInfo" ]
+        ] ]
       ] ]
     ] ]
 ];

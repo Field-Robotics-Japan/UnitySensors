@@ -5,6 +5,7 @@ var dir_fbdc50626b3ca14389c12f6a609ac0a1 =
     [ "CompressedImageMsgPublisher.cs", "CompressedImageMsgPublisher_8cs.html", "CompressedImageMsgPublisher_8cs" ],
     [ "ImageMsgPublisher.cs", "ImageMsgPublisher_8cs.html", "ImageMsgPublisher_8cs" ],
     [ "IMUMsgPublisher.cs", "IMUMsgPublisher_8cs.html", "IMUMsgPublisher_8cs" ],
+    [ "LaserScanMsgPublisher.cs", "LaserScanMsgPublisher_8cs.html", "LaserScanMsgPublisher_8cs" ],
     [ "NavSatFixMsgPublisher.cs", "NavSatFixMsgPublisher_8cs.html", "NavSatFixMsgPublisher_8cs" ],
     [ "PointCloud2MsgPublisher.cs", "PointCloud2MsgPublisher_8cs.html", "PointCloud2MsgPublisher_8cs" ]
 ];
