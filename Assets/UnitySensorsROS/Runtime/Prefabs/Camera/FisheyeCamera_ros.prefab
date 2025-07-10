@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1440127890685067463}
   - component: {fileID: 9052829084107625070}
   - component: {fileID: 8928244098186655159}
+  - component: {fileID: 4818470690042959147}
   m_Layer: 0
   m_Name: FisheyeCamera_ros
   m_TagString: Untagged
@@ -101,8 +102,13 @@ MonoBehaviour:
   _resolution: {x: 1024, y: 1024}
   _fov: 30
   _fisheyeMat: {fileID: 2100000, guid: 54d1a4a7d74dd4945ad614037e38fbb0, type: 2}
-  _cubemapResolution: {x: 512, y: 512}
-  viewAngle: 210
+  _cubemapResolution: 1024
+  _viewAngle: 210
+  _cameraModel: 0
+  _alpha: 1
+  _beta: 0
+  _focalLength: {x: 1, y: 1}
+  _principalPoint: {x: 512, y: 512}
 --- !u!114 &8928244098186655159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,3 +130,18 @@ MonoBehaviour:
       _source: {fileID: 9052829084107625070}
       _frame_id: camera_frame
     quality: 75
+--- !u!114 &4818470690042959147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3069757406263986279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a6512c6d49c2244a1a77e382c678b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _frequency: 10
+  _frame_id: camera_frame
+  _children: []

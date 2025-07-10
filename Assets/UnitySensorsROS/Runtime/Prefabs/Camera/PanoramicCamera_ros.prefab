@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 431380551188723405}
   - component: {fileID: 431380551188723404}
   - component: {fileID: 769876242129936710}
+  - component: {fileID: 2184592007528865473}
   m_Layer: 0
   m_Name: PanoramicCamera_ros
   m_TagString: Untagged
@@ -123,3 +124,18 @@ MonoBehaviour:
       _source: {fileID: 431380551188723404}
       _frame_id: camera_frame
     quality: 75
+--- !u!114 &2184592007528865473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431380551188723393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a6512c6d49c2244a1a77e382c678b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _frequency: 10
+  _frame_id: camera_frame
+  _children: []
