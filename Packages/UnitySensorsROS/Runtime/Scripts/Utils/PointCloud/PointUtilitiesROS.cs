@@ -13,7 +13,7 @@ namespace UnitySensors.ROS.Utils.PointCloud
         public readonly static ReadOnlyDictionary<Type, PointFieldMsg[]> pointFields = new ReadOnlyDictionary<Type, PointFieldMsg[]>(new Dictionary<Type, PointFieldMsg[]>
         {
             {
-                typeof(PointXYZ), 
+                typeof(PointXYZ),
                 new PointFieldMsg[]
                 {
                     new PointFieldMsg("y", 0, 7, 1),

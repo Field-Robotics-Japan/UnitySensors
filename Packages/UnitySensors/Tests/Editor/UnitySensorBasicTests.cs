@@ -11,10 +11,11 @@ namespace UnitySensors.Tests.Editor
         {
             // Test that UnitySensors assembly can be accessed
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 var assemblies = System.AppDomain.CurrentDomain.GetAssemblies();
                 bool foundUnitySensors = false;
-                
+
                 foreach (var assembly in assemblies)
                 {
                     if (assembly.FullName.Contains("UnitySensors"))
@@ -23,7 +24,7 @@ namespace UnitySensors.Tests.Editor
                         break;
                     }
                 }
-                
+
                 Assert.IsTrue(foundUnitySensors, "UnitySensors assembly should be loaded");
             });
         }
@@ -34,7 +35,7 @@ namespace UnitySensors.Tests.Editor
             // Test that Unity types work well with UnitySensors
             // Arrange
             var screenSize = new Vector2Int(1920, 1080);
-            
+
             // Act & Assert
             Assert.IsTrue(screenSize.x > 0);
             Assert.IsTrue(screenSize.y > 0);
@@ -49,7 +50,7 @@ namespace UnitySensors.Tests.Editor
             // Arrange
             var highPrecisionValue = 1.23456789012345f;
             var truncatedValue = (float)(double)highPrecisionValue;
-            
+
             // Act & Assert
             Assert.AreEqual(highPrecisionValue, truncatedValue);
             Assert.IsTrue(highPrecisionValue > 1.0f);

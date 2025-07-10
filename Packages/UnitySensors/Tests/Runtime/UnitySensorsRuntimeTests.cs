@@ -28,7 +28,7 @@ namespace UnitySensors.Tests.Runtime
         {
             // Act
             yield return null; // Wait one frame
-            
+
             // Assert
             Assert.IsNotNull(_testObject);
             Assert.AreEqual("TestObject", _testObject.name);
@@ -39,11 +39,11 @@ namespace UnitySensors.Tests.Runtime
         {
             // Arrange
             var newPosition = new Vector3(1.0f, 2.0f, 3.0f);
-            
+
             // Act
             _testObject.transform.position = newPosition;
             yield return null; // Wait one frame
-            
+
             // Assert
             Assert.AreEqual(newPosition, _testObject.transform.position);
         }
@@ -53,11 +53,11 @@ namespace UnitySensors.Tests.Runtime
         {
             // Arrange
             var newRotation = Quaternion.Euler(45.0f, 90.0f, 0.0f);
-            
+
             // Act
             _testObject.transform.rotation = newRotation;
             yield return null; // Wait one frame
-            
+
             // Assert
             var actualRotation = _testObject.transform.rotation;
             Assert.AreEqual(newRotation.x, actualRotation.x, 0.001f);
@@ -72,7 +72,7 @@ namespace UnitySensors.Tests.Runtime
             // Act
             var camera = _testObject.AddComponent<Camera>();
             yield return null; // Wait one frame
-            
+
             // Assert
             Assert.IsNotNull(camera);
             Assert.AreEqual(_testObject, camera.gameObject);
@@ -84,11 +84,11 @@ namespace UnitySensors.Tests.Runtime
             // Arrange
             var camera = _testObject.AddComponent<Camera>();
             var expectedFOV = 45.0f;
-            
+
             // Act
             camera.fieldOfView = expectedFOV;
             yield return null; // Wait one frame
-            
+
             // Assert
             Assert.AreEqual(expectedFOV, camera.fieldOfView, 0.001f);
         }
@@ -103,7 +103,7 @@ namespace UnitySensors.Tests.Runtime
             // Act
             yield return null; // Wait one frame
             var deltaTime = Time.deltaTime;
-            
+
             // Assert
             Assert.GreaterOrEqual(deltaTime, 0.0f);
         }
@@ -113,14 +113,14 @@ namespace UnitySensors.Tests.Runtime
         {
             // Arrange
             var originalTimeScale = Time.timeScale;
-            
+
             // Act
             Time.timeScale = 0.5f;
             yield return null; // Wait one frame
-            
+
             // Assert
             Assert.AreEqual(0.5f, Time.timeScale, 0.001f);
-            
+
             // Cleanup
             Time.timeScale = originalTimeScale;
         }
@@ -131,11 +131,11 @@ namespace UnitySensors.Tests.Runtime
             // Arrange
             var startTime = Time.time;
             var waitDuration = 0.1f;
-            
+
             // Act
             yield return new WaitForSeconds(waitDuration);
             var endTime = Time.time;
-            
+
             // Assert
             var actualDuration = endTime - startTime;
             Assert.GreaterOrEqual(actualDuration, waitDuration * 0.9f); // Allow 10% tolerance
@@ -166,11 +166,11 @@ namespace UnitySensors.Tests.Runtime
             // Arrange
             var camera = _testObject.AddComponent<Camera>();
             yield return null; // Wait one frame
-            
+
             // Act
             Object.DestroyImmediate(camera);
             yield return null; // Wait one frame
-            
+
             // Assert
             Assert.IsNull(_testObject.GetComponent<Camera>());
         }
@@ -182,7 +182,7 @@ namespace UnitySensors.Tests.Runtime
             var camera = _testObject.AddComponent<Camera>();
             var audioListener = _testObject.AddComponent<AudioListener>();
             yield return null; // Wait one frame
-            
+
             // Assert
             Assert.IsNotNull(camera);
             Assert.IsNotNull(audioListener);
@@ -195,18 +195,18 @@ namespace UnitySensors.Tests.Runtime
         {
             // Arrange
             Assert.IsTrue(_testObject.activeInHierarchy);
-            
+
             // Act
             _testObject.SetActive(false);
             yield return null; // Wait one frame
-            
+
             // Assert
             Assert.IsFalse(_testObject.activeInHierarchy);
-            
+
             // Act
             _testObject.SetActive(true);
             yield return null; // Wait one frame
-            
+
             // Assert
             Assert.IsTrue(_testObject.activeInHierarchy);
         }
@@ -237,14 +237,14 @@ namespace UnitySensors.Tests.Runtime
         {
             // Arrange
             var renderTexture = new RenderTexture(256, 256, 24);
-            
+
             // Act
             _camera.targetTexture = renderTexture;
             yield return null; // Wait one frame
-            
+
             // Assert
             Assert.AreSame(renderTexture, _camera.targetTexture);
-            
+
             // Cleanup
             renderTexture.Release();
         }
@@ -255,12 +255,12 @@ namespace UnitySensors.Tests.Runtime
             // Arrange
             var nearClip = 0.1f;
             var farClip = 100.0f;
-            
+
             // Act
             _camera.nearClipPlane = nearClip;
             _camera.farClipPlane = farClip;
             yield return null; // Wait one frame
-            
+
             // Assert
             Assert.AreEqual(nearClip, _camera.nearClipPlane, 0.001f);
             Assert.AreEqual(farClip, _camera.farClipPlane, 0.001f);
@@ -271,11 +271,11 @@ namespace UnitySensors.Tests.Runtime
         {
             // Arrange
             var depth = 5.0f;
-            
+
             // Act
             _camera.depth = depth;
             yield return null; // Wait one frame
-            
+
             // Assert
             Assert.AreEqual(depth, _camera.depth, 0.001f);
         }
@@ -304,7 +304,7 @@ namespace UnitySensors.Tests.Runtime
         {
             // Act
             yield return null; // Wait one frame
-            
+
             // Assert
             Assert.IsNotNull(_testObject);
             Assert.AreEqual("TestSensorObject", _testObject.name);
@@ -316,7 +316,7 @@ namespace UnitySensors.Tests.Runtime
             // Act
             var transform = _testObject.transform;
             yield return null; // Wait one frame
-            
+
             // Assert
             Assert.IsNotNull(transform);
             Assert.AreEqual(Vector3.zero, transform.position);
@@ -328,7 +328,7 @@ namespace UnitySensors.Tests.Runtime
             // Act
             var camera = _testObject.AddComponent<Camera>();
             yield return null; // Wait one frame
-            
+
             // Assert
             Assert.IsNotNull(camera);
             Assert.AreEqual(_testObject, camera.gameObject);
@@ -340,9 +340,10 @@ namespace UnitySensors.Tests.Runtime
             // This test verifies UnitySensors assembly can be accessed at runtime
             // Act
             yield return null; // Wait one frame
-            
+
             // Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 var assemblyName = typeof(Camera).Assembly.GetName().Name;
                 Assert.IsNotNull(assemblyName);
             });
@@ -375,9 +376,9 @@ namespace UnitySensors.Tests.Runtime
             var initialPosition = _testObject.transform.position;
             var newPosition = new Vector3(1.0f, 2.0f, 3.0f);
             _testObject.transform.position = newPosition;
-            
+
             yield return null; // Wait one frame
-            
+
             // Assert
             Assert.AreNotEqual(initialPosition, _testObject.transform.position);
             Assert.AreEqual(newPosition, _testObject.transform.position);
@@ -391,12 +392,12 @@ namespace UnitySensors.Tests.Runtime
             var frequency = 30.0f;
             var expectedDeltaTime = 1.0f / frequency;
             var startTime = Time.time;
-            
+
             // Act
             yield return new WaitForSeconds(expectedDeltaTime);
             var endTime = Time.time;
             var actualDeltaTime = endTime - startTime;
-            
+
             // Assert
             Assert.That(actualDeltaTime, Is.EqualTo(expectedDeltaTime).Within(0.02f)); // 20ms tolerance
         }
@@ -410,9 +411,9 @@ namespace UnitySensors.Tests.Runtime
             camera.fieldOfView = 60.0f;
             camera.nearClipPlane = 0.1f;
             camera.farClipPlane = 100.0f;
-            
+
             yield return null; // Wait one frame
-            
+
             // Assert
             Assert.IsNotNull(camera);
             Assert.AreEqual(60.0f, camera.fieldOfView, 0.001f);
@@ -427,16 +428,16 @@ namespace UnitySensors.Tests.Runtime
             // Arrange
             var camera = _testObject.AddComponent<Camera>();
             var renderTexture = new RenderTexture(256, 256, 24);
-            
+
             // Act
             camera.targetTexture = renderTexture;
             yield return null; // Wait one frame
-            
+
             // Assert
             Assert.IsNotNull(camera.targetTexture);
             Assert.AreEqual(256, camera.targetTexture.width);
             Assert.AreEqual(256, camera.targetTexture.height);
-            
+
             // Cleanup
             renderTexture.Release();
         }
@@ -448,13 +449,13 @@ namespace UnitySensors.Tests.Runtime
             // Act
             var startPosition = _testObject.transform.position;
             var targetPosition = new Vector3(10.0f, 5.0f, 0.0f);
-            
+
             // Simulate sensor movement
             _testObject.transform.position = Vector3.Lerp(startPosition, targetPosition, 0.5f);
             yield return null; // Wait one frame
-            
+
             var intermediatePosition = _testObject.transform.position;
-            
+
             // Assert
             Assert.AreNotEqual(startPosition, intermediatePosition);
             Assert.AreEqual(new Vector3(5.0f, 2.5f, 0.0f), intermediatePosition);

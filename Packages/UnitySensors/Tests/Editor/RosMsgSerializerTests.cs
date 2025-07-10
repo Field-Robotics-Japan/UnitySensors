@@ -10,14 +10,15 @@ namespace UnitySensors.Tests.Editor
         {
             // Test that RosMsgSerializer<T> can be accessed via reflection
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 var type = System.Type.GetType("UnitySensors.ROS.Serializer.RosMsgSerializer`1, UnitySensorsROSRuntime");
                 if (type != null)
                 {
                     Assert.IsTrue(type.IsGenericTypeDefinition);
                     Assert.IsTrue(type.IsAbstract);
                     Assert.IsTrue(type.IsClass);
-                    
+
                     // Check System.Serializable attribute
                     var attrs = type.GetCustomAttributes(typeof(System.SerializableAttribute), false);
                     Assert.Greater(attrs.Length, 0, "Should have System.Serializable attribute");
@@ -30,13 +31,14 @@ namespace UnitySensors.Tests.Editor
         {
             // Test that the generic constraint is properly defined
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 var type = System.Type.GetType("UnitySensors.ROS.Serializer.RosMsgSerializer`1, UnitySensorsROSRuntime");
                 if (type != null)
                 {
                     var genericParam = type.GetGenericArguments()[0];
                     var constraints = genericParam.GetGenericParameterConstraints();
-                    
+
                     // Should have new() constraint
                     var attrs = genericParam.GenericParameterAttributes;
                     Assert.IsTrue((attrs & System.Reflection.GenericParameterAttributes.DefaultConstructorConstraint) != 0);
@@ -49,7 +51,8 @@ namespace UnitySensors.Tests.Editor
         {
             // Test that the msg property is properly defined
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 var type = System.Type.GetType("UnitySensors.ROS.Serializer.RosMsgSerializer`1, UnitySensorsROSRuntime");
                 if (type != null)
                 {
@@ -69,7 +72,8 @@ namespace UnitySensors.Tests.Editor
         {
             // Test that abstract methods are properly defined
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 var type = System.Type.GetType("UnitySensors.ROS.Serializer.RosMsgSerializer`1, UnitySensorsROSRuntime");
                 if (type != null)
                 {
@@ -89,7 +93,8 @@ namespace UnitySensors.Tests.Editor
         {
             // Test that virtual methods are properly defined
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 var type = System.Type.GetType("UnitySensors.ROS.Serializer.RosMsgSerializer`1, UnitySensorsROSRuntime");
                 if (type != null)
                 {
@@ -100,7 +105,7 @@ namespace UnitySensors.Tests.Editor
                         Assert.IsTrue(initMethod.IsVirtual);
                         Assert.IsTrue(initMethod.IsPublic);
                     }
-                    
+
                     var onDestroyMethod = type.GetMethod("OnDestroy");
                     if (onDestroyMethod != null)
                     {
@@ -117,17 +122,18 @@ namespace UnitySensors.Tests.Editor
         {
             // Test serialization lifecycle concepts
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 // Test lifecycle sequence
                 var initCalled = false;
                 var serializeCalled = false;
                 var destroyCalled = false;
-                
+
                 // Simulate lifecycle
                 if (!initCalled) { initCalled = true; }
                 if (!serializeCalled) { serializeCalled = true; }
                 if (!destroyCalled) { destroyCalled = true; }
-                
+
                 // Verify lifecycle order
                 Assert.IsTrue(initCalled);
                 Assert.IsTrue(serializeCalled);
@@ -140,20 +146,21 @@ namespace UnitySensors.Tests.Editor
         {
             // Test ROS message compatibility concepts
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 // Test that ROS message patterns work
                 // We can't instantiate the abstract class, but we can test the concepts
-                
+
                 // Test message creation pattern
                 var messageCreated = false;
                 var messageInitialized = false;
                 var messageSerialized = false;
-                
+
                 // Simulate message lifecycle
                 if (!messageCreated) { messageCreated = true; }
                 if (!messageInitialized) { messageInitialized = true; }
                 if (!messageSerialized) { messageSerialized = true; }
-                
+
                 Assert.IsTrue(messageCreated);
                 Assert.IsTrue(messageInitialized);
                 Assert.IsTrue(messageSerialized);
@@ -165,19 +172,20 @@ namespace UnitySensors.Tests.Editor
         {
             // Test Unity serialization compatibility
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 // Test Unity serialization concepts
                 var unitySerializable = true;
                 var systemSerializable = true;
-                
+
                 // Test that serialization attributes work
                 Assert.IsTrue(unitySerializable);
                 Assert.IsTrue(systemSerializable);
-                
+
                 // Test serialization in Unity context
                 var serializedInEditor = true;
                 var serializedInRuntime = true;
-                
+
                 Assert.IsTrue(serializedInEditor);
                 Assert.IsTrue(serializedInRuntime);
             });

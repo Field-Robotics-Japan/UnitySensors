@@ -11,14 +11,15 @@ namespace UnitySensors.Tests.Editor
         {
             // Test that PointCloudGeneric<T> can be accessed via reflection
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 var type = System.Type.GetType("UnitySensors.DataType.PointCloud.PointCloudGeneric`1, UnitySensorsRuntime");
                 if (type != null)
                 {
                     Assert.IsTrue(type.IsClass);
                     Assert.IsTrue(type.IsGenericTypeDefinition);
                     Assert.IsTrue(type.IsPublic);
-                    
+
                     // Should have generic constraint
                     var genericParams = type.GetGenericArguments();
                     Assert.AreEqual(1, genericParams.Length);
@@ -31,19 +32,20 @@ namespace UnitySensors.Tests.Editor
         {
             // Test generic constraint validation
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 var type = System.Type.GetType("UnitySensors.DataType.PointCloud.PointCloudGeneric`1, UnitySensorsRuntime");
                 if (type != null)
                 {
                     var genericParam = type.GetGenericArguments()[0];
-                    
+
                     // Check constraints
                     var constraints = genericParam.GetGenericParameterConstraints();
                     var attributes = genericParam.GenericParameterAttributes;
-                    
+
                     // Should have value type constraint (struct)
                     Assert.IsTrue((attributes & System.Reflection.GenericParameterAttributes.NotNullableValueTypeConstraint) != 0);
-                    
+
                     // Should have interface constraint
                     bool hasIPointInterface = false;
                     foreach (var constraint in constraints)
@@ -64,7 +66,8 @@ namespace UnitySensors.Tests.Editor
         {
             // Test NativeArray field access
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 var type = System.Type.GetType("UnitySensors.DataType.PointCloud.PointCloudGeneric`1, UnitySensorsRuntime");
                 if (type != null)
                 {
@@ -85,14 +88,15 @@ namespace UnitySensors.Tests.Editor
         {
             // Test IDisposable pattern implementation
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 var type = System.Type.GetType("UnitySensors.DataType.PointCloud.PointCloudGeneric`1, UnitySensorsRuntime");
                 if (type != null)
                 {
                     // Check if implements IDisposable
                     var interfaces = type.GetInterfaces();
                     bool implementsIDisposable = false;
-                    
+
                     foreach (var iface in interfaces)
                     {
                         if (iface == typeof(System.IDisposable))
@@ -101,7 +105,7 @@ namespace UnitySensors.Tests.Editor
                             break;
                         }
                     }
-                    
+
                     if (implementsIDisposable)
                     {
                         // Check for Dispose method
@@ -117,27 +121,28 @@ namespace UnitySensors.Tests.Editor
         {
             // Test memory management concepts for NativeArrays
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 // Test NativeArray lifecycle concepts
                 var nativeArrayCreated = false;
                 var nativeArrayAllocated = false;
                 var nativeArrayDisposed = false;
-                
+
                 // Simulate NativeArray lifecycle
                 if (!nativeArrayCreated) { nativeArrayCreated = true; }
                 if (!nativeArrayAllocated) { nativeArrayAllocated = true; }
                 if (!nativeArrayDisposed) { nativeArrayDisposed = true; }
-                
+
                 Assert.IsTrue(nativeArrayCreated);
                 Assert.IsTrue(nativeArrayAllocated);
                 Assert.IsTrue(nativeArrayDisposed);
-                
+
                 // Test allocation concepts
                 var testCapacities = new int[] { 0, 100, 1000, 10000 };
                 foreach (var capacity in testCapacities)
                 {
                     Assert.GreaterOrEqual(capacity, 0);
-                    
+
                     // Memory requirements grow linearly
                     if (capacity > 0)
                     {
@@ -153,28 +158,29 @@ namespace UnitySensors.Tests.Editor
         {
             // Test type safety enforcement
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 // Test that only valid point types should be usable
                 var validPointTypes = new[] {
                     "PointXYZ", "PointXYZI", "PointXYZRGB"
                 };
-                
+
                 foreach (var pointType in validPointTypes)
                 {
                     Assert.IsNotNull(pointType);
                     Assert.IsTrue(pointType.StartsWith("Point"));
-                    
+
                     // All valid point types should have position
                     Assert.IsTrue(pointType.Contains("XYZ"));
                 }
-                
+
                 // Test constraint validation concepts
                 var constraintTests = new[] {
                     new { typeName = "PointXYZ", isStruct = true, hasPosition = true, isValid = true },
                     new { typeName = "PointXYZI", isStruct = true, hasPosition = true, isValid = true },
                     new { typeName = "string", isStruct = false, hasPosition = false, isValid = false }
                 };
-                
+
                 foreach (var test in constraintTests)
                 {
                     bool meetsConstraints = test.isStruct && test.hasPosition;
@@ -188,19 +194,20 @@ namespace UnitySensors.Tests.Editor
         {
             // Test Unity Job System compatibility concepts
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 // Test job system requirements
                 var jobSystemRequirements = new[] {
                     "NativeArraySupport", "BlittableTypes", "ThreadSafety",
                     "MemoryAlignment", "NoManagedReferences"
                 };
-                
+
                 foreach (var requirement in jobSystemRequirements)
                 {
                     Assert.IsNotNull(requirement);
                     Assert.IsTrue(requirement.Length > 0);
                 }
-                
+
                 // Test data structure requirements for job system
                 var dataStructureTests = new[] {
                     new { type = "float3", isBlittable = true, isThreadSafe = true },
@@ -208,7 +215,7 @@ namespace UnitySensors.Tests.Editor
                     new { type = "byte", isBlittable = true, isThreadSafe = true },
                     new { type = "string", isBlittable = false, isThreadSafe = false }
                 };
-                
+
                 foreach (var test in dataStructureTests)
                 {
                     if (test.isBlittable && test.isThreadSafe)

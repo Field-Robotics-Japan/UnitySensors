@@ -32,7 +32,8 @@ namespace UnitySensors.Tests.Editor
         {
             // This test provides information about the test suite organization
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 var testClasses = new[] {
                     "BasicUnityTests - Basic Unity framework tests",
                     "UnitySensorBasicTests - Basic UnitySensors functionality tests",
@@ -50,16 +51,16 @@ namespace UnitySensors.Tests.Editor
                     "RosMsgPublisherTests - ROS message publisher base class tests",
                     "LaserScanMsgPublisherTests - Laser scan message publisher tests (FINAL TARGET)"
                 };
-                
+
                 Assert.AreEqual(15, testClasses.Length);
-                
+
                 foreach (var testClass in testClasses)
                 {
                     Assert.IsNotNull(testClass);
                     Assert.IsTrue(testClass.Length > 0);
                     Assert.IsTrue(testClass.Contains("Tests"));
                 }
-                
+
                 // Verify that the test suite is complete
                 var testSuiteComplete = true;
                 Assert.IsTrue(testSuiteComplete, "UnitySensors test suite should be complete and organized");

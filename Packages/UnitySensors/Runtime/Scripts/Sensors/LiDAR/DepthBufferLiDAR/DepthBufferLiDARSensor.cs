@@ -9,7 +9,6 @@ using UnitySensors.Utils.Noise;
 using UnitySensors.Utils.Camera;
 
 using Random = Unity.Mathematics.Random;
-using UnityEngine.UI;
 
 namespace UnitySensors.Sensor.LiDAR
 {

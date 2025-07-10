@@ -10,14 +10,15 @@ namespace UnitySensors.Tests.Editor
         {
             // Test that LaserScanMsgSerializer can be accessed via reflection
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 var type = System.Type.GetType("UnitySensors.ROS.Serializer.Sensor.LaserScanMsgSerializer, UnitySensorsROSRuntime");
                 if (type != null)
                 {
                     Assert.IsTrue(type.IsClass);
                     Assert.IsFalse(type.IsAbstract);
                     Assert.IsTrue(type.IsPublic);
-                    
+
                     // Check System.Serializable attribute
                     var attrs = type.GetCustomAttributes(typeof(System.SerializableAttribute), false);
                     Assert.Greater(attrs.Length, 0, "Should have System.Serializable attribute");
@@ -30,14 +31,15 @@ namespace UnitySensors.Tests.Editor
         {
             // Test that LaserScanMsgSerializer properly inherits from RosMsgSerializer<LaserScanMsg>
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 var type = System.Type.GetType("UnitySensors.ROS.Serializer.Sensor.LaserScanMsgSerializer, UnitySensorsROSRuntime");
                 if (type != null)
                 {
                     var baseType = type.BaseType;
                     Assert.IsNotNull(baseType);
                     Assert.IsTrue(baseType.IsGenericType);
-                    
+
                     // Check that it's RosMsgSerializer<LaserScanMsg>
                     var genericTypeDef = baseType.GetGenericTypeDefinition();
                     var expectedBase = System.Type.GetType("UnitySensors.ROS.Serializer.RosMsgSerializer`1, UnitySensorsROSRuntime");
@@ -54,7 +56,8 @@ namespace UnitySensors.Tests.Editor
         {
             // Test that LaserScanMsgSerializer configuration fields are properly defined
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 var type = System.Type.GetType("UnitySensors.ROS.Serializer.Sensor.LaserScanMsgSerializer, UnitySensorsROSRuntime");
                 if (type != null)
                 {
@@ -65,7 +68,7 @@ namespace UnitySensors.Tests.Editor
                         Assert.IsNotNull(minRangeField);
                         Assert.AreEqual(typeof(float), minRangeField.FieldType);
                     }
-                    
+
                     // Check _maxRange field
                     var maxRangeField = type.GetField("_maxRange", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
                     if (maxRangeField != null)
@@ -73,7 +76,7 @@ namespace UnitySensors.Tests.Editor
                         Assert.IsNotNull(maxRangeField);
                         Assert.AreEqual(typeof(float), maxRangeField.FieldType);
                     }
-                    
+
                     // Check _gaussianNoiseSigma field
                     var noiseField = type.GetField("_gaussianNoiseSigma", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
                     if (noiseField != null)
@@ -90,7 +93,8 @@ namespace UnitySensors.Tests.Editor
         {
             // Test that LaserScanMsgSerializer dependency fields are properly defined
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 var type = System.Type.GetType("UnitySensors.ROS.Serializer.Sensor.LaserScanMsgSerializer, UnitySensorsROSRuntime");
                 if (type != null)
                 {
@@ -102,7 +106,7 @@ namespace UnitySensors.Tests.Editor
                         // Should be ScanPattern type
                         Assert.IsTrue(scanPatternField.FieldType.Name.Contains("ScanPattern"));
                     }
-                    
+
                     // Check _header field
                     var headerField = type.GetField("_header", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
                     if (headerField != null)
@@ -120,7 +124,8 @@ namespace UnitySensors.Tests.Editor
         {
             // Test that LaserScanMsgSerializer methods are properly overridden
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 var type = System.Type.GetType("UnitySensors.ROS.Serializer.Sensor.LaserScanMsgSerializer, UnitySensorsROSRuntime");
                 if (type != null)
                 {
@@ -133,7 +138,7 @@ namespace UnitySensors.Tests.Editor
                         Assert.IsTrue(initMethod.IsVirtual);
                         Assert.IsFalse(initMethod.IsAbstract);
                     }
-                    
+
                     // Check Serialize method
                     var serializeMethod = type.GetMethod("Serialize");
                     if (serializeMethod != null)
@@ -143,7 +148,7 @@ namespace UnitySensors.Tests.Editor
                         Assert.IsTrue(serializeMethod.IsVirtual);
                         Assert.IsFalse(serializeMethod.IsAbstract);
                     }
-                    
+
                     // Check SetSource method
                     var setSourceMethod = type.GetMethod("SetSource");
                     if (setSourceMethod != null)
@@ -160,7 +165,8 @@ namespace UnitySensors.Tests.Editor
         {
             // Test range calculation logic concepts used in LaserScanMsgSerializer
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 // Test 2D range calculation from 3D points (x, y, z) -> sqrt(x² + z²)
                 var testPoints = new[] {
                     new { x = 1.0f, y = 0.0f, z = 0.0f, expectedRange = 1.0f },
@@ -168,7 +174,7 @@ namespace UnitySensors.Tests.Editor
                     new { x = 3.0f, y = 0.0f, z = 4.0f, expectedRange = 5.0f },
                     new { x = 0.0f, y = 0.0f, z = 0.0f, expectedRange = 0.0f }
                 };
-                
+
                 foreach (var point in testPoints)
                 {
                     var calculatedRange = System.Math.Sqrt(point.x * point.x + point.z * point.z);
@@ -182,10 +188,11 @@ namespace UnitySensors.Tests.Editor
         {
             // Test range filtering logic concepts
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 float minRange = 0.5f;
                 float maxRange = 100.0f;
-                
+
                 var testRanges = new[] {
                     new { range = 0.1f, shouldBeValid = false },  // Below minimum
                     new { range = 0.5f, shouldBeValid = true },   // At minimum
@@ -193,12 +200,12 @@ namespace UnitySensors.Tests.Editor
                     new { range = 100.0f, shouldBeValid = true }, // At maximum
                     new { range = 150.0f, shouldBeValid = false } // Above maximum
                 };
-                
+
                 foreach (var test in testRanges)
                 {
                     bool isValid = test.range >= minRange && test.range <= maxRange;
                     Assert.AreEqual(test.shouldBeValid, isValid);
-                    
+
                     // Test NaN assignment for invalid ranges
                     float filteredRange = isValid ? test.range : float.NaN;
                     if (test.shouldBeValid)
@@ -218,13 +225,14 @@ namespace UnitySensors.Tests.Editor
         {
             // Test Gaussian noise application concepts
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 float sigma = 0.1f;
                 float originalRange = 10.0f;
-                
+
                 // Test Box-Muller transform concept for Gaussian noise
                 var random = new System.Random(42); // Fixed seed for reproducibility
-                
+
                 // Generate multiple noise samples
                 var noiseSamples = new float[100];
                 for (int i = 0; i < noiseSamples.Length; i += 2)
@@ -233,7 +241,7 @@ namespace UnitySensors.Tests.Editor
                     double u1 = random.NextDouble();
                     double u2 = random.NextDouble();
                     double z0 = System.Math.Sqrt(-2.0 * System.Math.Log(u1)) * System.Math.Cos(2.0 * System.Math.PI * u2);
-                    
+
                     noiseSamples[i] = (float)(z0 * sigma);
                     if (i + 1 < noiseSamples.Length)
                     {
@@ -241,7 +249,7 @@ namespace UnitySensors.Tests.Editor
                         noiseSamples[i + 1] = (float)(z1 * sigma);
                     }
                 }
-                
+
                 // Test that noise is applied correctly
                 for (int i = 0; i < noiseSamples.Length; i++)
                 {
@@ -256,7 +264,8 @@ namespace UnitySensors.Tests.Editor
         {
             // Test LaserScanMsg structure concepts
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 // Test typical LaserScanMsg structure
                 var laserScanCreated = false;
                 var headerSet = false;
@@ -264,7 +273,7 @@ namespace UnitySensors.Tests.Editor
                 var rangePropertiesSet = false;
                 var rangesArraySet = false;
                 var intensitiesArraySet = false;
-                
+
                 // Simulate LaserScanMsg creation and population
                 if (!laserScanCreated) { laserScanCreated = true; }
                 if (!headerSet) { headerSet = true; }
@@ -272,7 +281,7 @@ namespace UnitySensors.Tests.Editor
                 if (!rangePropertiesSet) { rangePropertiesSet = true; }
                 if (!rangesArraySet) { rangesArraySet = true; }
                 if (!intensitiesArraySet) { intensitiesArraySet = true; }
-                
+
                 Assert.IsTrue(laserScanCreated);
                 Assert.IsTrue(headerSet);
                 Assert.IsTrue(anglePropertiesSet);
@@ -287,16 +296,17 @@ namespace UnitySensors.Tests.Editor
         {
             // Test intensity mapping concepts
             // Act & Assert
-            Assert.DoesNotThrow(() => {
+            Assert.DoesNotThrow(() =>
+            {
                 // Test intensity value handling
                 var testIntensities = new float[] { 0.0f, 0.5f, 1.0f, 100.0f, 255.0f };
-                
+
                 foreach (var intensity in testIntensities)
                 {
                     // Test that intensity values are preserved
                     Assert.AreEqual(intensity, intensity);
                     Assert.IsTrue(intensity >= 0.0f);
-                    
+
                     // Test intensity range validation
                     var normalizedIntensity = intensity / 255.0f;
                     Assert.IsTrue(normalizedIntensity >= 0.0f);

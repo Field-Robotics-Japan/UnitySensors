@@ -1,19 +1,11 @@
 using UnityEngine;
-using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
-using Unity.Jobs;
 using RosMessageTypes.Sensor;
 using System;
 
 using UnitySensors.Interface.Sensor;
-using UnitySensors.Interface.Sensor.PointCloud;
-using UnitySensors.DataType.Sensor;
 using UnitySensors.DataType.Sensor.PointCloud;
 using UnitySensors.DataType.LiDAR;
-using UnitySensors.Sensor.LiDAR;
-using UnitySensors.Utils.PointCloud;
 using UnitySensors.ROS.Serializer.Std;
-using UnitySensors.ROS.Utils.PointCloud;
 
 namespace UnitySensors.ROS.Serializer.Sensor
 {
@@ -64,7 +56,7 @@ namespace UnitySensors.ROS.Serializer.Sensor
         public override LaserScanMsg Serialize()
         {
             _msg.header = _header.Serialize();
-            
+
             for (int i = 0; i < _pointsNum; i++)
             {
                 var point = _sourceInterface.pointCloud.points[i];
@@ -75,15 +67,15 @@ namespace UnitySensors.ROS.Serializer.Sensor
                 }
                 else
                 {
-                    double u1 = 1.0-UnityEngine.Random.Range(0f, 1f); //uniform(0,1] random doubles
-                    double u2 = 1.0-UnityEngine.Random.Range(0f, 1f);
+                    double u1 = 1.0 - UnityEngine.Random.Range(0f, 1f); //uniform(0,1] random doubles
+                    double u2 = 1.0 - UnityEngine.Random.Range(0f, 1f);
                     double randStdNormal = Math.Sqrt(-2.0 * Math.Log(u1)) *
                         Math.Sin(2.0 * Math.PI * u2); //random normal(0,1)
                     _msg.ranges[i] += (float)randStdNormal * _gaussianNoiseSigma; //random normal(mean,stdDev^2)
                 }
                 _msg.intensities[i] = point.intensity;
             }
-            
+
             return _msg;
         }
 

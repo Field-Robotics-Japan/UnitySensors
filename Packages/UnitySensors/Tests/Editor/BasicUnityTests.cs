@@ -12,10 +12,10 @@ namespace UnitySensors.Tests.Editor
             // Arrange
             var vector = new Vector3(3.0f, 4.0f, 0.0f);
             var expectedMagnitude = 5.0f;
-            
+
             // Act
             var magnitude = vector.magnitude;
-            
+
             // Assert
             Assert.AreEqual(expectedMagnitude, magnitude, 0.001f);
         }
@@ -25,10 +25,10 @@ namespace UnitySensors.Tests.Editor
         {
             // Arrange
             var vector = new Vector3(3.0f, 4.0f, 0.0f);
-            
+
             // Act
             var normalized = vector.normalized;
-            
+
             // Assert
             Assert.AreEqual(1.0f, normalized.magnitude, 0.001f);
         }
@@ -38,7 +38,7 @@ namespace UnitySensors.Tests.Editor
         {
             // Arrange & Act
             var identity = Quaternion.identity;
-            
+
             // Assert
             Assert.AreEqual(0.0f, identity.x, 0.001f);
             Assert.AreEqual(0.0f, identity.y, 0.001f);
@@ -51,7 +51,7 @@ namespace UnitySensors.Tests.Editor
         {
             // Arrange
             var color = new Color(0.8f, 0.6f, 0.4f, 1.0f);
-            
+
             // Act & Assert
             Assert.AreEqual(0.8f, color.r, 0.001f);
             Assert.AreEqual(0.6f, color.g, 0.001f);
@@ -65,10 +65,10 @@ namespace UnitySensors.Tests.Editor
             // Arrange
             var x = 640;
             var y = 480;
-            
+
             // Act
             var vector = new Vector2Int(x, y);
-            
+
             // Assert
             Assert.AreEqual(x, vector.x);
             Assert.AreEqual(y, vector.y);
@@ -80,13 +80,13 @@ namespace UnitySensors.Tests.Editor
             // Arrange
             var gameObject = new GameObject("TestObject");
             var transform = gameObject.transform;
-            
+
             // Act
             var position = transform.localPosition;
-            
+
             // Assert
             Assert.AreEqual(Vector3.zero, position);
-            
+
             // Cleanup
             Object.DestroyImmediate(gameObject);
         }
@@ -97,16 +97,16 @@ namespace UnitySensors.Tests.Editor
             // Arrange
             var gameObject = new GameObject("TestObject");
             var transform = gameObject.transform;
-            
+
             // Act
             var rotation = transform.localRotation;
-            
+
             // Assert
             Assert.AreEqual(0.0f, rotation.x, 0.001f);
             Assert.AreEqual(0.0f, rotation.y, 0.001f);
             Assert.AreEqual(0.0f, rotation.z, 0.001f);
             Assert.AreEqual(1.0f, rotation.w, 0.001f);
-            
+
             // Cleanup
             Object.DestroyImmediate(gameObject);
         }
@@ -117,7 +117,7 @@ namespace UnitySensors.Tests.Editor
             // Arrange
             var a = 1.0f;
             var b = 1.000001f;
-            
+
             // Act & Assert
             Assert.IsTrue(Mathf.Approximately(a, b));
             Assert.IsFalse(Mathf.Approximately(a, b + 0.1f));
@@ -128,7 +128,7 @@ namespace UnitySensors.Tests.Editor
         {
             // Act
             var deltaTime = Time.deltaTime;
-            
+
             // Assert
             Assert.GreaterOrEqual(deltaTime, 0.0f);
         }
