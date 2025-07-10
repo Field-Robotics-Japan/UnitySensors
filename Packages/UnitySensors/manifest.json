@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "com.unity.burst": "1.8.21"
+  }
+}
