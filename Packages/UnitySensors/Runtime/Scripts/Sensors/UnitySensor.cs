@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnitySensors.Interface.Std;
 using System.Runtime.CompilerServices;
+using System;
 
 [assembly: InternalsVisibleTo("UnitySensorsEditor")]
 [assembly: InternalsVisibleTo("UnitySensorsROSEditor")]
@@ -13,15 +14,23 @@ namespace UnitySensors.Sensor
 
         private float _time;
         private float _dt;
-
-        public delegate void OnSensorUpdated();
-        public OnSensorUpdated onSensorUpdated;
-
-
         private float _frequency_inv;
 
+        public Action onSensorUpdated;
         public float dt { get => _frequency_inv; }
         public float time { get => _time; }
+        public float frequency
+        {
+            get => _frequency;
+            set
+            {
+                if (_frequency != value)
+                {
+                    _frequency = value;
+                    _frequency_inv = 1.0f / _frequency;
+                }
+            }
+        }
 
         private void Awake()
         {

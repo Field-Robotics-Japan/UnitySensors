@@ -18,11 +18,37 @@ namespace UnitySensors.ROS.Publisher
         protected T _serializer;
 
         private ROSConnection _ros;
-
-        private float _time;
         private float _dt;
-
         private float _frequency_inv;
+
+        public string topicName
+        {
+            get => _topicName;
+            set
+            {
+                if (_topicName != value)
+                {
+                    _topicName = value;
+                    if (_ros != null)
+                    {
+                        // Re-register the publisher with the new topic name
+                        _ros.RegisterPublisher<TT>(value);
+                    }
+                }
+            }
+        }
+        public float frequency
+        {
+            get => _frequency;
+            set
+            {
+                if (_frequency != value)
+                {
+                    _frequency = value;
+                    _frequency_inv = 1.0f / _frequency;
+                }
+            }
+        }
 
         protected virtual void Start()
         {
