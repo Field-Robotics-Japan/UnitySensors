@@ -16,9 +16,6 @@ namespace UnitySensors.Sensor.Camera
         protected override void UpdateSensor()
         {
             if (!LoadTexture(_rt, ref _texture)) return;
-
-            if (onSensorUpdated != null)
-                onSensorUpdated.Invoke();
         }
 
         protected override void OnSensorDestroy()

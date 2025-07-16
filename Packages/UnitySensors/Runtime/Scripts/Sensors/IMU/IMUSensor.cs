@@ -81,9 +81,6 @@ namespace UnitySensors.Sensor.IMU
 
             _rotation = _rotation_tmp;
             _angularVelocity = _angularVelocity_tmp;
-
-            if (onSensorUpdated != null)
-                onSensorUpdated.Invoke();
         }
 
         protected override void OnSensorDestroy()

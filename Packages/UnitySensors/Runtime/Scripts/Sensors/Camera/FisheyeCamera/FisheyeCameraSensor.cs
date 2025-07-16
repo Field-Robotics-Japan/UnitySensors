@@ -57,7 +57,6 @@ namespace UnitySensors.Sensor.Camera
             Graphics.Blit(_cubemap, _rt, _fisheyeMat);
 
             if (!LoadTexture(_rt, ref _texture)) return;
-            onSensorUpdated?.Invoke();
         }
         protected override void OnSensorDestroy()
         {

@@ -183,9 +183,6 @@ namespace UnitySensors.Sensor.LiDAR
             _jobHandle.Complete();
 
             _textureToPointsJob.indexOffset = (_textureToPointsJob.indexOffset + pointsNum) % scanPattern.size;
-
-            if (onSensorUpdated != null)
-                onSensorUpdated.Invoke();
         }
 
         private bool LoadTexture()

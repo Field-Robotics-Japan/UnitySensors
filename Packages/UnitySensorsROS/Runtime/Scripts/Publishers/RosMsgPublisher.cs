@@ -38,7 +38,6 @@ namespace UnitySensors.ROS.Publisher
             _frequency_inv = 1.0f / _frequency;
 
             _ros = ROSConnection.GetOrCreateInstance();
-            // _ros.RegisterPublisher<TT>(_topicName);
 
             _serializer.Init();
         }

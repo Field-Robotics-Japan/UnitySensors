@@ -23,7 +23,7 @@ namespace UnitySensors.Visualization.Sensor
         {
             if (_source is UnitySensor)
             {
-                (_source as UnitySensor).onSensorUpdated += Visualize;
+                (_source as UnitySensor).onSensorUpdateComplete += Visualize;
             }
             base.SetSource(_source as IPointCloudInterface<PointXYZ>);
             base.Start();

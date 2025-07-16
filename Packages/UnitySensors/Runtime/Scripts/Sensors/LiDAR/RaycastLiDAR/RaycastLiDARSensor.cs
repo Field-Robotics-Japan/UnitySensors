@@ -111,9 +111,6 @@ namespace UnitySensors.Sensor.LiDAR
 
             _updateRaycastCommandsJob.indexOffset = (_updateRaycastCommandsJob.indexOffset + pointsNum) % scanPattern.size;
             _raycastHitsToPointsJob.indexOffset = (_raycastHitsToPointsJob.indexOffset + pointsNum) % scanPattern.size;
-
-            if (onSensorUpdated != null)
-                onSensorUpdated.Invoke();
         }
 
         protected override void OnSensorDestroy()

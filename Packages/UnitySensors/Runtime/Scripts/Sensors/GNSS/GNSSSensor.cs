@@ -24,8 +24,6 @@ namespace UnitySensors.Sensor.GNSS
         protected override void UpdateSensor()
         {
             _coordinate = _coordinateSystem.GetCoordinate(_transform.position);
-            if (onSensorUpdated != null)
-                onSensorUpdated.Invoke();
         }
 
         protected override void OnSensorDestroy()

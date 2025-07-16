@@ -16,7 +16,7 @@ namespace UnitySensors.Sensor
         private float _dt;
         private float _frequency_inv;
 
-        public Action onSensorUpdated;
+        public Action onSensorUpdateComplete;
         public float dt { get => _frequency_inv; }
         public float time { get => _time; }
         public float frequency
@@ -44,19 +44,20 @@ namespace UnitySensors.Sensor
 
             _time = Time.time;
             UpdateSensor();
+            onSensorUpdateComplete?.Invoke();
 
             _dt -= _frequency_inv;
         }
 
         private void OnDestroy()
         {
-            onSensorUpdated = null;
             OnSensorDestroy();
         }
 
         public void UpdateSensorManually()
         {
             UpdateSensor();
+            onSensorUpdateComplete?.Invoke();
         }
 
         protected abstract void Init();

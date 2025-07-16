@@ -116,8 +116,6 @@ namespace UnitySensors.Sensor.Camera
                 JobHandle.ScheduleBatchedJobs();
                 _jobHandle.Complete();
             }
-
-            onSensorUpdated?.Invoke();
         }
 
         protected override void OnSensorDestroy()
