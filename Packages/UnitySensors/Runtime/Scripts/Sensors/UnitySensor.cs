@@ -9,7 +9,7 @@ namespace UnitySensors.Sensor
 {
     public abstract class UnitySensor : MonoBehaviour, ITimeInterface
     {
-        [SerializeField]
+        [SerializeField, Min(0)]
         internal float _frequency = 10.0f;
 
         private float _time;
@@ -24,11 +24,8 @@ namespace UnitySensors.Sensor
             get => _frequency;
             set
             {
-                if (_frequency != value)
-                {
-                    _frequency = value;
-                    _frequency_inv = 1.0f / _frequency;
-                }
+                _frequency = Mathf.Max(value, 0);
+                _frequency_inv = 1.0f / _frequency;
             }
         }
 

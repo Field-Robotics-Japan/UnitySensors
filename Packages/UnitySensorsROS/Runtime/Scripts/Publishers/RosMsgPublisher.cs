@@ -8,7 +8,7 @@ namespace UnitySensors.ROS.Publisher
 {
     public class RosMsgPublisher<T, TT> : MonoBehaviour where T : RosMsgSerializer<TT> where TT : Message, new()
     {
-        [SerializeField]
+        [SerializeField, Min(0)]
         private float _frequency = 10.0f;
 
         [SerializeField]
@@ -21,32 +21,14 @@ namespace UnitySensors.ROS.Publisher
         private float _dt;
         private float _frequency_inv;
 
-        public string topicName
-        {
-            get => _topicName;
-            set
-            {
-                if (_topicName != value)
-                {
-                    _topicName = value;
-                    if (_ros != null)
-                    {
-                        // Re-register the publisher with the new topic name
-                        _ros.RegisterPublisher<TT>(value);
-                    }
-                }
-            }
-        }
+        public string topicName { get => _topicName; set => _topicName = value; }
         public float frequency
         {
             get => _frequency;
             set
             {
-                if (_frequency != value)
-                {
-                    _frequency = value;
-                    _frequency_inv = 1.0f / _frequency;
-                }
+                _frequency = Mathf.Max(value, 0);
+                _frequency_inv = 1.0f / _frequency;
             }
         }
 
@@ -56,7 +38,7 @@ namespace UnitySensors.ROS.Publisher
             _frequency_inv = 1.0f / _frequency;
 
             _ros = ROSConnection.GetOrCreateInstance();
-            _ros.RegisterPublisher<TT>(_topicName);
+            // _ros.RegisterPublisher<TT>(_topicName);
 
             _serializer.Init();
         }
@@ -65,6 +47,10 @@ namespace UnitySensors.ROS.Publisher
         {
             _dt += Time.deltaTime;
             if (_dt < _frequency_inv) return;
+
+            // Register the publisher if it hasn't been registered yet
+            if (_ros.GetTopic(_topicName) == null)
+                _ros.RegisterPublisher<TT>(_topicName);
 
             _ros.Publish(_topicName, _serializer.Serialize());
 
