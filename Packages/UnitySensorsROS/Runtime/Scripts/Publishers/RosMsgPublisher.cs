@@ -20,6 +20,7 @@ namespace UnitySensors.ROS.Publisher
         private ROSConnection _ros;
         private float _dt;
         private float _frequency_inv;
+        private RosTopicState _topicState;
 
         public string topicName { get => _topicName; set => _topicName = value; }
         public float frequency
@@ -48,7 +49,8 @@ namespace UnitySensors.ROS.Publisher
             if (_dt < _frequency_inv) return;
 
             // Register the publisher if it hasn't been registered yet
-            if (_ros.GetTopic(_topicName) == null)
+            _topicState = _ros.GetTopic(_topicName);
+            if (_topicState == null || !_topicState.IsPublisher)
                 _ros.RegisterPublisher<TT>(_topicName);
 
             _ros.Publish(_topicName, _serializer.Serialize());
