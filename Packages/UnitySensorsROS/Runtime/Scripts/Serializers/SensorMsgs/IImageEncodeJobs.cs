@@ -10,7 +10,9 @@ namespace UnitySensors.ROS.Serializer.Image
     struct ImageEncodeJob : IJobParallelFor
     {
         [ReadOnly]
-        public NativeArray<Color> sourceTextureRawData;
+        public NativeArray<Color> sourceTextureRawDataColorRGBAF;
+        [ReadOnly]
+        public NativeArray<ColorRGBA32> sourceTextureRawDataColorRGBA32;
         [WriteOnly]
         public NativeArray<byte> targetTextureRawData;
         [ReadOnly]
@@ -29,26 +31,27 @@ namespace UnitySensors.ROS.Serializer.Image
             int j = index / width;
             int targetIndex = index * bytesPerPixel;
 
-            var sourceColor = sourceTextureRawData[(height - j - 1) * width + i];
+            var sourceColorRGBAF = encoding != Encoding._RGB8 ? sourceTextureRawDataColorRGBAF[(height - j - 1) * width + i] : Color.white;
 
             switch (encoding)
             {
                 case Encoding._32FC1:
                     var targetColor32FC1 = new Color32FC1();
-                    targetColor32FC1.r = sourceColor.r * distanceFactor;
+                    targetColor32FC1.r = sourceColorRGBAF.r * distanceFactor;
                     targetTextureRawData.ReinterpretStore(targetIndex, targetColor32FC1);
                     break;
                 case Encoding._16UC1:
                     var targetColor16UC1 = new Color16UC1();
-                    targetColor16UC1.r = (ushort)(sourceColor.r * distanceFactor);
+                    targetColor16UC1.r = (ushort)(sourceColorRGBAF.r * distanceFactor);
                     targetTextureRawData.ReinterpretStore(targetIndex, targetColor16UC1);
                     break;
                 case Encoding._RGB8:
                 default:
+                    var sourceColorRGBA32 = sourceTextureRawDataColorRGBA32[(height - j - 1) * width + i];
                     var targetColorRGB8 = new ColorRGB8();
-                    targetColorRGB8.r = (byte)(sourceColor.r * 255);
-                    targetColorRGB8.g = (byte)(sourceColor.g * 255);
-                    targetColorRGB8.b = (byte)(sourceColor.b * 255);
+                    targetColorRGB8.r = sourceColorRGBA32.r;
+                    targetColorRGB8.g = sourceColorRGBA32.g;
+                    targetColorRGB8.b = sourceColorRGBA32.b;
                     targetTextureRawData.ReinterpretStore(targetIndex, targetColorRGB8);
                     break;
             }
@@ -67,6 +70,13 @@ namespace UnitySensors.ROS.Serializer.Image
         public byte r;
         public byte g;
         public byte b;
+    }
+    struct ColorRGBA32
+    {
+        public byte r;
+        public byte g;
+        public byte b;
+        public byte a;
     }
     enum Encoding
     {

@@ -44,9 +44,9 @@ namespace UnitySensors.ROS.Serializer.Sensor
 
             var texture = _sourceTexture == SourceTexture.Texture0 ? _sourceInterface.texture0 : _sourceInterface.texture1;
 
-            if (texture.format != TextureFormat.RGBAFloat)
+            if (texture.format != TextureFormat.RGBAFloat && texture.format != TextureFormat.RGBA32)
             {
-                Debug.LogError("ImageMsgSerializer: Source texture format must be RGBAFloat");
+                Debug.LogError("ImageMsgSerializer: Source texture format must be RGBAFloat or RGBA32. Current format: " + texture.format);
                 return;
             }
 
@@ -61,7 +61,8 @@ namespace UnitySensors.ROS.Serializer.Sensor
                 width = _width,
                 height = _height,
                 encoding = _encoding,
-                sourceTextureRawData = texture.GetRawTextureData<Color>(),
+                sourceTextureRawDataColorRGBAF = texture.GetRawTextureData<Color>(),
+                sourceTextureRawDataColorRGBA32 = texture.GetRawTextureData<ColorRGBA32>()
             };
 
             switch (_encoding)
