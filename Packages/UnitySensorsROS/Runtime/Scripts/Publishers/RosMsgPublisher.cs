@@ -59,7 +59,7 @@ namespace UnitySensors.ROS.Publisher
 
             _dt = normalizedOffset * _frequency_inv;
 
-            Debug.Log($"Publisher {GetType().Name} ID:{_publisher_id} initialized with offset {normalizedOffset:F3} ({_dt:F3}s)");
+            // Debug.Log($"Publisher {GetType().Name} ID:{_publisher_id} initialized with offset {normalizedOffset:F3} ({_dt:F3}s)");
         }
 
         protected virtual void Start()
