@@ -1,17 +1,19 @@
 
 using Unity.Burst;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 using Unity.Jobs;
 using UnityEngine;
 
 namespace UnitySensors.ROS.Serializer.Image
 {
+    // TODO: Use ComputeShader to accelerate
     [BurstCompile]
     struct ImageEncodeJob : IJobParallelFor
     {
-        [ReadOnly]
+        [ReadOnly, NativeDisableContainerSafetyRestriction]
         public NativeArray<Color> sourceTextureRawDataColorRGBAF;
-        [ReadOnly]
+        [ReadOnly, NativeDisableContainerSafetyRestriction]
         public NativeArray<ColorRGBA32> sourceTextureRawDataColorRGBA32;
         [WriteOnly]
         public NativeArray<byte> targetTextureRawData;

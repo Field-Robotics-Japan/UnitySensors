@@ -8,6 +8,7 @@ using Unity.Mathematics;
 using UnitySensors.Utils.Noise;
 
 using Random = Unity.Mathematics.Random;
+using System.Collections;
 
 namespace UnitySensors.Sensor.LiDAR
 {
@@ -96,7 +97,7 @@ namespace UnitySensors.Sensor.LiDAR
             };
         }
 
-        protected override void UpdateSensor()
+        protected override IEnumerator UpdateSensor()
         {
             _updateRaycastCommandsJob.origin = _transform.position;
             _updateRaycastCommandsJob.localToWorldMatrix = _transform.localToWorldMatrix;
@@ -106,11 +107,12 @@ namespace UnitySensors.Sensor.LiDAR
             JobHandle raycastJobHandle = RaycastCommand.ScheduleBatch(_raycastCommands, _raycastHits, 1024, updateGaussianNoisesJobHandle);
             _jobHandle = _raycastHitsToPointsJob.Schedule(pointsNum, 1024, raycastJobHandle);
 
-            JobHandle.ScheduleBatchedJobs();
+            // yield return new WaitUntil(() => _jobHandle.IsCompleted);
             _jobHandle.Complete();
 
             _updateRaycastCommandsJob.indexOffset = (_updateRaycastCommandsJob.indexOffset + pointsNum) % scanPattern.size;
             _raycastHitsToPointsJob.indexOffset = (_raycastHitsToPointsJob.indexOffset + pointsNum) % scanPattern.size;
+            yield return null;
         }
 
         protected override void OnSensorDestroy()

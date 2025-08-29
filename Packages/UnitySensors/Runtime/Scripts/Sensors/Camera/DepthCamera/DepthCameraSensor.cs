@@ -10,6 +10,8 @@ using UnitySensors.Interface.Sensor;
 using UnitySensors.Utils.Noise;
 
 using Random = Unity.Mathematics.Random;
+using System.Collections;
+using UnitySensors.Utils.Texture;
 
 namespace UnitySensors.Sensor.Camera
 {
@@ -26,6 +28,7 @@ namespace UnitySensors.Sensor.Camera
         private Material _depthCameraMat;
         [SerializeField]
         private bool _convertToPointCloud = false;
+        private TextureLoader _textureLoader;
 
         private JobHandle _jobHandle;
 
@@ -53,6 +56,12 @@ namespace UnitySensors.Sensor.Camera
             _camera.targetTexture = _rt;
 
             _texture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBAFloat, false);
+
+            _textureLoader = new TextureLoader
+            {
+                source = _rt,
+                destination = _texture
+            };
 
             if (_convertToPointCloud)
             {
@@ -105,16 +114,16 @@ namespace UnitySensors.Sensor.Camera
             };
         }
 
-        protected override void UpdateSensor()
+        protected override IEnumerator UpdateSensor()
         {
             _camera.Render();
-            if (!LoadTexture(_rt, ref _texture)) return;
+            yield return _textureLoader.LoadTextureAsync();
 
-            if (_convertToPointCloud)
+            if (_textureLoader.success && _convertToPointCloud)
             {
                 JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(_pointsNum, 1024);
                 _jobHandle = _textureToPointsJob.Schedule(_pointsNum, 1024, updateGaussianNoisesJobHandle);
-                JobHandle.ScheduleBatchedJobs();
+                // yield return new WaitUntil(() => _jobHandle.IsCompleted);
                 _jobHandle.Complete();
             }
         }

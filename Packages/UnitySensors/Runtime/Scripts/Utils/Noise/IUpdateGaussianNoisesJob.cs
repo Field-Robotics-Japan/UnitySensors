@@ -8,6 +8,7 @@ using Random = Unity.Mathematics.Random;
 
 namespace UnitySensors.Utils.Noise
 {
+    // TODO: Use ComputeShader to accelerate
     [BurstCompile]
     public struct IUpdateGaussianNoisesJob : IJobParallelFor
     {

@@ -1,9 +1,12 @@
+using System.Collections;
 using UnityEngine;
+using UnitySensors.Utils.Texture;
 
 namespace UnitySensors.Sensor.Camera
 {
     public class RGBCameraSensor : CameraSensor
     {
+        private TextureLoader _textureLoader;
         protected override void Init()
         {
             base.Init();
@@ -11,12 +14,17 @@ namespace UnitySensors.Sensor.Camera
             _camera.targetTexture = _rt;
 
             _texture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBA32, false);
+            _textureLoader = new TextureLoader
+            {
+                source = _rt,
+                destination = _texture
+            };
         }
 
-        protected override void UpdateSensor()
+        protected override IEnumerator UpdateSensor()
         {
             _camera.Render();
-            if (!LoadTexture(_rt, ref _texture)) return;
+            yield return _textureLoader.LoadTextureAsync();
         }
 
         protected override void OnSensorDestroy()

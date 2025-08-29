@@ -6,9 +6,11 @@ using Unity.Jobs;
 using Unity.Mathematics;
 
 using UnitySensors.DataType.Sensor.PointCloud;
+using Unity.Collections.LowLevel.Unsafe;
 
 namespace UnitySensors.Sensor.Camera
 {
+    // TODO: Use ComputeShader to accelerate
     [BurstCompile]
     public struct ITextureToColorPointsJob : IJobParallelFor
     {
@@ -18,9 +20,9 @@ namespace UnitySensors.Sensor.Camera
         [ReadOnly]
         public NativeArray<float3> directions;
 
-        [ReadOnly]
+        [ReadOnly, NativeDisableContainerSafetyRestriction]
         public NativeArray<Color> depthPixels;
-        [ReadOnly]
+        [ReadOnly, NativeDisableContainerSafetyRestriction]
         public NativeArray<Color32> colorPixels;
         [ReadOnly]
         public NativeArray<float> noises;

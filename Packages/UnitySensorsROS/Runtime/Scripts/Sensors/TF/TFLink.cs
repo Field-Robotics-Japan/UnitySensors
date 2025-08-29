@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,8 +27,9 @@ namespace UnitySensors.Sensor.TF
             _transform = this.transform;
         }
 
-        protected override void UpdateSensor()
+        protected override IEnumerator UpdateSensor()
         {
+            yield return null;
         }
 
         public TFData[] GetTFData()

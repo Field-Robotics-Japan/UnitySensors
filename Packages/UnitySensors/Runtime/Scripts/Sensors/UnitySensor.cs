@@ -2,6 +2,8 @@ using UnityEngine;
 using UnitySensors.Interface.Std;
 using System.Runtime.CompilerServices;
 using System;
+using System.Collections;
+using UnityEngine.Rendering;
 
 [assembly: InternalsVisibleTo("UnitySensorsEditor")]
 [assembly: InternalsVisibleTo("UnitySensorsROSEditor")]
@@ -60,31 +62,45 @@ namespace UnitySensors.Sensor
 
             // Debug.Log($"Sensor {GetType().Name} ID:{_sensor_id} initialized with offset {normalizedOffset:F3} ({_dt:F3}s)");
         }
-        protected virtual void Update()
+        private void Start()
         {
-            _dt += Time.deltaTime;
-            if (_dt < _frequency_inv) return;
+            StartCoroutine(UpdateSensorPeriodically());
+        }
+        private IEnumerator UpdateSensorPeriodically()
+        {
+            while (true)
+            {
+                yield return new WaitUntil(() =>
+                {
+                    _dt += Time.deltaTime;
+                    return _dt >= _frequency_inv;
+                });
 
-            _time = Time.time;
-            UpdateSensor();
-            onSensorUpdateComplete?.Invoke();
+                _time = Time.time;
+                yield return UpdateSensorOnce();
 
-            _dt -= _frequency_inv;
+                _dt -= _frequency_inv;
+            }
         }
 
         private void OnDestroy()
         {
+            AsyncGPUReadback.WaitAllRequests();
             OnSensorDestroy();
         }
-
-        public void UpdateSensorManually()
+        private void OnValidate()
         {
-            UpdateSensor();
+            frequency = _frequency;
+        }
+
+        public virtual IEnumerator UpdateSensorOnce()
+        {
+            yield return UpdateSensor();
             onSensorUpdateComplete?.Invoke();
         }
 
         protected abstract void Init();
-        protected abstract void UpdateSensor();
+        protected abstract IEnumerator UpdateSensor();
         protected abstract void OnSensorDestroy();
     }
 }

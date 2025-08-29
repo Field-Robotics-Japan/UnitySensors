@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnitySensors.Interface.Sensor;
@@ -29,28 +30,6 @@ namespace UnitySensors.Sensor.Camera
             _camera = GetComponent<UnityEngine.Camera>();
             _camera.fieldOfView = _fov;
             _camera.enabled = false;
-        }
-        protected bool LoadTexture(RenderTexture sourceRT, ref Texture2D dstTexture)
-        {
-            bool result = false;
-            Texture2D tex = dstTexture;
-            AsyncGPUReadback.Request(sourceRT, 0, request =>
-            {
-                if (request.hasError)
-                {
-                    Debug.LogError("GPU readback error detected.");
-                }
-                else
-                {
-                    var data = request.GetData<Color>();
-                    tex.LoadRawTextureData(data);
-                    tex.Apply();
-                    result = true;
-                }
-            });
-            AsyncGPUReadback.WaitAllRequests();
-            // TODO: Use coroutine to wait for the request
-            return result;
         }
     }
 }

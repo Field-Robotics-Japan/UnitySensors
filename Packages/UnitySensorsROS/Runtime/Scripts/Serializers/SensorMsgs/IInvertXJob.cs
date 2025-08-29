@@ -1,15 +1,17 @@
 using Unity.Burst;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 using Unity.Jobs;
 
 namespace UnitySensors.ROS.Serializer.PointCloud
 {
+    // TODO: Use ComputeShader to accelerate
     [BurstCompile]
     public struct IInvertXJob : IJobParallelFor
     {
         public int pointStep;
 
-        [NativeDisableParallelForRestriction]
+        [WriteOnly, NativeDisableParallelForRestriction, NativeDisableContainerSafetyRestriction]
         public NativeArray<byte> data;
 
         public void Execute(int index)

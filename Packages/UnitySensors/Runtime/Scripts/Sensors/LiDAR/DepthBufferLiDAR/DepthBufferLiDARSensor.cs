@@ -10,6 +10,8 @@ using UnitySensors.Utils.Camera;
 
 using Random = Unity.Mathematics.Random;
 using System.Collections.Generic;
+using System.Collections;
+using UnitySensors.Utils.Texture;
 
 namespace UnitySensors.Sensor.LiDAR
 {
@@ -35,6 +37,7 @@ namespace UnitySensors.Sensor.LiDAR
         private NativeArray<Color> _pixels;
         private NativeArray<float3> _directions;
         private NativeArray<int> _pixelIndices;
+        private TextureLoader _textureLoader;
 
         private int _camerasNum = 0;
         private float _horizontalFOV;
@@ -77,6 +80,12 @@ namespace UnitySensors.Sensor.LiDAR
             _rt = new RenderTexture(_textureSizePerCamera.x, _textureSizePerCamera.y * _camerasNum, 0, RenderTextureFormat.ARGBFloat);
             _texture = new Texture2D(_textureSizePerCamera.x, _textureSizePerCamera.y * _camerasNum, TextureFormat.RGBAFloat, false);
             _pixels = _texture.GetPixelData<Color>(0);
+
+            _textureLoader = new TextureLoader
+            {
+                source = _rt,
+                destination = _texture
+            };
 
             _cameras.Capacity = _camerasNum;
             for (int i = 0; i < _camerasNum; i++)
@@ -177,39 +186,18 @@ namespace UnitySensors.Sensor.LiDAR
             };
         }
 
-        protected override void UpdateSensor()
+        protected override IEnumerator UpdateSensor()
         {
             _cameras.ForEach(cam => cam.Render());
-            if (!LoadTexture()) return;
+            yield return _textureLoader.LoadTextureAsync();
 
             JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(pointsNum, 1024);
             _jobHandle = _textureToPointsJob.Schedule(pointsNum, 1024, updateGaussianNoisesJobHandle);
 
-            JobHandle.ScheduleBatchedJobs();
+            // yield return new WaitUntil(() => _jobHandle.IsCompleted);
             _jobHandle.Complete();
 
             _textureToPointsJob.indexOffset = (_textureToPointsJob.indexOffset + pointsNum) % scanPattern.size;
-        }
-
-        private bool LoadTexture()
-        {
-            bool result = false;
-            AsyncGPUReadback.Request(_rt, 0, request =>
-            {
-                if (request.hasError)
-                {
-                    Debug.LogError("GPU readback error detected.");
-                }
-                else
-                {
-                    var data = request.GetData<Color>();
-                    _texture.LoadRawTextureData(data);
-                    _texture.Apply();
-                    result = true;
-                }
-            });
-            AsyncGPUReadback.WaitAllRequests();
-            return result;
         }
 
         protected override void OnSensorDestroy()

@@ -1,5 +1,7 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnitySensors.Utils.Texture;
 
 namespace UnitySensors.Sensor.Camera
 {
@@ -10,6 +12,7 @@ namespace UnitySensors.Sensor.Camera
         [SerializeField]
         protected Vector2Int _cubemapResolution = new Vector2Int(1024, 1024);
         private RenderTexture _cubemap;
+        private TextureLoader _textureLoader;
         protected override void Init()
         {
             base.Init();
@@ -19,15 +22,20 @@ namespace UnitySensors.Sensor.Camera
             };
             _rt = new RenderTexture(_resolution.x, _resolution.y, 0, RenderTextureFormat.ARGB32);
             _texture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBA32, false);
+            _textureLoader = new TextureLoader
+            {
+                source = _rt,
+                destination = _texture
+            };
         }
 
-        protected override void UpdateSensor()
+        protected override IEnumerator UpdateSensor()
         {
             _panoramicMat.SetVector("_Rotation", transform.rotation.eulerAngles);
             m_camera.RenderToCubemap(_cubemap);
             Graphics.Blit(_cubemap, _rt, _panoramicMat);
 
-            if (!LoadTexture(_rt, ref _texture)) return;
+            yield return _textureLoader.LoadTextureAsync();
         }
         protected override void OnSensorDestroy()
         {

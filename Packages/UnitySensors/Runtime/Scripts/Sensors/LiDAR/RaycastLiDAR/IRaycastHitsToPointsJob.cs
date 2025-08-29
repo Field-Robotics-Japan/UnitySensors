@@ -9,6 +9,7 @@ using UnitySensors.DataType.Sensor.PointCloud;
 
 namespace UnitySensors.Sensor.LiDAR
 {
+    // TODO: Use ComputeShader to accelerate
     [BurstCompile]
     public struct IRaycastHitsToPointsJob : IJobParallelFor
     {

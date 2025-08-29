@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnitySensors.Interface.Geometry;
 
@@ -15,8 +16,9 @@ namespace UnitySensors.Sensor.GroundTruth
             _transform = this.transform;
         }
 
-        protected override void UpdateSensor()
+        protected override IEnumerator UpdateSensor()
         {
+            yield return null;
         }
 
         protected override void OnSensorDestroy()

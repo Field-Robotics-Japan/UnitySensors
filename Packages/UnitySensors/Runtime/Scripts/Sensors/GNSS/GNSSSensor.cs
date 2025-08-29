@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 using UnitySensors.DataType.Geometry;
@@ -21,9 +22,10 @@ namespace UnitySensors.Sensor.GNSS
             _transform = this.transform;
         }
 
-        protected override void UpdateSensor()
+        protected override IEnumerator UpdateSensor()
         {
             _coordinate = _coordinateSystem.GetCoordinate(_transform.position);
+            yield return null;
         }
 
         protected override void OnSensorDestroy()

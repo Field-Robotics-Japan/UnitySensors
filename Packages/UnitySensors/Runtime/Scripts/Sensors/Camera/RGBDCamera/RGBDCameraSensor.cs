@@ -8,7 +8,9 @@ using UnitySensors.DataType.Sensor;
 using UnitySensors.DataType.Sensor.PointCloud;
 using UnitySensors.Interface.Sensor;
 using UnitySensors.Utils.Noise;
+using UnitySensors.Utils.Texture;
 using Random = Unity.Mathematics.Random;
+using System.Collections;
 
 namespace UnitySensors.Sensor.Camera
 {
@@ -52,6 +54,8 @@ namespace UnitySensors.Sensor.Camera
         public int pointsNum { get => _pointsNum; }
         public bool convertToPointCloud { get => _convertToPointCloud; set => _convertToPointCloud = value; }
 
+        private TextureLoader _depthTextureLoader, _colorTextureLoader;
+
         protected override void Init()
         {
             base.Init();
@@ -78,6 +82,17 @@ namespace UnitySensors.Sensor.Camera
 
             _depthCamera.enabled = false;
             _colorCamera.enabled = false;
+
+            _depthTextureLoader = new TextureLoader
+            {
+                source = _depthRt,
+                destination = _depthTexture
+            };
+            _colorTextureLoader = new TextureLoader
+            {
+                source = _colorRt,
+                destination = _colorTexture
+            };
 
             if (_convertToPointCloud)
             {
@@ -131,17 +146,21 @@ namespace UnitySensors.Sensor.Camera
             };
         }
 
-        protected override void UpdateSensor()
+        protected override IEnumerator UpdateSensor()
         {
             _depthCamera.Render();
             _colorCamera.Render();
-            if (!LoadTexture(_depthRt, ref _depthTexture) || !LoadTexture(_colorRt, ref _colorTexture)) return;
 
-            if (_convertToPointCloud)
+            var depthLoad = _depthTextureLoader.LoadTextureAsync();
+            var colorLoad = _colorTextureLoader.LoadTextureAsync();
+            yield return depthLoad;
+            yield return colorLoad;
+
+            if (_depthTextureLoader.success && _convertToPointCloud)
             {
                 JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(_pointsNum, 1024);
                 _jobHandle = _textureToPointsJob.Schedule(_pointsNum, 1024, updateGaussianNoisesJobHandle);
-                JobHandle.ScheduleBatchedJobs();
+                // yield return new WaitUntil(() => _jobHandle.IsCompleted);
                 _jobHandle.Complete();
             }
         }

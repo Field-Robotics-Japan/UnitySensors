@@ -9,6 +9,7 @@ namespace UnitySensors.ROS.Serializer
         public T msg { get => _msg; }
 
         public virtual void Init() { _msg = new T(); }
+        // TODO: Use Coroutine for async serialization
         public abstract T Serialize();
         public virtual void OnDestroy() { }
     }

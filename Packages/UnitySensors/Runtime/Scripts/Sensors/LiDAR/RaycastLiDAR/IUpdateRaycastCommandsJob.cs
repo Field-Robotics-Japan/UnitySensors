@@ -7,6 +7,7 @@ using Unity.Mathematics;
 
 namespace UnitySensors.Sensor.LiDAR
 {
+    // TODO: Use ComputeShader to accelerate
     [BurstCompile]
     public struct IUpdateRaycastCommandsJob : IJobParallelFor
     {

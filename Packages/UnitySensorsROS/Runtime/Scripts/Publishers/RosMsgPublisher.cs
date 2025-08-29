@@ -43,6 +43,7 @@ namespace UnitySensors.ROS.Publisher
             _serializer.Init();
         }
 
+        // TODO: Use Coroutine for async publishing
         protected virtual void Update()
         {
             _dt += Time.deltaTime;

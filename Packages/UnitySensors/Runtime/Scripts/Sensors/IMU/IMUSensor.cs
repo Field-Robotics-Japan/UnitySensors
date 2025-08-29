@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnitySensors.Attribute;
 using UnitySensors.Interface.Sensor;
@@ -49,7 +50,7 @@ namespace UnitySensors.Sensor.IMU
             _gravityMagnitude = Physics.gravity.magnitude;
         }
 
-        protected override void Update()
+        public override IEnumerator UpdateSensorOnce()
         {
             //FIXME: IMU sensor should be updated at a fixed frequency
             float dt = Time.deltaTime;
@@ -69,10 +70,10 @@ namespace UnitySensors.Sensor.IMU
             _velocity_last = _velocity_tmp;
             _rotation_last = _rotation_tmp;
 
-            base.Update();
+            yield return base.UpdateSensorOnce();
         }
 
-        protected override void UpdateSensor()
+        protected override IEnumerator UpdateSensor()
         {
             //FIXME: The linear acceleration and angular velocity should be in imu local frame
             _position = _position_tmp;
@@ -81,6 +82,7 @@ namespace UnitySensors.Sensor.IMU
 
             _rotation = _rotation_tmp;
             _angularVelocity = _angularVelocity_tmp;
+            yield return null;
         }
 
         protected override void OnSensorDestroy()
