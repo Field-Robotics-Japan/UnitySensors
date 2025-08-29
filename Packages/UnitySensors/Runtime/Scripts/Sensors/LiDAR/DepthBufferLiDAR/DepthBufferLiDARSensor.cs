@@ -9,6 +9,7 @@ using UnitySensors.Utils.Noise;
 using UnitySensors.Utils.Camera;
 
 using Random = Unity.Mathematics.Random;
+using System.Collections.Generic;
 
 namespace UnitySensors.Sensor.LiDAR
 {
@@ -37,6 +38,7 @@ namespace UnitySensors.Sensor.LiDAR
 
         private int _camerasNum = 0;
         private float _horizontalFOV;
+        private List<UnityEngine.Camera> _cameras = new List<UnityEngine.Camera>();
 
         protected override void Init()
         {
@@ -76,6 +78,7 @@ namespace UnitySensors.Sensor.LiDAR
             _texture = new Texture2D(_textureSizePerCamera.x, _textureSizePerCamera.y * _camerasNum, TextureFormat.RGBAFloat, false);
             _pixels = _texture.GetPixelData<Color>(0);
 
+            _cameras.Capacity = _camerasNum;
             for (int i = 0; i < _camerasNum; i++)
             {
                 GameObject camera_obj = new GameObject();
@@ -91,6 +94,8 @@ namespace UnitySensors.Sensor.LiDAR
                 camera.nearClipPlane = minRange;
                 camera.farClipPlane = maxRange;
                 camera.targetTexture = _rt;
+                camera.enabled = false;
+                _cameras.Add(camera);
 
                 Rect rect = camera.rect;
                 rect.size = new Vector2(1.0f, 1.0f / _camerasNum);
@@ -174,6 +179,7 @@ namespace UnitySensors.Sensor.LiDAR
 
         protected override void UpdateSensor()
         {
+            _cameras.ForEach(cam => cam.Render());
             if (!LoadTexture()) return;
 
             JobHandle updateGaussianNoisesJobHandle = _updateGaussianNoisesJob.Schedule(pointsNum, 1024);

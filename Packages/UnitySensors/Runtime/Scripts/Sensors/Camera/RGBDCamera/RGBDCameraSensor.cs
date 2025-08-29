@@ -59,6 +59,7 @@ namespace UnitySensors.Sensor.Camera
             _depthCamera.targetTexture = _depthRt;
 
             GameObject colorCameraObject = new GameObject();
+            colorCameraObject.name = "ColorCamera";
             Transform colorCameraTransform = colorCameraObject.transform;
             colorCameraTransform.parent = transform;
             colorCameraTransform.localPosition = Vector3.zero;
@@ -75,6 +76,8 @@ namespace UnitySensors.Sensor.Camera
             _depthTexture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBAFloat, false);
             _colorTexture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBA32, false);
 
+            _depthCamera.enabled = false;
+            _colorCamera.enabled = false;
 
             if (_convertToPointCloud)
             {
@@ -130,6 +133,8 @@ namespace UnitySensors.Sensor.Camera
 
         protected override void UpdateSensor()
         {
+            _depthCamera.Render();
+            _colorCamera.Render();
             if (!LoadTexture(_depthRt, ref _depthTexture) || !LoadTexture(_colorRt, ref _colorTexture)) return;
 
             if (_convertToPointCloud)

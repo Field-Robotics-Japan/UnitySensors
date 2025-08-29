@@ -28,6 +28,7 @@ namespace UnitySensors.Sensor.Camera
         {
             _camera = GetComponent<UnityEngine.Camera>();
             _camera.fieldOfView = _fov;
+            _camera.enabled = false;
         }
         protected bool LoadTexture(RenderTexture sourceRT, ref Texture2D dstTexture)
         {

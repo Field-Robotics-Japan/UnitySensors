@@ -107,6 +107,7 @@ namespace UnitySensors.Sensor.Camera
 
         protected override void UpdateSensor()
         {
+            _camera.Render();
             if (!LoadTexture(_rt, ref _texture)) return;
 
             if (_convertToPointCloud)
