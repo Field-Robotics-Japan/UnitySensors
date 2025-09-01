@@ -5,6 +5,7 @@ var hierarchy =
     [ "UnitySensors.ROS.Serializer.Image.Color16UC1", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1Color16UC1.html", null ],
     [ "UnitySensors.ROS.Serializer.Image.Color32FC1", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1Color32FC1.html", null ],
     [ "UnitySensors.ROS.Serializer.Image.ColorRGB8", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ColorRGB8.html", null ],
+    [ "UnitySensors.ROS.Serializer.Image.ColorRGBA32", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ColorRGBA32.html", null ],
     [ "UnitySensors.Tests.Runtime.ComponentLifecycleTests", "classUnitySensors_1_1Tests_1_1Runtime_1_1ComponentLifecycleTests.html", null ],
     [ "UnityEditor.Editor", null, [
       [ "UnitySensors.Editor.FisheyeCameraEditor", "classUnitySensors_1_1Editor_1_1FisheyeCameraEditor.html", null ],
@@ -199,6 +200,7 @@ var hierarchy =
       [ "UnitySensors.DataType.LiDAR.ScanPattern", "classUnitySensors_1_1DataType_1_1LiDAR_1_1ScanPattern.html", null ],
       [ "UnitySensors.Utils.PointCloud.PointUtilitiesSO", "classUnitySensors_1_1Utils_1_1PointCloud_1_1PointUtilitiesSO.html", null ]
     ] ],
+    [ "UnitySensors.Utils.Texture.TextureLoader", "classUnitySensors_1_1Utils_1_1Texture_1_1TextureLoader.html", null ],
     [ "UnitySensors.Sensor.TF.TFData", "structUnitySensors_1_1Sensor_1_1TF_1_1TFData.html", null ],
     [ "UnitySensors.Tests.Runtime.TimingTests", "classUnitySensors_1_1Tests_1_1Runtime_1_1TimingTests.html", null ],
     [ "UnitySensors.Tests.Editor.UnitySensorBasicTests", "classUnitySensors_1_1Tests_1_1Editor_1_1UnitySensorBasicTests.html", null ],

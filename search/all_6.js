@@ -12,6 +12,7 @@ var searchData=
   ['fovlabel_9',['fovLabel',['../classUnitySensors_1_1Editor_1_1FisheyeCameraEditor.html#acf585ef1e34be47560cc4b2595c29e1d',1,'UnitySensors::Editor::FisheyeCameraEditor']]],
   ['frame_5fid_5fchild_10',['frame_id_child',['../structUnitySensors_1_1Sensor_1_1TF_1_1TFData.html#a28708bdeafcf999ac5f276c7695caff7',1,'UnitySensors::Sensor::TF::TFData']]],
   ['frame_5fid_5fparent_11',['frame_id_parent',['../structUnitySensors_1_1Sensor_1_1TF_1_1TFData.html#a590a285009e2fe20e2ab51ab0a8fb195',1,'UnitySensors::Sensor::TF::TFData']]],
-  ['frequencylabel_12',['frequencyLabel',['../classUnitySensors_1_1ROS_1_1Editor_1_1TFLinkEditor.html#a385fd04d6814107e4a526efa61b6c9f2',1,'UnitySensors::ROS::Editor::TFLinkEditor']]],
-  ['fromvector3_13',['FromVector3',['../classUnitySensors_1_1DataType_1_1Geometry_1_1Vector3D.html#aacb989de59ff6f0a354151e8f69ebdd1',1,'UnitySensors::DataType::Geometry::Vector3D']]]
+  ['frequency_12',['frequency',['../classUnitySensors_1_1Sensor_1_1UnitySensor.html#acb2f099f5c9a70aba6b869bd55dfb563',1,'UnitySensors.Sensor.UnitySensor.frequency'],['../classUnitySensors_1_1ROS_1_1Publisher_1_1RosMsgPublisher.html#a03f056fa6bce631b4d38a2fa3324b487',1,'UnitySensors.ROS.Publisher.RosMsgPublisher.frequency']]],
+  ['frequencylabel_13',['frequencyLabel',['../classUnitySensors_1_1ROS_1_1Editor_1_1TFLinkEditor.html#a385fd04d6814107e4a526efa61b6c9f2',1,'UnitySensors::ROS::Editor::TFLinkEditor']]],
+  ['fromvector3_14',['FromVector3',['../classUnitySensors_1_1DataType_1_1Geometry_1_1Vector3D.html#aacb989de59ff6f0a354151e8f69ebdd1',1,'UnitySensors::DataType::Geometry::Vector3D']]]
 ];

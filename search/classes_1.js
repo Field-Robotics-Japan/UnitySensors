@@ -7,7 +7,8 @@ var searchData=
   ['color2depth_4',['Color2Depth',['../classUnitySensors_1_1Utils_1_1Camera_1_1Color2Depth.html',1,'UnitySensors::Utils::Camera']]],
   ['color32fc1_5',['Color32FC1',['../structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1Color32FC1.html',1,'UnitySensors::ROS::Serializer::Image']]],
   ['colorrgb8_6',['ColorRGB8',['../structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ColorRGB8.html',1,'UnitySensors::ROS::Serializer::Image']]],
-  ['componentlifecycletests_7',['ComponentLifecycleTests',['../classUnitySensors_1_1Tests_1_1Runtime_1_1ComponentLifecycleTests.html',1,'UnitySensors::Tests::Runtime']]],
-  ['compressedimagemsgpublisher_8',['CompressedImageMsgPublisher',['../classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1CompressedImageMsgPublisher.html',1,'UnitySensors::ROS::Publisher::Sensor']]],
-  ['compressedimagemsgserializer_9',['CompressedImageMsgSerializer',['../classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1CompressedImageMsgSerializer.html',1,'UnitySensors::ROS::Serializer::Sensor']]]
+  ['colorrgba32_7',['ColorRGBA32',['../structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ColorRGBA32.html',1,'UnitySensors::ROS::Serializer::Image']]],
+  ['componentlifecycletests_8',['ComponentLifecycleTests',['../classUnitySensors_1_1Tests_1_1Runtime_1_1ComponentLifecycleTests.html',1,'UnitySensors::Tests::Runtime']]],
+  ['compressedimagemsgpublisher_9',['CompressedImageMsgPublisher',['../classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1CompressedImageMsgPublisher.html',1,'UnitySensors::ROS::Publisher::Sensor']]],
+  ['compressedimagemsgserializer_10',['CompressedImageMsgSerializer',['../classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1CompressedImageMsgSerializer.html',1,'UnitySensors::ROS::Serializer::Sensor']]]
 ];

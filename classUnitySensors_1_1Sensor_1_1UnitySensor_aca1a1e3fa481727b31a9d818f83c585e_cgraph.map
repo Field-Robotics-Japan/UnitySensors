@@ -1,5 +1,7 @@
 <map id="UnitySensors.Sensor.UnitySensor.Awake" name="UnitySensors.Sensor.UnitySensor.Awake">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,200,45"/>
-<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html#ad08d54738bc510c1488c5ffb8dbd4719" title=" " alt="" coords="248,5,443,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,23,234,23,234,28,200,28"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,200,77"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html#ad08d54738bc510c1488c5ffb8dbd4719" title=" " alt="" coords="255,5,449,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,42,241,37,241,42,200,48"/>
+<area shape="rect" id="Node000003" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html#aeb837b3fe85b3148ef24f880ad76caaf" title=" " alt="" coords="248,69,456,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,67,235,72,234,77,200,72"/>
 </map>

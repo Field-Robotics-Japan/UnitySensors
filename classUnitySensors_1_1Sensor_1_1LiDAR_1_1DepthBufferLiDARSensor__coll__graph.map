@@ -1,7 +1,7 @@
 <map id="UnitySensors.Sensor.LiDAR.DepthBufferLiDARSensor" name="UnitySensors.Sensor.LiDAR.DepthBufferLiDARSensor">
-<area shape="rect" id="Node000001" title=" " alt="" coords="976,235,1179,275"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="976,271,1179,311"/>
 <area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor.html" title=" " alt="" coords="593,151,698,176"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="712,175,983,233,982,238,711,180"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="712,177,825,206,953,243,1025,269,1023,274,951,249,824,211,711,182"/>
 <area shape="rect" id="Node000003" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="245,29,347,55"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="361,52,409,65,526,108,618,148,616,153,524,113,407,70,360,57"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="8,5,132,31"/>
@@ -16,13 +16,15 @@
 <area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="148,161,202,161,202,166,148,166"/>
 <area shape="rect" id="Node000009" href="$classUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud.html" title=" " alt="" coords="184,207,408,247"/>
 <area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="419,202,592,170,593,176,420,207"/>
-<area shape="rect" id="Node000010" href="$structUnitySensors_1_1Utils_1_1Noise_1_1IUpdateGaussianNoisesJob.html" title=" " alt="" coords="547,299,744,339"/>
-<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="757,301,952,273,975,269,976,274,952,278,758,306"/>
+<area shape="rect" id="Node000010" href="$structUnitySensors_1_1Utils_1_1Noise_1_1IUpdateGaussianNoisesJob.html" title=" " alt="" coords="547,298,744,338"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="758,311,952,301,976,299,976,304,952,306,758,317"/>
 <area shape="rect" id="Node000011" title=" " alt="" coords="239,273,353,299"/>
-<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="367,290,547,307,546,313,366,295"/>
-<area shape="rect" id="Node000013" href="$structUnitySensors_1_1Sensor_1_1LiDAR_1_1ITextureToPointsJob.html" title=" " alt="" coords="544,235,747,275"/>
-<area shape="poly" id="edge13_Node000013_Node000011" title=" " alt="" coords="367,277,544,262,544,267,367,282"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="367,290,547,306,546,312,366,295"/>
+<area shape="rect" id="Node000013" href="$structUnitySensors_1_1Sensor_1_1LiDAR_1_1ITextureToPointsJob.html" title=" " alt="" coords="544,234,747,274"/>
+<area shape="poly" id="edge13_Node000013_Node000011" title=" " alt="" coords="367,277,544,261,544,266,367,282"/>
 <area shape="rect" id="Node000012" title=" " alt="" coords="243,325,349,351"/>
-<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="363,337,439,337,520,334,546,332,547,337,520,339,439,343,363,343"/>
-<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="760,253,976,253,976,258,760,258"/>
+<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="363,337,439,338,520,334,546,331,547,337,520,339,439,343,363,343"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="761,261,976,280,975,285,760,267"/>
+<area shape="rect" id="Node000014" href="$classUnitySensors_1_1Utils_1_1Texture_1_1TextureLoader.html" title=" " alt="" coords="546,362,745,402"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="758,367,853,352,951,331,1023,309,1025,314,953,337,854,357,759,372"/>
 </map>

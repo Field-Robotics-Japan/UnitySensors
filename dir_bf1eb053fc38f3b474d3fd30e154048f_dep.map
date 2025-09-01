@@ -1,6 +1,0 @@
-<map id="Assets/UnitySensors/Runtime/Scripts/Sensors/LiDAR" name="Assets/UnitySensors/Runtime/Scripts/Sensors/LiDAR">
-<area shape="rect" id="node2" href="dir_7c854ed8251db9b2803035f426eb678f.html" title="DepthBufferLiDAR" alt="" coords="176,63,315,88"/>
-<area shape="rect" id="node3" href="dir_7f9578b67184a6b4cf26aa3edadf86d2.html" title="RaycastLiDAR" alt="" coords="38,63,151,88"/>
-<area shape="rect" id="clust2" href="dir_bf1eb053fc38f3b474d3fd30e154048f.html" alt="" coords="27,52,411,99"/>
-<area shape="rect" id="clust1" href="dir_1e4ed8468348760a2b62868251ee10ce.html" title="Sensors" alt="" coords="16,16,421,109"/>
-</map>

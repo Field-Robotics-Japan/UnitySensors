@@ -1,6 +1,0 @@
-var dir_8310522a50a912389298b90c3a6f874d =
-[
-    [ "Editor", "dir_29e9e4c025cc1247401d2537abdc2b2c.html", "dir_29e9e4c025cc1247401d2537abdc2b2c" ],
-    [ "Runtime", "dir_0041e7ab42628f31821649203854a96d.html", "dir_0041e7ab42628f31821649203854a96d" ],
-    [ "Tests", "dir_8b17f51700e4657a852845f8ef1198f8.html", "dir_8b17f51700e4657a852845f8ef1198f8" ]
-];

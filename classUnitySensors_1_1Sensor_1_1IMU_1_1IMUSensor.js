@@ -2,8 +2,8 @@ var classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor =
 [
     [ "Init", "classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#afd38cf227764bb3337ded45591905fda", null ],
     [ "OnSensorDestroy", "classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a78b48d848c37d65bd543955f0d82df8e", null ],
-    [ "Update", "classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a0ceaa826b1c89f65fbcbeab906de5779", null ],
-    [ "UpdateSensor", "classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a31e1c00bce1b1b2353c08c6828f32cb8", null ],
+    [ "UpdateSensor", "classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#adee4d9900c7acc639747d331a7dbd372", null ],
+    [ "UpdateSensorOnce", "classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a0ae08f44f5c5fe6729697e6b39c9fb1e", null ],
     [ "_acceleration", "classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a3dd5062f4e3a0bbcd1fbc6cc1a30010b", null ],
     [ "_acceleration_tmp", "classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a99689e2bccf2b7b067839991e0d042db", null ],
     [ "_angularVelocity", "classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a487c7d96db26e1e316898f4b5cedf09b", null ],

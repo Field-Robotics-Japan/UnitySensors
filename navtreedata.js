@@ -25,14 +25,14 @@
 var NAVTREE =
 [
   [ "UnitySensors", "index.html", [
-    [ "LICENSE", "md_Assets_2UnitySensors_2LICENSE.html", null ],
-    [ "README", "md_Assets_2UnitySensors_2README.html", null ],
-    [ "LICENSE", "md_Assets_2UnitySensorsROS_2LICENSE.html", null ],
-    [ "README", "md_Assets_2UnitySensorsROS_2README.html", null ],
     [ "Migrating To URP/HDRP", "md_MigrateToURP_6HDRP.html", [
       [ "Migrating to URP", "md_MigrateToURP_6HDRP.html#autotoc_md1", null ],
       [ "Migrating to HDRP", "md_MigrateToURP_6HDRP.html#autotoc_md2", null ]
     ] ],
+    [ "LICENSE", "md_Packages_2UnitySensors_2LICENSE.html", null ],
+    [ "README", "md_Packages_2UnitySensors_2README.html", null ],
+    [ "LICENSE", "md_Packages_2UnitySensorsROS_2LICENSE.html", null ],
+    [ "README", "md_Packages_2UnitySensorsROS_2README.html", null ],
     [ "README", "md_README.html", [
       [ "UnitySensors", "md_README.html#autotoc_md3", [
         [ "🔍 Overview", "md_README.html#autotoc_md4", null ],
@@ -78,14 +78,14 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "BasicUnityTests_8cs.html",
-"classUnitySensors_1_1DataType_1_1Geometry_1_1GeoCoordinate.html#a9a1f35c076f4c135afe7932e37f00773",
-"classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1ImageMsgSerializer.html#a31209e4ee51be3faad70cd8babb8053a",
-"classUnitySensors_1_1Sensor_1_1Camera_1_1RGBCameraSensor.html",
-"classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor.html#ae0fa529a076f18d833e990b768eafff8",
-"classUnitySensors_1_1Tests_1_1Editor_1_1RosMsgPublisherTests.html#a027f6ec46b9e0dc997a5e93bd9f6c8a5",
-"classUnitySensors_1_1Visualization_1_1Sensor_1_1DepthCameraPointCloudVisualizer.html#a7c754e132daee1084039dc54605cc2be",
-"interfaceUnitySensors_1_1Interface_1_1Sensor_1_1IPointCloudInterface.html#afdd0aa3e47b0fb8176856f41490593fb",
-"structUnitySensors_1_1Sensor_1_1LiDAR_1_1IUpdateRaycastCommandsJob.html#acb94482030929948f8186dfe5c5f6463"
+"classUnitySensors_1_1DataType_1_1Geometry_1_1GeoCoordinate.html#a83e8f167f1a95f8ea1173fdb2195240d",
+"classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1IMUMsgSerializer.html#a02e51567f2c800691f87c9914fc6f2b1",
+"classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#ad90a3d7d0ecbbe327d9beea99781900daa45c671ecdf8150c929197906dcd58f0",
+"classUnitySensors_1_1Sensor_1_1LiDAR_1_1LiDARSensor.html#a196dda4b1991c93fd47d8b4192744f8f",
+"classUnitySensors_1_1Tests_1_1Editor_1_1LaserScanMsgSerializerTests.html#add1f72437424c1c77d09084366741d0a",
+"classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#aa19f2f0243214280b040cb0bb1558225",
+"functions_vars_n.html",
+"structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToPointsJob.html#a6486b6e2bc0d0b2ebdab7a5958a4991c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

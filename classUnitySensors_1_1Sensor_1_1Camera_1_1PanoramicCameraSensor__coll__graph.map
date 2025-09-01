@@ -1,17 +1,19 @@
 <map id="UnitySensors.Sensor.Camera.PanoramicCameraSensor" name="UnitySensors.Sensor.Camera.PanoramicCameraSensor">
-<area shape="rect" id="Node000001" title=" " alt="" coords="253,243,468,283"/>
-<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1CameraSensor.html" title=" " alt="" coords="302,168,419,193"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="363,207,363,243,358,243,358,207"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="344,271,559,311"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1CameraSensor.html" title=" " alt="" coords="302,175,419,201"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="382,209,436,269,432,272,378,213"/>
 <area shape="rect" id="Node000003" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="89,80,190,105"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="183,108,332,165,330,170,181,113"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="180,108,334,173,332,178,178,113"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="5,5,129,31"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="91,39,130,78,126,82,87,43"/>
 <area shape="rect" id="Node000005" href="$interfaceUnitySensors_1_1Interface_1_1Std_1_1ITimeInterface.html" title=" " alt="" coords="154,5,271,31"/>
 <area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="193,43,153,82,149,78,189,39"/>
 <area shape="rect" id="Node000006" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1ICameraInterface.html" title=" " alt="" coords="215,80,349,105"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="304,114,352,166,348,169,300,117"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="303,114,353,173,349,177,298,118"/>
 <area shape="rect" id="Node000007" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1ITextureInterface.html" title=" " alt="" coords="373,80,505,105"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="422,117,374,169,370,166,418,114"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="423,118,372,177,368,173,419,114"/>
 <area shape="rect" id="Node000008" title=" " alt="" coords="530,80,631,105"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="539,113,391,170,389,165,537,108"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="542,113,389,178,387,173,540,108"/>
+<area shape="rect" id="Node000009" href="$classUnitySensors_1_1Utils_1_1Texture_1_1TextureLoader.html" title=" " alt="" coords="443,168,641,208"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="518,220,470,272,466,269,514,216"/>
 </map>

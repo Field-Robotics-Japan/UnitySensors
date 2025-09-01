@@ -1,0 +1,9 @@
+<map id="UnitySensors.Sensor.UnitySensor.Start" name="UnitySensors.Sensor.UnitySensor.Start">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,200,45"/>
+<area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html#a28c525902be92119e80e0ab991998031" title=" " alt="" coords="248,5,484,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,23,234,23,234,28,200,28"/>
+<area shape="rect" id="Node000003" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html#ada6144c9d4fecf5741838b5b22f3dc94" title=" " alt="" coords="532,5,727,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="484,23,518,23,518,28,484,28"/>
+<area shape="rect" id="Node000004" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html#ab14615f52fae16b76f2594a44a494ca3" title=" " alt="" coords="775,5,969,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="727,23,761,23,761,28,727,28"/>
+</map>

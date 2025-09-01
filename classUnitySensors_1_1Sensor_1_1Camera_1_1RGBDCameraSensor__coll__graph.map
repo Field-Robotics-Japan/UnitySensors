@@ -1,7 +1,7 @@
 <map id="UnitySensors.Sensor.Camera.RGBDCameraSensor" name="UnitySensors.Sensor.Camera.RGBDCameraSensor">
-<area shape="rect" id="Node000001" title=" " alt="" coords="876,277,1091,317"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="876,323,1091,363"/>
 <area shape="rect" id="Node000002" href="$classUnitySensors_1_1Sensor_1_1Camera_1_1CameraSensor.html" title=" " alt="" coords="476,120,593,145"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="608,134,663,140,725,150,791,167,853,190,886,209,917,231,965,274,961,278,914,235,883,213,851,195,789,172,724,156,662,145,607,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="607,130,663,135,727,145,792,163,853,190,893,220,927,256,973,321,968,324,923,259,889,224,851,195,790,168,726,150,663,140,607,136"/>
 <area shape="rect" id="Node000003" href="$classUnitySensors_1_1Sensor_1_1UnitySensor.html" title=" " alt="" coords="195,29,297,55"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="301,56,494,117,492,122,300,61"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="5,5,129,31"/>
@@ -13,19 +13,21 @@
 <area shape="rect" id="Node000007" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1ITextureInterface.html" title=" " alt="" coords="180,128,312,153"/>
 <area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="326,136,476,132,476,137,326,141"/>
 <area shape="rect" id="Node000008" title=" " alt="" coords="195,188,297,213"/>
-<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="311,203,549,227,700,246,852,267,890,274,889,279,852,273,700,251,548,233,310,209"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="311,202,416,211,552,227,703,253,853,290,937,321,935,326,851,295,702,258,551,232,415,216,310,207"/>
 <area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="310,183,479,143,480,148,311,188"/>
 <area shape="rect" id="Node000009" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1IPointCloudInterface.html" title=" " alt="" coords="457,259,612,299"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="626,280,876,290,876,295,626,285"/>
-<area shape="rect" id="Node000010" href="$structUnitySensors_1_1Utils_1_1Noise_1_1IUpdateGaussianNoisesJob.html" title=" " alt="" coords="436,323,633,363"/>
-<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="647,331,852,310,876,307,876,313,852,315,647,336"/>
-<area shape="rect" id="Node000011" title=" " alt="" coords="189,380,303,405"/>
-<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="316,378,435,358,436,363,317,383"/>
-<area shape="rect" id="Node000013" href="$structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToColorPointsJob.html" title=" " alt="" coords="427,387,642,427"/>
-<area shape="poly" id="edge14_Node000013_Node000011" title=" " alt="" coords="317,394,427,399,427,405,317,399"/>
-<area shape="rect" id="Node000012" title=" " alt="" coords="193,317,299,343"/>
-<area shape="poly" id="edge12_Node000010_Node000012" title=" " alt="" coords="313,330,436,336,435,341,313,336"/>
-<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="655,390,752,373,851,349,897,333,940,314,942,319,899,338,853,354,753,378,656,395"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="626,289,852,321,876,324,876,330,852,326,625,294"/>
+<area shape="rect" id="Node000010" href="$structUnitySensors_1_1Utils_1_1Noise_1_1IUpdateGaussianNoisesJob.html" title=" " alt="" coords="436,387,633,427"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="647,390,852,361,876,357,876,362,852,366,647,395"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="189,340,303,365"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="317,363,436,386,435,391,316,369"/>
+<area shape="rect" id="Node000013" href="$structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToColorPointsJob.html" title=" " alt="" coords="427,323,642,363"/>
+<area shape="poly" id="edge14_Node000013_Node000011" title=" " alt="" coords="317,348,427,344,427,349,317,353"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="193,399,299,424"/>
+<area shape="poly" id="edge12_Node000010_Node000012" title=" " alt="" coords="313,408,399,407,436,407,436,412,399,413,313,414"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="656,341,876,341,876,346,656,346"/>
 <area shape="rect" id="Node000014" href="$classUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud.html" title=" " alt="" coords="423,451,647,491"/>
-<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="660,459,756,440,805,425,851,406,885,386,916,362,963,315,967,319,919,366,888,391,853,411,806,430,757,445,661,464"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="660,453,755,435,851,407,903,385,948,361,950,366,905,390,853,413,756,440,661,458"/>
+<area shape="rect" id="Node000015" href="$classUnitySensors_1_1Utils_1_1Texture_1_1TextureLoader.html" title=" " alt="" coords="435,515,634,555"/>
+<area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="648,535,697,530,750,522,802,507,851,486,889,459,922,426,968,362,972,365,926,429,893,463,853,491,804,512,751,527,698,536,648,540"/>
 </map>

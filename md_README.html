@@ -121,17 +121,19 @@ UnitySensors</h1>
 Inside Unity3D</h3>
 <blockquote class="doxtable">
 <p>&zwj;[!NOTE]</p>
-<p><a class="el" href="namespaceUnitySensors.html">UnitySensors</a> is made for Unity 2022.3 or later </p>
+<p><a class="el" href="namespaceUnitySensors.html">UnitySensors</a> is made for Unity 2022.3 or later</p>
+<p>If you are using Unity 2022.3 with the Built-in Render Pipeline, you need to change the materials of the Depth Camera, RGBD Camera, and Depth Buffer Lidar to ones with the "Legacy" suffix. </p>
 </blockquote>
 <ol type="1">
 <li>Open the Package Manager from <code>Window</code> -&gt; <code>Package Manager</code>.</li>
 <li>In the Package Manager window, find and click the + button in the upper lefthand corner of the window. Select <code>Add package from git URL....</code></li>
 <li>Enter the git URL for the desired package.<ol type="a">
-<li>For the <a class="el" href="namespaceUnitySensors.html">UnitySensors</a>, enter <code><a href="https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensors">https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensors</a>#v2.0.5</code>.</li>
-<li>For the <a class="el" href="namespaceUnitySensorsROS.html">UnitySensorsROS</a>, enter <code><a href="https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensorsROS">https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensorsROS</a>#v2.0.5</code>. <b>Note: <a class="el" href="namespaceUnitySensorsROS.html">UnitySensorsROS</a> does not contain <a class="el" href="namespaceUnitySensors.html">UnitySensors</a>.</b></li>
+<li>For the <a class="el" href="namespaceUnitySensors.html">UnitySensors</a>, enter <code><a href="https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Packages/UnitySensors">https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Packages/UnitySensors</a>#3.0.0</code>.</li>
+<li>For the <a class="el" href="namespaceUnitySensorsROS.html">UnitySensorsROS</a>, enter <code><a href="https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Packages/UnitySensorsROS">https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Packages/UnitySensorsROS</a>#3.0.0</code>. <b>Note: <a class="el" href="namespaceUnitySensorsROS.html">UnitySensorsROS</a> does not contain <a class="el" href="namespaceUnitySensors.html">UnitySensors</a>.</b></li>
 </ol>
 </li>
 <li>Click <code>Add</code>.</li>
+<li>Import sample assets of <a class="el" href="namespaceUnitySensors.html">UnitySensors</a> and <a class="el" href="namespaceUnitySensorsROS.html">UnitySensorsROS</a> from <code>Window</code> -&gt; <code>Package Manager</code> -&gt; <code><a class="el" href="namespaceUnitySensors.html">UnitySensors</a></code> or <code><a class="el" href="namespaceUnitySensorsROS.html">UnitySensorsROS</a></code> -&gt; <code>Import Sample</code>.</li>
 </ol>
 <h3><a class="anchor" id="autotoc_md7"></a>
 Inside ROS workspace</h3>

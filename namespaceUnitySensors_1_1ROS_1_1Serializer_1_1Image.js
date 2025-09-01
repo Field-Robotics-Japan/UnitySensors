@@ -3,6 +3,7 @@ var namespaceUnitySensors_1_1ROS_1_1Serializer_1_1Image =
     [ "Color16UC1", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1Color16UC1.html", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1Color16UC1" ],
     [ "Color32FC1", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1Color32FC1.html", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1Color32FC1" ],
     [ "ColorRGB8", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ColorRGB8.html", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ColorRGB8" ],
+    [ "ColorRGBA32", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ColorRGBA32.html", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ColorRGBA32" ],
     [ "ImageEncodeJob", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ImageEncodeJob.html", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ImageEncodeJob" ],
     [ "Encoding", "namespaceUnitySensors_1_1ROS_1_1Serializer_1_1Image.html#a45413946aa10cfd900289b8fc5e37a69", [
       [ "_RGB8", "namespaceUnitySensors_1_1ROS_1_1Serializer_1_1Image.html#a45413946aa10cfd900289b8fc5e37a69a8dd94f29d35dd0b5f9822dd229629987", null ],

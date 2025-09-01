@@ -5,7 +5,8 @@ var structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ImageEncodeJob =
     [ "distanceFactor", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ImageEncodeJob.html#afa92f403948c89847667c6e86e8354ef", null ],
     [ "encoding", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ImageEncodeJob.html#aa26c63309372bc564e15116034c1662b", null ],
     [ "height", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ImageEncodeJob.html#a58c4fab07d96d7d1f4a868528b67cdb4", null ],
-    [ "sourceTextureRawData", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ImageEncodeJob.html#a13f7fa13a817aa2f5d5c0a8c08c600e8", null ],
+    [ "sourceTextureRawDataColorRGBA32", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ImageEncodeJob.html#a3ce749164dcf080c445feece9954b470", null ],
+    [ "sourceTextureRawDataColorRGBAF", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ImageEncodeJob.html#af7d48548c8aa7b001d738bf1d4290485", null ],
     [ "targetTextureRawData", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ImageEncodeJob.html#a8d9a28f9228bae21b6af4ec46ad2f242", null ],
     [ "width", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ImageEncodeJob.html#a849710e9a7f2681cc733d6a8c5c37e91", null ]
 ];

@@ -84,6 +84,7 @@ var annotated_dup =
             [ "Color16UC1", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1Color16UC1.html", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1Color16UC1" ],
             [ "Color32FC1", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1Color32FC1.html", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1Color32FC1" ],
             [ "ColorRGB8", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ColorRGB8.html", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ColorRGB8" ],
+            [ "ColorRGBA32", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ColorRGBA32.html", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ColorRGBA32" ],
             [ "ImageEncodeJob", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ImageEncodeJob.html", "structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ImageEncodeJob" ]
           ] ],
           [ "PointCloud", "namespaceUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud.html", [
@@ -191,6 +192,9 @@ var annotated_dup =
         ] ],
         [ "PointCloud", "namespaceUnitySensors_1_1Utils_1_1PointCloud.html", [
           [ "PointUtilitiesSO", "classUnitySensors_1_1Utils_1_1PointCloud_1_1PointUtilitiesSO.html", "classUnitySensors_1_1Utils_1_1PointCloud_1_1PointUtilitiesSO" ]
+        ] ],
+        [ "Texture", "namespaceUnitySensors_1_1Utils_1_1Texture.html", [
+          [ "TextureLoader", "classUnitySensors_1_1Utils_1_1Texture_1_1TextureLoader.html", "classUnitySensors_1_1Utils_1_1Texture_1_1TextureLoader" ]
         ] ]
       ] ],
       [ "Visualization", "namespaceUnitySensors_1_1Visualization.html", [
