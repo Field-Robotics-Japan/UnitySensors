@@ -1,5 +1,22 @@
 {
   "dependencies": {
+    "com.frj.unity-sensors": {
+      "version": "file:UnitySensors",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.burst": "1.6.6"
+      }
+    },
+    "com.frj.unity-sensors-ros": {
+      "version": "file:UnitySensorsROS",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.frj.unity-sensors": "3.0.0",
+        "com.unity.robotics.ros-tcp-connector": "0.7.0-preview"
+      }
+    },
     "com.unity.burst": {
       "version": "1.8.21",
       "depth": 0,

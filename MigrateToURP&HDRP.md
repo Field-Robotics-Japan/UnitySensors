@@ -15,7 +15,7 @@ In addition to the shader, the post-processing steps are also different in URP/H
 
 2. Install the [ROS-TCP-Connector](https://github.com/Unity-Technologies/ROS-TCP-Connector) package
 
-3. Copy the `UnitySensors` and `UnitySensorsROS` folders to the project
+3. Install this package and import sample assets
 
 4. Update the materials from `Window` -> `Rendering` -> `Render Pipeline Converter`. Tick the `Rendering Settings` and `Material Upgrade` then click `Initialize And Convert`
 
@@ -52,7 +52,7 @@ Migrating to HDRP is relatively simple. You need to:
 
 2. Install the [ROS-TCP-Connector](https://github.com/Unity-Technologies/ROS-TCP-Connector) package
 
-3. Copy the `UnitySensors` and `UnitySensorsROS` folders to the project
+3. Install this package and import sample assets
 
 4. Update the materials from `Window` -> `Rendering` -> `HDRP Wizard`. Click `Convert All Built-in Materials to HDRP`
 

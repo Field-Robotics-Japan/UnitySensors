@@ -51,15 +51,18 @@ To receive the data in ROS take a look at [ROS-TCP-Endpoint][external-RosTCPEndp
 > \[!NOTE]
 >
 > UnitySensors is made for Unity 2022.3 or later
+>
+> If you are using Unity 2022.3 with the Built-in Render Pipeline, you need to change the materials of the Depth Camera, RGBD Camera, and Depth Buffer Lidar to ones with the "Legacy" suffix.
 
 1. Open the Package Manager from `Window` -> `Package Manager`.
 2. In the Package Manager window, find and click the + button in the upper lefthand corner of the window. Select `Add package from git URL....`
 
 3. Enter the git URL for the desired package.
-    1. For the UnitySensors, enter `https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensors#v2.0.5`.
-    2. For the UnitySensorsROS, enter `https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Assets/UnitySensorsROS#v2.0.5`.
+    1. For the UnitySensors, enter `https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Packages/UnitySensors#3.0.0`.
+    2. For the UnitySensorsROS, enter `https://github.com/Field-Robotics-Japan/UnitySensors.git?path=/Packages/UnitySensorsROS#3.0.0`.
     __Note: UnitySensorsROS does not contain UnitySensors.__
 4. Click `Add`.
+5. Import sample assets of UnitySensors and UnitySensorsROS from `Window` -> `Package Manager` -> `UnitySensors` or `UnitySensorsROS` -> `Import Sample`.
 
 ### Inside ROS workspace
 
