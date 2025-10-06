@@ -11,8 +11,10 @@ namespace UnitySensors.ROS.Publisher.Sensor
         [SerializeField, Interface(typeof(IPointCloudInterface<PointXYZ>))]
         private Object _source;
 
-        private void Awake()
+        protected override void InitializePublisher()
         {
+            base.InitializePublisher();
+
             _serializer.SetSource(_source as IPointCloudInterface<PointXYZ>);
             (_source as DepthCameraSensor).convertToPointCloud = true;
         }
