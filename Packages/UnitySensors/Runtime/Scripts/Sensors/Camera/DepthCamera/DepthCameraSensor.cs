@@ -13,6 +13,10 @@ using Random = Unity.Mathematics.Random;
 using System.Collections;
 using UnitySensors.Utils.Texture;
 
+#if UNITY_6000_0_OR_NEWER
+using UnityEngine.Rendering;
+#endif
+
 namespace UnitySensors.Sensor.Camera
 {
     [RequireComponent(typeof(UnityEngine.Camera))]
@@ -53,8 +57,14 @@ namespace UnitySensors.Sensor.Camera
             _camera.farClipPlane = _maxRange;
 
 #if UNITY_6000_0_OR_NEWER
-            // Unity 6000+ requires depth buffer for render textures used with cameras
             _rt = new RenderTexture(_resolution.x, _resolution.y, 24, RenderTextureFormat.ARGBFloat);
+            _rt.Create();
+
+            bool isURP = GraphicsSettings.currentRenderPipeline != null;
+            if (isURP)
+            {
+                Debug.Log("DepthCameraSensor: Unity 6000+ URP mode initialized");
+            }
 #else
             _rt = new RenderTexture(_resolution.x, _resolution.y, 0, RenderTextureFormat.ARGBFloat);
 #endif
@@ -121,7 +131,21 @@ namespace UnitySensors.Sensor.Camera
 
         protected override IEnumerator UpdateSensor()
         {
+#if UNITY_6000_0_OR_NEWER
+            bool isURP = GraphicsSettings.currentRenderPipeline != null;
+
+            if (isURP)
+            {
+                GenerateDepthImageUsingRaycast();
+            }
+            else
+            {
+                _camera.Render();
+            }
+#else
             _camera.Render();
+#endif
+
             yield return _textureLoader.LoadTextureAsync();
 
             if (_textureLoader.success && _convertToPointCloud)
@@ -131,6 +155,58 @@ namespace UnitySensors.Sensor.Camera
                 // yield return new WaitUntil(() => _jobHandle.IsCompleted);
                 _jobHandle.Complete();
             }
+        }
+
+        private void GenerateDepthImageUsingRaycast()
+        {
+            RenderTexture.active = _rt;
+            GL.Clear(true, true, Color.white);
+            RenderTexture.active = null;
+
+            Texture2D depthTexture = new Texture2D(_rt.width, _rt.height, TextureFormat.RGBAFloat, false);
+
+            float fovRad = _camera.fieldOfView * Mathf.Deg2Rad;
+            float aspect = (float)_rt.width / _rt.height;
+            float tanHalfFov = Mathf.Tan(fovRad * 0.5f);
+
+            Vector3 cameraPos = _camera.transform.position;
+            Vector3 forward = _camera.transform.forward;
+            Vector3 right = _camera.transform.right;
+            Vector3 up = _camera.transform.up;
+
+            for (int y = 0; y < _rt.height; y++)
+            {
+                for (int x = 0; x < _rt.width; x++)
+                {
+                    float ndcX = (2.0f * x / (_rt.width - 1)) - 1.0f;
+                    float ndcY = (2.0f * y / (_rt.height - 1)) - 1.0f;
+
+                    float viewX = ndcX * tanHalfFov * aspect;
+                    float viewY = ndcY * tanHalfFov;
+
+                    Vector3 rayDirection = (forward + right * viewX + up * viewY).normalized;
+                    Ray ray = new Ray(cameraPos, rayDirection);
+
+                    float depth = 1.0f;
+
+                    if (Physics.Raycast(ray, out RaycastHit hit, _camera.farClipPlane))
+                    {
+                        float distance = hit.distance;
+                        depth = Mathf.Clamp01(distance / _camera.farClipPlane);
+                    }
+
+                    Color depthColor = new Color(depth, depth, depth, 1.0f);
+                    depthTexture.SetPixel(x, y, depthColor);
+                }
+            }
+
+            depthTexture.Apply();
+
+            RenderTexture.active = _rt;
+            Graphics.CopyTexture(depthTexture, _rt);
+            RenderTexture.active = null;
+
+            DestroyImmediate(depthTexture);
         }
 
         protected override void OnSensorDestroy()
@@ -145,9 +221,11 @@ namespace UnitySensors.Sensor.Camera
             _rt.Release();
         }
 
+#if !UNITY_6000_0_OR_NEWER
         private void OnRenderImage(RenderTexture source, RenderTexture dest)
         {
             Graphics.Blit(null, dest, _depthCameraMat);
         }
+#endif
     }
 }
