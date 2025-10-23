@@ -52,7 +52,12 @@ namespace UnitySensors.Sensor.Camera
             _camera.nearClipPlane = _minRange;
             _camera.farClipPlane = _maxRange;
 
+#if UNITY_6000_0_OR_NEWER
+            // Unity 6000+ requires depth buffer for render textures used with cameras
+            _rt = new RenderTexture(_resolution.x, _resolution.y, 24, RenderTextureFormat.ARGBFloat);
+#else
             _rt = new RenderTexture(_resolution.x, _resolution.y, 0, RenderTextureFormat.ARGBFloat);
+#endif
             _camera.targetTexture = _rt;
 
             _texture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBAFloat, false);

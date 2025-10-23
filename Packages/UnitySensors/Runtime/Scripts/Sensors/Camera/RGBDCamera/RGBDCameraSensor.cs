@@ -59,7 +59,12 @@ namespace UnitySensors.Sensor.Camera
         protected override void Init()
         {
             base.Init();
+#if UNITY_6000_0_OR_NEWER
+            // Unity 6000+ requires depth buffer for render textures used with cameras
+            _depthRt = new RenderTexture(_resolution.x, _resolution.y, 24, RenderTextureFormat.ARGBFloat);
+#else
             _depthRt = new RenderTexture(_resolution.x, _resolution.y, 0, RenderTextureFormat.ARGBFloat);
+#endif
             _depthCamera.targetTexture = _depthRt;
 
             GameObject colorCameraObject = new GameObject();
@@ -70,7 +75,12 @@ namespace UnitySensors.Sensor.Camera
             colorCameraTransform.localRotation = Quaternion.identity;
 
             _colorCamera = colorCameraObject.AddComponent<UnityEngine.Camera>();
+#if UNITY_6000_0_OR_NEWER
+            // Unity 6000+ requires depth buffer for render textures used with cameras
+            _colorRt = new RenderTexture(_resolution.x, _resolution.y, 24, RenderTextureFormat.ARGB32);
+#else
             _colorRt = new RenderTexture(_resolution.x, _resolution.y, 0, RenderTextureFormat.ARGB32);
+#endif
             _colorCamera.targetTexture = _colorRt;
 
             _depthCamera.fieldOfView = _colorCamera.fieldOfView = _fov;
