@@ -12,6 +12,10 @@ using UnitySensors.Utils.Texture;
 using Random = Unity.Mathematics.Random;
 using System.Collections;
 
+#if UNITY_6000_0_OR_NEWER
+using UnityEngine.Rendering;
+#endif
+
 namespace UnitySensors.Sensor.Camera
 {
     [RequireComponent(typeof(UnityEngine.Camera))]
@@ -158,8 +162,24 @@ namespace UnitySensors.Sensor.Camera
 
         protected override IEnumerator UpdateSensor()
         {
+#if UNITY_6000_0_OR_NEWER
+            bool isURP = GraphicsSettings.currentRenderPipeline != null;
+
+            if (isURP)
+            {
+                // For Unity 6000+ URP, use raycast for depth but normal rendering for color
+                GenerateDepthImageUsingRaycast();
+                _colorCamera.Render();
+            }
+            else
+            {
+                _depthCamera.Render();
+                _colorCamera.Render();
+            }
+#else
             _depthCamera.Render();
             _colorCamera.Render();
+#endif
 
             var depthLoad = _depthTextureLoader.LoadTextureAsync();
             var colorLoad = _colorTextureLoader.LoadTextureAsync();
@@ -175,6 +195,58 @@ namespace UnitySensors.Sensor.Camera
             }
         }
 
+        private void GenerateDepthImageUsingRaycast()
+        {
+            RenderTexture.active = _depthRt;
+            GL.Clear(true, true, Color.white);
+            RenderTexture.active = null;
+
+            Texture2D depthTexture = new Texture2D(_depthRt.width, _depthRt.height, TextureFormat.RGBAFloat, false);
+
+            float fovRad = _depthCamera.fieldOfView * Mathf.Deg2Rad;
+            float aspect = (float)_depthRt.width / _depthRt.height;
+            float tanHalfFov = Mathf.Tan(fovRad * 0.5f);
+
+            Vector3 cameraPos = _depthCamera.transform.position;
+            Vector3 forward = _depthCamera.transform.forward;
+            Vector3 right = _depthCamera.transform.right;
+            Vector3 up = _depthCamera.transform.up;
+
+            for (int y = 0; y < _depthRt.height; y++)
+            {
+                for (int x = 0; x < _depthRt.width; x++)
+                {
+                    float ndcX = (2.0f * x / (_depthRt.width - 1)) - 1.0f;
+                    float ndcY = (2.0f * y / (_depthRt.height - 1)) - 1.0f;
+
+                    float viewX = ndcX * tanHalfFov * aspect;
+                    float viewY = ndcY * tanHalfFov;
+
+                    Vector3 rayDirection = (forward + right * viewX + up * viewY).normalized;
+                    Ray ray = new Ray(cameraPos, rayDirection);
+
+                    float depth = 1.0f;
+
+                    if (Physics.Raycast(ray, out RaycastHit hit, _depthCamera.farClipPlane))
+                    {
+                        float distance = hit.distance;
+                        depth = Mathf.Clamp01(distance / _depthCamera.farClipPlane);
+                    }
+
+                    Color depthColor = new Color(depth, depth, depth, 1.0f);
+                    depthTexture.SetPixel(x, y, depthColor);
+                }
+            }
+
+            depthTexture.Apply();
+
+            RenderTexture.active = _depthRt;
+            Graphics.CopyTexture(depthTexture, _depthRt);
+            RenderTexture.active = null;
+
+            DestroyImmediate(depthTexture);
+        }
+
         protected override void OnSensorDestroy()
         {
             if (_convertToPointCloud)
@@ -188,9 +260,11 @@ namespace UnitySensors.Sensor.Camera
             _colorRt.Release();
         }
 
+#if !UNITY_6000_0_OR_NEWER
         private void OnRenderImage(RenderTexture source, RenderTexture dest)
         {
             Graphics.Blit(null, dest, _depthCameraMat);
         }
+#endif
     }
 }
