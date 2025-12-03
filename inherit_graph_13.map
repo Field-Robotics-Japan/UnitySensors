@@ -1,9 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="Node000000" href="$interfaceUnitySensors_1_1Interface_1_1Sensor_1_1PointCloud_1_1IPointInterface.html" title=" " alt="" coords="5,69,227,109"/>
 <area shape="rect" id="Node000001" href="$structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZ.html" title=" " alt="" coords="275,5,499,45"/>
-<area shape="poly" id="edge51_Node000000_Node000001" title=" " alt="" coords="214,63,301,43,302,48,215,69"/>
+<area shape="poly" id="edge52_Node000000_Node000001" title=" " alt="" coords="214,63,301,43,302,48,215,69"/>
 <area shape="rect" id="Node000002" href="$structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZI.html" title=" " alt="" coords="275,69,499,109"/>
-<area shape="poly" id="edge52_Node000000_Node000002" title=" " alt="" coords="240,87,275,87,275,92,240,92"/>
+<area shape="poly" id="edge53_Node000000_Node000002" title=" " alt="" coords="240,87,275,87,275,92,240,92"/>
 <area shape="rect" id="Node000003" href="$structUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud_1_1PointXYZRGB.html" title=" " alt="" coords="275,133,499,173"/>
-<area shape="poly" id="edge53_Node000000_Node000003" title=" " alt="" coords="215,110,302,131,301,136,214,115"/>
+<area shape="poly" id="edge54_Node000000_Node000003" title=" " alt="" coords="215,110,302,131,301,136,214,115"/>
 </map>

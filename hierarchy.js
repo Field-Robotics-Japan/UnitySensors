@@ -40,6 +40,7 @@ var hierarchy =
       [ "UnitySensors.ROS.Serializer.PointCloud.IInvertXJob", "structUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1IInvertXJob.html", null ],
       [ "UnitySensors.Sensor.Camera.ITextureToColorPointsJob", "structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToColorPointsJob.html", null ],
       [ "UnitySensors.Sensor.Camera.ITextureToPointsJob", "structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToPointsJob.html", null ],
+      [ "UnitySensors.Sensor.Camera.ParallelRaycastDepthJob", "structUnitySensors_1_1Sensor_1_1Camera_1_1ParallelRaycastDepthJob.html", null ],
       [ "UnitySensors.Sensor.LiDAR.IRaycastHitsToPointsJob", "structUnitySensors_1_1Sensor_1_1LiDAR_1_1IRaycastHitsToPointsJob.html", null ],
       [ "UnitySensors.Sensor.LiDAR.ITextureToPointsJob", "structUnitySensors_1_1Sensor_1_1LiDAR_1_1ITextureToPointsJob.html", null ],
       [ "UnitySensors.Sensor.LiDAR.IUpdateRaycastCommandsJob", "structUnitySensors_1_1Sensor_1_1LiDAR_1_1IUpdateRaycastCommandsJob.html", null ],

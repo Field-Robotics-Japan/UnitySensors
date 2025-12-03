@@ -231,6 +231,8 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a80eaf14f0e242e71405eb491a35cbe83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d6852ac681ffc4b0bf46f97dff9d8ae" id="r_a3d6852ac681ffc4b0bf46f97dff9d8ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#a3d6852ac681ffc4b0bf46f97dff9d8ae">SetupJob</a> ()</td></tr>
 <tr class="separator:a3d6852ac681ffc4b0bf46f97dff9d8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae44201fe70bead81efb6999f7b59afad" id="r_ae44201fe70bead81efb6999f7b59afad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#ae44201fe70bead81efb6999f7b59afad">GenerateDepthImageUsingRaycast</a> ()</td></tr>
+<tr class="separator:ae44201fe70bead81efb6999f7b59afad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1afb84b8160d0846f2a2dfd3651eb91" id="r_ac1afb84b8160d0846f2a2dfd3651eb91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#ac1afb84b8160d0846f2a2dfd3651eb91">OnRenderImage</a> (RenderTexture source, RenderTexture dest)</td></tr>
 <tr class="separator:ac1afb84b8160d0846f2a2dfd3651eb91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -242,8 +244,20 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a221bfa0f5c337cc42b373e0c9abd0a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9049196ac04f6704c7c2305f121ab0fa" id="r_a9049196ac04f6704c7c2305f121ab0fa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#a9049196ac04f6704c7c2305f121ab0fa">_convertToPointCloud</a> = false</td></tr>
 <tr class="separator:a9049196ac04f6704c7c2305f121ab0fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa04e8d4fc465c0b4423d59d6eab4f345" id="r_aa04e8d4fc465c0b4423d59d6eab4f345"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#aa04e8d4fc465c0b4423d59d6eab4f345">_raycastResolutionScale</a> = 0.5f</td></tr>
+<tr class="separator:aa04e8d4fc465c0b4423d59d6eab4f345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a00be2513a9a5f9dcafc06b1200ce60" id="r_a8a00be2513a9a5f9dcafc06b1200ce60"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#a8a00be2513a9a5f9dcafc06b1200ce60">_useAdaptiveQuality</a> = true</td></tr>
+<tr class="separator:a8a00be2513a9a5f9dcafc06b1200ce60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a691e58171d3b0e593e085b7daf8c9b93" id="r_a691e58171d3b0e593e085b7daf8c9b93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUnitySensors_1_1Utils_1_1Texture_1_1TextureLoader.html">TextureLoader</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#a691e58171d3b0e593e085b7daf8c9b93">_textureLoader</a></td></tr>
 <tr class="separator:a691e58171d3b0e593e085b7daf8c9b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d031ca77e6ed2c690b741d59ffbabd0" id="r_a8d031ca77e6ed2c690b741d59ffbabd0"><td class="memItemLeft" align="right" valign="top">Texture2D&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#a8d031ca77e6ed2c690b741d59ffbabd0">_depthTexture</a></td></tr>
+<tr class="separator:a8d031ca77e6ed2c690b741d59ffbabd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0dd1e182d9b03b9438c9b9ae925d586" id="r_af0dd1e182d9b03b9438c9b9ae925d586"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#af0dd1e182d9b03b9438c9b9ae925d586">_lastRaycastWidth</a></td></tr>
+<tr class="separator:af0dd1e182d9b03b9438c9b9ae925d586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab75d7ff87fd0751285c69ecfbeff92af" id="r_ab75d7ff87fd0751285c69ecfbeff92af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#ab75d7ff87fd0751285c69ecfbeff92af">_lastRaycastHeight</a></td></tr>
+<tr class="separator:ab75d7ff87fd0751285c69ecfbeff92af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6da367ca68e537ef20d93454f3c44ec0" id="r_a6da367ca68e537ef20d93454f3c44ec0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#a6da367ca68e537ef20d93454f3c44ec0">_lastFrameTime</a></td></tr>
+<tr class="separator:a6da367ca68e537ef20d93454f3c44ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab38b7866fa44328af91d646b74ced226" id="r_ab38b7866fa44328af91d646b74ced226"><td class="memItemLeft" align="right" valign="top">JobHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#ab38b7866fa44328af91d646b74ced226">_jobHandle</a></td></tr>
 <tr class="separator:ab38b7866fa44328af91d646b74ced226"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa397efa4dcb464c9dc0834819e507e78" id="r_aa397efa4dcb464c9dc0834819e507e78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structUnitySensors_1_1Utils_1_1Noise_1_1IUpdateGaussianNoisesJob.html">IUpdateGaussianNoisesJob</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#aa397efa4dcb464c9dc0834819e507e78">_updateGaussianNoisesJob</a></td></tr>
@@ -277,6 +291,41 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a433eba390402a1586e7a71830c3d3433 inherit pac_attribs_classUnitySensors_1_1Sensor_1_1UnitySensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae44201fe70bead81efb6999f7b59afad" name="ae44201fe70bead81efb6999f7b59afad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae44201fe70bead81efb6999f7b59afad">&#9670;&#160;</a></span>GenerateDepthImageUsingRaycast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UnitySensors.Sensor.Camera.DepthCameraSensor.GenerateDepthImageUsingRaycast </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor_ae44201fe70bead81efb6999f7b59afad_icgraph.png" border="0" usemap="#aclassUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor_ae44201fe70bead81efb6999f7b59afad_icgraph" alt=""/></div>
+<map name="aclassUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor_ae44201fe70bead81efb6999f7b59afad_icgraph" id="aclassUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor_ae44201fe70bead81efb6999f7b59afad_icgraph">
+<area shape="rect" title=" " alt="" coords="304,5,563,60"/>
+<area shape="rect" href="classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#ad6f6b392e578ca92950262c7de1e6953" title=" " alt="" coords="5,13,256,53"/>
+<area shape="poly" title=" " alt="" coords="291,35,256,35,256,30,291,30"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a3f2e559b58555877a6ba9684fcefae86" name="a3f2e559b58555877a6ba9684fcefae86"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f2e559b58555877a6ba9684fcefae86">&#9670;&#160;</a></span>Init()</h2>
 
@@ -482,9 +531,11 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor_ad6f6b392e578ca92950262c7de1e6953_cgraph.png" border="0" usemap="#aclassUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor_ad6f6b392e578ca92950262c7de1e6953_cgraph" alt=""/></div>
 <map name="aclassUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor_ad6f6b392e578ca92950262c7de1e6953_cgraph" id="aclassUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor_ad6f6b392e578ca92950262c7de1e6953_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,256,45"/>
-<area shape="rect" href="classUnitySensors_1_1Utils_1_1Texture_1_1TextureLoader.html#a06eb9a85cb4876818ab9460dffa131ce" title=" " alt="" coords="304,5,539,45"/>
-<area shape="poly" title=" " alt="" coords="256,23,291,23,291,28,256,28"/>
+<area shape="rect" title=" " alt="" coords="5,49,256,89"/>
+<area shape="rect" href="classUnitySensors_1_1Sensor_1_1Camera_1_1DepthCameraSensor.html#ae44201fe70bead81efb6999f7b59afad" title=" " alt="" coords="304,5,563,60"/>
+<area shape="poly" title=" " alt="" coords="256,51,290,47,291,52,257,56"/>
+<area shape="rect" href="classUnitySensors_1_1Utils_1_1Texture_1_1TextureLoader.html#a06eb9a85cb4876818ab9460dffa131ce" title=" " alt="" coords="316,85,551,125"/>
+<area shape="poly" title=" " alt="" coords="257,81,303,86,302,92,256,86"/>
 </map>
 </div>
 
@@ -524,6 +575,28 @@ Here is the call graph for this function:</div>
       <table class="memname">
         <tr>
           <td class="memname">Material UnitySensors.Sensor.Camera.DepthCameraSensor._depthCameraMat</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d031ca77e6ed2c690b741d59ffbabd0" name="a8d031ca77e6ed2c690b741d59ffbabd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d031ca77e6ed2c690b741d59ffbabd0">&#9670;&#160;</a></span>_depthTexture</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Texture2D UnitySensors.Sensor.Camera.DepthCameraSensor._depthTexture</td>
         </tr>
       </table>
   </td>
@@ -590,6 +663,72 @@ Here is the call graph for this function:</div>
       <table class="memname">
         <tr>
           <td class="memname">JobHandle UnitySensors.Sensor.Camera.DepthCameraSensor._jobHandle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6da367ca68e537ef20d93454f3c44ec0" name="a6da367ca68e537ef20d93454f3c44ec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6da367ca68e537ef20d93454f3c44ec0">&#9670;&#160;</a></span>_lastFrameTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnitySensors.Sensor.Camera.DepthCameraSensor._lastFrameTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab75d7ff87fd0751285c69ecfbeff92af" name="ab75d7ff87fd0751285c69ecfbeff92af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab75d7ff87fd0751285c69ecfbeff92af">&#9670;&#160;</a></span>_lastRaycastHeight</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnitySensors.Sensor.Camera.DepthCameraSensor._lastRaycastHeight</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af0dd1e182d9b03b9438c9b9ae925d586" name="af0dd1e182d9b03b9438c9b9ae925d586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0dd1e182d9b03b9438c9b9ae925d586">&#9670;&#160;</a></span>_lastRaycastWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int UnitySensors.Sensor.Camera.DepthCameraSensor._lastRaycastWidth</td>
         </tr>
       </table>
   </td>
@@ -711,6 +850,28 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="aa04e8d4fc465c0b4423d59d6eab4f345" name="aa04e8d4fc465c0b4423d59d6eab4f345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa04e8d4fc465c0b4423d59d6eab4f345">&#9670;&#160;</a></span>_raycastResolutionScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnitySensors.Sensor.Camera.DepthCameraSensor._raycastResolutionScale = 0.5f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a691e58171d3b0e593e085b7daf8c9b93" name="a691e58171d3b0e593e085b7daf8c9b93"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a691e58171d3b0e593e085b7daf8c9b93">&#9670;&#160;</a></span>_textureLoader</h2>
 
@@ -766,6 +927,28 @@ Here is the call graph for this function:</div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="structUnitySensors_1_1Utils_1_1Noise_1_1IUpdateGaussianNoisesJob.html">IUpdateGaussianNoisesJob</a> UnitySensors.Sensor.Camera.DepthCameraSensor._updateGaussianNoisesJob</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a00be2513a9a5f9dcafc06b1200ce60" name="a8a00be2513a9a5f9dcafc06b1200ce60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a00be2513a9a5f9dcafc06b1200ce60">&#9670;&#160;</a></span>_useAdaptiveQuality</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UnitySensors.Sensor.Camera.DepthCameraSensor._useAdaptiveQuality = true</td>
         </tr>
       </table>
   </td>
