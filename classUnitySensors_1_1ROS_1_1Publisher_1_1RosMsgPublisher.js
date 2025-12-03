@@ -1,6 +1,7 @@
 var classUnitySensors_1_1ROS_1_1Publisher_1_1RosMsgPublisher =
 [
     [ "Awake", "classUnitySensors_1_1ROS_1_1Publisher_1_1RosMsgPublisher.html#aa63ca75bd28092122d815366deeb90fc", null ],
+    [ "InitializePublisher", "classUnitySensors_1_1ROS_1_1Publisher_1_1RosMsgPublisher.html#a5ad2e6c2b917d8d6c0f652d34fa5863b", null ],
     [ "InitializePublisherOffset", "classUnitySensors_1_1ROS_1_1Publisher_1_1RosMsgPublisher.html#a63136358289c486fd8dbf9d7192bb00e", null ],
     [ "OnDestroy", "classUnitySensors_1_1ROS_1_1Publisher_1_1RosMsgPublisher.html#af1bbce08ee872223b03f58840b30fbd0", null ],
     [ "Start", "classUnitySensors_1_1ROS_1_1Publisher_1_1RosMsgPublisher.html#a12f7ce7e527e6f8faba780cbbcb26d78", null ],

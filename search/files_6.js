@@ -19,7 +19,7 @@ var searchData=
   ['iraycasthitstopointsjob_2ecs_16',['IRaycastHitsToPointsJob.cs',['../IRaycastHitsToPointsJob_8cs.html',1,'']]],
   ['itextureinterface_2ecs_17',['ITextureInterface.cs',['../ITextureInterface_8cs.html',1,'']]],
   ['itexturetocolorpointsjob_2ecs_18',['ITextureToColorPointsJob.cs',['../ITextureToColorPointsJob_8cs.html',1,'']]],
-  ['itexturetopointsjob_2ecs_19',['itexturetopointsjob.cs',['../Camera_2DepthCamera_2ITextureToPointsJob_8cs.html',1,'(Global Namespace)'],['../LiDAR_2DepthBufferLiDAR_2ITextureToPointsJob_8cs.html',1,'(Global Namespace)']]],
+  ['itexturetopointsjob_2ecs_19',['itexturetopointsjob.cs',['../LiDAR_2DepthBufferLiDAR_2ITextureToPointsJob_8cs.html',1,'(Global Namespace)'],['../Camera_2DepthCamera_2ITextureToPointsJob_8cs.html',1,'(Global Namespace)']]],
   ['itimeinterface_2ecs_20',['ITimeInterface.cs',['../ITimeInterface_8cs.html',1,'']]],
   ['itimeinterfacetests_2ecs_21',['ITimeInterfaceTests.cs',['../ITimeInterfaceTests_8cs.html',1,'']]],
   ['iupdategaussiannoisesjob_2ecs_22',['IUpdateGaussianNoisesJob.cs',['../IUpdateGaussianNoisesJob_8cs.html',1,'']]],
