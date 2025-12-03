@@ -37,7 +37,13 @@ namespace UnitySensors.ROS.Publisher
         }
         private void Awake()
         {
+            InitializePublisher();
+        }
+
+        protected virtual void InitializePublisher()
+        {
             _frequency_inv = 1.0f / _frequency;
+
             _publisher_id = _publisher_count;
             _publisher_count++;
 
