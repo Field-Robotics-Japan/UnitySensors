@@ -33,11 +33,20 @@ namespace UnitySensors.Sensor.Camera
         protected override void Init()
         {
             base.Init();
+#if UNITY_6000_0_OR_NEWER
+            // Unity 6000+ requires depth buffer for render textures used with cameras
+            _cubemap = new RenderTexture(_cubemapResolution, _cubemapResolution, 24, RenderTextureFormat.ARGB32)
+            {
+                dimension = TextureDimension.Cube
+            };
+            _rt = new RenderTexture(_resolution.x, _resolution.y, 24, RenderTextureFormat.ARGB32);
+#else
             _cubemap = new RenderTexture(_cubemapResolution, _cubemapResolution, 0, RenderTextureFormat.ARGB32)
             {
                 dimension = TextureDimension.Cube
             };
             _rt = new RenderTexture(_resolution.x, _resolution.y, 0, RenderTextureFormat.ARGB32);
+#endif
             _texture = new Texture2D(_resolution.x, _resolution.y, TextureFormat.RGBA32, false);
             _textureLoader = new TextureLoader
             {

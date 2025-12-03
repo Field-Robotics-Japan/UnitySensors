@@ -12,6 +12,10 @@ using UnitySensors.Utils.Texture;
 using Random = Unity.Mathematics.Random;
 using System.Collections;
 
+#if UNITY_6000_0_OR_NEWER
+using UnityEngine.Rendering;
+#endif
+
 namespace UnitySensors.Sensor.Camera
 {
     [RequireComponent(typeof(UnityEngine.Camera))]
@@ -27,9 +31,18 @@ namespace UnitySensors.Sensor.Camera
         private Material _depthCameraMat;
         [SerializeField]
         private bool _convertToPointCloud = false;
+        
+        [Header("Performance Settings")]
+        [SerializeField, Range(0.1f, 1.0f)]
+        private float _raycastResolutionScale = 0.5f; // Reduce raycast resolution for better performance
+        [SerializeField]
+        private bool _useAdaptiveQuality = true; // Enable adaptive quality based on frame rate
 
         private RenderTexture _depthRt = null;
         private Texture2D _depthTexture;
+        private Texture2D _raycastDepthTexture; // Reuse texture for raycast to avoid allocations
+        private int _lastRaycastWidth, _lastRaycastHeight;
+        private float _lastFrameTime;
 
         private UnityEngine.Camera _colorCamera;
         private RenderTexture _colorRt = null;
@@ -59,7 +72,12 @@ namespace UnitySensors.Sensor.Camera
         protected override void Init()
         {
             base.Init();
+#if UNITY_6000_0_OR_NEWER
+            // Unity 6000+ requires depth buffer for render textures used with cameras
+            _depthRt = new RenderTexture(_resolution.x, _resolution.y, 24, RenderTextureFormat.ARGBFloat);
+#else
             _depthRt = new RenderTexture(_resolution.x, _resolution.y, 0, RenderTextureFormat.ARGBFloat);
+#endif
             _depthCamera.targetTexture = _depthRt;
 
             GameObject colorCameraObject = new GameObject();
@@ -70,7 +88,12 @@ namespace UnitySensors.Sensor.Camera
             colorCameraTransform.localRotation = Quaternion.identity;
 
             _colorCamera = colorCameraObject.AddComponent<UnityEngine.Camera>();
+#if UNITY_6000_0_OR_NEWER
+            // Unity 6000+ requires depth buffer for render textures used with cameras
+            _colorRt = new RenderTexture(_resolution.x, _resolution.y, 24, RenderTextureFormat.ARGB32);
+#else
             _colorRt = new RenderTexture(_resolution.x, _resolution.y, 0, RenderTextureFormat.ARGB32);
+#endif
             _colorCamera.targetTexture = _colorRt;
 
             _depthCamera.fieldOfView = _colorCamera.fieldOfView = _fov;
@@ -148,8 +171,24 @@ namespace UnitySensors.Sensor.Camera
 
         protected override IEnumerator UpdateSensor()
         {
+#if UNITY_6000_0_OR_NEWER
+            bool isURP = GraphicsSettings.currentRenderPipeline != null;
+
+            if (isURP)
+            {
+                // For Unity 6000+ URP, use raycast for depth but normal rendering for color
+                GenerateDepthImageUsingRaycast();
+                _colorCamera.Render();
+            }
+            else
+            {
+                _depthCamera.Render();
+                _colorCamera.Render();
+            }
+#else
             _depthCamera.Render();
             _colorCamera.Render();
+#endif
 
             var depthLoad = _depthTextureLoader.LoadTextureAsync();
             var colorLoad = _colorTextureLoader.LoadTextureAsync();
@@ -165,6 +204,111 @@ namespace UnitySensors.Sensor.Camera
             }
         }
 
+        private void GenerateDepthImageUsingRaycast()
+        {
+            // Adaptive quality adjustment based on frame rate
+            if (_useAdaptiveQuality)
+            {
+                float currentFrameTime = Time.unscaledDeltaTime;
+                if (_lastFrameTime > 0)
+                {
+                    float currentFPS = 1.0f / currentFrameTime;
+                    float targetFPS = frequency; // Use sensor frequency as target
+                    if (currentFPS < targetFPS * 0.8f) // If FPS drops below 80% of target
+                    {
+                        _raycastResolutionScale = Mathf.Max(0.1f, _raycastResolutionScale - 0.05f);
+                    }
+                    else if (currentFPS > targetFPS * 1.1f) // If FPS is above 110% of target
+                    {
+                        _raycastResolutionScale = Mathf.Min(1.0f, _raycastResolutionScale + 0.02f);
+                    }
+                }
+                _lastFrameTime = currentFrameTime;
+            }
+
+            // Calculate actual raycast resolution
+            int raycastWidth = Mathf.Max(1, Mathf.RoundToInt(_depthRt.width * _raycastResolutionScale));
+            int raycastHeight = Mathf.Max(1, Mathf.RoundToInt(_depthRt.height * _raycastResolutionScale));
+
+            // Reuse texture if possible to avoid allocations
+            if (_raycastDepthTexture == null || _lastRaycastWidth != raycastWidth || _lastRaycastHeight != raycastHeight)
+            {
+                if (_raycastDepthTexture != null)
+                    DestroyImmediate(_raycastDepthTexture);
+                    
+                _raycastDepthTexture = new Texture2D(raycastWidth, raycastHeight, TextureFormat.RGBAFloat, false);
+                _lastRaycastWidth = raycastWidth;
+                _lastRaycastHeight = raycastHeight;
+            }
+
+            RenderTexture.active = _depthRt;
+            GL.Clear(true, true, Color.white);
+            RenderTexture.active = null;
+
+            // Pre-calculate camera parameters
+            float fovRad = _depthCamera.fieldOfView * Mathf.Deg2Rad;
+            float aspect = (float)_depthRt.width / _depthRt.height;
+            float tanHalfFov = Mathf.Tan(fovRad * 0.5f);
+
+            Vector3 cameraPos = _depthCamera.transform.position;
+            Vector3 forward = _depthCamera.transform.forward;
+            Vector3 right = _depthCamera.transform.right;
+            Vector3 up = _depthCamera.transform.up;
+
+            // Use Color32 array for better performance
+            Color32[] pixels = new Color32[raycastWidth * raycastHeight];
+            
+            // Batch raycast operations
+            for (int y = 0; y < raycastHeight; y++)
+            {
+                for (int x = 0; x < raycastWidth; x++)
+                {
+                    // Map raycast coordinates to full resolution
+                    float normalizedX = (float)x / (raycastWidth - 1);
+                    float normalizedY = (float)y / (raycastHeight - 1);
+                    
+                    float ndcX = (2.0f * normalizedX) - 1.0f;
+                    float ndcY = (2.0f * normalizedY) - 1.0f;
+
+                    float viewX = ndcX * tanHalfFov * aspect;
+                    float viewY = ndcY * tanHalfFov;
+
+                    Vector3 rayDirection = (forward + right * viewX + up * viewY).normalized;
+                    Ray ray = new Ray(cameraPos, rayDirection);
+
+                    float depth = 1.0f;
+
+                    if (Physics.Raycast(ray, out RaycastHit hit, _depthCamera.farClipPlane))
+                    {
+                        float distance = hit.distance;
+                        depth = Mathf.Clamp01(distance / _depthCamera.farClipPlane);
+                    }
+
+                    byte depthByte = (byte)(depth * 255);
+                    pixels[y * raycastWidth + x] = new Color32(depthByte, depthByte, depthByte, 255);
+                }
+            }
+
+            // Apply pixels and scale to target resolution
+            _raycastDepthTexture.SetPixels32(pixels);
+            _raycastDepthTexture.Apply();
+
+            // Scale to target resolution if needed
+            if (raycastWidth != _depthRt.width || raycastHeight != _depthRt.height)
+            {
+                RenderTexture tempRT = RenderTexture.GetTemporary(_depthRt.width, _depthRt.height, 0, RenderTextureFormat.ARGBFloat);
+                Graphics.Blit(_raycastDepthTexture, tempRT);
+                Graphics.CopyTexture(tempRT, _depthRt);
+                RenderTexture.ReleaseTemporary(tempRT);
+            }
+            else
+            {
+                RenderTexture.active = _depthRt;
+                Graphics.CopyTexture(_raycastDepthTexture, _depthRt);
+                RenderTexture.active = null;
+            }
+        }
+
         protected override void OnSensorDestroy()
         {
             if (_convertToPointCloud)
@@ -174,13 +318,23 @@ namespace UnitySensors.Sensor.Camera
                 _noises.Dispose();
                 _directions.Dispose();
             }
+            
+            // Clean up raycast depth texture
+            if (_raycastDepthTexture != null)
+            {
+                DestroyImmediate(_raycastDepthTexture);
+                _raycastDepthTexture = null;
+            }
+            
             _depthRt.Release();
             _colorRt.Release();
         }
 
+#if !UNITY_6000_0_OR_NEWER
         private void OnRenderImage(RenderTexture source, RenderTexture dest)
         {
             Graphics.Blit(null, dest, _depthCameraMat);
         }
+#endif
     }
 }
