@@ -20,5 +20,6 @@ var searchData=
   ['dispose_17',['Dispose',['../classUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud.html#a1b1fd1ead93387275388cfabbc68d74e',1,'UnitySensors::DataType::Sensor::PointCloud']]],
   ['distancefactor_18',['distanceFactor',['../structUnitySensors_1_1ROS_1_1Serializer_1_1Image_1_1ImageEncodeJob.html#afa92f403948c89847667c6e86e8354ef',1,'UnitySensors::ROS::Serializer::Image::ImageEncodeJob']]],
   ['dm0_19',['dM0',['../classUnitySensors_1_1Utils_1_1Geometry_1_1GeoCoordinateConverter.html#aa19f2f0243214280b040cb0bb1558225',1,'UnitySensors::Utils::Geometry::GeoCoordinateConverter']]],
-  ['dt_20',['dt',['../classUnitySensors_1_1Sensor_1_1UnitySensor.html#a31ebee67b4b5b34795d2cd35fbf04072',1,'UnitySensors::Sensor::UnitySensor']]]
+  ['ds_20',['DS',['../classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#ad90a3d7d0ecbbe327d9beea99781900da47b79bd259e22596ffc4be2ffbbe5c5a',1,'UnitySensors::Sensor::Camera::FisheyeCameraSensor']]],
+  ['dt_21',['dt',['../classUnitySensors_1_1Sensor_1_1UnitySensor.html#a31ebee67b4b5b34795d2cd35fbf04072',1,'UnitySensors::Sensor::UnitySensor']]]
 ];

@@ -145,8 +145,15 @@ Collaboration diagram for UnitySensors.Sensor.Camera.FisheyeCameraSensor:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ad90a3d7d0ecbbe327d9beea99781900d" id="r_ad90a3d7d0ecbbe327d9beea99781900d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#ad90a3d7d0ecbbe327d9beea99781900d">CameraModel</a> { <a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#ad90a3d7d0ecbbe327d9beea99781900da4bd2dce3bd186b044b90d37b908c3c52">Equidistant</a>
+<tr class="memitem:ad90a3d7d0ecbbe327d9beea99781900d" id="r_ad90a3d7d0ecbbe327d9beea99781900d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#ad90a3d7d0ecbbe327d9beea99781900d">CameraModel</a> { <br />
+&#160;&#160;<a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#ad90a3d7d0ecbbe327d9beea99781900daebdeccfe5ff0af70fe9fbec8b2360f90">UCM</a>
 , <a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#ad90a3d7d0ecbbe327d9beea99781900daa45c671ecdf8150c929197906dcd58f0">EUCM</a>
+, <a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#ad90a3d7d0ecbbe327d9beea99781900da47b79bd259e22596ffc4be2ffbbe5c5a">DS</a>
+, <a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#ad90a3d7d0ecbbe327d9beea99781900daed2f9a0f3018b6b27b6309ffbc7c35c7">KB4</a>
+, <br />
+&#160;&#160;<a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#ad90a3d7d0ecbbe327d9beea99781900da3ba2d684ce335ae94c25dfe0c13567d7">OCAM</a>
+, <a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#ad90a3d7d0ecbbe327d9beea99781900da4bd2dce3bd186b044b90d37b908c3c52">Equidistant</a>
+<br />
  }</td></tr>
 <tr class="separator:ad90a3d7d0ecbbe327d9beea99781900d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -177,6 +184,22 @@ Package Attributes</h2></td></tr>
 <tr class="separator:a62b81244f4655abf5c945cc66aa6d40d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b0948a2c102c607eb4f0b9272a7c541" id="r_a1b0948a2c102c607eb4f0b9272a7c541"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#a1b0948a2c102c607eb4f0b9272a7c541">_beta</a> = 0.0f</td></tr>
 <tr class="separator:a1b0948a2c102c607eb4f0b9272a7c541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32211f6bed7319d18165352b903c861e" id="r_a32211f6bed7319d18165352b903c861e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#a32211f6bed7319d18165352b903c861e">_xi</a> = 0.34f</td></tr>
+<tr class="separator:a32211f6bed7319d18165352b903c861e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc9d152cbd5c6d3949c45b18e5510372" id="r_abc9d152cbd5c6d3949c45b18e5510372"><td class="memItemLeft" align="right" valign="top">Vector4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#abc9d152cbd5c6d3949c45b18e5510372">_kb4</a> = new Vector4(-0.01f, 0.03f, -0.02f, 0.005f)</td></tr>
+<tr class="separator:abc9d152cbd5c6d3949c45b18e5510372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c2e8eeb27866bd4d9ff48ca5b67f93d" id="r_a4c2e8eeb27866bd4d9ff48ca5b67f93d"><td class="memItemLeft" align="right" valign="top">Vector4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#a4c2e8eeb27866bd4d9ff48ca5b67f93d">_affineCoeffs</a> = new Vector4(1.0f, 0.0f, 0.0f, 1.0f)</td></tr>
+<tr class="separator:a4c2e8eeb27866bd4d9ff48ca5b67f93d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af75a0f82de7fe319df8ee4037f34f8f8" id="r_af75a0f82de7fe319df8ee4037f34f8f8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#af75a0f82de7fe319df8ee4037f34f8f8">_a0</a> = 190.87f</td></tr>
+<tr class="separator:af75a0f82de7fe319df8ee4037f34f8f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0f4499ebd954fec0f9d154678b505cd" id="r_aa0f4499ebd954fec0f9d154678b505cd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#aa0f4499ebd954fec0f9d154678b505cd">_a1</a> = 0.0f</td></tr>
+<tr class="separator:aa0f4499ebd954fec0f9d154678b505cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18ba1fb92f7290104ab2251e0504fe53" id="r_a18ba1fb92f7290104ab2251e0504fe53"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#a18ba1fb92f7290104ab2251e0504fe53">_a2</a> = 0.0f</td></tr>
+<tr class="separator:a18ba1fb92f7290104ab2251e0504fe53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad2fdad8aa679a80a9ba5d1aae0c095d" id="r_aad2fdad8aa679a80a9ba5d1aae0c095d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#aad2fdad8aa679a80a9ba5d1aae0c095d">_a3</a> = -0.000003f</td></tr>
+<tr class="separator:aad2fdad8aa679a80a9ba5d1aae0c095d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c8e75d2e5e933cbadd7e0a21f19c98" id="r_a12c8e75d2e5e933cbadd7e0a21f19c98"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#a12c8e75d2e5e933cbadd7e0a21f19c98">_a4</a> = 0.0f</td></tr>
+<tr class="separator:a12c8e75d2e5e933cbadd7e0a21f19c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cb5cb6114cb388f22a570b5bab04f5e" id="r_a4cb5cb6114cb388f22a570b5bab04f5e"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#a4cb5cb6114cb388f22a570b5bab04f5e">_focalLength</a> = new Vector2(1.0f, 1.0f)</td></tr>
 <tr class="separator:a4cb5cb6114cb388f22a570b5bab04f5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d37923711b009c87d173134acec7cd2" id="r_a0d37923711b009c87d173134acec7cd2"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#a0d37923711b009c87d173134acec7cd2">_principalPoint</a> = new Vector2(512f, 512f)</td></tr>
@@ -251,8 +274,12 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad90a3d7d0ecbbe327d9beea99781900da4bd2dce3bd186b044b90d37b908c3c52" name="ad90a3d7d0ecbbe327d9beea99781900da4bd2dce3bd186b044b90d37b908c3c52"></a>Equidistant&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad90a3d7d0ecbbe327d9beea99781900daebdeccfe5ff0af70fe9fbec8b2360f90" name="ad90a3d7d0ecbbe327d9beea99781900daebdeccfe5ff0af70fe9fbec8b2360f90"></a>UCM&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ad90a3d7d0ecbbe327d9beea99781900daa45c671ecdf8150c929197906dcd58f0" name="ad90a3d7d0ecbbe327d9beea99781900daa45c671ecdf8150c929197906dcd58f0"></a>EUCM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad90a3d7d0ecbbe327d9beea99781900da47b79bd259e22596ffc4be2ffbbe5c5a" name="ad90a3d7d0ecbbe327d9beea99781900da47b79bd259e22596ffc4be2ffbbe5c5a"></a>DS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad90a3d7d0ecbbe327d9beea99781900daed2f9a0f3018b6b27b6309ffbc7c35c7" name="ad90a3d7d0ecbbe327d9beea99781900daed2f9a0f3018b6b27b6309ffbc7c35c7"></a>KB4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad90a3d7d0ecbbe327d9beea99781900da3ba2d684ce335ae94c25dfe0c13567d7" name="ad90a3d7d0ecbbe327d9beea99781900da3ba2d684ce335ae94c25dfe0c13567d7"></a>OCAM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad90a3d7d0ecbbe327d9beea99781900da4bd2dce3bd186b044b90d37b908c3c52" name="ad90a3d7d0ecbbe327d9beea99781900da4bd2dce3bd186b044b90d37b908c3c52"></a>Equidistant&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -344,6 +371,138 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="af75a0f82de7fe319df8ee4037f34f8f8" name="af75a0f82de7fe319df8ee4037f34f8f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af75a0f82de7fe319df8ee4037f34f8f8">&#9670;&#160;</a></span>_a0</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnitySensors.Sensor.Camera.FisheyeCameraSensor._a0 = 190.87f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0f4499ebd954fec0f9d154678b505cd" name="aa0f4499ebd954fec0f9d154678b505cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0f4499ebd954fec0f9d154678b505cd">&#9670;&#160;</a></span>_a1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnitySensors.Sensor.Camera.FisheyeCameraSensor._a1 = 0.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18ba1fb92f7290104ab2251e0504fe53" name="a18ba1fb92f7290104ab2251e0504fe53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18ba1fb92f7290104ab2251e0504fe53">&#9670;&#160;</a></span>_a2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnitySensors.Sensor.Camera.FisheyeCameraSensor._a2 = 0.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad2fdad8aa679a80a9ba5d1aae0c095d" name="aad2fdad8aa679a80a9ba5d1aae0c095d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad2fdad8aa679a80a9ba5d1aae0c095d">&#9670;&#160;</a></span>_a3</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnitySensors.Sensor.Camera.FisheyeCameraSensor._a3 = -0.000003f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12c8e75d2e5e933cbadd7e0a21f19c98" name="a12c8e75d2e5e933cbadd7e0a21f19c98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12c8e75d2e5e933cbadd7e0a21f19c98">&#9670;&#160;</a></span>_a4</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnitySensors.Sensor.Camera.FisheyeCameraSensor._a4 = 0.0f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c2e8eeb27866bd4d9ff48ca5b67f93d" name="a4c2e8eeb27866bd4d9ff48ca5b67f93d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c2e8eeb27866bd4d9ff48ca5b67f93d">&#9670;&#160;</a></span>_affineCoeffs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector4 UnitySensors.Sensor.Camera.FisheyeCameraSensor._affineCoeffs = new Vector4(1.0f, 0.0f, 0.0f, 1.0f)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a62b81244f4655abf5c945cc66aa6d40d" name="a62b81244f4655abf5c945cc66aa6d40d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a62b81244f4655abf5c945cc66aa6d40d">&#9670;&#160;</a></span>_alpha</h2>
 
@@ -498,6 +657,28 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="abc9d152cbd5c6d3949c45b18e5510372" name="abc9d152cbd5c6d3949c45b18e5510372"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc9d152cbd5c6d3949c45b18e5510372">&#9670;&#160;</a></span>_kb4</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector4 UnitySensors.Sensor.Camera.FisheyeCameraSensor._kb4 = new Vector4(-0.01f, 0.03f, -0.02f, 0.005f)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a0d37923711b009c87d173134acec7cd2" name="a0d37923711b009c87d173134acec7cd2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0d37923711b009c87d173134acec7cd2">&#9670;&#160;</a></span>_principalPoint</h2>
 
@@ -558,6 +739,28 @@ Here is the call graph for this function:</div>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32211f6bed7319d18165352b903c861e" name="a32211f6bed7319d18165352b903c861e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32211f6bed7319d18165352b903c861e">&#9670;&#160;</a></span>_xi</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float UnitySensors.Sensor.Camera.FisheyeCameraSensor._xi = 0.34f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

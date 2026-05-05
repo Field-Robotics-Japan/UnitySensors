@@ -1,12 +1,5 @@
 var searchData=
 [
-  ['pixelindices_0',['pixelIndices',['../structUnitySensors_1_1Sensor_1_1LiDAR_1_1ITextureToPointsJob.html#a23f7212d41b76119cdd89b15fc8baf3a',1,'UnitySensors::Sensor::LiDAR::ITextureToPointsJob']]],
-  ['pixels_1',['pixels',['../structUnitySensors_1_1Sensor_1_1LiDAR_1_1ITextureToPointsJob.html#ac5f807e27fa200b6de3cf07e6fe7f608',1,'UnitySensors::Sensor::LiDAR::ITextureToPointsJob']]],
-  ['pointdatasizes_2',['pointDataSizes',['../classUnitySensors_1_1Utils_1_1PointCloud_1_1PointUtilitiesSO.html#a1625a89a45a2e592dbde1a64360dcf90',1,'UnitySensors::Utils::PointCloud::PointUtilitiesSO']]],
-  ['pointfields_3',['pointFields',['../classUnitySensors_1_1ROS_1_1Utils_1_1PointCloud_1_1PointUtilitiesROS.html#a8f6276979425643d4a9d8c11a1ef7ae8',1,'UnitySensors::ROS::Utils::PointCloud::PointUtilitiesROS']]],
-  ['points_4',['points',['../classUnitySensors_1_1DataType_1_1Sensor_1_1PointCloud.html#a7fea7bbadf255488d94357d57f5ccda1',1,'UnitySensors.DataType.Sensor.PointCloud.points'],['../structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToPointsJob.html#a430e4462b163348a7c5972cfad5dddc6',1,'UnitySensors.Sensor.Camera.ITextureToPointsJob.points'],['../structUnitySensors_1_1Sensor_1_1Camera_1_1ITextureToColorPointsJob.html#a608fa74e6381a3e54068eb94340439cc',1,'UnitySensors.Sensor.Camera.ITextureToColorPointsJob.points'],['../structUnitySensors_1_1Sensor_1_1LiDAR_1_1ITextureToPointsJob.html#a7376dd6c7be9f5c11003904ae18a580f',1,'UnitySensors.Sensor.LiDAR.ITextureToPointsJob.points'],['../structUnitySensors_1_1Sensor_1_1LiDAR_1_1IRaycastHitsToPointsJob.html#ac6ddded64efe02c0c29c32d1079a8c64',1,'UnitySensors.Sensor.LiDAR.IRaycastHitsToPointsJob.points']]],
-  ['pointstep_5',['pointStep',['../structUnitySensors_1_1ROS_1_1Serializer_1_1PointCloud_1_1IInvertXJob.html#a75e07cf2cdcaa8fefc11007bb2567165',1,'UnitySensors::ROS::Serializer::PointCloud::IInvertXJob']]],
-  ['position_6',['position',['../structUnitySensors_1_1Sensor_1_1TF_1_1TFData.html#af2b9808f9d88a8dfdd0074a0eb7b3b1a',1,'UnitySensors::Sensor::TF::TFData']]],
-  ['principalpointlabel_7',['principalPointLabel',['../classUnitySensors_1_1Editor_1_1FisheyeCameraEditor.html#ad4734d13bc5575d066d365c10702b9fe',1,'UnitySensors::Editor::FisheyeCameraEditor']]],
-  ['principalpointprop_8',['principalPointProp',['../classUnitySensors_1_1Editor_1_1FisheyeCameraEditor.html#a3022406d78b982df5f6ce64e4723876c',1,'UnitySensors::Editor::FisheyeCameraEditor']]]
+  ['onsensorupdatecomplete_0',['onSensorUpdateComplete',['../classUnitySensors_1_1Sensor_1_1UnitySensor.html#af28fe6cc366d14229f8df81f845f5fae',1,'UnitySensors::Sensor::UnitySensor']]],
+  ['origin_1',['origin',['../structUnitySensors_1_1Sensor_1_1LiDAR_1_1IUpdateRaycastCommandsJob.html#ad9ab356cd090986ae904e6b5dfe27d6d',1,'UnitySensors::Sensor::LiDAR::IUpdateRaycastCommandsJob']]]
 ];

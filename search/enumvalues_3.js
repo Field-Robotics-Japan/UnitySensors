@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['fix_0',['FIX',['../classUnitySensors_1_1ROS_1_1Serializer_1_1Sensor_1_1NavSatFixMsgSerializer.html#a9758971b3fe7049486b132a443d762aca6aaac758332a8320840ac0e5f8fc28e2',1,'UnitySensors::ROS::Serializer::Sensor::NavSatFixMsgSerializer']]]
+  ['equidistant_0',['Equidistant',['../classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#ad90a3d7d0ecbbe327d9beea99781900da4bd2dce3bd186b044b90d37b908c3c52',1,'UnitySensors::Sensor::Camera::FisheyeCameraSensor']]],
+  ['eucm_1',['EUCM',['../classUnitySensors_1_1Sensor_1_1Camera_1_1FisheyeCameraSensor.html#ad90a3d7d0ecbbe327d9beea99781900daa45c671ecdf8150c929197906dcd58f0',1,'UnitySensors::Sensor::Camera::FisheyeCameraSensor']]]
 ];
