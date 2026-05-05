@@ -29,7 +29,7 @@ var searchData=
   ['laserscanmsgserializertests_26',['laserscanmsgserializertests',['../classUnitySensors_1_1Tests_1_1Editor_1_1LaserScanMsgSerializerTests.html',1,'UnitySensors.Tests.Editor.LaserScanMsgSerializerTests'],['../classUnitySensorsROS_1_1Tests_1_1Editor_1_1LaserScanMsgSerializerTests.html',1,'UnitySensorsROS.Tests.Editor.LaserScanMsgSerializerTests']]],
   ['laserscanmsgserializertests_2ecs_27',['laserscanmsgserializertests.cs',['../OS_2Tests_2Editor_2LaserScanMsgSerializerTests_8cs.html',1,'(Global Namespace)'],['../Tests_2Editor_2LaserScanMsgSerializerTests_8cs.html',1,'(Global Namespace)']]],
   ['latitude_28',['latitude',['../classUnitySensors_1_1DataType_1_1Geometry_1_1GeoCoordinate.html#a9a1f35c076f4c135afe7932e37f00773',1,'UnitySensors::DataType::Geometry::GeoCoordinate']]],
-  ['license_29',['license',['../md_README.html#autotoc_md11',1,'📄 LICENSE'],['../md_Packages_2UnitySensorsROS_2LICENSE.html',1,'LICENSE'],['../md_Packages_2UnitySensors_2LICENSE.html',1,'LICENSE']]],
+  ['license_29',['license',['../md_README.html#autotoc_md11',1,'📄 LICENSE'],['../md_Packages_2UnitySensors_2LICENSE.html',1,'LICENSE'],['../md_Packages_2UnitySensorsROS_2LICENSE.html',1,'LICENSE']]],
   ['license_2emd_30',['license.md',['../UnitySensors_2LICENSE_8md.html',1,'(Global Namespace)'],['../UnitySensorsROS_2LICENSE_8md.html',1,'(Global Namespace)']]],
   ['lidarpointcloud2msgpublisher_31',['LiDARPointCloud2MsgPublisher',['../classUnitySensors_1_1ROS_1_1Publisher_1_1Sensor_1_1LiDARPointCloud2MsgPublisher.html',1,'UnitySensors::ROS::Publisher::Sensor']]],
   ['lidarpointcloud2msgpublisher_2ecs_32',['LiDARPointCloud2MsgPublisher.cs',['../LiDARPointCloud2MsgPublisher_8cs.html',1,'']]],
@@ -40,7 +40,6 @@ var searchData=
   ['loadscandata_37',['loadscandata',['../classUnitySensors_1_1Sensor_1_1LiDAR_1_1DepthBufferLiDARSensor.html#ac85367cccf7a3f20888be86345c3afee',1,'UnitySensors.Sensor.LiDAR.DepthBufferLiDARSensor.LoadScanData()'],['../classUnitySensors_1_1Sensor_1_1LiDAR_1_1RaycastLiDARSensor.html#a4e92b552dd61998b35ecc50e57d073f2',1,'UnitySensors.Sensor.LiDAR.RaycastLiDARSensor.LoadScanData()']]],
   ['loadtextureasync_38',['LoadTextureAsync',['../classUnitySensors_1_1Utils_1_1Texture_1_1TextureLoader.html#a06eb9a85cb4876818ab9460dffa131ce',1,'UnitySensors::Utils::Texture::TextureLoader']]],
   ['localacceleration_39',['localAcceleration',['../classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#aba65e5099e8671b6e344a1d3fc09eb18',1,'UnitySensors::Sensor::IMU::IMUSensor']]],
-  ['localtoworldmatrix_40',['localToWorldMatrix',['../structUnitySensors_1_1Sensor_1_1LiDAR_1_1IUpdateRaycastCommandsJob.html#acdfe11e1cfdff0c690633eff7ccb66a7',1,'UnitySensors::Sensor::LiDAR::IUpdateRaycastCommandsJob']]],
-  ['localvelocity_41',['localVelocity',['../classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a2cef9cf81d26c528a66665ad45c16dc3',1,'UnitySensors::Sensor::IMU::IMUSensor']]],
-  ['longitude_42',['longitude',['../classUnitySensors_1_1DataType_1_1Geometry_1_1GeoCoordinate.html#a9c8f0216bad770e9df63d55969fe894e',1,'UnitySensors::DataType::Geometry::GeoCoordinate']]]
+  ['localvelocity_40',['localVelocity',['../classUnitySensors_1_1Sensor_1_1IMU_1_1IMUSensor.html#a2cef9cf81d26c528a66665ad45c16dc3',1,'UnitySensors::Sensor::IMU::IMUSensor']]],
+  ['longitude_41',['longitude',['../classUnitySensors_1_1DataType_1_1Geometry_1_1GeoCoordinate.html#a9c8f0216bad770e9df63d55969fe894e',1,'UnitySensors::DataType::Geometry::GeoCoordinate']]]
 ];

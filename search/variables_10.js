@@ -5,5 +5,5 @@ var searchData=
   ['raycastcommands_2',['raycastCommands',['../structUnitySensors_1_1Sensor_1_1LiDAR_1_1IUpdateRaycastCommandsJob.html#a6c0f04045a862cc82ffef29a9cfa9a91',1,'UnitySensors::Sensor::LiDAR::IUpdateRaycastCommandsJob']]],
   ['raycasthits_3',['raycastHits',['../structUnitySensors_1_1Sensor_1_1LiDAR_1_1IRaycastHitsToPointsJob.html#a19531df0d3f51e1e727c2966ea038ad1',1,'UnitySensors::Sensor::LiDAR::IRaycastHitsToPointsJob']]],
   ['right_4',['right',['../structUnitySensors_1_1Sensor_1_1Camera_1_1ParallelRaycastDepthJob.html#a388d78bc81d730bf1269da9b4f454664',1,'UnitySensors::Sensor::Camera::ParallelRaycastDepthJob']]],
-  ['rotation_5',['rotation',['../structUnitySensors_1_1Sensor_1_1TF_1_1TFData.html#adcbb80e29b39f70e7b45928577f309a6',1,'UnitySensors::Sensor::TF::TFData']]]
+  ['rotation_5',['rotation',['../structUnitySensors_1_1Sensor_1_1LiDAR_1_1IUpdateRaycastCommandsJob.html#ad50e5c1f8a72d77547373902f4beaed5',1,'UnitySensors.Sensor.LiDAR.IUpdateRaycastCommandsJob.rotation'],['../structUnitySensors_1_1Sensor_1_1TF_1_1TFData.html#adcbb80e29b39f70e7b45928577f309a6',1,'UnitySensors.Sensor.TF.TFData.rotation']]]
 ];
