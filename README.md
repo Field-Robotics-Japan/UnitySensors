@@ -33,6 +33,7 @@ The following sensors are available inside :
 - Fisheye Camera ([UCM][external-UCM-link], [EUCM][external-EUCM-link], [Double Sphere][external-DS-link], [Kannala-Brandt (KB4)][external-KB4-link], [OCamCalib][external-OCamCalib-link], and Equidistant models with adjustable parameters)
 - IMU
 - GNSS
+- Contact (Bumper)
 - (GroundTruth)
 - (TF)
 
