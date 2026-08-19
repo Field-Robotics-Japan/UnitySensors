@@ -52,8 +52,20 @@ namespace UnitySensors.Sensor.IMU
 
         public override IEnumerator UpdateSensorOnce()
         {
-            //FIXME: IMU sensor should be updated at a fixed frequency
-            float dt = Time.deltaTime;
+            // dt must be the REAL time since the previous sensor update: the
+            // position/rotation deltas below span the whole sensor period
+            // (several frames at low frame rates, and one or two frames
+            // depending on scheduling when the requested frequency is at or
+            // above the frame rate), so dividing them by one frame's
+            // Time.deltaTime overestimates every derivative by
+            // (actual sample spacing / frame time) -- measured ~2x angular
+            // velocity at 30 FPS with a 20 Hz IMU, and it is what makes the
+            // velocity and angular velocity read too large and unstable at
+            // high Frequency settings (Field-Robotics-Japan/UnitySensors#156).
+            float now = Time.time;
+            float dt = (_time_last > 0.0f) ? (now - _time_last) : Time.deltaTime;
+            if (dt <= 0.0f) dt = Time.deltaTime;
+            _time_last = now;
 
             _position_tmp = _transform.position;
             _velocity_tmp = (_position_tmp - _position_last) / dt;
