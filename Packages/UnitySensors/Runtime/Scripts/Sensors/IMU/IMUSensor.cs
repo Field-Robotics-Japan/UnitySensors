@@ -50,6 +50,32 @@ namespace UnitySensors.Sensor.IMU
             _gravityMagnitude = Physics.gravity.magnitude;
         }
 
+        /// <summary>
+        /// Mean angular velocity [rad/s] of the rotation taking
+        /// <paramref name="previous"/> to <paramref name="current"/> over
+        /// <paramref name="dt"/> seconds, always measured along the short arc.
+        /// </summary>
+        /// <remarks>
+        /// Quaternions double-cover rotations (q and -q are the same
+        /// rotation), and consecutive transform.rotation samples can land on
+        /// opposite hemispheres once the accumulated rotation passes a
+        /// multiple of 2*pi. ToAngleAxis on such a delta reports the LONG way
+        /// around -- ~(360 deg - delta) about the inverted axis -- so the
+        /// angular velocity spikes to ~2*pi/dt for one sample
+        /// (Field-Robotics-Japan/UnitySensors#155). Folding the delta onto
+        /// the w >= 0 hemisphere makes ToAngleAxis measure the short arc.
+        /// </remarks>
+        public static Vector3 AngularVelocityBetween(Quaternion previous, Quaternion current, float dt)
+        {
+            Quaternion delta = Quaternion.Inverse(previous) * current;
+            if (delta.w < 0.0f)
+            {
+                delta = new Quaternion(-delta.x, -delta.y, -delta.z, -delta.w);
+            }
+            delta.ToAngleAxis(out float angle, out Vector3 axis);
+            return axis * (angle * Mathf.Deg2Rad / dt);
+        }
+
         public override IEnumerator UpdateSensorOnce()
         {
             //FIXME: IMU sensor should be updated at a fixed frequency
@@ -61,10 +87,7 @@ namespace UnitySensors.Sensor.IMU
             _acceleration_tmp -= _transform.InverseTransformDirection(_gravityDirection) * _gravityMagnitude;
 
             _rotation_tmp = _transform.rotation;
-            Quaternion rotation_delta = Quaternion.Inverse(_rotation_last) * _rotation_tmp;
-            rotation_delta.ToAngleAxis(out float angle, out Vector3 axis);
-            float angularSpeed = (angle * Mathf.Deg2Rad) / dt;
-            _angularVelocity_tmp = axis * angularSpeed;
+            _angularVelocity_tmp = AngularVelocityBetween(_rotation_last, _rotation_tmp, dt);
 
             _position_last = _position_tmp;
             _velocity_last = _velocity_tmp;
